@@ -3,7 +3,38 @@
 > **Bu doküman, yeni bir sohbet veya yapay zeka ajanı başlatıldığında
 > projenin geçmişini, amacını, mimarisini ve güncel durumunu eksiksiz
 > aktarmak için hazırlanmıştır.** Son güncelleme: 6 Ağustos 2026
-> (public release).
+> (public release tamamlandı).
+
+---
+
+## ⏭️ Devir Durumu — önce bunu oku
+
+**Kalori Cafe public yayında. Google'da görünmek için son adımların bazıları kullanıcıda; kod tarafı tamamıyla hazır ve yeşil doğrulandı.
+
+| Durum | Detay |
+|---|---|
+| Canlı adres | <https://selimgrsoy0-commits.github.io/> (HTTP 200, tüm asset'ler doğrulandı) |
+| Repo | <https://github.com/selimgrsoy0-commits/selimgrsoy0-commits.github.io> (PUBLIC, `master`) |
+| Branch (fix) | `master` (HEAD `c1142e76`); yayın öncesi güvenlik tag'i `pre-public-2026-08-06` |
+| Katalog | 845 ürün · 10 zincir · 4 secondary kayıt (Tchibo) |
+| Kalite kapıları | audit ✓ · lint ✓ · build ✓ (P2 bundle uyarısı) · unit 53/53 · E2E 19/19 · npm audit 0 |
+| CI/Pages | tüm Actions run'ları success; deploy Pages green |
+| SEO altyapısı | `sitemap.xml`, `robots.txt` (+Sitemap), JSON-LD `WebSite` canlıda |
+
+**Sırada ne var?**
+1. (Kullanıcı) Google Search Console → mülk ekle → HTML doğrulama dosyası
+   adını ver, `public/`'e ekleyip push edelim → `sitemap.xml` gönder →
+   ilk URL Indexing isteği. Google'da çıkması günler sürebilir.
+2. (Kullanıcı) İsteğe Bağlı: Bing Webmaster Tools (aynı sitemap import).
+3. P2 (ertelendi): ana bundle ~143 kB gzip chunk — code splitting yapılabilir.
+4. P2 (ertelendi): tek sayfa olduğu için SSR/sitemap ekstra gerekmiyor;
+   özel domain ileride eklenebilir.
+
+**Bu sohbette ne yapıldı (özet):** public release uçtan uca — kod
+düzeltmeleri (secondary provenance, image E2E), UX/güvenlik (makro profil,
+peanut, ARIA, disclaimer'lar), marka ve starter dosyaların temizliği,
+legacy test arşivi, doküman yenileme, GitHub Pages workflow, canlı
+doğrulama, SEO altyapısı. Tüm detaylar aşağıda ve README.md'de.
 
 ---
 
@@ -116,7 +147,17 @@ Aggregator uygulamasıdır.
 - Eski legacy tier suite (67 senaryo) aktif değil: `tests/legacy/`
   arşivi + README. Bu depodaki dokümanlar güncel sayılarla tutulur.
 
-### 7. Otomasyon araçları
+### 7. Arama motorları (SEO)
+
+- `public/sitemap.xml` — canlı `/sitemap.xml` (HTTP 200 doğrulandı).
+- `public/robots.txt` — `Allow: /` + `Sitemap:` yönergesi.
+- `index.html` — JSON-LD `WebSite` schema, `og:*` meta'ları, `lang="tr"`,
+  `theme-color`. Title: "Kalori Cafe | Tüm Zincir Kafelerin Makro &
+  Alerjen Haritası".
+- **Bekleyen (kullanıcı aksiyonu):** Google Search Console'a mülk ekleme,
+  HTML doğrulama dosyası, sitemap gönderimi, ilk index isteği.
+
+### 8. Otomasyon araçları
 
 - `scripts/compile_catalog.py`: katalog modülleri ve `items.ts` üretici
   (provenance: ürüne özgü/secondary bilgisi araştırma JSON'larından gelir).
@@ -189,3 +230,6 @@ npm audit --omit=dev  # üretim bağımları taraması
 6. **Kalite önceliği:** `catalog:audit → lint → build → test → audit
    sırası kapıdır; gerçek sonuçlar GATE_STATUS.md / raporda saklanır.
    Deploy yalnız `pages.yml` (master push veya workflow_dispatch).
+7. **SEO:** Yeni içerik eklerken `index.html` meta/JSON-LD'yi ve
+   `public/sitemap.xml`'i güncelle; Google Search Console adımı hâlâ
+   kullanıcıda bekliyor (HTML doğrulama dosyası).

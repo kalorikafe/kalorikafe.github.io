@@ -78,7 +78,7 @@ kişisel günlük sınır** olarak yazılır (varsayılan 400 mg).
 
 ## Dokümanlar
 
-- [PROJECT_OVERVIEW.md](./PROJECT_OVERVIEW.md) — mimari ve geliştirici kılavuzu
+- [PROJECT_OVERVIEW.md](./PROJECT_OVERVIEW.md) — **yeni sohbet için başlangıç noktası**: durum, devir özeti, sıradaki adımlar
 - [PROJECT.md](./PROJECT.md) — katalog & kalite kapıları
 - [GATE_STATUS.md](./GATE_STATUS.md) — güncel kapı sonuçları
 - [DATA_PROVENANCE.md](./DATA_PROVENANCE.md) — kaynak sözleşmeleri
@@ -90,3 +90,15 @@ Statik Vite çıktısı (`dist/`) `.github/workflows/pages.yml` ile GitHub
 Pages'e yayınlanır (kullanıcı kök sitesi olduğu için Vite `base` değişmez;
 asset yolları `/images/...` kalır). Tetikleyiciler: `master` push ve manuel
 `workflow_dispatch`.
+
+## Arama motorları (SEO)
+
+- `public/sitemap.xml` (canlı `/sitemap.xml`) ve `public/robots.txt`
+  (`Allow: /` + `Sitemap:` yönergesi) yayında.
+- `index.html` içinde JSON-LD `WebSite` yapılandırılmış verisi, `og:*`
+  meta'ları ve `lang="tr"` mevcut.
+- **Bekleyen (kullanıcı):** Google Search Console'da mülk ekle
+  (`https://selimgrsoy0-commits.github.io/`), HTML doğrulama dosyasını
+  bize ver → `public/`'e koyup push edelim, sonra `sitemap.xml` gönder ve
+  ilk "URL Indexing isteği"ni başlat. Yeni sitenin Google'da çıkması
+  günler sürebilir.

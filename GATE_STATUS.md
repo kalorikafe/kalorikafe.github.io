@@ -1,12 +1,12 @@
 # GATE_STATUS.md — Kalite Kapıları Durumu
 
 Bu dosya, 6 Ağustos 2026 yayın (public release) hazırlığındaki gerçek
-kapı sonuçlarını gösterir; her sonuç bu çalışmada komutlarla yeniden
-üretildi. "67/67" gibi eski legacy paket iddiaları geçersizdir — eski
-kaynak-metin suite'i `tests/legacy/` altına arşivlenmiştir ve aktif
-kalite kapısı değildir.
+kapı sonuçlarını gösterir; her sonuç bu çalışmada komutlarla **son
+commit'ten** (HEAD `c1142e76`) yeniden üretildi. "67/67" gibi eski legacy
+paket iddiaları geçersizdir — eski kaynak-metin suite'i `tests/legacy/`
+altına arşivlenmiştir ve aktif kalite kapısı değildir.
 
-## Güncel kalite kapıları (6 Ağustos 2026)
+## Güncel kalite kapıları (6 Ağustos 2026, HEAD c1142e7)
 
 | Komut | Görev | Son sonuç |
 |---|---|---|
@@ -18,6 +18,14 @@ kalite kapısı değildir.
 | `npm test` | unit + E2E birlikte | ✅ |
 | `npm audit` · `npm audit --omit=dev` | Bağımlılık güvenlik taraması | ✅ 0 açık |
 
+## Public / SEO durumu
+
+- GitHub Pages canlı: <https://selimgrsoy0-commits.github.io/> (HTTP 200;
+  `/favicon.svg`, `/sitemap.xml`, `/images/menu/starbucks/caff_latte.webp`
+  doğrulandı).
+- GitHub Actions: CI (master) + Pages deploy run'ları **success**.
+- Google Search Console kaydı bekliyor (kullanıcı aksiyonu).
+
 Her çalıştırmada sonuçlar komut çıktısıyla yeniden üretilmelidir; bu
 belge sabit bir "her zaman yeşil" iddiası taşımaz. Detaylı çıktılar
-[DEEPSEEK_NIGHT_REPORT.md](./DEEPSEEK_NIGHT_REPORT.md) bölüm 11'dedir.
+[DEEPSEEK_NIGHT_REPORT.md](./DEEPSEEK_NIGHT_REPORT.md) bölüm 5'dedir.

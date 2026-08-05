@@ -126,6 +126,7 @@ push ve manuel `workflow_dispatch`.</think>
 | 13 | Alerjen: peanut ("Yer Fıstığı") seçeneği + çapraz bulaşma disclaimer'ı | DONE |
 | 14 | Kişisel makro profili (BMR/TDEE, validasyon, localStorage migrasyonu) | DONE |
 | 15 | GitHub Pages CI/CD (pages.yml) + public repo | DONE |
+| 16 | SEO: sitemap.xml, robots.txt (+Sitemap), JSON-LD WebSite schema | DONE (Search Console kaydı kullanıcıda) |
 
 ## Milestones
 
@@ -172,3 +173,11 @@ dinamik üretilir (sabit liste yok).
   araştırma zincir kaynağı → katalog varsayılanı; secondary işaretleme)
 - `tests/legacy/`: arşivlenmiş eski tier suite (aktif kapı değil, README'li)
 - `.github/workflows/`: `ci.yml` (kalite), `pages.yml` (kalite + Pages deploy)
+- `public/sitemap.xml` + `robots.txt`: arama motoru keşfi (canlıda)
+
+## Bekleyen işler (devir)
+
+- (Kullanıcı) Google Search Console → mülk → HTML doğrulama dosyası →
+  `sitemap.xml` gönderimi → ilk index isteği.
+- P2: ana bundle ~143 kB gzip chunk (code splitting ertelendi).
+- HEAD: `c1142e76` (master); yayın öncesi tag: `pre-public-2026-08-06`.

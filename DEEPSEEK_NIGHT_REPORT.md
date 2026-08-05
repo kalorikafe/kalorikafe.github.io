@@ -149,7 +149,9 @@ Her kapı bu rapordan önce yeniden çalıştırıldı ve çıkış 0 alındı.
 | `e14a724` | feat: macro profile, peanut allergen, search ARIA, safety branding | UX/safety/branding |
 | `fe93ae7` | docs: refresh project docs to release state with real measurements | provenance/docs |
 | `9de4f70` | ci: add GitHub Pages build+deploy workflow | deployment |
-| (yayın sonrası) | docs: record live verification results | provenance/docs |
+| `246ab9f` | docs: record live verification results in the release report | provenance/docs |
+| `44a21a8` | docs: add sitemap.xml and expose it via robots.txt for search engines | SEO |
+| `c1142e7` | feat: add WebSite JSON-LD structured data for search engines | SEO |
 
 ## 7. Legacy suite arşiv bilgisi
 
@@ -195,7 +197,10 @@ yok; `tsx` bağımlılığı eklenmedi.
 |---|---|
 | `https://selimgrsoy0-commits.github.io/` | HTTP 200 · `text/html` · başlık "Kalori Cafe \| Tüm Zincir Kafelerin Makro & Alerjen Haritası" |
 | `/favicon.svg` | HTTP 200 · `image/svg+xml` (kahve temalı favicon) |
+| `/sitemap.xml` | HTTP 200 · `application/xml` (yayında) |
+| `/robots.txt` | `User-agent: *` + `Allow: /` + `Sitemap:` yönergesi yayında |
 | `/images/menu/starbucks/caff_latte.webp` | HTTP 200 · `image/webp` · RIFF/VP8 720×720 · 13.042 bayt |
+| JSON-LD | Canlı `index.html` içinde `WebSite` schema mevcut |
 | Sayfa içeriği | Hero + 10 zincir (gerçek sayaçlar: Tüm Kafeler 845) + "Tahmini değer" rozetli kartlar |
 | Arama | "sarelle" → 1 kart; listbox `desktop-search-suggestions-listbox`; option id `desktop-search-suggestion-option-0`; `aria-activedescendant` klavye ile doğru güncelleniyor |
 | Ürün modalı | Açılıyor; "Kaynak doğrulaması bekleniyor" + alerjen listesi; Escape kapatıyor |

@@ -11,7 +11,20 @@ sözleşmeleri otomatik denetler.
 - `kind: 'official'` — zincirin resmî Türkiye web sitesi/menü sayfası;
   URL ve `checkedAt` (`YYYY-MM-DD`) birlikte kaydedilir.
 - `kind: 'secondary'` — resmî sayfaya doğrudan erişilemediğinde kullanılan
-  güvenilir ikincil kaynak; gerekçesi final raporda belirtilir.
+  güvenilir ikincil kaynak; gerekçesi final raporda belirtilir. Yalnızca
+  gerçekten bu kaynaktan araştırılan ürünler `secondary` işaretlenir
+  (2026-08-06 itibarıyla tam olarak 4 kayıt: `tchibo_espresso`,
+  `tchibo_caff_latte`, `tchibo_cappuccino`, `tchibo_americano`).
+
+### `compile_catalog.py` URL önceliği (derleyici kuralı)
+
+1. Ürünün exact `productUrl` değeri (araştırma JSON'unda `productUrl`)
+2. Araştırma zincir kaynağı URL'si (`research.json → sources[].url`)
+3. `CATALOG_URLS` katalog varsayılanı
+
+`kind` ürünün `secondary: true` bayrağından veya zincir kaynağının
+`kind: 'secondary'` olmasından + ürünün o kaynaktan araştırılmış
+olmasından türetilir. URL/besin/kaynak bilgisi uydurulmaz.
 
 ## Besin kaydı kuralları
 
@@ -46,3 +59,10 @@ uydurulmaz.
   `nutritionSource` taşımalı (denetim hatası: eksik provenance).
 - Benzersiz yerel görsel oranı ≥ %60; tek görsel dosyası en fazla 6 üründe;
   tekrar eden dosya yalnızca aynı görsel ailede kullanılabilir.
+
+## Public kaynak hipotezi (GitHub Pages)
+
+- Canlı adres: <https://selimgrsoy0-commits.github.io/>
+- `sitemap.xml`, `robots.txt` (Allow: / + Sitemap yönergesi) ve
+  `index.html` içindeki JSON-LD `WebSite` yapılandırılmış verisi yayında;
+  Google Search Console'a kayıt bekliyor (kullanıcı aksiyonu).
