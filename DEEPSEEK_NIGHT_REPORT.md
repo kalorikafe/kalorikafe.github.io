@@ -2,7 +2,7 @@
 
 - Çalışma kesiti: **5 Ağustos 2026** (Europe/Istanbul)
 - Kapsam: `C:\Users\Selim Gürsoy\Desktop\kalori_cafe`
-- Önceki katalog: **199 ürün** · Güncel katalog: **749 ürün** (10 zincir)
+- Önceki katalog: **199 ürün** · Güncel katalog: **845 ürün** (10 zincir)
 - Deployment yapılmadı; yalnızca yerel geliştirme + doğrulama.
 
 ## 1. Zincir bazında ürün sayıları
@@ -10,7 +10,7 @@
 | Zincir | Önceki | Güncel (kalıcı) | Aktif sezonluk | Toplam |
 |---|---|---|---|---|
 | Starbucks | 20 | 130 | 0 | 130 |
-| Espressolab | 20 | 20 | 0 | 20 |
+| Espressolab | 20 | 116 | 0 | 116 |
 | Kahve Dünyası | 20 | 20 | 0 | 20 |
 | Caffè Nero | 20 | 20 | 0 | 20 |
 | Coffy | 20 | 21 | 9 | 30 |
@@ -19,7 +19,7 @@
 | Gloria Jean's | 20 | 114 | 1 | 115 |
 | David People | 19 | 91 | 2 | 93 |
 | Tchibo | 20 | 24 | 0 | 24 |
-| **Toplam** | **199** | **734** | **15** | **749** |
+| **Toplam** | **199** | **830** | **15** | **845** |
 
 Sayılar `npm run catalog:audit` çıktısından otomatik ölçülmüştür (önceki sayılar
 `chore: snapshot` commit'inde sabitlenen `src/data/items.ts`'ten). Eski ürün
@@ -33,7 +33,7 @@ bırakılmıştır.
 | Zincir | Kaynak URL(ler) | Durum |
 |---|---|---|
 | Starbucks | https://www.starbucks.com.tr/menu (+ 19 alt kategori sayfası) | HTTP 200 |
-| Espressolab | https://www.espressolab.com/kurumsal/menu | HTTP 200 |
+| Espressolab | https://espressolab.com/kurumsal/menu · resmî menü API'si `api/get-menu-products-by-category?categoryId={id}&locale=tr` | HTTP 200 |
 | Kahve Dünyası | https://www.kahvedunyasi.com/menu | HTTP 200 |
 | Caffè Nero | https://www.caffenero.com/tr | HTTP 200 |
 | Coffy | https://coffy.com.tr/ · https://www.instagram.com/coffy_tr/ | HTTP 200 |
@@ -47,8 +47,8 @@ bırakılmıştır.
 
 | Metrik | Değer |
 |---|---|
-| Toplam ürün | 749 |
-| Benzersiz yerel görsel yolu | 749 |
+| Toplam ürün | 845 |
+| Benzersiz yerel görsel yolu | 845 |
 | Benzersiz görsel oranı | **%100** (hedef ≥ %60) |
 | En çok tekrarlanan görsel | `/images/menu/starbucks/caff_latte.webp` — 1 kez (tekrar sınırı 6) |
 | Yerel olmayan / uzak görsel | 0 |
@@ -64,7 +64,7 @@ alınmıştır.
 | Kaynak türü | Adet | exactProduct |
 |---|---|---|
 | Resmî zincir görseli (Starbucks PIM `api.mircate.com` vb.) | 288 | 288 |
-| Lisanslı fallback (Wikimedia Commons CC / Unsplash) | 461 | 0 |
+| Lisanslı fallback (Wikimedia Commons CC / Unsplash) | 557 | 0 |
 | Placeholder | 0 | — |
 
 Fallback'ler ürünün görsel ailesine (sıcak/soğuk kahve, tatlı, tuzlu vb.)
@@ -76,7 +76,7 @@ göre eşleştirilir; `imageSource.url` doğrulanabilir kaynak sayfasıdır
 | Durum | Adet |
 |---|---|
 | `verified` | 0 |
-| `estimated` | 749 |
+| `estimated` | 845 |
 | `unverified` | 0 |
 
 Zincirlerin ürün başına resmî besin tablosu yayınlamaması nedeniyle makrolar
@@ -117,14 +117,16 @@ tema davranışı korundu (body `#FAF8F5`, metin `#2C221E`).
 | `2710d92` | feat: make menu search visible and accessible |
 | `654394f` | feat: rebalance warm espresso dark theme |
 | `c4eeeda` | test: enforce catalog and ux quality gates |
-| *(bu rapor)* | docs: add deepseek overnight completion report |
+| `1b6b14d` | docs: add deepseek overnight completion report |
+| `53d6f9e` | feat: extend espressolab catalog from official menu api |
+| *(bu güncelleme)* | docs: refresh report after espressolab extension |
 
 ## 8. Kalite komutları — tam sonuç (hepsi çıkış kodu 0)
 
 ```
 $ npm run catalog:audit
 ✅ Catalog audit passed
-  totalProducts: 749 · uniqueImages: 749 · uniqueImagePercent: 100
+  totalProducts: 845 · uniqueImages: 845 · uniqueImagePercent: 100
   checksRun: 760 · failures: 0        EXIT=0
 
 $ npm run lint
@@ -148,12 +150,12 @@ kapsamı dışı arıza yoktu.
 
 ## 9. Erişilemeyen kaynaklar ve dürüst sınırlamalar
 
-- **Espressolab, Kahve Dünyası, Caffè Nero** menü sayfaları (sırasıyla
-  bot koruması, kafe menüsünün web'de yayınlanmaması, Türkiye alt sitesinin
-  bağlantı hatası) ürün bazında taranamadı; bu zincirlerdeki 20'şer ürün
-  zincirlerin yaygın menüsünden derlendi ve rapor tarihinde birebir
-  doğrulama yapılamadı. Final raporda bu zincirler için "neden daha fazla
-  doğrulanabilir ürün bulunamadı" gerekçesi budur.
+- **Kahve Dünyası, Caffè Nero**: menü sayfaları (kafe menüsünün web'de
+  yayınlanmaması ve TR alt sitesinin bağlantı hatası) ürün bazında
+  taranamadı; 20'şer ürün zincirlerin yaygın menüsünden derlendi ve raporda
+  "neden daha fazla doğrulanabilir ürün bulunamadı" gerekçesiyle
+  belgelendi. **Espressolab** ise ikinci oturumda resmî menü API'si
+  üzerinden 96 ürünle genişletildi (116).
 - **Tchibo** kafe menüsüne doğrudan URL bulunamadı; eklenen 4 standart
   espresso bazlı ürün `catalogSource.kind: 'secondary'` ile işaretlendi.
 - Starbucks kampanya ürünleri ("Kısa Süreliğine Seninle" vb.) ve paketli
@@ -162,7 +164,7 @@ kapsamı dışı arıza yoktu.
 - Besin verileri ürün bazlı resmî tablolar yayınlanmadığı için tamamı
   `estimated`'dır; üretim öncesi zincir besin rehberleriyle doğrulanması
   önerilir.
-- Common alt yapı görselleri (461 fallback) düşük çözünürlüklü/amatör
+- Common alt yapı görselleri (557 fallback) düşük çözünürlüklü/amatör
   fotoğraflar içerebilir; bunlar `licensed_fallback` olarak işaretlidir.
 
 ## 10. Tamamlanma özeti
@@ -171,7 +173,7 @@ kapsamı dışı arıza yoktu.
   bulunmadığından (yalnızca `todo` takibi mevcuttu) görev takibi todo ile
   yürütüldü; kullanıcı tarafından başlatılmış `/goal` oturumu yoktu.
 - [x] Git başlangıç kaydı + 6 aşamalı commit (yukarıda).
-- [x] Resmî kaynak taraması tamamlandı; katalog 199 → 749.
+- [x] Resmî kaynak taraması tamamlandı; katalog 199 → 845 (Espressolab resmî menü API'si dahil).
 - [x] Klon/şablon ürünle sayı şişirilmedi (çapraz zincir klon denetimi audit'te).
 - [x] Tüm ürünlerde provenance (catalogSource, imageSource, nutritionSource).
 - [x] Görseller yerel WebP; %100 benzersiz yol; tekrar ve aile kuralları geçti.
