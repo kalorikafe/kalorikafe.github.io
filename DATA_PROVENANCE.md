@@ -1,33 +1,48 @@
 # Besin Verisi Kaynaklandırma Politikası
 
-Katalogda şu anda 199 ürün vardır. Mevcut kayıtların kaynak URL’si, doğrulama tarihi ve porsiyon temeli bulunmadığı için ürünler resmi/güncel olarak sunulmaz.
+Katalog, 5 Ağustos 2026 çalışma kesitinde zincirlerin resmî menü
+sayfalarından derlenmiştir ve `src/data/catalog/<chain>.ts` modüllerinde
+saklanır. Her statik ürün `availability`, `catalogSource`, `imageSource`
+ve `nutritionSource` alanlarını taşır; `npm run catalog:audit` bu
+sözleşmeleri otomatik denetler.
 
-## Bir kaydı doğrulanmış sayma
+## Katalog kaynakları (catalogSource)
 
-`MenuItem.nutritionSource` alanı yalnız şu bilgiler birlikte mevcutsa `verified` olabilir:
+- `kind: 'official'` — zincirin resmî Türkiye web sitesi/menü sayfası;
+  URL ve `checkedAt` (`YYYY-MM-DD`) birlikte kaydedilir.
+- `kind: 'secondary'` — resmî sayfaya doğrudan erişilemediğinde kullanılan
+  güvenilir ikincil kaynak; gerekçesi final raporda belirtilir.
 
-- Markanın resmi besin veya menü sayfasına doğrudan HTTPS URL’si
-- `YYYY-MM-DD` biçiminde son kontrol tarihi
-- Boyut, gramaj veya porsiyon gibi açık `servingBasis`
-- Karttaki makroların aynı porsiyonla eşleştiğinin manuel kontrolü
+## Besin kaydı kuralları
 
-Örnek:
+`nutritionSource.status` şu durumlarda `verified` olabilir:
 
-```ts
-nutritionSource: {
-  status: 'verified',
-  label: 'Marka besin tablosu',
-  url: 'https://marka.example/besin-degerleri',
-  verifiedAt: '2026-08-05',
-  servingBasis: 'Grande, 473 ml',
-}
-```
+- Markanın resmî besin/menü sayfasına doğrudan HTTPS URL'si
+- `YYYY-MM-DD` biçiminde son kontrol tarihi (`verifiedAt`)
+- Boyut/gramaj/porsiyon temeli (`servingBasis`)
 
-Tahmini veya üçüncü taraf veriler `estimated`; kaydı olmayan ürünler `unverified` kalır. URL veya tarih uydurulmaz. Kaynak değiştiğinde eski doğrulama tarihi korunmaz; kayıt yeniden kontrol edilir.
+Resmî ürün başına besin tablosu yayınlanmadığında makrolar standart tarif
+ve porsiyon üzerinden tahmin edilir; bu durum `status: 'estimated'` ile
+birlikte yöntemi anlatan `notes` alanıyla işaretlenir. URL veya tarih
+uydurulmaz.
+
+## Görsel kaynakları (imageSource)
+
+- `kind: 'official', exactProduct: true` — zincirin kendi medya
+  sunucusundan ürünün gerçek görseli (ör. Starbucks PIM: `api.mircate.com`).
+- `kind: 'licensed_fallback', exactProduct: false` — ürünün sıcak/soğuk
+  oluşunu, tipini ve sunumunu doğru temsil eden, kaynak sayfası
+  doğrulanabilir lisanslı bir görsel (Wikimedia Commons dosya sayfası veya
+  Unsplash foto sayfası).
+- Tüm görseller yerel WebP'dir: `/images/menu/<chain>/<slug>.webp`.
 
 ## Kalite kapıları
 
-- Kimlikler benzersiz ve zincir referansları geçerli olmalı.
+- Kimlikler benzersiz, zincir referansları geçerli olmalı.
 - Tüm makrolar sonlu ve negatif olmayan sayılar olmalı.
-- `verified` kayıt URL, tarih ve porsiyon temeli olmadan unit testten geçmemeli.
-- Kaynak doğrulaması olmayan ürün için UI açık uyarı göstermeli.
+- `verified` kayıt URL, tarih ve porsiyon temeli olmadan unit testlerden
+  geçemez.
+- Her statik ürün `availability`, `catalogSource`, `imageSource` ve
+  `nutritionSource` taşımalı (denetim hatası: eksik provenance).
+- Benzersiz yerel görsel oranı ≥ %60; tek görsel dosyası en fazla 6 üründe;
+  tekrar eden dosya yalnızca aynı görsel ailede kullanılabilir.

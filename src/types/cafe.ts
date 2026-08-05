@@ -80,6 +80,18 @@ export interface NutritionSource {
   notes?: string;
 }
 
+export interface CatalogSource {
+  url: string;
+  checkedAt: string; // YYYY-MM-DD
+  kind: 'official' | 'secondary';
+}
+
+export interface ImageSource {
+  url: string;
+  kind: 'official' | 'licensed_fallback';
+  exactProduct: boolean;
+}
+
 export interface MenuItem {
   id: string;
   chainId: string;
@@ -101,6 +113,15 @@ export interface MenuItem {
   smartSwapNote?: string;
   smartSwapSaveKcal?: number;
   nutritionSource?: NutritionSource;
+  /**
+   * Catalog provenance for static catalog products. Optional at the type
+   * level so user recipes loaded from localStorage (which carry no
+   * provenance) stay valid; the automated catalog audit requires it on
+   * every static MENU_ITEMS entry.
+   */
+  availability?: 'current' | 'seasonal';
+  catalogSource?: CatalogSource;
+  imageSource?: ImageSource;
 }
 
 export interface CustomizationState {

@@ -37,3 +37,6 @@ coverage
 tmp
 tmp-*
 *.tmp
+
+# Research scratch outputs (not part of the source tree)
+tmp_research/
