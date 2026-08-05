@@ -119,7 +119,9 @@ tema davranışı korundu (body `#FAF8F5`, metin `#2C221E`).
 | `c4eeeda` | test: enforce catalog and ux quality gates |
 | `1b6b14d` | docs: add deepseek overnight completion report |
 | `53d6f9e` | feat: extend espressolab catalog from official menu api |
-| *(bu güncelleme)* | docs: refresh report after espressolab extension |
+| `91e6d84` | docs: refresh report after espressolab extension |
+| `1b2c860` | fix: render local chain logos as images everywhere |
+| `37e17b5` | chore: update og description to current catalog size |
 
 ## 8. Kalite komutları — tam sonuç (hepsi çıkış kodu 0)
 

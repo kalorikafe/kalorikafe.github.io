@@ -1,124 +1,167 @@
-# ☕ Kalori Cafe — Proje Özeti & Geliştirici Kılavuzu (Project Overview)
+# ☕ Kalori Cafe — Proje Özeti & Geliştirici Kılavuzu
 
-> **Bu doküman, yeni bir sohbet veya yapay zeka ajanı başlatıldığında projenin geçmişini, amacını, mimarisini ve yapılan tüm geliştirmeleri eksiksiz şekilde aktarmak için güncellenmiştir.**
-
----
-
-## 🎯 Projenin Amacı ve Konsepti
-
-**Kalori Cafe**, Türkiye'deki en popüler zincir kahve mağazalarının (Starbucks, Espressolab, Kahve Dünyası, Caffè Nero, Coffy, Mackbear Coffee Co., Arabica Coffee House, Gloria Jean's, David People, Tchibo) tüm menülerini tek bir platformda toplayan, kullanıcıların **kalori, protein, karbonhidrat, şeker, yağ, kafein ve alerjen** değerlerini şeffafça incelemesini sağlayan modern, ultra-hızlı ve yüksek kontrastlı bir Web Aggregator uygulamasıdır.
-
-### Hedef Kitle ve Kullanım Senaryoları
-1. **Sporcular & Diyet Yapanlar:** Kalori ve makro (protein/karb/yağ) hedeflerine göre kahve ve yiyecek seçimi yapmak isteyenler.
-2. **Alerjisi / Hassasiyeti Olanlar:** Laktoz, glüten, yumurta, soya, fındık/fıstık gibi alerjenlerden kaçınan ve profillerine göre otomatik uyarı almak isteyenler.
-3. **Diyabet & Düşük Glisemik Endeks Takibi Yapanlar:** Şeker oranlarını ve glisemik etkiyi izleyen kullanıcılar.
-4. **Kafein Hassasiyeti Olanlar:** Günlük kafein limitini (mg) aşmamak için içecek bazlı kafein takibi yapanlar.
+> **Bu doküman, yeni bir sohbet veya yapay zeka ajanı başlatıldığında
+> projenin geçmişini, amacını, mimarisini ve güncel durumunu eksiksiz
+> aktarmak için hazırlanmıştır.** Son güncelleme: 5 Ağustos 2026.
 
 ---
 
-## 🛠️ Neler Yapıldı? (Geliştirme Geçmişi & En Son Güncellemeler)
+## 🎯 Projenin Amacı
 
-### 1. Veri Seti ve Açıklamalar (199 Ürün)
-- Türkiye'nin en çok şubesi olan **TOP 10 Kafe Zinciri** sisteme entegre edildi:
-  - **Starbucks** (750+ Şube)
-  - **Espressolab** (300+ Şube)
-  - **Kahve Dünyası** (300+ Şube)
-  - **Caffè Nero**
-  - **Coffy**
-  - **Mackbear Coffee Co.**
-  - **Arabica Coffee House**
-  - **Gloria Jean's Coffees**
-  - **David People**
-  - **Tchibo**
-- Katalog 10 zincirde toplam **199 ürün** içerir (zincir başına 19–20). Resmi kaynak ve doğrulama tarihi henüz veri modelinde tutulmadığından güncellik iddiası yapılmaz.
-- Açıklamalar kullanıcıya ürün içeriği ve hazırlanışı hakkında kısa bilgi verir. Görseller sınırlı bir havuzdan gelir; birebir ürün fotoğrafı garantisi yoktur.
+**Kalori Cafe**, Türkiye'deki popüler zincir kahve mağazalarının
+(Starbucks, Espressolab, Kahve Dünyası, Caffè Nero, Coffy, Mackbear Coffee
+Co., Arabica Coffee House, Gloria Jean's, David People, Tchibo) menülerini
+tek platformda toplayan; kalori, protein, karbonhidrat, şeker, yağ, kafein
+ve alerjen değerlerini inceleme ve karşılaştırma imkânı veren bir Web
+Aggregator uygulamasıdır.
 
-### 2. Orijinal Marka Logoları
-- Emojiler yerine Google Favicon API altyapısı kullanılarak tüm zincirlerin **orijinal yüksek çözünürlüklü logoları** (`https://www.google.com/s2/favicons?domain=...&sz=128`) entegre edildi.
-- `ChainSelector` ve `ItemCard` bileşenleri hem görsel logoları hem de metin bazlı yedekleri (fallback) destekler.
+### Hedef Kitle
 
-### 3. Sıcak Lüks Gece Modu & Temiz Hero Alanı
-- **Sıcak Mocha & Krem Gece Modu:** İç karartan soğuk siyahlardan vazgeçildi; yumuşak mocha zemin (`#1C1816`), kremsi kartlar (`rgba(36, 30, 26, 0.92)`) ve sıcak kehribar vurgular uygulandı.
-- **Profesyonel Hero Banner:** Katalogdaki gerçek ürün sayısını veriden türeten rozetler ve hızlı filtre butonları kullanılır.
-- **Tailwind CSS v4 Uyumlu Dark Mode:** `@custom-variant dark (&:where(.dark, .dark *));` tanımı `index.css` içindedir.
-
-### 4. Fonksiyonel Bileşenler & Özellikler
-- **Kişisel Alerjen Profili & Uyarı Sistemi:** Kullanıcı kendi alerjenlerini seçer; riski olan ürünler kırmızı rozet alır veya gizlenebilir.
-- **Canlı İçecek Özelleştirici (Customizer Modal):** Boyut, süt türü, şurup pompası, ekstra shot ve krema seçimlerinde canlı makro/alerjen hesaplar.
-- **Günlük Kalori & Makro Sepeti (Daily Basket Drawer):** Günlük tüketilen ürünleri toplar, hedefleri gösterir, MyFitnessPal formatında panoya kopyalar.
-- **Akıllı Karşılaştırma Modülü (Compare Modal):** 4 ürüne kadar yan yana makro ve kafein karşılaştırması.
-- **FDA Besin Değerleri Etiketi (Nutrition Label Modal):** Paket gıda etiketi formatında besin tablosu popup'ı.
-
-### 5. Otomatik Test ve Derleme
-- **`npm run build`**: TypeScript ve Vite üretim derlemesi
-- **`npm run test:unit`**: Vitest ile makro motoru golden sözleşmeleri
-- **`npm run test:e2e`**: Playwright ile gerçek Chromium kullanıcı akışları
-- **`npm run test:legacy`**: Eski 67 senaryo; ana kalite kapısı değildir
+1. Sporcular ve diyet yapanlar: makro hedeflerine göre kahve/yiyecek seçimi.
+2. Alerjisi olanlar: laktoz, glüten, yumurta, soya, fındık/fıstık uyarıları.
+3. Kan şekeri takibi yapanlar: şeker ve glisemik etki.
+4. Kafein hassasiyeti olanlar: günlük kafein limiti takibi.
 
 ---
 
-## 🏗️ Proje Mimarisi & Dosya Yapısı
+## 🛠️ Güncel Durum (5 Ağustos 2026)
+
+### 1. Katalog: 199 → 845 ürün
+
+- Zincir başına ürün: Starbucks 130, Espressolab 116, Mackbear 166,
+  Arabica 131, Gloria Jean's 115, David People 93, Coffy 30, Tchibo 24,
+  Kahve Dünyası 20, Caffè Nero 20.
+- Kaynaklar: Starbucks TR resmî menüsü (19 kategori sayfası), Espressolab
+  resmî menü API'si, Arabica/Gloria Jean's/David People/Mackbear/Coffy
+  resmî sayfaları; Kahve Dünyası kafe menüsü web'de yayınlanmadığı ve
+  Caffè Nero TR sayfası ürün bazında erişilemediği için bu iki zincir
+  20'şer ürünle kaldı (gerekçe raporda).
+- Her ürün `availability` + `catalogSource` + `imageSource` +
+  `nutritionSource` taşır; kimlikler eski favorileri koruyacak şekilde
+  sabittir. Boyut varyasyonları (Double/Single/2'li) ayrı ürün sayılmaz.
+
+### 2. Görseller: 845 yerel WebP
+
+- Tüm görseller `/images/menu/<chain>/<slug>.webp` altında; %100 benzersiz
+  yol, tekrar sınırı 6, aile kuralı denetlenir.
+- Kaynaklar: zincir resmî görselleri (Starbucks PIM, 288 ürün) +
+  lisanslı fallback'ler (Wikimedia Commons CC / Unsplash, 557 ürün).
+- Zincir logoları yereldir: `/images/chains/<id>.png` (Google favicon
+  hotlink'i kullanılmaz).
+- Kart hata fallback'i yerel `/images/menu/placeholder.webp`'dir.
+
+### 3. Arama deneyimi
+
+- Tek normalizasyon yardımcısı (`searchNormalize.ts`): Türkçe karakter ve
+  diakritik katlama (`turk kahvesi` → Türk Kahvesi), boşluk temizliği.
+- Arama alanları: ürün adı, İngilizce ad, zincir adı, açıklama, kategori
+  etiketi, diyet etiketleri.
+- 2+ karakterde en fazla 8 önerilik panel (masaüstü navbar + mobil modal
+  aynı bileşen); `ArrowDown/Up`, `Enter`, `Escape` klavye sözleşmesi;
+  Escape sorguyu silmez; temizleme düğmesi sorgu + aktif öneri + paneli
+  sıfırlar; sonuç sayısı `aria-live`; seçim `#menu-results` hedefine kayar.
+
+### 4. Sıcak espresso koyu tema
+
+- Tokenlar `src/index.css` içinde merkezli:
+  `--dark-bg #17120F`, `--dark-surface #211A16`,
+  `--dark-surface-elevated #2B211C`, `--dark-border #49372E`,
+  `--dark-text #F7EFE8`, `--dark-text-muted #C6B4A6`,
+  `--dark-accent #E0A15A`.
+- Tercih `kalori_cafe_theme` (light|dark) anahtarında kalıcı; kayıtlı
+  tercih sistem tercihinden önce gelir; `index.html` satır içi betiği ilk
+  boyamada tema parlamasını önler; tema düğmesi erişilebilir adını
+  günceller. Açık tema davranışı korunur.
+
+### 5. Fonksiyonel bileşenler
+
+- Alerjen profili + uyarı/gizleme, canlı özelleştirici (boyut, süt, şurup,
+  shot, krema), günlük makro sepeti (MyFitnessPal kopyalama), 4'e kadar
+  karşılaştırma, FDA tarzı besin etiketi, akıllı takas, BMR/TDEE hedef
+  hesaplayıcı, özel tarif oluşturucu.
+
+### 6. Otomasyon araçları
+
+- `scripts/assemble_research.py`, `scripts/add_espressolab.py`: araştırma
+  verisini birleştirir.
+- `scripts/compile_catalog.py`: katalog modüllerini ve `items.ts`'i üretir.
+- `scripts/build-images.mjs`: görselleri indirir/WebP'ler (incremental).
+- `scripts/catalog-audit.ts`: tüm katalog sözleşmelerini denetler.
+- Eski `scripts/generate_items.mjs` şablon üretici
+  `scripts/archive/generate_items.mjs` altına arşivlenmiştir; kataloğu
+  ezemez.
+
+---
+
+## 🏗️ Mimari & Dosya Yapısı
 
 ```
 kalori_cafe/
+├── index.html                  # OG meta, FOUC önleyici tema betiği
+├── public/
+│   ├── images/menu/<chain>/    # 845 ürün görseli (WebP)
+│   ├── images/chains/          # 10 zincir logosu (yerel PNG)
+│   └── robots.txt
 ├── scripts/
-│   └── generate_items.mjs       # Mevcut katalog üretim yardımcısı
+│   ├── catalog-audit.ts        # npm run catalog:audit
+│   ├── compile_catalog.py      # katalog modül üretici
+│   ├── assemble_research.py    # araştırma birleştirici
+│   ├── add_espressolab.py      # Espressolab API ekleyici
+│   ├── build-images.mjs        # görsel üretim hattı (sharp)
+│   └── archive/generate_items.mjs  # eski şablon üretici (arşiv)
 ├── src/
-│   ├── components/
-│   │   ├── Navbar.tsx           # Üst navigasyon, arama barı, Gece/Gündüz geçişi, Sepet/Karşılaştırma butonları
-│   │   ├── Hero.tsx             # Ana başlık banner'ı, istatistikler ve hızlı diyet filtreleri
-│   │   ├── ChainSelector.tsx    # 10 Popüler kafe zincirinin orijinal logolu yatay filtre paneli
-│   │   ├── DietaryFilterBar.tsx # Kategori ve diyet etiketleri (Glütensiz, Vegan, Yüksek Protein vb.)
-│   │   ├── SortAndAnalyticsBar.tsx # Sıralama (Kalori, Protein, Şeker) ve favoriler
-│   │   ├── ItemCard.tsx         # Ürün kartı (Görsel, Makro gridi, Alerjen uyarısı, Özelleştir butonu)
-│   │   ├── CustomizerModal.tsx  # Canlı süt/boyut/şurup özelleştirme modalı (onError görsel korumalı)
-│   │   ├── DailyBasketDrawer.tsx# Günlük besin takip çekmecesi ve hedef barı
-│   │   ├── CompareModal.tsx     # Yan yana ürün karşılaştırma modalı
-│   │   ├── AllergenSettingsModal.tsx # Alerjen profil seçim modalı
-│   │   ├── NutritionLabelModal.tsx  # FDA tarzı besin etiketi modalı
-│   │   ├── SmartSwapModal.tsx   # Akıllı kalori tasarruflu tarif takas rehberi
-│   │   └── MacroTargetCalculatorModal.tsx # BMR/TDEE bazlı kişisel hedef hesaplayıcı
+│   ├── components/             # Navbar, Hero, ChainSelector, ItemCard,
+│   │                           # SearchSuggestions, MobileSearchModal,
+│   │                           # modallar, çekmece, alt navigasyon
 │   ├── data/
-│   │   ├── chains.ts            # TOP 10 zincirin tanımı, renkleri ve logo URL'leri
-│   │   └── items.ts             # 199 ürünün bulunduğu ana katalog
-│   ├── types/
-│   │   └── cafe.ts              # TypeScript arayüzleri (MenuItem, Chain, Macros, CustomizationState vb.)
+│   │   ├── catalog/<chain>.ts  # zincir başına MenuItem modülleri
+│   │   ├── items.ts            # MENU_ITEMS birleştirici
+│   │   ├── chains.ts           # 10 zincir (yerel logolar)
+│   │   └── modifiers.ts        # süt/boyut/ekstra makro deltaları
+│   ├── types/cafe.ts           # MenuItem + provenance sözleşmeleri
 │   ├── utils/
-│   │   └── macroCalculator.ts   # Boyut, süt ve şurup değişikliklerine göre makro/alerjen hesaplama motoru
-│   ├── App.tsx                  # Ana uygulama durumu, filtreleme mantığı ve modal yönetimi
-│   ├── index.css                # Tailwind CSS v4 custom variant ve glassmorphism stilleri
-│   └── main.tsx                 # React DOM giriş noktası
-├── tests/                       # Vitest unit, Playwright E2E ve legacy senaryolar
-├── README.md                    # Hızlı başlangıç kılavuzu
-└── PROJECT_OVERVIEW.md          # Bu kılavuz (Detaylı proje özeti)
+│   │   ├── searchNormalize.ts  # arama normalizasyonu + sıralama
+│   │   ├── searchInteraction.ts# klavye sözleşmesi
+│   │   ├── menuFilter.ts       # filtre + sıralama (testlerle paylaşılan)
+│   │   └── macroCalculator.ts  # makro/alerjen hesaplama motoru
+│   ├── App.tsx                 # merkezi durum, filtre, modal yönetimi
+│   └── index.css               # Tailwind v4 + koyu tema tokenları
+├── tests/
+│   ├── unit/                   # searchNormalize, menuFilter, dataQuality,
+│   │                           # macroCalculator (31 test)
+│   └── e2e/                    # critical-flows, image-loading (17 akış)
+├── tmp_research/               # araştırma/üretim ara dosyaları (git dışı)
+├── README.md, PROJECT.md, PROJECT_OVERVIEW.md, GATE_STATUS.md,
+│   DATA_PROVENANCE.md, DEEPSEEK_NIGHT_REPORT.md, DEEPSEEK_NIGHT_GOAL.md
 ```
 
 ---
 
-## 🚀 Çalıştırma & Geliştirme Komutları
+## 🚀 Komutlar
 
-- **Geliştirme Sunucusunu Başlatma:**
-  ```bash
-  npx vite --host
-  ```
-- **Tüm Ana Testleri Çalıştırma:**
-  ```bash
-  npm test
-  ```
-- **Mevcut Ürün Kataloğunu Yeniden Üretme:**
-  ```bash
-  node scripts/generate_items.mjs
-  ```
-- **Prodüksiyon Derleme Testi:**
-  ```bash
-  npm run build
-  ```
+```bash
+npm run dev             # geliştirme sunucusu (5173)
+npm run catalog:audit   # katalog denetimi
+npm test                # unit (31) + E2E (17)
+npm run build           # üretim derlemesi
+npm run lint            # oxlint
+npm audit               # güvenlik taraması
+```
 
 ---
 
-## 💡 Yeni Bir Chat / Yapay Zeka Ajanı İçin Önemli Notlar
+## 💡 Yeni Chat / Ajan İçin Notlar
 
-1. **Stil Kuralları:** Projede Tailwind CSS v4 ve Vanilla CSS kullanılmaktadır. Renk paletinde sıcak kahve (`#6F4E37`), krem (`#FAF8F5`), sıcak koyu mocha (`#1C1816`) ve yüksek kontrast esas alınmıştır.
-2. **Karanlık Mod:** Gece modu `document.documentElement.classList.add('dark')` ile toggled edilir ve `index.css` içindeki `@custom-variant dark (&:where(.dark, .dark *));` ile çalışır.
-3. **Veri Değişikliği:** `items.ts` dosyasına el ile müdahale etmek yerine `scripts/generate_items.mjs` scriptini düzenleyip çalıştırarak verileri güncellemek önerilir.
-4. **Fotoğraf & Açıklama Standartları:** Yeni ürün eklenirken `getItemImage` fonksiyonundaki kelime eşleştirmeleri kullanılır. Açıklamalar jargondan uzak, malzemeyi ve hazırlanışı belirten net Türkçe olmalıdır.
+1. **Veri düzenleme:** `src/data/catalog/<chain>.ts` derleyici tarafından
+   üretilir; elle düzenlemek yerine araştırma JSON'larını ve
+   `compile_catalog.py`'yi kullan. Denetim `npm run catalog:audit`.
+2. **Koyu tema:** Tokenlar `src/index.css`'te; bileşenlerde
+   `dark:bg-[var(--dark-surface)]` gibi referanslar kullanılır; hex değer
+   tekrarı yapma.
+3. **Görsel ekleme:** Yeni ürün → `build-images.mjs` manifest üzerinden
+   otomatik WebP üretir; uzak hotlink ekleme, placeholder yereldir.
+4. **Arama:** Arama davranışı tek kaynak `searchNormalize.ts` +
+   `searchInteraction.ts`; masaüstü ve mobil aynı mantığı kullanır.
+5. **Kalite:** `catalog:audit` → `lint` → `build` → `test` → `audit`
+   sırası hedef kapılardır; rapor `DEEPSEEK_NIGHT_REPORT.md`'de gerçek
+   ölçümlerle saklanır.
