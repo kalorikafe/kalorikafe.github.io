@@ -17,7 +17,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/caffe-latte-SBUX-1", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -44,7 +44,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/caramel-macchiato-SBUX-12", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -71,7 +71,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/white-chocolate-mocha-SBUX-16", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -97,7 +97,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/flat-white-SBUX-3", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -122,7 +122,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/caffe-americano-SBUX-6", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -199,7 +199,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cold-brew-SBUX-23", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -226,7 +226,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/caramel-frappuccino-SBUX-35", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -253,7 +253,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/java-chip-frappuccino-SBUX-38", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -330,7 +330,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/chai-tea-latte-SBUX-45", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -354,7 +354,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/belcika-cikolatali-pasta-SBUX-67", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -378,7 +378,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/kremali-havuclu-kek-SBUX-66", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -402,7 +402,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/limonlu-kek-SBUX-69", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -426,7 +426,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/very-berry-muffin-SBUX-78", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -450,7 +450,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/triple-chocolate-cookie-SBUX-75", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -524,7 +524,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/buzlu-caffe-latte-SBUX-2", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -550,7 +550,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/ristretto-bianco-SBUX-5", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -576,7 +576,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cortado-SBUX-4", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -602,7 +602,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/iced-spanish-latte-SBUX-261", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -628,7 +628,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/spanish-latte-SBUX-260", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -653,7 +653,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/buzlu-caffe-americano-SBUX-7", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -678,7 +678,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/espresso-con-panna-SBUX-9", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -703,7 +703,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/espresso-SBUX-8", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -728,7 +728,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/espresso-macchiato-SBUX-10", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -754,7 +754,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/latte-macchiato-SBUX-11", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -780,7 +780,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/buzlu-caramel-macchiato-SBUX-13", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -806,7 +806,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/buzlu-caffe-mocha-SBUX-15", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -832,7 +832,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/buzlu-white-chocolate-mocha-SBUX-17", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -858,7 +858,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/caffe-mocha-SBUX-14", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -884,7 +884,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/peppermint-mocha-SBUX-319", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -910,7 +910,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cappuccino-SBUX-18", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -936,7 +936,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/buzlu-cappuccino-SBUX-19", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -962,7 +962,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-doubleshot-iced-shaken-SBUX-20", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -987,7 +987,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/iced-brown-sugar-oat-shaken-espresso-SBUX-198", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1012,7 +1012,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/filtre-kahve-SBUX-21", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1037,7 +1037,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cold-brew-latte-SBUX-24", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1063,7 +1063,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/caffe-misto-SBUX-22", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1089,7 +1089,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/iced-matcha-protein-latte-SBUX-338", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1115,7 +1115,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/matcha-protein-latte-SBUX-337", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1141,7 +1141,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/protein-latte-SBUX-335", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1167,7 +1167,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/iced-protein-latte-SBUX-336", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1192,7 +1192,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/berry-hibiscus-starbucks-refresha-drink-SBUX-26", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1217,7 +1217,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/orange-mango-starbucks-refresha-drink-SBUX-27", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1242,7 +1242,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/frozen-mango-dragon-refresha-SBUX-205", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1267,7 +1267,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cool-lime-starbucks-refresha-drink-SBUX-25", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1292,7 +1292,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/mango-dragonfruit-refresha-SBUX-201", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1317,7 +1317,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/frozen-berry-hibiscus-refresha-SBUX-203", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1342,7 +1342,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/frozen-orange-mango-refresha-SBUX-204", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1367,7 +1367,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/frozen-cool-lime-refresha-SBUX-202", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1392,7 +1392,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/melon-pearls-refresha-SBUX-280", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1418,7 +1418,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/strawberries-cream-frappuccino-SBUX-30", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1444,7 +1444,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/caramel-cream-frappuccino-SBUX-29", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1470,7 +1470,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/chai-cream-frappuccino-SBUX-33", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1496,7 +1496,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/vanilla-cream-frappuccino-SBUX-31", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1522,7 +1522,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/java-chip-chocolate-cream-frappuccino-SBUX-32", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1548,7 +1548,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/chocolate-cream-frappuccino-SBUX-28", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1574,7 +1574,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/coffee-frappuccino-SBUX-34", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1599,7 +1599,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/espresso-frappuccino-SBUX-39", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1625,7 +1625,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/white-chocolate-mocha-frappuccino-SBUX-37", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1651,7 +1651,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/mocha-frappuccino-SBUX-36", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1677,7 +1677,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/matcha-latte-SBUX-265", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1703,7 +1703,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/iced-strawberry-matcha-latte-SBUX-267", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1729,7 +1729,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/iced-matcha-latte-SBUX-266", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1754,7 +1754,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/buzlu-chai-tea-latte-SBUX-46", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1779,7 +1779,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/turk-cayi-SBUX-44", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1804,7 +1804,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-earl-grey-tea-SBUX-341", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1829,7 +1829,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-mint-citrus-tea-SBUX-342", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1854,7 +1854,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-jasmine-green-tea-SBUX-340", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1879,7 +1879,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-hibiscus-tea-SBUX-339", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1904,7 +1904,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/turk-kahvesi-SBUX-42", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1930,7 +1930,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/signature-hazelnut-hot-chocolate-SBUX-50", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1956,7 +1956,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/signature-caramel-hot-chocolate-SBUX-49", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1982,7 +1982,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/signature-hot-chocolate-SBUX-48", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2008,7 +2008,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/classic-hot-chocolate-SBUX-47", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2034,7 +2034,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/white-hot-chocolate-SBUX-51", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2060,7 +2060,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/affogato-SBUX-40", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2085,7 +2085,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cold-brew-float-SBUX-41", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2110,7 +2110,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/portakal-suyu-SBUX-52", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2135,7 +2135,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/limonlu-cheesecake-SBUX-62", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2160,7 +2160,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/brownie-cheesecake-SBUX-63", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2185,7 +2185,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/ahududulu-cheesecake-SBUX-64", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2210,7 +2210,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/kahveli-pasta-SBUX-65", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2235,7 +2235,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-brownie-SBUX-68", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2260,7 +2260,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/mozaik-kek-SBUX-70", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2285,7 +2285,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/tiramisu-SBUX-72", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2310,7 +2310,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/havuclu-cevizli-kek-SBUX-283", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2335,7 +2335,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cilekli-donut-SBUX-355", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2360,7 +2360,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cikolatali-donut-SBUX-356", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2385,7 +2385,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/belcika-cikolatali-muffin-SBUX-79", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2410,7 +2410,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/misto-cookie-SBUX-76", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2435,7 +2435,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/dopdolu-fit-cookie-SBUX-77", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2460,7 +2460,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/dolgulu-ucgen-kurabiye-SBUX-248", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2485,7 +2485,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/zeytinli-acma-SBUX-85", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2510,7 +2510,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/tahilli-peynirli-pogaca-SBUX-83", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2535,7 +2535,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cikolatali-kruvasan-SBUX-84", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2560,7 +2560,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/peynirli-simit-SBUX-80", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2585,7 +2585,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/peynirli-kruvasan-SBUX-81", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2610,7 +2610,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/hashasli-uc-peynirli-SBUX-88", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2635,7 +2635,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/tavuklu-wrap-SBUX-97", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2660,7 +2660,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/3-lezzetli-focaccia-SBUX-99", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2685,7 +2685,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/peynirli-mucver-sandvic-SBUX-96", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2710,7 +2710,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/mozzarella-sandvic-SBUX-91", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2735,7 +2735,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/hindi-fumeli-baget-sandvic-SBUX-100", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2760,7 +2760,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/ezine-peynirli-sandvic-SBUX-92", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2785,7 +2785,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/hindi-fume-jambonlu-SBUX-89", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2810,7 +2810,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/dort-peynirli-tostie-SBUX-236", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2835,7 +2835,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/dana-jambonlu-tostie-SBUX-237", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2860,7 +2860,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/tavuklu-ve-mantarli-sandvic-SBUX-271", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2885,7 +2885,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/izgara-tavuklu-salata-SBUX-104", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2910,7 +2910,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/meyveli-yulaf-lapasi-vegan-tuketimine-uygun-SBUX-103", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2935,7 +2935,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/meyveli-ve-yogurtlu-parfe-SBUX-101", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2960,7 +2960,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/kiya-tohumlu-parfe-SBUX-274", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2985,7 +2985,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/pol-s-kurutulmus-cilek-SBUX-124", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3010,7 +3010,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-caramel-waffle-SBUX-109", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3035,7 +3035,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-cikolatali-glutensiz-kurabiye-SBUX-118", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3060,7 +3060,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-glutensiz-chia-tohumlu-grissini-SBUX-117", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3085,7 +3085,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/glutensiz-bitter-cikolatali-brownie-SBUX-116", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3110,7 +3110,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-mini-brownies-SBUX-112", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3135,7 +3135,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/starbucks-tereyagli-kurabiye-SBUX-115", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3160,7 +3160,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/tuzlu-mini-kruvasan-SBUX-281", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3185,7 +3185,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/cevizli-glutensiz-kurabiye-SBUX-282", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3210,7 +3210,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/tereyagli-kruvasan-SBUX-304", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3235,7 +3235,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/kasarli-susamli-pogaca-SBUX-308", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3260,7 +3260,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/tereyagli-cikolatali-kruvasan-SBUX-305", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3285,7 +3285,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.starbucks.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.starbucks.com.tr/menu/urun/dereotlu-scone-pogaca-SBUX-306", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",

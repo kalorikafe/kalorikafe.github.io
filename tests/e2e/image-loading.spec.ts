@@ -27,8 +27,9 @@ test('product images are local webp files that actually load (naturalWidth > 0)'
     expect(src, 'card image must be local webp').toMatch(/^\/images\/menu\/.+\.webp$/);
   }
 
-  // Wait for the lazily-loaded grid images and verify real decoding.
-  await page.getByTestId('item-card').first().locator('img').evaluate(async (img: HTMLImageElement) => {
+  // Wait for the lazily-loaded grid image and verify real decoding.
+  const firstCardProductImage = page.getByTestId('item-card').first().locator('img[src^="/images/menu/"]').first();
+  await firstCardProductImage.evaluate(async (img: HTMLImageElement) => {
     if (!img.complete) {
       await new Promise<void>(resolve => {
         img.addEventListener('load', () => resolve(), { once: true });
@@ -36,7 +37,7 @@ test('product images are local webp files that actually load (naturalWidth > 0)'
       });
     }
   });
-  const loaded = await page.getByTestId('item-card').first().locator('img').evaluate(
+  const loaded = await firstCardProductImage.evaluate(
     (img: HTMLImageElement) => ({ complete: img.complete, naturalWidth: img.naturalWidth })
   );
   expect(loaded.complete).toBe(true);
@@ -50,12 +51,14 @@ test('product images are local webp files that actually load (naturalWidth > 0)'
   expect((await response.body()).length).toBeGreaterThan(0);
 });
 
-test('every visible card in both themes renders its image element', async ({ page }) => {
+test('every visible card in both themes renders its product image', async ({ page }) => {
   for (const theme of ['light', 'dark']) {
     await page.evaluate(t => localStorage.setItem('kalori_cafe_theme', t), theme);
     await page.reload();
     await expect(page.getByTestId('item-card').first()).toBeVisible();
-    const images = page.getByTestId('item-card').locator('img');
+    // Only product photos live under /images/menu/; chain logo badges are
+    // intentionally outside the image-loading test's scope.
+    const images = page.getByTestId('item-card').locator('img[src^="/images/menu/"]');
     const count = await images.count();
     expect(count).toBeGreaterThan(0);
     for (let i = 0; i < count; i++) {

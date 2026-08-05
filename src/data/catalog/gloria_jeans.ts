@@ -42,7 +42,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -68,7 +68,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -95,7 +95,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -198,7 +198,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -248,7 +248,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -399,7 +399,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -522,7 +522,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -549,7 +549,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -576,7 +576,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -603,7 +603,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -629,7 +629,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -656,7 +656,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -683,7 +683,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -710,7 +710,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -736,7 +736,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -763,7 +763,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -790,7 +790,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -817,7 +817,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -844,7 +844,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -871,7 +871,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -898,7 +898,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -924,7 +924,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -951,7 +951,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -978,7 +978,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1005,7 +1005,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1032,7 +1032,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1058,7 +1058,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1084,7 +1084,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1111,7 +1111,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1138,7 +1138,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1165,7 +1165,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1192,7 +1192,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1219,7 +1219,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1246,7 +1246,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1273,7 +1273,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1300,7 +1300,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1327,7 +1327,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1354,7 +1354,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1381,7 +1381,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1407,7 +1407,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1434,7 +1434,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1461,7 +1461,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1488,7 +1488,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1515,7 +1515,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1542,7 +1542,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1569,7 +1569,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1596,7 +1596,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1623,7 +1623,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1650,7 +1650,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "seasonal",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1677,7 +1677,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1704,7 +1704,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1731,7 +1731,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1758,7 +1758,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1785,7 +1785,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1812,7 +1812,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1839,7 +1839,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1866,7 +1866,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1891,7 +1891,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1916,7 +1916,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1941,7 +1941,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1966,7 +1966,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1991,7 +1991,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2016,7 +2016,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2041,7 +2041,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2066,7 +2066,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2091,7 +2091,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2116,7 +2116,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2141,7 +2141,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2166,7 +2166,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2191,7 +2191,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2216,7 +2216,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2241,7 +2241,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2266,7 +2266,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2291,7 +2291,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2316,7 +2316,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2341,7 +2341,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2366,7 +2366,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2391,7 +2391,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2416,7 +2416,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2441,7 +2441,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2466,7 +2466,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2491,7 +2491,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2516,7 +2516,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2541,7 +2541,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2566,7 +2566,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2591,7 +2591,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2616,7 +2616,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2641,7 +2641,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2666,7 +2666,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2691,7 +2691,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2716,7 +2716,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2741,7 +2741,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2766,7 +2766,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2791,7 +2791,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2816,7 +2816,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2841,7 +2841,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2866,7 +2866,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2891,7 +2891,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2916,7 +2916,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2941,7 +2941,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2966,7 +2966,7 @@ export const CHAIN_GLORIA_JEANS_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.gloriajeans.com.tr/menu", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.gloriajeans.com.tr/pages/qr-menu", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",

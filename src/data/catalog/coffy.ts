@@ -16,7 +16,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -42,7 +42,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -68,7 +68,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbDd2VSuQWM/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -93,7 +93,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -119,7 +119,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -145,7 +145,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -170,7 +170,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -196,7 +196,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -222,7 +222,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -248,7 +248,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbI-lCsOyFm/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -274,7 +274,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -300,7 +300,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -324,7 +324,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -348,7 +348,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -372,7 +372,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -396,7 +396,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -420,7 +420,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -444,7 +444,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -468,7 +468,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -492,7 +492,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://coffy.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -519,7 +519,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "seasonal",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbYDU08uEN7/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -545,7 +545,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "seasonal",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbYDU08uEN7/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -572,7 +572,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "seasonal",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbYDU08uEN7/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -599,7 +599,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "seasonal",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbYDU08uEN7/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -625,7 +625,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "seasonal",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbYDU08uEN7/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -651,7 +651,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbTJo8rOPio/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -677,7 +677,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "seasonal",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbTJo8rOPio/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -704,7 +704,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "seasonal",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/p/DbI-lCsOyFm/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -731,7 +731,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "seasonal",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/reel/Da7nhISOUp9/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -758,7 +758,7 @@ export const CHAIN_COFFY_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "seasonal",
     catalogSource: {
-      url: "https://coffy.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.instagram.com/coffy_tr/reel/Da7nhISOUp9/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",

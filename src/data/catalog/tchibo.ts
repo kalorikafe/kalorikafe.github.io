@@ -516,7 +516,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.tchibo.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.tchibo.com.tr", checkedAt: "2026-08-05", kind: "secondary",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -542,7 +542,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.tchibo.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.tchibo.com.tr", checkedAt: "2026-08-05", kind: "secondary",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -568,7 +568,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.tchibo.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.tchibo.com.tr", checkedAt: "2026-08-05", kind: "secondary",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -593,7 +593,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.tchibo.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://www.tchibo.com.tr", checkedAt: "2026-08-05", kind: "secondary",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",

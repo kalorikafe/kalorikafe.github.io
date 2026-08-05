@@ -16,7 +16,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -42,7 +42,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -68,7 +68,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -95,7 +95,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -122,7 +122,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -147,7 +147,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -172,7 +172,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -198,7 +198,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -224,7 +224,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/frappes", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -250,7 +250,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -274,7 +274,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -298,7 +298,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -322,7 +322,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -346,7 +346,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -370,7 +370,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -394,7 +394,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -418,7 +418,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -442,7 +442,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -466,7 +466,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -490,7 +490,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -517,7 +517,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -544,7 +544,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -570,7 +570,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -596,7 +596,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -622,7 +622,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -649,7 +649,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -676,7 +676,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -703,7 +703,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -730,7 +730,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -757,7 +757,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -784,7 +784,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -810,7 +810,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ozel-demlemeler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -837,7 +837,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ozel-demlemeler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -864,7 +864,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ozel-demlemeler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -890,7 +890,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/demleme-caylar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -916,7 +916,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/demleme-caylar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -943,7 +943,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/demleme-caylar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -969,7 +969,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/demleme-caylar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -995,7 +995,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/demleme-caylar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1021,7 +1021,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/demleme-caylar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1047,7 +1047,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/demleme-caylar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1074,7 +1074,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/demleme-caylar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1101,7 +1101,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/demleme-caylar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1127,7 +1127,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/diger-icecekler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1154,7 +1154,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/diger-icecekler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1181,7 +1181,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/diger-icecekler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1208,7 +1208,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/diger-icecekler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1234,7 +1234,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/diger-icecekler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1261,7 +1261,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1288,7 +1288,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1315,7 +1315,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1341,7 +1341,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1367,7 +1367,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1394,7 +1394,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1421,7 +1421,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1447,7 +1447,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-klasikler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1474,7 +1474,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1501,7 +1501,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1528,7 +1528,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1555,7 +1555,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1582,7 +1582,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1609,7 +1609,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1636,7 +1636,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/ice-spesiyaller", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1663,7 +1663,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/frappes", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1690,7 +1690,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/frozen", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1717,7 +1717,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/frozen", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1744,7 +1744,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/frozen", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1771,7 +1771,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/frozen", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1798,7 +1798,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/fresh", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1825,7 +1825,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/fresh", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1852,7 +1852,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/fresh", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1879,7 +1879,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/fresh", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1906,7 +1906,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1933,7 +1933,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1960,7 +1960,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1987,7 +1987,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2014,7 +2014,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2041,7 +2041,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2068,7 +2068,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2095,7 +2095,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2121,7 +2121,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2147,7 +2147,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2174,7 +2174,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2201,7 +2201,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/cold-drinks", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2228,7 +2228,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2255,7 +2255,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2282,7 +2282,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2309,7 +2309,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2336,7 +2336,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2363,7 +2363,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2390,7 +2390,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2417,7 +2417,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2444,7 +2444,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2471,7 +2471,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2498,7 +2498,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2525,7 +2525,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2552,7 +2552,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2579,7 +2579,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2606,7 +2606,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2633,7 +2633,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2660,7 +2660,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2687,7 +2687,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2714,7 +2714,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2741,7 +2741,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2768,7 +2768,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2795,7 +2795,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2822,7 +2822,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2849,7 +2849,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2876,7 +2876,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2903,7 +2903,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/tatlilar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2930,7 +2930,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/kruvasan", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2957,7 +2957,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/kruvasan", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2984,7 +2984,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/kruvasan", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3011,7 +3011,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/kruvasan", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3038,7 +3038,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3065,7 +3065,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3092,7 +3092,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3119,7 +3119,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3146,7 +3146,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3173,7 +3173,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3200,7 +3200,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3227,7 +3227,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3254,7 +3254,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3281,7 +3281,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3308,7 +3308,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3335,7 +3335,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3362,7 +3362,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/sandvicler", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3389,7 +3389,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3416,7 +3416,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3443,7 +3443,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3470,7 +3470,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://www.arabicacoffee.com.tr", checkedAt: "2026-08-05", kind: "official",
+      url: "https://arabicacoffee.com.tr/urun/atistirmaliklar", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",

@@ -243,8 +243,39 @@ def glycemic(sugar: float, carbs: float) -> str:
     return "Orta"
 
 
-def catalog_source(chain_id: str) -> dict:
-    return {"url": CATALOG_URLS.get(chain_id, f"https://{chain_id}.tr"), "checkedAt": CHECKED_AT, "kind": "official"}
+def catalog_source(chain_id: str, research_product=None, sources=None) -> dict:
+    """Catalog provenance with honest kind + URL priority.
+
+    URL priority:
+      1. the researched product's exact ``productUrl``
+      2. the chain's research source URL
+      3. the catalog default menu URL
+
+    kind is ``secondary`` only for products that were actually researched
+    from a secondary source — i.e. the matched research product carries
+    ``secondary: true`` OR the chain research sources are marked
+    ``kind: 'secondary'``. Products without a research match keep the
+    chain's default provenance (``official``).
+    """
+    srcs = sources or []
+    secondary = bool(research_product) and (
+        bool(research_product.get("secondary"))
+        or any(isinstance(s, dict) and s.get("kind") == "secondary" for s in srcs)
+    )
+    url = None
+    checked_at = CHECKED_AT
+    for s in srcs:
+        if not isinstance(s, dict):
+            continue
+        if url is None and s.get("url"):
+            url = s["url"]
+        if s.get("checkedAt"):
+            checked_at = s["checkedAt"]
+    if research_product and research_product.get("productUrl"):
+        url = research_product["productUrl"]
+    if url is None:
+        url = CATALOG_URLS.get(chain_id, f"https://{chain_id}.tr")
+    return {"url": url, "checkedAt": checked_at, "kind": "secondary" if secondary else "official"}
 
 
 def nutrition_estimated(is_new: bool) -> dict:
@@ -408,12 +439,14 @@ def main() -> None:
     has_assets = bool(assets)
 
     research_by_chain = {}
+    research_sources = {}
     for chain in research.get("chains", []):
         m = {}
         for p in chain.get("products", []):
             if p.get("name"):
                 m[norm(p["name"])] = p
         research_by_chain[chain.get("chainId")] = m
+        research_sources[chain.get("chainId")] = chain.get("sources", [])
 
     chain_items = {cid: [] for cid in CHAIN_KEYS}
     for item in existing:
@@ -482,7 +515,7 @@ def main() -> None:
                 "officialUrl": sl["officialUrl"],
                 "pageUrl": sl["pageUrl"],
             })
-            item["catalogSource"] = catalog_source(cid)
+            item["catalogSource"] = catalog_source(cid, research_product, research_sources.get(cid))
             item["nutritionSource"] = nutrition_estimated(item["id"] not in existing_ids)
             item.setdefault("availability", "current")
             if has_assets and item["id"] in assets:

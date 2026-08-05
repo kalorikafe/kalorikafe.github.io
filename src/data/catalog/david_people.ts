@@ -18,7 +18,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -45,7 +45,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -72,7 +72,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -97,7 +97,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -122,7 +122,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -148,7 +148,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -174,7 +174,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -200,7 +200,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -226,7 +226,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -251,7 +251,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -276,7 +276,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -301,7 +301,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -327,7 +327,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -351,7 +351,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -375,7 +375,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -399,7 +399,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -423,7 +423,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -447,7 +447,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -471,7 +471,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -497,7 +497,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -523,7 +523,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -550,7 +550,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -576,7 +576,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -603,7 +603,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -630,7 +630,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -657,7 +657,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -684,7 +684,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -710,7 +710,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -737,7 +737,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -764,7 +764,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -791,7 +791,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "seasonal",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -817,7 +817,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -844,7 +844,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -871,7 +871,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -898,7 +898,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -925,7 +925,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -952,7 +952,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -978,7 +978,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1005,7 +1005,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1032,7 +1032,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1059,7 +1059,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1086,7 +1086,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1112,7 +1112,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1139,7 +1139,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1165,7 +1165,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/kahve/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1191,7 +1191,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1218,7 +1218,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1244,7 +1244,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1270,7 +1270,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "seasonal",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1297,7 +1297,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1324,7 +1324,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1351,7 +1351,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1378,7 +1378,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1405,7 +1405,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1432,7 +1432,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1459,7 +1459,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1486,7 +1486,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1513,7 +1513,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1540,7 +1540,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1567,7 +1567,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1594,7 +1594,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1621,7 +1621,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1648,7 +1648,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1675,7 +1675,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1702,7 +1702,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1729,7 +1729,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1756,7 +1756,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1783,7 +1783,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1810,7 +1810,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1837,7 +1837,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1864,7 +1864,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1891,7 +1891,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1918,7 +1918,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/icecek/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1944,7 +1944,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1971,7 +1971,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1998,7 +1998,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2025,7 +2025,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2052,7 +2052,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2079,7 +2079,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2106,7 +2106,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2132,7 +2132,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2159,7 +2159,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2186,7 +2186,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2213,7 +2213,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2240,7 +2240,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2267,7 +2267,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2294,7 +2294,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2321,7 +2321,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2348,7 +2348,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2375,7 +2375,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2402,7 +2402,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2429,7 +2429,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2456,7 +2456,7 @@ export const CHAIN_DAVID_PEOPLE_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://davidpeople.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://davidpeople.com/bakery-tatli/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",

@@ -16,7 +16,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -42,7 +42,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -67,7 +67,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -93,7 +93,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -118,7 +118,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -145,7 +145,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -172,7 +172,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -199,7 +199,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -226,7 +226,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -252,7 +252,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -277,7 +277,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -303,7 +303,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -328,7 +328,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -354,7 +354,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -378,7 +378,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -402,7 +402,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -426,7 +426,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -450,7 +450,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -474,7 +474,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -498,7 +498,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -525,7 +525,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -552,7 +552,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -578,7 +578,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -605,7 +605,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -632,7 +632,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -659,7 +659,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -686,7 +686,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -713,7 +713,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "seasonal",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -740,7 +740,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -767,7 +767,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -794,7 +794,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "seasonal",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -820,7 +820,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -847,7 +847,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -874,7 +874,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -900,7 +900,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -927,7 +927,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -954,7 +954,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -981,7 +981,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1008,7 +1008,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1035,7 +1035,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1062,7 +1062,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1089,7 +1089,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1116,7 +1116,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1143,7 +1143,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1170,7 +1170,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1197,7 +1197,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1224,7 +1224,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1250,7 +1250,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1277,7 +1277,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1304,7 +1304,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1331,7 +1331,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1358,7 +1358,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1384,7 +1384,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1410,7 +1410,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1436,7 +1436,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "seasonal",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1462,7 +1462,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1488,7 +1488,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1514,7 +1514,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1541,7 +1541,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1568,7 +1568,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1595,7 +1595,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1622,7 +1622,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1649,7 +1649,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1676,7 +1676,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1703,7 +1703,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1729,7 +1729,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1755,7 +1755,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1782,7 +1782,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1808,7 +1808,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1835,7 +1835,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1862,7 +1862,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1889,7 +1889,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1916,7 +1916,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1943,7 +1943,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1970,7 +1970,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -1997,7 +1997,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2024,7 +2024,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2051,7 +2051,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2078,7 +2078,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2105,7 +2105,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2132,7 +2132,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2159,7 +2159,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2186,7 +2186,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2213,7 +2213,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2240,7 +2240,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2267,7 +2267,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2294,7 +2294,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2321,7 +2321,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2348,7 +2348,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2375,7 +2375,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2402,7 +2402,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2429,7 +2429,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2456,7 +2456,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2483,7 +2483,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2510,7 +2510,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2537,7 +2537,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2564,7 +2564,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2591,7 +2591,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2618,7 +2618,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2644,7 +2644,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Orta",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2671,7 +2671,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2698,7 +2698,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2725,7 +2725,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2752,7 +2752,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2779,7 +2779,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2806,7 +2806,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2833,7 +2833,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2860,7 +2860,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2887,7 +2887,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2914,7 +2914,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2941,7 +2941,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2968,7 +2968,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -2995,7 +2995,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3022,7 +3022,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3049,7 +3049,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3076,7 +3076,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3103,7 +3103,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3130,7 +3130,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3157,7 +3157,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3184,7 +3184,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3211,7 +3211,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3238,7 +3238,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3265,7 +3265,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3292,7 +3292,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3319,7 +3319,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3346,7 +3346,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3373,7 +3373,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3400,7 +3400,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3427,7 +3427,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3454,7 +3454,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3481,7 +3481,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3508,7 +3508,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3535,7 +3535,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3562,7 +3562,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3589,7 +3589,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3616,7 +3616,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3643,7 +3643,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3670,7 +3670,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3697,7 +3697,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3724,7 +3724,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3751,7 +3751,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3778,7 +3778,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3805,7 +3805,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3832,7 +3832,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3859,7 +3859,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3886,7 +3886,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3913,7 +3913,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3940,7 +3940,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3967,7 +3967,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -3994,7 +3994,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4021,7 +4021,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4048,7 +4048,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4075,7 +4075,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4102,7 +4102,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4129,7 +4129,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4156,7 +4156,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4183,7 +4183,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4210,7 +4210,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4237,7 +4237,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4264,7 +4264,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4291,7 +4291,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4318,7 +4318,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4345,7 +4345,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4372,7 +4372,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4399,7 +4399,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Düşük",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
@@ -4426,7 +4426,7 @@ export const CHAIN_MACKBEAR_ITEMS: MenuItem[] = [
     glycemicImpact: "Yüksek",
     availability: "current",
     catalogSource: {
-      url: "https://mackbearcoffee.com", checkedAt: "2026-08-05", kind: "official",
+      url: "https://mackbearcoffee.com/urunler/", checkedAt: "2026-08-05", kind: "official",
     },
     nutritionSource: {
       status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
