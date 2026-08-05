@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply font-sans antialiased selection:bg-[#D97706] selection:text-white bg-[#FAF8F5] text-[#2C221E] dark:bg-[#0C0A09] dark:text-[#F5F5F4];
+  }
+}
+
+/* Glassmorphism Design System - Warm Cozy Luxury Cafe */
+.glass-panel {
+  background: rgba(250, 248, 245, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .glass-panel {
+  background: rgba(23, 20, 18, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: rgba(217, 119, 6, 0.2);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 162, 158, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 119, 6, 0.6);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out forwards;
+}
