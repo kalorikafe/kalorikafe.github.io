@@ -147,8 +147,9 @@ Her kapı bu rapordan önce yeniden çalıştırıldı ve çıkış 0 alındı.
 |---|---|---|
 | `9441e59` | fix: honest secondary provenance in compiled catalog + scoped image E2E | correctness/tests |
 | `e14a724` | feat: macro profile, peanut allergen, search ARIA, safety branding | UX/safety/branding |
-| (docs) | docs: refresh project docs to release state | provenance/docs |
-| (workflow) | ci: add GitHub Pages deploy workflow | deployment |
+| `fe93ae7` | docs: refresh project docs to release state with real measurements | provenance/docs |
+| `9de4f70` | ci: add GitHub Pages build+deploy workflow | deployment |
+| (yayın sonrası) | docs: record live verification results | provenance/docs |
 
 ## 7. Legacy suite arşiv bilgisi
 
@@ -185,7 +186,23 @@ yok; `tsx` bağımlılığı eklenmedi.
   `actions/upload-pages-artifact` + `actions/deploy-pages` ile yayınlanır.
 - Vite `base` kök site olduğu için değiştirilmedi; `/images/...` yolları
   korunur.
-- Canlı doğrulama: (aşağıya bakınız — yayın sonrası eklenecek).
+- Workflow run `31049494024` (`Deploy static content to Pages`): **success**
+  — kalite kapıları + artifact upload + deploy adımlarının tamamı geçti.
+
+### Canlı doğrulama (6 Ağustos 2026, yayın sonrası)
+
+| Kontrol | Sonuç |
+|---|---|
+| `https://selimgrsoy0-commits.github.io/` | HTTP 200 · `text/html` · başlık "Kalori Cafe \| Tüm Zincir Kafelerin Makro & Alerjen Haritası" |
+| `/favicon.svg` | HTTP 200 · `image/svg+xml` (kahve temalı favicon) |
+| `/images/menu/starbucks/caff_latte.webp` | HTTP 200 · `image/webp` · RIFF/VP8 720×720 · 13.042 bayt |
+| Sayfa içeriği | Hero + 10 zincir (gerçek sayaçlar: Tüm Kafeler 845) + "Tahmini değer" rozetli kartlar |
+| Arama | "sarelle" → 1 kart; listbox `desktop-search-suggestions-listbox`; option id `desktop-search-suggestion-option-0`; `aria-activedescendant` klavye ile doğru güncelleniyor |
+| Ürün modalı | Açılıyor; "Kaynak doğrulaması bekleniyor" + alerjen listesi; Escape kapatıyor |
+| Tema | dark → light geçişi ve `kalori_cafe_theme=light` yazımı doğrulandı |
+| Footer | 10 zincir dinamik listeleniyor; çapraz bulaşma feragat metni görünür |
+| Konsol | 0 hata |
+| Mobil/desktop taşma (390×844 & 1440×900 × iki tema) | Playwright E2E 19/19 (aynı commit ağacında) |
 
 ## 11. Güvenlik & gizlilik notu
 
