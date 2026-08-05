@@ -4,7 +4,7 @@ export const CHAINS: Chain[] = [
   {
     id: 'starbucks',
     name: 'Starbucks',
-    logo: 'https://www.google.com/s2/favicons?domain=starbucks.com.tr&sz=128',
+    logo: '/images/chains/starbucks.png',
     color: 'border-emerald-600',
     badgeColor: 'bg-emerald-600 text-white',
     accentBg: 'bg-emerald-50 dark:bg-emerald-950/20',
@@ -13,7 +13,7 @@ export const CHAINS: Chain[] = [
   {
     id: 'espressolab',
     name: 'Espressolab',
-    logo: 'https://www.google.com/s2/favicons?domain=espressolab.com&sz=128',
+    logo: '/images/chains/espressolab.png',
     color: 'border-red-600',
     badgeColor: 'bg-red-600 text-white',
     accentBg: 'bg-red-50 dark:bg-red-950/20',
@@ -22,7 +22,7 @@ export const CHAINS: Chain[] = [
   {
     id: 'kahve_dunyasi',
     name: 'Kahve Dünyası',
-    logo: 'https://www.google.com/s2/favicons?domain=kahvedunyasi.com&sz=128',
+    logo: '/images/chains/kahve_dunyasi.png',
     color: 'border-pink-600',
     badgeColor: 'bg-pink-600 text-white',
     accentBg: 'bg-pink-50 dark:bg-pink-950/20',
@@ -31,7 +31,7 @@ export const CHAINS: Chain[] = [
   {
     id: 'caffe_nero',
     name: 'Caffè Nero',
-    logo: 'https://www.google.com/s2/favicons?domain=caffenero.com&sz=128',
+    logo: '/images/chains/caffe_nero.png',
     color: 'border-blue-600',
     badgeColor: 'bg-blue-600 text-white',
     accentBg: 'bg-blue-50 dark:bg-blue-950/20',
@@ -40,7 +40,7 @@ export const CHAINS: Chain[] = [
   {
     id: 'coffy',
     name: 'Coffy',
-    logo: 'https://www.google.com/s2/favicons?domain=coffy.com.tr&sz=128',
+    logo: '/images/chains/coffy.png',
     color: 'border-yellow-500',
     badgeColor: 'bg-yellow-500 text-stone-950',
     accentBg: 'bg-yellow-50 dark:bg-yellow-950/20',
@@ -49,7 +49,7 @@ export const CHAINS: Chain[] = [
   {
     id: 'mackbear',
     name: 'Mackbear Coffee Co.',
-    logo: 'https://www.google.com/s2/favicons?domain=mackbearcoffee.com&sz=128',
+    logo: '/images/chains/mackbear.png',
     color: 'border-amber-600',
     badgeColor: 'bg-amber-600 text-white',
     accentBg: 'bg-amber-50 dark:bg-amber-950/20',
@@ -58,16 +58,16 @@ export const CHAINS: Chain[] = [
   {
     id: 'arabica',
     name: 'Arabica Coffee House',
-    logo: 'https://www.google.com/s2/favicons?domain=arabicacoffee.com.tr&sz=128',
+    logo: '/images/chains/arabica.png',
     color: 'border-stone-800',
     badgeColor: 'bg-stone-800 text-white',
-    accentBg: 'bg-stone-100 dark:bg-stone-800/50',
+    accentBg: 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)]/50',
     description: "Ankara merkezli olup Türkiye genelinde yaygınlaşan taze kavrulmuş nitelikli kahve markası."
   },
   {
     id: 'gloria_jeans',
     name: "Gloria Jean's",
-    logo: 'https://www.google.com/s2/favicons?domain=gloriajeans.com.tr&sz=128',
+    logo: '/images/chains/gloria_jeans.png',
     color: 'border-orange-600',
     badgeColor: 'bg-orange-600 text-white',
     accentBg: 'bg-orange-50 dark:bg-orange-950/20',
@@ -76,7 +76,7 @@ export const CHAINS: Chain[] = [
   {
     id: 'david_people',
     name: 'David People',
-    logo: 'https://www.google.com/s2/favicons?domain=davidpeople.com&sz=128',
+    logo: '/images/chains/david_people.png',
     color: 'border-purple-600',
     badgeColor: 'bg-purple-600 text-white',
     accentBg: 'bg-purple-50 dark:bg-purple-950/20',
@@ -85,7 +85,7 @@ export const CHAINS: Chain[] = [
   {
     id: 'tchibo',
     name: 'Tchibo',
-    logo: 'https://www.google.com/s2/favicons?domain=tchibo.com.tr&sz=128',
+    logo: '/images/chains/tchibo.png',
     color: 'border-blue-800',
     badgeColor: 'bg-blue-800 text-white',
     accentBg: 'bg-blue-50 dark:bg-blue-900/20',

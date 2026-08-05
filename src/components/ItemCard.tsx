@@ -36,23 +36,23 @@ export const ItemCard: React.FC<ItemCardProps> = ({
     <article
       data-testid="item-card"
       data-item-id={item.id}
-      className={`group relative rounded-3xl overflow-hidden bg-white dark:bg-[#171412] border transition-all duration-300 hover:shadow-2xl flex flex-col justify-between ${
+      className={`group relative rounded-3xl overflow-hidden bg-white dark:bg-[var(--dark-surface)] border transition-all duration-300 hover:shadow-2xl flex flex-col justify-between ${
       hasUserAllergenRisk 
         ? 'border-red-500/80 ring-2 ring-red-500/20' 
-        : 'border-stone-200 dark:border-stone-800/80 hover:border-[#D97706]/60'
+        : 'border-stone-200 dark:border-[var(--dark-border)]/80 hover:border-[#D97706]/60'
     }`}
     >
       
       {/* Top Image & Overlay Badges */}
-      <div className="relative h-48 w-full overflow-hidden bg-stone-100 dark:bg-stone-800">
+      <div className="relative h-48 w-full overflow-hidden bg-stone-100 dark:bg-[var(--dark-surface-elevated)]">
         <img
           src={item.image}
           alt={item.name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
           onError={(e) => {
-            (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&auto=format&fit=crop&q=80';
-          }}
+                      (e.target as HTMLImageElement).src = '/images/menu/placeholder.webp';
+                    }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
 
@@ -102,7 +102,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
       </div>
 
       {/* Card Content Body */}
-      <div className="p-4 flex-1 flex flex-col justify-between space-y-4 text-stone-900 dark:text-stone-100">
+      <div className="p-4 flex-1 flex flex-col justify-between space-y-4 text-stone-900 dark:text-[var(--dark-text)]">
         
         {/* User Allergen Warning Banner if Matched */}
         {hasUserAllergenRisk && (
@@ -114,37 +114,37 @@ export const ItemCard: React.FC<ItemCardProps> = ({
           </div>
         )}
 
-        <p className="text-xs text-stone-600 dark:text-stone-300 font-medium line-clamp-2 leading-relaxed">
+        <p className="text-xs text-stone-600 dark:text-[var(--dark-text-muted)] font-medium line-clamp-2 leading-relaxed">
           {item.description}
         </p>
 
         {/* Ultra High Contrast Macro Grid Summary */}
-        <div className="grid grid-cols-4 gap-1.5 p-2 rounded-2xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700/80 text-center">
+        <div className="grid grid-cols-4 gap-1.5 p-2 rounded-2xl bg-stone-50 dark:bg-[var(--dark-surface-elevated)]/60 border border-stone-200 dark:border-[var(--dark-border)]/80 text-center">
           
-          <div className="p-1.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200/80 dark:border-stone-700">
-            <div className="text-[10px] uppercase font-black text-stone-500 dark:text-stone-400">Kalori</div>
+          <div className="p-1.5 rounded-xl bg-white dark:bg-[var(--dark-surface)] border border-stone-200/80 dark:border-[var(--dark-border)]">
+            <div className="text-[10px] uppercase font-black text-stone-500 dark:text-[var(--dark-text-muted)]">Kalori</div>
             <div data-testid="card-calories" className="text-xs font-black text-red-600 dark:text-red-400 flex items-center justify-center gap-0.5 mt-0.5">
               <Flame className="w-3 h-3" />
               {item.baseMacros.calories}
             </div>
           </div>
 
-          <div className="p-1.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200/80 dark:border-stone-700">
-            <div className="text-[10px] uppercase font-black text-stone-500 dark:text-stone-400">Protein</div>
+          <div className="p-1.5 rounded-xl bg-white dark:bg-[var(--dark-surface)] border border-stone-200/80 dark:border-[var(--dark-border)]">
+            <div className="text-[10px] uppercase font-black text-stone-500 dark:text-[var(--dark-text-muted)]">Protein</div>
             <div className="text-xs font-black text-blue-600 dark:text-blue-400 mt-0.5">
               {item.baseMacros.protein}g
             </div>
           </div>
 
-          <div className="p-1.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200/80 dark:border-stone-700">
-            <div className="text-[10px] uppercase font-black text-stone-500 dark:text-stone-400">Karb/Şeker</div>
+          <div className="p-1.5 rounded-xl bg-white dark:bg-[var(--dark-surface)] border border-stone-200/80 dark:border-[var(--dark-border)]">
+            <div className="text-[10px] uppercase font-black text-stone-500 dark:text-[var(--dark-text-muted)]">Karb/Şeker</div>
             <div className="text-xs font-black text-amber-600 dark:text-amber-400 mt-0.5">
               {item.baseMacros.carbs}g <span className="text-[10px] text-stone-500 font-bold">({item.baseMacros.sugar}g)</span>
             </div>
           </div>
 
-          <div className="p-1.5 rounded-xl bg-white dark:bg-stone-900 border border-stone-200/80 dark:border-stone-700">
-            <div className="text-[10px] uppercase font-black text-stone-500 dark:text-stone-400">Yağ</div>
+          <div className="p-1.5 rounded-xl bg-white dark:bg-[var(--dark-surface)] border border-stone-200/80 dark:border-[var(--dark-border)]">
+            <div className="text-[10px] uppercase font-black text-stone-500 dark:text-[var(--dark-text-muted)]">Yağ</div>
             <div className="text-xs font-black text-emerald-600 dark:text-emerald-400 mt-0.5">
               {item.baseMacros.fat}g
             </div>
@@ -162,7 +162,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
                 return (
                   <span
                     key={allergen}
-                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg border text-[10px] font-bold bg-stone-100 dark:bg-stone-800 border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200"
+                    className="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg border text-[10px] font-bold bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border-stone-200 dark:border-[var(--dark-border)] text-stone-800 dark:text-[var(--dark-text)]"
                     title={info.description}
                   >
                     <span>{info.icon}</span>
@@ -182,13 +182,13 @@ export const ItemCard: React.FC<ItemCardProps> = ({
         </div>
 
         {/* Action Buttons */}
-        <div className="pt-2 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between gap-1.5">
+        <div className="pt-2 border-t border-stone-200 dark:border-[var(--dark-border)] flex items-center justify-between gap-1.5">
           
           {/* Customizer / Quick Add Button */}
           {item.isDrink ? (
             <button
               onClick={() => onOpenCustomizer(item)}
-              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#2C221E] hover:bg-[#3D2B1F] dark:bg-[#FAF8F5] dark:hover:bg-stone-200 text-white dark:text-[#2C221E] text-xs font-black transition-all shadow-md active:scale-95"
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#2C221E] hover:bg-[#3D2B1F] dark:bg-[#FAF8F5] dark:hover:bg-[var(--dark-surface-elevated)] text-white dark:text-[#2C221E] text-xs font-black transition-all shadow-md active:scale-95"
             >
               <SlidersHorizontal className="w-3.5 h-3.5" />
               <span>Özelleştir</span>
@@ -196,7 +196,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
           ) : (
             <button
               onClick={() => onQuickAddToBasket(item)}
-              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#2C221E] hover:bg-[#3D2B1F] dark:bg-[#FAF8F5] dark:hover:bg-stone-200 text-white dark:text-[#2C221E] text-xs font-black transition-all shadow-md active:scale-95"
+              className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#2C221E] hover:bg-[#3D2B1F] dark:bg-[#FAF8F5] dark:hover:bg-[var(--dark-surface-elevated)] text-white dark:text-[#2C221E] text-xs font-black transition-all shadow-md active:scale-95"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Sepete Ekle</span>
@@ -206,7 +206,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
           {/* FDA Label Button */}
           <button
             onClick={() => onOpenNutritionLabel(item)}
-            className="p-2.5 rounded-xl bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors"
+            className="p-2.5 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)] hover:bg-stone-200 dark:hover:bg-[var(--dark-surface-elevated)] transition-colors"
             title="FDA Besin Etiketi Göster"
           >
             <FileText className="w-4 h-4" />
@@ -218,7 +218,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
             className={`p-2.5 rounded-xl border text-xs font-extrabold transition-all ${
               isComparing
                 ? 'bg-[#6F4E37] text-white border-[#6F4E37] shadow-sm'
-                : 'bg-stone-100 dark:bg-stone-800 border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700'
+                : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)] hover:bg-stone-200 dark:hover:bg-[var(--dark-surface-elevated)]'
             }`}
             title={isComparing ? "Karşılaştırmadan Çıkar" : "Karşılaştırmaya Ekle"}
           >
@@ -229,7 +229,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
           {item.isDrink && (
             <button
               onClick={() => onQuickAddToBasket(item)}
-              className="p-2.5 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-900 dark:text-stone-100 border border-stone-200 dark:border-stone-700 hover:bg-[#2C221E] hover:text-white dark:hover:bg-[#FAF8F5] dark:hover:text-[#2C221E] transition-colors shadow-xs"
+              className="p-2.5 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-900 dark:text-[var(--dark-text)] border border-stone-200 dark:border-[var(--dark-border)] hover:bg-[#2C221E] hover:text-white dark:hover:bg-[#FAF8F5] dark:hover:text-[#2C221E] transition-colors shadow-xs"
               title="Hızlı Sepete Ekle (Varsayılan Tarif)"
             >
               <Plus className="w-4 h-4" />
