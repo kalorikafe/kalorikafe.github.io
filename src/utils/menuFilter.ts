@@ -1,5 +1,5 @@
 import type { MenuItem, Category, DietaryPreference, Allergen } from '../types/cafe';
-import { CHAINS } from '../data/chains';
+import { queryMatchesItem } from './searchNormalize';
 
 export type SortOption = 'default' | 'cal_asc' | 'protein_desc' | 'sugar_asc' | 'fat_asc' | 'caffeine_desc';
 
@@ -44,13 +44,7 @@ export function filterAndSortMenu(
 
     // 2. Search Query
     if (searchQuery.trim() !== '') {
-      const q = searchQuery.toLowerCase();
-      const chainName = CHAINS.find(c => c.id === item.chainId)?.name.toLowerCase() || '';
-      const matchesName = item.name.toLowerCase().includes(q) || (item.nameEn && item.nameEn.toLowerCase().includes(q));
-      const matchesChain = chainName.includes(q);
-      const matchesDesc = item.description.toLowerCase().includes(q);
-      const matchesTags = item.dietaryTags.some(t => t.toLowerCase().includes(q));
-      if (!matchesName && !matchesChain && !matchesDesc && !matchesTags) return false;
+      if (!queryMatchesItem(item, searchQuery)) return false;
     }
 
     // 3. Chain Selection

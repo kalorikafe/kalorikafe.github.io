@@ -1,10 +1,16 @@
-import React from 'react';
-import type { Allergen } from '../types/cafe';
-import { Coffee, Search, ShieldAlert, Scale, ShoppingBag, Sun, Moon } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import type { Allergen, MenuItem } from '../types/cafe';
+import { Coffee, Search, ShieldAlert, Scale, ShoppingBag, Sun, Moon, X } from 'lucide-react';
+import { SearchSuggestions, SUGGESTION_LIST_ID } from './SearchSuggestions';
+import { handleSuggestionKeydown, DEFAULT_ACTIVE_INDEX } from '../utils/searchInteraction';
 
 interface NavbarProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
+  suggestions: MenuItem[];
+  resultCount: number;
+  onSelectSuggestion: (item: MenuItem) => void;
+  onSubmitQuery: () => void;
   userAllergens: Allergen[];
   hideAllergens: boolean;
   onOpenAllergenModal: () => void;
@@ -20,6 +26,10 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({
   searchQuery,
   setSearchQuery,
+  suggestions,
+  resultCount,
+  onSelectSuggestion,
+  onSubmitQuery,
   userAllergens,
   hideAllergens,
   onOpenAllergenModal,
@@ -31,8 +41,53 @@ export const Navbar: React.FC<NavbarProps> = ({
   isDarkMode,
   setIsDarkMode,
 }) => {
+  const [activeIndex, setActiveIndex] = useState(DEFAULT_ACTIVE_INDEX);
+  const [panelOpen, setPanelOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const queryLength = searchQuery.trim().length;
+  const suggestionsOpen = queryLength >= 2 && panelOpen && suggestions.length > 0;
+
+  const handleChange = (value: string) => {
+    setSearchQuery(value);
+    setActiveIndex(DEFAULT_ACTIVE_INDEX);
+    setPanelOpen(true);
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Escape') {
+      // Escape only closes the suggestion panel; it never clears the query.
+      setPanelOpen(false);
+      setActiveIndex(DEFAULT_ACTIVE_INDEX);
+      (event.target as HTMLInputElement).blur();
+      event.preventDefault();
+      return;
+    }
+    const handled = handleSuggestionKeydown(event, {
+      suggestions,
+      isOpen: suggestionsOpen,
+      activeIndex,
+      setActiveIndex,
+      onSelect: item => {
+        setPanelOpen(false);
+        onSelectSuggestion(item);
+      },
+      onSubmitQuery,
+    });
+    if (!handled && event.key === 'Enter') {
+      event.preventDefault();
+      onSubmitQuery();
+    }
+  };
+
+  const handleClear = () => {
+    setSearchQuery('');
+    setActiveIndex(DEFAULT_ACTIVE_INDEX);
+    setPanelOpen(false);
+    inputRef.current?.focus();
+  };
+
   return (
-    <header className="sticky top-0 z-40 w-full bg-white/95 dark:bg-[#1C1816]/95 backdrop-blur-md border-b border-stone-200 dark:border-stone-800/80 shadow-[0_4px_20px_-4px_rgba(44,34,30,0.04)] dark:shadow-none transition-colors duration-300">
+    <header className="sticky top-0 z-40 w-full bg-white/95 dark:bg-[var(--dark-surface)]/95 backdrop-blur-md border-b border-stone-200 dark:border-[var(--dark-border)] shadow-[0_4px_20px_-4px_rgba(44,34,30,0.04)] dark:shadow-none transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
         
         {/* Logo & Brand Name */}
@@ -42,40 +97,69 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
           <div className="min-w-0">
             <div className="flex items-center gap-2">
-              <span className="text-lg sm:text-xl font-black text-stone-950 dark:text-stone-50 tracking-tight whitespace-nowrap">
+              <span className="text-lg sm:text-xl font-black text-stone-950 dark:text-[var(--dark-text)] tracking-tight whitespace-nowrap">
                 Kalori Cafe
               </span>
               <span className="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-[#6F4E37]/10 dark:bg-[#D4B996]/15 text-[#6F4E37] dark:text-[#D4B996] font-extrabold text-[10px] uppercase border border-[#6F4E37]/20 dark:border-[#D4B996]/30 tracking-wider">
                 Zincir Rehberi
               </span>
             </div>
-            <p className="text-[11px] text-stone-500 dark:text-stone-400 font-bold hidden sm:block">
+            <p className="text-[11px] text-stone-500 dark:text-[var(--dark-text-muted)] font-bold hidden sm:block">
               Kafe Makro & Alerjen Takip Platformu
             </p>
           </div>
         </div>
 
         {/* Global Search Bar */}
-        <div className="flex-1 max-w-md relative hidden md:block">
+        <div
+          className="flex-1 max-w-md relative hidden md:block"
+          role="combobox"
+          aria-expanded={suggestionsOpen}
+          aria-haspopup="listbox"
+          aria-controls={suggestionsOpen ? SUGGESTION_LIST_ID : undefined}
+          aria-owns={SUGGESTION_LIST_ID}
+        >
           <div className="relative">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 dark:text-stone-500" />
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 dark:text-[var(--dark-text-muted)]" />
             <input
+              ref={inputRef}
               type="text"
               aria-label="Menüde ara"
+              aria-autocomplete="list"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => handleChange(e.target.value)}
+              onKeyDown={handleKeyDown}
+              onFocus={() => setPanelOpen(true)}
               placeholder="Kahve, yiyecek, kafe adı veya filtre ara... (örn: Latte, Glutensiz)"
-              className="w-full pl-10 pr-8 py-2.5 rounded-2xl bg-stone-100 dark:bg-stone-800/90 border border-stone-200 dark:border-stone-700 text-stone-950 dark:text-stone-50 placeholder-stone-400 dark:placeholder-stone-500 text-xs font-bold focus:outline-none focus:bg-white focus:border-[#6F4E37] focus:ring-4 focus:ring-[#6F4E37]/10 transition-all shadow-inner-sm"
+              className="w-full pl-10 pr-9 py-2.5 rounded-2xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] text-stone-950 dark:text-[var(--dark-text)] placeholder-stone-400 dark:placeholder-[var(--dark-text-muted)] text-xs font-bold focus:outline-none focus:bg-white focus:border-[#6F4E37] focus:ring-4 focus:ring-[#6F4E37]/10 dark:focus:bg-[var(--dark-surface-elevated)] transition-all shadow-inner-sm"
             />
             {searchQuery && (
               <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 text-xs font-black p-1"
+                onClick={handleClear}
+                aria-label="Aramayı temizle"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 p-1 rounded-lg text-stone-400 hover:text-stone-700 dark:hover:text-[var(--dark-text)] text-xs font-black"
               >
-                ✕
+                <X className="w-4 h-4" />
               </button>
             )}
           </div>
+
+          {suggestionsOpen && (
+            <SearchSuggestions
+              suggestions={suggestions}
+              isOpen
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+              onSelect={(item) => {
+                setPanelOpen(false);
+                setActiveIndex(DEFAULT_ACTIVE_INDEX);
+                onSelectSuggestion(item);
+              }}
+              onSubmitQuery={onSubmitQuery}
+              onClear={handleClear}
+              resultCount={resultCount}
+            />
+          )}
         </div>
 
         {/* Header Action Buttons Right */}
@@ -89,7 +173,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 ? hideAllergens
                   ? 'bg-red-700 hover:bg-red-800 text-white border-red-800 shadow-md shadow-red-700/20'
                   : 'bg-[#6F4E37]/15 dark:bg-[#D4B996]/20 text-[#6F4E37] dark:text-[#D4B996] border-[#6F4E37]/30 hover:bg-[#6F4E37]/25'
-                : 'bg-stone-50 hover:bg-stone-100 dark:bg-stone-800 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 border-stone-200 dark:border-stone-700 shadow-xs'
+                : 'bg-stone-50 hover:bg-stone-100 dark:bg-[var(--dark-surface-elevated)] dark:hover:bg-[var(--dark-surface-elevated)] text-stone-800 dark:text-[var(--dark-text)] border-stone-200 dark:border-[var(--dark-border)] shadow-xs'
             }`}
           >
             <ShieldAlert className="w-4 h-4 text-[#6F4E37] dark:text-[#D4B996]" />
@@ -108,7 +192,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             className={`relative hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-2xl border text-xs font-black transition-all ${
               compareCount > 0
                 ? 'bg-[#6F4E37] hover:bg-[#5C402C] text-white border-[#6F4E37] shadow-md shadow-[#6F4E37]/20'
-                : 'bg-stone-50 dark:bg-stone-800/50 text-stone-400 dark:text-stone-500 border-stone-200/80 dark:border-stone-700/50 cursor-not-allowed opacity-60 font-semibold'
+                : 'bg-stone-50 dark:bg-[var(--dark-surface-elevated)] text-stone-400 dark:text-[var(--dark-text-muted)] border-stone-200/80 dark:border-[var(--dark-border)]/50 cursor-not-allowed opacity-60 font-semibold'
             }`}
           >
             <Scale className="w-4 h-4" />
@@ -135,7 +219,8 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Dark / Light Theme Toggle */}
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className="p-2.5 rounded-2xl bg-stone-50 hover:bg-stone-100 dark:bg-stone-800 dark:hover:bg-stone-700 border border-stone-200 dark:border-stone-700 text-stone-800 dark:text-stone-200 transition-all shadow-xs"
+            aria-label={isDarkMode ? 'Açık Moda Geç' : 'Koyu Moda Geç'}
+            className="p-2.5 rounded-2xl bg-stone-50 hover:bg-stone-100 dark:bg-[var(--dark-surface-elevated)] dark:hover:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] text-stone-800 dark:text-[var(--dark-text)] transition-all shadow-xs"
             title={isDarkMode ? "Açık Moda Geç" : "Koyu Moda Geç"}
           >
             {isDarkMode ? <Sun className="w-4 h-4 text-[#D4B996] font-bold" /> : <Moon className="w-4 h-4 text-[#2C221E] font-bold" />}

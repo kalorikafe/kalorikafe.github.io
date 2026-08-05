@@ -70,39 +70,39 @@ test('dialog traps interaction, locks page scroll and restores focus on Escape',
   await expect.poll(() => page.evaluate(() => document.body.style.overflow)).toBe('');
 });
 
-test('mobile 390px layout has no horizontal overflow and actions stay reachable', async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 });
-  const cards = page.getByTestId('item-card');
-  await expect(cards).toHaveCount(24);
+test('390px and 1440px layouts have no horizontal overflow in both themes', async ({ page }) => {
+  for (const viewport of [
+    { width: 390, height: 844 },
+    { width: 1440, height: 900 },
+  ]) {
+    await page.setViewportSize(viewport);
+    for (const theme of ['light', 'dark']) {
+      await page.evaluate(t => localStorage.setItem('kalori_cafe_theme', t), theme);
+      await page.reload();
 
-  const layout = await page.evaluate(() => {
-    const doc = document.documentElement;
-    const offenders = [...document.querySelectorAll<HTMLElement>('body *')]
-      .map(element => ({
-        tag: element.tagName,
-        text: (element.textContent || '').trim().slice(0, 60),
-        className: element.className.toString().slice(0, 100),
-        left: Math.round(element.getBoundingClientRect().left),
-        right: Math.round(element.getBoundingClientRect().right),
-        width: Math.round(element.getBoundingClientRect().width),
-        overflowX: getComputedStyle(element).overflowX,
-        scrollWidth: element.scrollWidth,
-        clientWidth: element.clientWidth,
-      }))
-      .filter(element =>
-        element.width > doc.clientWidth + 1 ||
-        (element.left < doc.clientWidth && element.right > doc.clientWidth + 1 && element.overflowX === 'visible')
-      )
-      .slice(0, 20);
-    return { overflow: doc.scrollWidth - doc.clientWidth, offenders };
-  });
-  expect(layout.overflow, JSON.stringify(layout.offenders)).toBeLessThanOrEqual(0);
+      const layout = await page.evaluate(() => {
+        const doc = document.documentElement;
+        const offenders = [...document.querySelectorAll<HTMLElement>('body *')]
+          .map(element => ({
+            tag: element.tagName,
+            className: element.className.toString().slice(0, 100),
+            width: Math.round(element.getBoundingClientRect().width),
+          }))
+          .filter(element => element.width > doc.clientWidth + 1)
+          .slice(0, 10);
+        return { overflow: doc.scrollWidth - doc.clientWidth, offenders };
+      });
+      expect(layout.overflow, `${JSON.stringify(viewport)} ${theme}: ${JSON.stringify(layout.offenders)}`).toBeLessThanOrEqual(0);
 
-  // Basket and theme toggle remain accessible regardless of compactness
-  await expect(page.getByRole('button', { name: /Sepetim/ })).toBeVisible();
-  await expect(page.getByRole('button', { name: /Açık Moda Geç|Koyu Moda Geç/ })).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Arama' })).toBeVisible();
-});
+      // Basket and theme toggle remain accessible regardless of compactness
+            await expect(page.getByRole('button', { name: /Sepetim/ })).toBeVisible();
+            await expect(page.getByRole('button', { name: /Açık Moda Geç|Koyu Moda Geç/ })).toBeVisible();
+            if (viewport.width < 768) {
+              await expect(page.getByRole('button', { name: 'Arama' })).toBeVisible();
+            }
+          }
+        }
+      });
 
 test('mobile search dialog filters results at 390px and Escape/close work', async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
@@ -135,15 +135,28 @@ test('hero quick pills filter to the correct chain', async ({ page }) => {
   const cards = page.getByTestId('item-card');
   await expect(cards).toHaveCount(24);
 
+  // Dynamic against the real catalog: the ChainSelector chip shows each
+  // chain's live product count, which must equal the filtered card count.
   const cases = [
-    { pill: '☕ Espressolab', idPrefix: 'espressolab_', count: 20 },
-    { pill: '☕ Kahve Dünyası', idPrefix: 'kahve_dunyasi_', count: 20 },
-    { pill: '☕ Caffè Nero', idPrefix: 'caffe_nero_', count: 20 },
+    { pill: '☕ Espressolab', chainChip: 'Espressolab', idPrefix: 'espressolab_' },
+    { pill: '☕ Kahve Dünyası', chainChip: 'Kahve Dünyası', idPrefix: 'kahve_dunyasi_' },
+    { pill: '☕ Caffè Nero', chainChip: 'Caffè Nero', idPrefix: 'caffe_nero_' },
   ];
 
   for (const c of cases) {
+    const badge = page
+      .getByRole('button', { name: new RegExp(`${c.chainChip} \\d+`) })
+      .getByText(/^\d+$/)
+      .first();
+    await expect(badge).toBeVisible();
+    const expectedCount = Number(await badge.textContent());
+
     await page.getByRole('button', { name: c.pill }).click();
-    await expect(cards).toHaveCount(c.count);
+    const more = page.getByRole('button', { name: 'Daha fazla göster' });
+    while (await more.isVisible().catch(() => false)) {
+      await more.click();
+    }
+    await expect(cards).toHaveCount(expectedCount);
     const ids = await cards.evaluateAll(els =>
       els.map(el => el.getAttribute('data-item-id') || '')
     );
@@ -151,4 +164,105 @@ test('hero quick pills filter to the correct chain', async ({ page }) => {
       expect(id.startsWith(c.idPrefix)).toBe(true);
     }
   }
+});
+
+test('catalog total count exceeds the legacy 199 baseline', async ({ page }) => {
+  const badge = page
+    .getByRole('button', { name: /Tüm Kafeler/ })
+    .getByText(/^\d+$/)
+    .first();
+  await expect(badge).toBeVisible();
+  expect(Number(await badge.textContent())).toBeGreaterThan(199);
+});
+
+test('suggestion panel opens after 2 characters and filters live', async ({ page }) => {
+  const input = page.getByRole('textbox', { name: 'Menüde ara' });
+  const listbox = page.getByRole('listbox', { name: 'Arama önerileri' });
+
+  await input.fill('l');
+  await expect(listbox).toBeHidden();
+
+  await input.fill('la');
+  await expect(listbox).toBeVisible();
+  expect(await listbox.getByRole('option').count()).toBeGreaterThan(0);
+
+  await input.fill('sarelle');
+  await expect(listbox.getByRole('option')).toHaveCount(1);
+  await expect(listbox).toContainText('Sarelle Mocha');
+});
+
+test('ArrowDown + Enter activate a suggestion and jump to results', async ({ page }) => {
+  const input = page.getByRole('textbox', { name: 'Menüde ara' });
+  const listbox = page.getByRole('listbox', { name: 'Arama önerileri' });
+  await input.fill('turk');
+  await expect(listbox).toBeVisible();
+
+  await input.press('ArrowDown');
+  const active = listbox.getByRole('option').and(page.locator('[aria-selected="true"]'));
+  await expect(active).toBeVisible();
+
+  await input.press('Enter');
+  await expect(listbox).toBeHidden();
+  await expect(page.getByTestId('item-card').first()).toBeVisible();
+});
+
+test('Escape closes the panel without clearing the query; ArrowUp cycles', async ({ page }) => {
+  const input = page.getByRole('textbox', { name: 'Menüde ara' });
+  const listbox = page.getByRole('listbox', { name: 'Arama önerileri' });
+  await input.fill('latte');
+  await expect(listbox).toBeVisible();
+
+  await input.press('ArrowUp');
+  await input.press('Escape');
+  await expect(listbox).toBeHidden();
+  await expect(input).toHaveValue('latte');
+  await expect(page.getByTestId('item-card').first()).toBeVisible();
+});
+
+test('clear button resets query, panel and active suggestion', async ({ page }) => {
+  const input = page.getByRole('textbox', { name: 'Menüde ara' });
+  await input.fill('latte');
+  await expect(page.getByRole('listbox', { name: 'Arama önerileri' })).toBeVisible();
+  await input.press('ArrowDown');
+
+  await page.getByRole('button', { name: 'Aramayı temizle' }).click();
+  await expect(page.getByRole('listbox', { name: 'Arama önerileri' })).toBeHidden();
+  await expect(input).toHaveValue('');
+  await expect(page.getByTestId('item-card').first()).toBeVisible();
+});
+
+test('mobile search modal shows the same suggestions and Enter closes it', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole('button', { name: 'Arama' }).click();
+  const dialog = page.getByRole('dialog', { name: 'Mobil arama' });
+  await expect(dialog).toBeVisible();
+
+  const input = dialog.getByRole('textbox', { name: 'Mobil aramada ara' });
+  await input.fill('sarelle');
+  await expect(page.getByTestId('item-card')).toHaveCount(1);
+  await expect(page.getByTestId('item-card').first()).toContainText('Sarelle Mocha');
+
+  await input.fill('la');
+  await expect(page.getByRole('listbox', { name: 'Arama önerileri' })).toBeVisible();
+  await input.press('ArrowDown');
+  await input.press('Enter');
+  await expect(dialog).toBeHidden();
+  await expect(page.getByTestId('item-card').first()).toBeVisible();
+});
+
+test('theme toggle persists across reload under kalori_cafe_theme', async ({ page }) => {
+  const initialDark = await page.evaluate(() => document.documentElement.classList.contains('dark'));
+  const toggle = page.getByRole('button', { name: /Açık Moda Geç|Koyu Moda Geç/ });
+  await toggle.click();
+  const afterToggle = await page.evaluate(() => document.documentElement.classList.contains('dark'));
+  expect(afterToggle).toBe(!initialDark);
+
+  await page.reload();
+  await expect
+    .poll(() => page.evaluate(() => document.documentElement.classList.contains('dark')))
+    .toBe(afterToggle);
+  expect(await page.evaluate(() => localStorage.getItem('kalori_cafe_theme'))).toBe(afterToggle ? 'dark' : 'light');
+  await expect(
+    page.getByRole('button', { name: afterToggle ? 'Açık Moda Geç' : 'Koyu Moda Geç' })
+  ).toBeVisible();
 });
