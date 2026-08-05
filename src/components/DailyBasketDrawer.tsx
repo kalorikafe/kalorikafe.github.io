@@ -63,19 +63,19 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden bg-black/60 backdrop-blur-sm animate-fadeIn flex justify-end">
-      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="basket-dialog-title" tabIndex={-1} className="relative w-full max-w-md h-full bg-white dark:bg-stone-900 shadow-2xl flex flex-col justify-between border-l border-stone-200 dark:border-stone-800">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="basket-dialog-title" tabIndex={-1} className="relative w-full max-w-md h-full bg-white dark:bg-[var(--dark-surface)] shadow-2xl flex flex-col justify-between border-l border-stone-200 dark:border-[var(--dark-border)]">
         
         {/* Header */}
-        <div className="p-4 sm:p-6 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between">
+        <div className="p-4 sm:p-6 border-b border-stone-200 dark:border-[var(--dark-border)] flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-amber-500/15 flex items-center justify-center text-amber-500">
               <ShoppingBag className="w-5 h-5" />
             </div>
             <div>
-              <h2 id="basket-dialog-title" className="text-lg font-extrabold text-stone-900 dark:text-stone-50">
+              <h2 id="basket-dialog-title" className="text-lg font-extrabold text-stone-900 dark:text-[var(--dark-text)]">
                 Günlük Kafe Makro Sepetim
               </h2>
-              <p className="text-xs text-stone-500 dark:text-stone-400">
+              <p className="text-xs text-stone-500 dark:text-[var(--dark-text-muted)]">
                 {basket.length} adet ürün kayıtlı
               </p>
             </div>
@@ -84,7 +84,7 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
           <button
             onClick={onClose}
             aria-label="Sepeti kapat"
-            className="p-2 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-500 hover:text-stone-900 dark:hover:text-stone-100"
+            className="p-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-500 hover:text-stone-900 dark:hover:text-[var(--dark-text)]"
           >
             <X className="w-5 h-5" />
           </button>
@@ -94,8 +94,8 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
         <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-6">
           
           {/* Personal Goal Dashboard */}
-          <div className="p-4 rounded-3xl bg-stone-100/80 dark:bg-stone-800/80 border border-stone-200/80 dark:border-stone-700/80 space-y-3">
-            <div className="flex items-center justify-between text-xs font-bold text-stone-800 dark:text-stone-200">
+          <div className="p-4 rounded-3xl bg-stone-100/80 dark:bg-[var(--dark-surface-elevated)]/80 border border-stone-200/80 dark:border-[var(--dark-border)]/80 space-y-3">
+            <div className="flex items-center justify-between text-xs font-bold text-stone-800 dark:text-[var(--dark-text)]">
               <span>Günlük Alım İlerlemeniz</span>
               <button
                 onClick={onOpenMacroCalculator}
@@ -106,32 +106,32 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
             </div>
 
             {/* Calorie Progress Bar */}
-            <div className="w-full h-3 rounded-full bg-stone-200 dark:bg-stone-700 overflow-hidden">
+            <div className="w-full h-3 rounded-full bg-stone-200 dark:bg-[var(--dark-surface-elevated)] overflow-hidden">
               <div
                 className="h-full bg-gradient-to-r from-amber-500 to-red-500 transition-all duration-500"
                 style={{ width: `${calProgress}%` }}
               />
             </div>
 
-            <div className="text-[11px] text-right font-bold text-stone-500 dark:text-stone-400">
+            <div className="text-[11px] text-right font-bold text-stone-500 dark:text-[var(--dark-text-muted)]">
               {totalCalories} / {userGoals.calorieGoal} kcal (%{calProgress})
             </div>
 
             {/* Personal Stats Row */}
             <div className="grid grid-cols-4 gap-1 text-center pt-1 text-xs">
-              <div className="p-2 rounded-xl bg-white/80 dark:bg-stone-900/80">
+              <div className="p-2 rounded-xl bg-white/80 dark:bg-[var(--dark-surface)]/80">
                 <div className="text-[10px] text-stone-400 font-bold">Kalori</div>
                 <div className="font-extrabold text-red-500">{totalCalories}</div>
               </div>
-              <div className="p-2 rounded-xl bg-white/80 dark:bg-stone-900/80">
+              <div className="p-2 rounded-xl bg-white/80 dark:bg-[var(--dark-surface)]/80">
                 <div className="text-[10px] text-stone-400 font-bold">Protein</div>
                 <div className="font-extrabold text-blue-500">{totalProtein.toFixed(1)}g</div>
               </div>
-              <div className="p-2 rounded-xl bg-white/80 dark:bg-stone-900/80">
+              <div className="p-2 rounded-xl bg-white/80 dark:bg-[var(--dark-surface)]/80">
                 <div className="text-[10px] text-stone-400 font-bold">Şeker</div>
                 <div className="font-extrabold text-orange-500">{totalSugar.toFixed(1)}g</div>
               </div>
-              <div className="p-2 rounded-xl bg-white/80 dark:bg-stone-900/80">
+              <div className="p-2 rounded-xl bg-white/80 dark:bg-[var(--dark-surface)]/80">
                 <div className="text-[10px] text-stone-400 font-bold">Kafein</div>
                 <div className="font-extrabold text-purple-500">{totalCaffeine}mg</div>
               </div>
@@ -156,7 +156,7 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
 
           {/* Itemized List */}
           <div className="space-y-3">
-            <div className="flex items-center justify-between text-xs font-bold text-stone-500 dark:text-stone-400 uppercase tracking-wider">
+            <div className="flex items-center justify-between text-xs font-bold text-stone-500 dark:text-[var(--dark-text-muted)] uppercase tracking-wider">
               <span>Eklenen Ürünler</span>
               {basket.length > 0 && (
                 <button
@@ -181,22 +181,22 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
                 return (
                   <div
                     key={b.id}
-                    className="p-3.5 rounded-2xl glass-panel border border-stone-200 dark:border-stone-800 flex items-center justify-between gap-3"
+                    className="p-3.5 rounded-2xl glass-panel border border-stone-200 dark:border-[var(--dark-border)] flex items-center justify-between gap-3"
                   >
                     <img
                       src={b.item.image}
                       alt={b.item.name}
-                      className="w-12 h-12 rounded-xl object-cover bg-stone-100 dark:bg-stone-800"
+                      className="w-12 h-12 rounded-xl object-cover bg-stone-100 dark:bg-[var(--dark-surface-elevated)]"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&auto=format&fit=crop&q=80';
                       }}
                     />
 
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-xs font-bold text-stone-900 dark:text-stone-100 truncate">
+                      <h4 className="text-xs font-bold text-stone-900 dark:text-[var(--dark-text)] truncate">
                         {b.item.name}
                       </h4>
-                      <p className="text-[11px] text-stone-500 dark:text-stone-400 truncate">
+                      <p className="text-[11px] text-stone-500 dark:text-[var(--dark-text-muted)] truncate">
                         {sizeObj?.name} {milkObj ? `• ${milkObj.name}` : ''} {b.customization.syrupPumps > 0 ? `• ${b.customization.syrupPumps} Şurup` : ''}
                       </p>
                       <div className="flex items-center gap-2 mt-1 text-[10px] font-bold">
@@ -222,7 +222,7 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
         </div>
 
         {/* Footer Copy & Export */}
-        <div className="p-4 sm:p-6 border-t border-stone-200 dark:border-stone-800 space-y-3">
+        <div className="p-4 sm:p-6 border-t border-stone-200 dark:border-[var(--dark-border)] space-y-3">
           <button
             onClick={handleCopyText}
             disabled={basket.length === 0}
@@ -231,7 +231,7 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
                 ? 'bg-emerald-600 text-white'
                 : basket.length > 0
                 ? 'bg-gradient-to-r from-amber-600 to-amber-500 text-white shadow-amber-600/20 hover:from-amber-500 hover:to-amber-400'
-                : 'bg-stone-200 dark:bg-stone-800 text-stone-400 cursor-not-allowed'
+                : 'bg-stone-200 dark:bg-[var(--dark-surface-elevated)] text-stone-400 cursor-not-allowed'
             }`}
           >
             {copied ? (

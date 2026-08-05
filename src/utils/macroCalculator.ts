@@ -47,8 +47,8 @@ export const ALLERGEN_MAP: Record<Allergen, { name: string; icon: string; bg: st
   egg: {
     name: 'Yumurta',
     icon: '🥚',
-    bg: 'bg-stone-200 dark:bg-stone-800',
-    text: 'text-stone-800 dark:text-stone-200',
+    bg: 'bg-stone-200 dark:bg-[var(--dark-surface-elevated)]',
+    text: 'text-stone-800 dark:text-[var(--dark-text)]',
     description: 'Taze yumurta veya yumurta akı tozu içerir.'
   }
 };

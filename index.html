@@ -12,6 +12,23 @@
     <meta property="og:locale" content="tr_TR" />
     <meta property="og:title" content="Kalori Cafe | Kafe Makro ve Alerjen Rehberi" />
     <meta property="og:description" content="10 zincirdeki 199 ürünü kalori, makro, kafein ve alerjen bilgileriyle karşılaştırın." />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      (function () {
+        try {
+          var saved = localStorage.getItem('kalori_cafe_theme');
+          var dark =
+            saved === 'dark'
+              ? true
+              : saved === 'light'
+                ? false
+                : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {
+          /* storage unavailable — system preference applies later */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -28,19 +28,19 @@ export const CompareModal: React.FC<CompareModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="compare-dialog-title" tabIndex={-1} className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl glass-panel border border-stone-200 dark:border-stone-800 shadow-2xl p-6 space-y-6">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="compare-dialog-title" tabIndex={-1} className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl glass-panel border border-stone-200 dark:border-[var(--dark-border)] shadow-2xl p-6 space-y-6">
         
         {/* Header */}
-        <div className="flex items-center justify-between pb-4 border-b border-stone-200 dark:border-stone-800">
+        <div className="flex items-center justify-between pb-4 border-b border-stone-200 dark:border-[var(--dark-border)]">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-blue-500/15 flex items-center justify-center text-blue-500">
               <Scale className="w-6 h-6" />
             </div>
             <div>
-              <h2 id="compare-dialog-title" className="text-xl font-extrabold text-stone-900 dark:text-stone-50">
+              <h2 id="compare-dialog-title" className="text-xl font-extrabold text-stone-900 dark:text-[var(--dark-text)]">
                 Kafe Ürün Karşılaştırması ({items.length}/4)
               </h2>
-              <p className="text-xs text-stone-500 dark:text-stone-400">
+              <p className="text-xs text-stone-500 dark:text-[var(--dark-text-muted)]">
                 Besin değerleri, şeker ve kafein oranlarını yan yana inceleyin.
               </p>
             </div>
@@ -58,7 +58,7 @@ export const CompareModal: React.FC<CompareModalProps> = ({
             <button
               onClick={onClose}
               aria-label="Karşılaştırmayı kapat"
-              className="p-2 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-500 hover:text-stone-900 dark:hover:text-stone-100"
+              className="p-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-500 hover:text-stone-900 dark:hover:text-[var(--dark-text)]"
             >
               <X className="w-5 h-5" />
             </button>
@@ -66,7 +66,7 @@ export const CompareModal: React.FC<CompareModalProps> = ({
         </div>
 
         {items.length === 0 ? (
-          <div className="py-12 text-center text-stone-500 dark:text-stone-400 space-y-2">
+          <div className="py-12 text-center text-stone-500 dark:text-[var(--dark-text-muted)] space-y-2">
             <Scale className="w-12 h-12 mx-auto text-stone-300 dark:text-stone-700 stroke-1" />
             <p className="text-sm font-semibold">Henüz karşılaştırma için ürün seçmediniz.</p>
             <p className="text-xs">Menüdeki ürün kartlarında bulunan ⚖️ butonuna basarak ürün ekleyebilirsiniz.</p>
@@ -81,11 +81,11 @@ export const CompareModal: React.FC<CompareModalProps> = ({
               return (
                 <div
                   key={item.id}
-                  className="relative p-4 rounded-2xl glass-panel border border-stone-200/80 dark:border-stone-800/80 flex flex-col justify-between space-y-3"
+                  className="relative p-4 rounded-2xl glass-panel border border-stone-200/80 dark:border-[var(--dark-border)]/80 flex flex-col justify-between space-y-3"
                 >
                   <button
                     onClick={() => onRemoveItem(item.id)}
-                    className="absolute top-2 right-2 p-1.5 rounded-full bg-stone-200/80 dark:bg-stone-800 text-stone-500 hover:text-red-500 transition-colors"
+                    className="absolute top-2 right-2 p-1.5 rounded-full bg-stone-200/80 dark:bg-[var(--dark-surface-elevated)] text-stone-500 hover:text-red-500 transition-colors"
                     title="Kaldır"
                   >
                     <Trash2 className="w-3.5 h-3.5" />
@@ -95,7 +95,7 @@ export const CompareModal: React.FC<CompareModalProps> = ({
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-32 rounded-xl object-cover bg-stone-100 dark:bg-stone-800"
+                      className="w-full h-32 rounded-xl object-cover bg-stone-100 dark:bg-[var(--dark-surface-elevated)]"
                       onError={(e) => {
                         (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&auto=format&fit=crop&q=80';
                       }}
@@ -110,7 +110,7 @@ export const CompareModal: React.FC<CompareModalProps> = ({
                       <span>{chainObj?.name}</span>
                     </div>
 
-                    <h4 className="text-sm font-bold text-stone-900 dark:text-stone-100 line-clamp-2">
+                    <h4 className="text-sm font-bold text-stone-900 dark:text-[var(--dark-text)] line-clamp-2">
                       {item.name}
                     </h4>
 
@@ -128,8 +128,8 @@ export const CompareModal: React.FC<CompareModalProps> = ({
                   </div>
 
                   {/* Macro Comparison List */}
-                  <div className="space-y-1.5 pt-2 border-t border-stone-200 dark:border-stone-800 text-xs">
-                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-stone-800">
+                  <div className="space-y-1.5 pt-2 border-t border-stone-200 dark:border-[var(--dark-border)] text-xs">
+                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-[var(--dark-surface-elevated)]">
                       <span className="text-stone-500 text-[11px] flex items-center gap-1">
                         <Flame className="w-3 h-3 text-red-500" /> Kalori:
                       </span>
@@ -138,28 +138,28 @@ export const CompareModal: React.FC<CompareModalProps> = ({
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-stone-800">
+                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-[var(--dark-surface-elevated)]">
                       <span className="text-stone-500 text-[11px]">Protein:</span>
                       <span className="font-extrabold text-blue-600 dark:text-blue-400">
                         {item.baseMacros.protein}g
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-stone-800">
+                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-[var(--dark-surface-elevated)]">
                       <span className="text-stone-500 text-[11px]">Karb (Şeker):</span>
                       <span className="font-extrabold text-amber-600 dark:text-amber-400">
                         {item.baseMacros.carbs}g ({item.baseMacros.sugar}g)
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-stone-800">
+                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-[var(--dark-surface-elevated)]">
                       <span className="text-stone-500 text-[11px]">Yağ:</span>
                       <span className="font-extrabold text-emerald-600 dark:text-emerald-400">
                         {item.baseMacros.fat}g
                       </span>
                     </div>
 
-                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-stone-800">
+                    <div className="flex items-center justify-between p-1 rounded bg-stone-100 dark:bg-[var(--dark-surface-elevated)]">
                       <span className="text-stone-500 text-[11px] flex items-center gap-1">
                         <Zap className="w-3 h-3 text-purple-500" /> Kafein:
                       </span>
@@ -172,7 +172,7 @@ export const CompareModal: React.FC<CompareModalProps> = ({
                   {/* Allergen List */}
                   <div className="flex flex-wrap gap-1 pt-1">
                     {item.allergens.map(a => (
-                      <span key={a} className="text-[10px] px-1.5 py-0.5 rounded bg-stone-200 dark:bg-stone-800">
+                      <span key={a} className="text-[10px] px-1.5 py-0.5 rounded bg-stone-200 dark:bg-[var(--dark-surface-elevated)]">
                         {ALLERGEN_MAP[a]?.icon} {ALLERGEN_MAP[a]?.name}
                       </span>
                     ))}

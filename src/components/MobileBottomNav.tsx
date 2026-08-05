@@ -22,12 +22,12 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
 }) => {
   return (
     <div className="md:hidden fixed bottom-4 left-4 right-4 z-40">
-      <div className="glass-panel rounded-2xl p-2 border border-stone-200/80 dark:border-stone-800 shadow-2xl flex items-center justify-around text-stone-700 dark:text-stone-300">
+      <div className="glass-panel rounded-2xl p-2 border border-stone-200/80 dark:border-[var(--dark-border)] shadow-2xl flex items-center justify-around text-stone-700 dark:text-[var(--dark-text-muted)]">
         
         {/* Search */}
         <button
           onClick={onOpenSearch}
-          className="flex flex-col items-center gap-0.5 p-1 text-[10px] font-bold text-stone-600 dark:text-stone-300 hover:text-amber-500"
+          className="flex flex-col items-center gap-0.5 p-1 text-[10px] font-bold text-stone-600 dark:text-[var(--dark-text-muted)] hover:text-amber-500"
         >
           <Search className="w-5 h-5 text-amber-500" />
           <span>Arama</span>
@@ -36,7 +36,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
         {/* Custom Builder */}
         <button
           onClick={onOpenCustomBuilder}
-          className="flex flex-col items-center gap-0.5 p-1 text-[10px] font-bold text-stone-600 dark:text-stone-300 hover:text-amber-500"
+          className="flex flex-col items-center gap-0.5 p-1 text-[10px] font-bold text-stone-600 dark:text-[var(--dark-text-muted)] hover:text-amber-500"
         >
           <Wand2 className="w-5 h-5 text-amber-500" />
           <span>Özel Tarif</span>

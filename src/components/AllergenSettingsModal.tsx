@@ -30,19 +30,19 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="allergen-dialog-title" tabIndex={-1} className="relative w-full max-w-xl rounded-3xl glass-panel border border-stone-200 dark:border-stone-800 shadow-2xl p-6 space-y-6">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="allergen-dialog-title" tabIndex={-1} className="relative w-full max-w-xl rounded-3xl glass-panel border border-stone-200 dark:border-[var(--dark-border)] shadow-2xl p-6 space-y-6">
         
         {/* Header */}
-        <div className="flex items-start justify-between pb-4 border-b border-stone-200 dark:border-stone-800">
+        <div className="flex items-start justify-between pb-4 border-b border-stone-200 dark:border-[var(--dark-border)]">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-amber-500/15 flex items-center justify-center text-amber-500">
               <ShieldAlert className="w-6 h-6" />
             </div>
             <div>
-              <h2 id="allergen-dialog-title" className="text-xl font-extrabold text-stone-900 dark:text-stone-50">
+              <h2 id="allergen-dialog-title" className="text-xl font-extrabold text-stone-900 dark:text-[var(--dark-text)]">
                 Kişisel Alerjen & Hassasiyet Profili
               </h2>
-              <p className="text-xs text-stone-500 dark:text-stone-400">
+              <p className="text-xs text-stone-500 dark:text-[var(--dark-text-muted)]">
                 Aşağıdaki alerjenleri seçerek size uygun olmayan kafe ürünlerini önceden görün.
               </p>
             </div>
@@ -51,7 +51,7 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
           <button
             onClick={onClose}
             aria-label="Alerjen profilini kapat"
-            className="p-2 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-500 hover:text-stone-900 dark:hover:text-stone-100"
+            className="p-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-500 hover:text-stone-900 dark:hover:text-[var(--dark-text)]"
           >
             <X className="w-5 h-5" />
           </button>
@@ -70,7 +70,7 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
                 className={`p-3.5 rounded-2xl border text-left flex items-start gap-3 transition-all ${
                   isSelected
                     ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold shadow-sm'
-                    : 'bg-stone-100/60 dark:bg-stone-800/60 border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:border-amber-500/30'
+                    : 'bg-stone-100/60 dark:bg-[var(--dark-surface-elevated)]/60 border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)] hover:border-amber-500/30'
                 }`}
               >
                 <span className="text-2xl">{info.icon}</span>
@@ -79,7 +79,7 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
                     <span>{info.name}</span>
                     {isSelected && <Check className="w-4 h-4 text-amber-600 dark:text-amber-400" />}
                   </div>
-                  <div className="text-[10px] text-stone-500 dark:text-stone-400 mt-0.5 font-normal">
+                  <div className="text-[10px] text-stone-500 dark:text-[var(--dark-text-muted)] mt-0.5 font-normal">
                     {info.description}
                   </div>
                 </div>
@@ -89,8 +89,8 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
         </div>
 
         {/* Behavior Switch */}
-        <div className="p-4 rounded-2xl bg-stone-100/80 dark:bg-stone-800/80 border border-stone-200/80 dark:border-stone-700/80 space-y-3">
-          <div className="text-xs font-bold text-stone-800 dark:text-stone-200 flex items-center gap-2">
+        <div className="p-4 rounded-2xl bg-stone-100/80 dark:bg-[var(--dark-surface-elevated)]/80 border border-stone-200/80 dark:border-[var(--dark-border)]/80 space-y-3">
+          <div className="text-xs font-bold text-stone-800 dark:text-[var(--dark-text)] flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-amber-500" />
             <span>Filtreleme Davranışı</span>
           </div>
@@ -104,7 +104,7 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
                 onChange={() => setHideAllergens(false)}
                 className="w-4 h-4 text-amber-600 focus:ring-amber-500"
               />
-              <span className="text-stone-700 dark:text-stone-300 font-medium">
+              <span className="text-stone-700 dark:text-[var(--dark-text-muted)] font-medium">
                 Belirgin Kırmızı İkaz Rozeti Göster (Önerilen)
               </span>
             </label>
@@ -117,7 +117,7 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
                 onChange={() => setHideAllergens(true)}
                 className="w-4 h-4 text-amber-600 focus:ring-amber-500"
               />
-              <span className="text-stone-700 dark:text-stone-300 font-medium">
+              <span className="text-stone-700 dark:text-[var(--dark-text-muted)] font-medium">
                 Alerji İçeren Tüm Ürünleri Menüden Gizle
               </span>
             </label>

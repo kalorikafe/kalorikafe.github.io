@@ -1,13 +1,40 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+/*
+ * Warm espresso dark theme tokens — single source of truth for the dark
+ * palette. Components reference these tokens (e.g.
+ * dark:bg-[var(--dark-surface)]) instead of repeating raw hex values so
+ * surfaces stay consistent and adjustable from one place.
+ *
+ * Light mode intentionally keeps the existing warm stone palette.
+ */
+:root {
+  --dark-bg: #17120f; /* deep warm charcoal page background        */
+  --dark-surface: #211a16; /* raised panels, navbar, cards             */
+  --dark-surface-elevated: #2b211c; /* buttons, inputs, elevated surfaces  */
+  --dark-border: #49372e; /* warm border on surfaces                 */
+  --dark-text: #f7efe8; /* primary text                            */
+  --dark-text-muted: #c6b4a6; /* secondary text                       */
+  --dark-accent: #e0a15a; /* selected / interactive amber            */
+}
+
 @layer base {
   body {
-    @apply font-sans antialiased selection:bg-[#D97706] selection:text-white bg-[#FAF8F5] text-[#2C221E] dark:bg-[#0C0A09] dark:text-[#F5F5F4];
+    @apply font-sans antialiased selection:bg-[#D97706] selection:text-white bg-[#FAF8F5] text-[#2C221E] dark:bg-[var(--dark-bg)] dark:text-[var(--dark-text)] transition-colors duration-300;
   }
 }
 
-/* Glassmorphism Design System - Warm Cozy Luxury Cafe */
+/* Visible focus ring for keyboard users (WCAG contrast on both themes). */
+:focus-visible {
+  outline: 2px solid #d97706;
+  outline-offset: 2px;
+}
+.dark :focus-visible {
+  outline-color: var(--dark-accent);
+}
+
+/* Glassmorphism panels: warm cream in light, warm espresso in dark. */
 .glass-panel {
   background: rgba(250, 248, 245, 0.95);
   backdrop-filter: blur(16px);
@@ -15,11 +42,11 @@
 }
 
 .dark .glass-panel {
-  background: rgba(23, 20, 18, 0.88);
+  background: rgba(33, 26, 22, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-color: rgba(217, 119, 6, 0.2);
-  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+  border-color: var(--dark-border);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.35);
 }
 
 /* Custom Scrollbars */
@@ -38,13 +65,19 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(217, 119, 6, 0.6);
+  background: var(--dark-accent);
 }
 
 /* Keyframe Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fadeIn {

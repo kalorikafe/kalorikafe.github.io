@@ -70,19 +70,19 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="macro-target-dialog-title" tabIndex={-1} className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-3xl glass-panel border border-stone-200 dark:border-stone-800 shadow-2xl p-6 space-y-6">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="macro-target-dialog-title" tabIndex={-1} className="relative w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-3xl glass-panel border border-stone-200 dark:border-[var(--dark-border)] shadow-2xl p-6 space-y-6">
         
         {/* Header */}
-        <div className="flex items-start justify-between pb-4 border-b border-stone-200 dark:border-stone-800">
+        <div className="flex items-start justify-between pb-4 border-b border-stone-200 dark:border-[var(--dark-border)]">
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-600 to-orange-500 flex items-center justify-center text-white shadow-lg shadow-amber-500/25">
               <Calculator className="w-6 h-6" />
             </div>
             <div>
-              <h2 id="macro-target-dialog-title" className="text-xl font-extrabold text-stone-900 dark:text-stone-50">
+              <h2 id="macro-target-dialog-title" className="text-xl font-extrabold text-stone-900 dark:text-[var(--dark-text)]">
                 Kişisel Günlük Makro Hesaplayıcı
               </h2>
-              <p className="text-xs text-stone-500 dark:text-stone-400">
+              <p className="text-xs text-stone-500 dark:text-[var(--dark-text-muted)]">
                 BMR ve TDEE formülü ile kafe sepetiniz için kişisel hedeflerinizi belirleyin.
               </p>
             </div>
@@ -91,7 +91,7 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
           <button
             onClick={onClose}
             aria-label="Makro hesaplayıcıyı kapat"
-            className="p-2 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-500 hover:text-stone-900 dark:hover:text-stone-100"
+            className="p-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-500 hover:text-stone-900 dark:hover:text-[var(--dark-text)]"
           >
             <X className="w-5 h-5" />
           </button>
@@ -102,17 +102,17 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
           
           {/* Gender */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-stone-300 mb-1">Cinsiyet</label>
+            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Cinsiyet</label>
             <div className="grid grid-cols-2 gap-2">
               <button
                 onClick={() => setGender('male')}
-                className={`py-2 rounded-xl border font-bold ${gender === 'male' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300'}`}
+                className={`py-2 rounded-xl border font-bold ${gender === 'male' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 Erkek
               </button>
               <button
                 onClick={() => setGender('female')}
-                className={`py-2 rounded-xl border font-bold ${gender === 'female' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300'}`}
+                className={`py-2 rounded-xl border font-bold ${gender === 'female' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 Kadın
               </button>
@@ -121,7 +121,7 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
           {/* Age */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-stone-300 mb-1">Yaş ({age})</label>
+            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Yaş ({age})</label>
             <input
               type="range"
               min={15}
@@ -134,33 +134,33 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
           {/* Weight */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-stone-300 mb-1">Kilo ({weightKg} kg)</label>
+            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Kilo ({weightKg} kg)</label>
             <input
               type="number"
               value={weightKg}
               onChange={(e) => setWeightKg(Number(e.target.value))}
-              className="w-full px-3 py-2 rounded-xl bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 font-bold"
+              className="w-full px-3 py-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] font-bold"
             />
           </div>
 
           {/* Height */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-stone-300 mb-1">Boy ({heightCm} cm)</label>
+            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Boy ({heightCm} cm)</label>
             <input
               type="number"
               value={heightCm}
               onChange={(e) => setHeightCm(Number(e.target.value))}
-              className="w-full px-3 py-2 rounded-xl bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 font-bold"
+              className="w-full px-3 py-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] font-bold"
             />
           </div>
 
           {/* Activity Level */}
           <div className="sm:col-span-2">
-            <label className="block font-bold text-stone-700 dark:text-stone-300 mb-1">Haftalık Aktivite Seviyesi</label>
+            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Haftalık Aktivite Seviyesi</label>
             <select
               value={activity}
               onChange={(e) => setActivity(Number(e.target.value))}
-              className="w-full px-3 py-2 rounded-xl bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700 font-semibold"
+              className="w-full px-3 py-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] font-semibold"
             >
               <option value={1.2}>Masa Başı / Hareketsiz Seviye</option>
               <option value={1.375}>Az Hareketli (Haftada 1-3 Gün Spor)</option>
@@ -171,23 +171,23 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
           {/* Goal Type */}
           <div className="sm:col-span-2">
-            <label className="block font-bold text-stone-700 dark:text-stone-300 mb-1">Ana Hedefiniz</label>
+            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Ana Hedefiniz</label>
             <div className="grid grid-cols-3 gap-2">
               <button
                 onClick={() => setGoalType('lose')}
-                className={`py-2 px-2 rounded-xl border text-[11px] font-bold ${goalType === 'lose' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300'}`}
+                className={`py-2 px-2 rounded-xl border text-[11px] font-bold ${goalType === 'lose' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 🔥 Yağ Yakmak (-20%)
               </button>
               <button
                 onClick={() => setGoalType('maintain')}
-                className={`py-2 px-2 rounded-xl border text-[11px] font-bold ${goalType === 'maintain' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300'}`}
+                className={`py-2 px-2 rounded-xl border text-[11px] font-bold ${goalType === 'maintain' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 ⚖️ Kilo Korumak
               </button>
               <button
                 onClick={() => setGoalType('gain')}
-                className={`py-2 px-2 rounded-xl border text-[11px] font-bold ${goalType === 'gain' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300'}`}
+                className={`py-2 px-2 rounded-xl border text-[11px] font-bold ${goalType === 'gain' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 💪 Kas Yapmak (+15%)
               </button>
@@ -203,19 +203,19 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
           </div>
 
           <div className="grid grid-cols-4 gap-2 pt-1 text-xs">
-            <div className="p-2 rounded-xl bg-white/80 dark:bg-stone-900/80">
+            <div className="p-2 rounded-xl bg-white/80 dark:bg-[var(--dark-surface)]/80">
               <div className="text-[10px] text-stone-400 font-bold">Hedef Kalori</div>
               <div className="font-black text-red-500 text-sm">{computedGoals.calorieGoal} kcal</div>
             </div>
-            <div className="p-2 rounded-xl bg-white/80 dark:bg-stone-900/80">
+            <div className="p-2 rounded-xl bg-white/80 dark:bg-[var(--dark-surface)]/80">
               <div className="text-[10px] text-stone-400 font-bold">Protein</div>
               <div className="font-black text-blue-500 text-sm">{computedGoals.proteinGoal}g</div>
             </div>
-            <div className="p-2 rounded-xl bg-white/80 dark:bg-stone-900/80">
+            <div className="p-2 rounded-xl bg-white/80 dark:bg-[var(--dark-surface)]/80">
               <div className="text-[10px] text-stone-400 font-bold">Karb</div>
               <div className="font-black text-amber-500 text-sm">{computedGoals.carbGoal}g</div>
             </div>
-            <div className="p-2 rounded-xl bg-white/80 dark:bg-stone-900/80">
+            <div className="p-2 rounded-xl bg-white/80 dark:bg-[var(--dark-surface)]/80">
               <div className="text-[10px] text-stone-400 font-bold">Yağ</div>
               <div className="font-black text-emerald-500 text-sm">{computedGoals.fatGoal}g</div>
             </div>
@@ -226,7 +226,7 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
         <div className="pt-2 flex items-center justify-between gap-3">
           <button
             onClick={onClose}
-            className="px-4 py-2.5 rounded-xl border border-stone-200 dark:border-stone-700 text-xs font-semibold text-stone-600 dark:text-stone-300"
+            className="px-4 py-2.5 rounded-xl border border-stone-200 dark:border-[var(--dark-border)] text-xs font-semibold text-stone-600 dark:text-[var(--dark-text-muted)]"
           >
             Vazgeç
           </button>

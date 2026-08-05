@@ -1,8 +1,10 @@
-import React, { lazy, Suspense, useState, useEffect, useMemo } from 'react';
+import React, { lazy, Suspense, useState, useEffect, useMemo, useRef } from 'react';
 import type { MenuItem, Category, DietaryPreference, Allergen, CustomizationState, BasketItem } from './types/cafe';
 import { MENU_ITEMS } from './data/items';
 import { calculateMacrosAndAllergens } from './utils/macroCalculator';
 import { filterAndSortMenu } from './utils/menuFilter';
+import { rankSearchMatches } from './utils/searchNormalize';
+import { MAX_SUGGESTIONS } from './utils/searchInteraction';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ChainSelector } from './components/ChainSelector';
@@ -27,18 +29,28 @@ const CustomRecipeBuilderModal = lazy(() => import('./components/CustomRecipeBui
 const MobileSearchModal = lazy(() => import('./components/MobileSearchModal').then(module => ({ default: module.MobileSearchModal })));
 
 export const App: React.FC = () => {
-  // Theme State
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
+  // Theme State — persisted under `kalori_cafe_theme` (light | dark).
+    // A saved choice wins over the system preference; the inline script in
+    // index.html applies the class before first paint to avoid a flash.
+    const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+      try {
+        const saved = localStorage.getItem('kalori_cafe_theme');
+        if (saved === 'dark') return true;
+        if (saved === 'light') return false;
+      } catch {
+        // fall through to system preference
+      }
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    });
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
+    useEffect(() => {
+      document.documentElement.classList.toggle('dark', isDarkMode);
+      try {
+        localStorage.setItem('kalori_cafe_theme', isDarkMode ? 'dark' : 'light');
+      } catch {
+        // storage unavailable
+      }
+    }, [isDarkMode]);
 
   // Dynamic Menu Items State (includes base items + user custom recipes)
   const [customRecipes, setCustomRecipes] = useState<MenuItem[]>(() => {
@@ -303,6 +315,30 @@ export const App: React.FC = () => {
 
   const visibleItems = filteredItems.slice(0, visibleCount);
 
+  // Search suggestions — one shared ranker for desktop and mobile surfaces.
+  const searchSuggestions = useMemo(() => {
+    return rankSearchMatches(allMenuItems, searchQuery, MAX_SUGGESTIONS);
+  }, [allMenuItems, searchQuery]);
+
+  // Stable scroll target for search navigation (desktop + mobile).
+  const resultsGridRef = useRef<HTMLDivElement>(null);
+
+  const scrollToResults = () => {
+    window.requestAnimationFrame(() => {
+      resultsGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  };
+
+  const handleSelectSuggestion = (item: MenuItem) => {
+    setSearchQuery(item.name);
+    setIsMobileSearchOpen(false);
+    scrollToResults();
+  };
+
+  const handleSubmitQuery = () => {
+    scrollToResults();
+  };
+
   // Chain counts map
   const chainCounts = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -315,12 +351,16 @@ export const App: React.FC = () => {
   const totalBasketCalories = basket.reduce((acc, b) => acc + b.calculatedMacros.calories, 0);
 
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 transition-colors duration-300 pb-20 md:pb-0">
+    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-[var(--dark-bg)] text-stone-900 dark:text-[var(--dark-text)] transition-colors duration-300 pb-20 md:pb-0">
       
       {/* Header Navigation */}
       <Navbar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        suggestions={searchSuggestions}
+        resultCount={filteredItems.length}
+        onSelectSuggestion={handleSelectSuggestion}
+        onSubmitQuery={handleSubmitQuery}
         userAllergens={userAllergens}
         hideAllergens={hideAllergens}
         onOpenAllergenModal={() => setIsAllergenModalOpen(true)}
@@ -406,12 +446,12 @@ export const App: React.FC = () => {
 
           {/* Product Cards Grid */}
           {filteredItems.length === 0 ? (
-            <div className="py-20 text-center space-y-3 glass-panel rounded-3xl border border-stone-200 dark:border-stone-800">
+            <div className="py-20 text-center space-y-3 glass-panel rounded-3xl border border-stone-200 dark:border-[var(--dark-border)]">
               <Coffee className="w-12 h-12 mx-auto text-amber-500/50 stroke-1" />
-              <h3 className="text-lg font-bold text-stone-800 dark:text-stone-200">
+              <h3 className="text-lg font-bold text-stone-800 dark:text-[var(--dark-text)]">
                 Aradığınız kriterlere uygun ürün bulunamadı.
               </h3>
-              <p className="text-xs text-stone-500 dark:text-stone-400 max-w-sm mx-auto">
+              <p className="text-xs text-stone-500 dark:text-[var(--dark-text-muted)] max-w-sm mx-auto">
                 Arama kelimenizi değiştirebilir veya diyet filtrelerini temizleyerek tüm menüyü görüntüleyebilirsiniz.
               </p>
               <button
@@ -423,7 +463,14 @@ export const App: React.FC = () => {
             </div>
           ) : (
             <div className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div id="menu-results" ref={resultsGridRef} className="scroll-mt-28">
+                <div
+                  aria-live="polite"
+                  className="sr-only"
+                >
+                  {searchQuery.trim() !== '' && `${filteredItems.length} ürün bulundu`}
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {visibleItems.map(item => (
                   <ItemCard
                     key={item.id}
@@ -438,9 +485,10 @@ export const App: React.FC = () => {
                     onOpenNutritionLabel={(selectedItem) => setNutritionLabelItem(selectedItem)}
                   />
                 ))}
+                </div>
               </div>
               <div className="flex flex-col items-center gap-3" aria-live="polite">
-                <p className="text-xs font-bold text-stone-500 dark:text-stone-400">
+                <p className="text-xs font-bold text-stone-500 dark:text-[var(--dark-text-muted)]">
                   {visibleItems.length} / {filteredItems.length} ürün gösteriliyor
                 </p>
                 {visibleItems.length < filteredItems.length && (
@@ -481,11 +529,11 @@ export const App: React.FC = () => {
         {nutritionLabelItem && <NutritionLabelModal item={nutritionLabelItem} onClose={() => setNutritionLabelItem(null)} />}
         {isMacroCalculatorOpen && <MacroTargetCalculatorModal isOpen onClose={() => setIsMacroCalculatorOpen(false)} userGoals={userGoals} onSaveGoals={(newGoals) => setUserGoals(newGoals)} />}
         {isCustomBuilderOpen && <CustomRecipeBuilderModal isOpen onClose={() => setIsCustomBuilderOpen(false)} onSaveCustomRecipe={handleSaveCustomRecipe} />}
-        {isMobileSearchOpen && <MobileSearchModal isOpen onClose={() => setIsMobileSearchOpen(false)} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />}
+        {isMobileSearchOpen && <MobileSearchModal isOpen onClose={() => setIsMobileSearchOpen(false)} searchQuery={searchQuery} setSearchQuery={setSearchQuery} suggestions={searchSuggestions} resultCount={filteredItems.length} onSelectSuggestion={handleSelectSuggestion} onSubmitQuery={handleSubmitQuery} />}
       </Suspense>
 
       {/* Footer */}
-      <footer className="w-full border-t border-stone-200 dark:border-stone-800 bg-white/50 dark:bg-stone-900/50 py-8 mt-16 text-center text-xs text-stone-500 dark:text-stone-400 space-y-2">
+      <footer className="w-full border-t border-stone-200 dark:border-[var(--dark-border)] bg-white/50 dark:bg-[var(--dark-surface)]/50 py-8 mt-16 text-center text-xs text-stone-500 dark:text-[var(--dark-text-muted)] space-y-2">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <span className="font-bold text-amber-600 dark:text-amber-400">Kalori Cafe</span>

@@ -22,7 +22,7 @@ export const ChainSelector: React.FC<ChainSelectorProps> = ({
           <div className="w-8 h-8 rounded-xl bg-[#6F4E37]/15 flex items-center justify-center text-[#6F4E37] dark:text-[#D4B996]">
             <Layers className="w-4 h-4" />
           </div>
-          <h2 id="chain-selector-title" className="text-sm font-black text-stone-900 dark:text-stone-100 uppercase tracking-wider">
+          <h2 id="chain-selector-title" className="text-sm font-black text-stone-900 dark:text-[var(--dark-text)] uppercase tracking-wider">
             Kafe Zincirleri ({CHAINS.length} Popüler Marka)
           </h2>
         </div>
@@ -46,12 +46,12 @@ export const ChainSelector: React.FC<ChainSelectorProps> = ({
           className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-2xl border text-xs font-black transition-all ${
             selectedChainId === null
               ? 'bg-[#2C221E] text-white dark:bg-[#FAF8F5] dark:text-[#2C221E] border-[#2C221E] dark:border-[#FAF8F5] shadow-md scale-105'
-              : 'bg-white dark:bg-[#1C1816] border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-200 hover:border-[#6F4E37]'
+              : 'bg-white dark:bg-[var(--dark-surface)] border-stone-200 dark:border-[var(--dark-border)] text-stone-800 dark:text-[var(--dark-text)] hover:border-[#6F4E37]'
           }`}
         >
           <span>☕ Tüm Kafeler</span>
           <span className={`px-2 py-0.5 rounded-full text-[10px] ${
-            selectedChainId === null ? 'bg-white/20 dark:bg-black/20 text-white dark:text-[#2C221E]' : 'bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400'
+            selectedChainId === null ? 'bg-white/20 dark:bg-black/20 text-white dark:text-[#2C221E]' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-600 dark:text-[var(--dark-text-muted)]'
           }`}>
             {totalCount}
           </span>
@@ -69,7 +69,7 @@ export const ChainSelector: React.FC<ChainSelectorProps> = ({
               className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-2xl border text-xs font-black transition-all ${
                 isSelected
                   ? 'bg-[#2C221E] text-white dark:bg-[#FAF8F5] dark:text-[#2C221E] border-[#2C221E] dark:border-[#FAF8F5] shadow-md scale-105'
-                  : 'bg-white dark:bg-[#1C1816] border-stone-200 dark:border-stone-800 text-stone-800 dark:text-stone-200 hover:border-[#6F4E37]'
+                  : 'bg-white dark:bg-[var(--dark-surface)] border-stone-200 dark:border-[var(--dark-border)] text-stone-800 dark:text-[var(--dark-text)] hover:border-[#6F4E37]'
               }`}
             >
               {chain.logo.startsWith('http') ? (
@@ -79,7 +79,7 @@ export const ChainSelector: React.FC<ChainSelectorProps> = ({
               )}
               <span>{chain.name}</span>
               <span className={`px-2 py-0.5 rounded-full text-[10px] ${
-                isSelected ? 'bg-[#6F4E37] text-white' : 'bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400'
+                isSelected ? 'bg-[#6F4E37] text-white' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-600 dark:text-[var(--dark-text-muted)]'
               }`}>
                 {count}
               </span>

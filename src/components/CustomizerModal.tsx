@@ -45,29 +45,29 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/70 backdrop-blur-sm animate-fadeIn">
-      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="customizer-title" tabIndex={-1} className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl glass-panel border border-stone-200 dark:border-stone-800 shadow-2xl p-6 space-y-6">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="customizer-title" tabIndex={-1} className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl glass-panel border border-stone-200 dark:border-[var(--dark-border)] shadow-2xl p-6 space-y-6">
         
         {/* Header */}
-        <div className="flex items-start justify-between gap-4 pb-4 border-b border-stone-200 dark:border-stone-800">
+        <div className="flex items-start justify-between gap-4 pb-4 border-b border-stone-200 dark:border-[var(--dark-border)]">
           <div className="flex items-center gap-3">
             <img
               src={item.image}
               alt={item.name}
-              className="w-16 h-16 shrink-0 rounded-2xl object-cover border border-stone-200 dark:border-stone-700 shadow-sm bg-stone-100 dark:bg-stone-800"
+              className="w-16 h-16 shrink-0 rounded-2xl object-cover border border-stone-200 dark:border-[var(--dark-border)] shadow-sm bg-stone-100 dark:bg-[var(--dark-surface-elevated)]"
               onError={(e) => {
                 (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&auto=format&fit=crop&q=80';
               }}
             />
             <div>
               <div className="flex items-center gap-2">
-                <h2 id="customizer-title" className="text-xl font-extrabold text-stone-900 dark:text-stone-50">
+                <h2 id="customizer-title" className="text-xl font-extrabold text-stone-900 dark:text-[var(--dark-text)]">
                   {item.name}
                 </h2>
                 <span className="text-xs font-bold px-2.5 py-0.5 rounded-full bg-amber-500/10 text-amber-600 dark:text-amber-400">
                   Tarif Özelleştirici
                 </span>
               </div>
-              <p className="text-xs text-stone-500 dark:text-stone-400 mt-0.5">
+              <p className="text-xs text-stone-500 dark:text-[var(--dark-text-muted)] mt-0.5">
                 Süt, şurup ve boyut seçiminize göre makro ve alerjenlerinizi kişiselleştirin.
               </p>
             </div>
@@ -76,7 +76,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
           <button
             onClick={onClose}
             aria-label="Özelleştiriciyi kapat"
-            className="p-2 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 transition-colors"
+            className="p-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-500 hover:text-stone-900 dark:hover:text-[var(--dark-text)] transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -84,7 +84,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
 
         {/* Live Macro Summary Gauge Bar */}
         <div className="p-4 rounded-2xl bg-gradient-to-br from-amber-500/10 via-orange-500/5 to-amber-500/10 border border-amber-500/30 space-y-3">
-          <div className="flex items-center justify-between text-xs font-bold text-stone-700 dark:text-stone-300">
+          <div className="flex items-center justify-between text-xs font-bold text-stone-700 dark:text-[var(--dark-text-muted)]">
             <span>Hesaplanan Canlı Makro Değerleri</span>
             <span className="flex items-center gap-1 text-amber-600 dark:text-amber-400">
               <Sparkles className="w-3.5 h-3.5" /> Anlık Güncelleme
@@ -93,7 +93,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
 
           <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 text-center">
             
-            <div className="p-2 rounded-xl bg-white/70 dark:bg-stone-900/70 border border-amber-500/20">
+            <div className="p-2 rounded-xl bg-white/70 dark:bg-[var(--dark-surface)]/70 border border-amber-500/20">
               <div className="text-[10px] uppercase font-bold text-stone-400">Kalori</div>
               <div data-testid="customizer-calories" className="text-sm font-black text-red-500 flex items-center justify-center gap-0.5">
                 <Flame className="w-3.5 h-3.5" />
@@ -101,35 +101,35 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
               </div>
             </div>
 
-            <div className="p-2 rounded-xl bg-white/70 dark:bg-stone-900/70 border border-blue-500/20">
+            <div className="p-2 rounded-xl bg-white/70 dark:bg-[var(--dark-surface)]/70 border border-blue-500/20">
               <div className="text-[10px] uppercase font-bold text-stone-400">Protein</div>
               <div className="text-sm font-black text-blue-500">
                 {calculatedMacros.protein}g
               </div>
             </div>
 
-            <div className="p-2 rounded-xl bg-white/70 dark:bg-stone-900/70 border border-amber-500/20">
+            <div className="p-2 rounded-xl bg-white/70 dark:bg-[var(--dark-surface)]/70 border border-amber-500/20">
               <div className="text-[10px] uppercase font-bold text-stone-400">Karbonhidrat</div>
               <div className="text-sm font-black text-amber-500">
                 {calculatedMacros.carbs}g
               </div>
             </div>
 
-            <div className="p-2 rounded-xl bg-white/70 dark:bg-stone-900/70 border border-orange-500/20">
+            <div className="p-2 rounded-xl bg-white/70 dark:bg-[var(--dark-surface)]/70 border border-orange-500/20">
               <div className="text-[10px] uppercase font-bold text-stone-400">Şeker</div>
               <div className="text-sm font-black text-orange-500">
                 {calculatedMacros.sugar}g
               </div>
             </div>
 
-            <div className="p-2 rounded-xl bg-white/70 dark:bg-stone-900/70 border border-emerald-500/20">
+            <div className="p-2 rounded-xl bg-white/70 dark:bg-[var(--dark-surface)]/70 border border-emerald-500/20">
               <div className="text-[10px] uppercase font-bold text-stone-400">Yağ</div>
               <div className="text-sm font-black text-emerald-500">
                 {calculatedMacros.fat}g
               </div>
             </div>
 
-            <div className="p-2 rounded-xl bg-white/70 dark:bg-stone-900/70 border border-purple-500/20">
+            <div className="p-2 rounded-xl bg-white/70 dark:bg-[var(--dark-surface)]/70 border border-purple-500/20">
               <div className="text-[10px] uppercase font-bold text-stone-400">Kafein</div>
               <div className="text-sm font-black text-purple-500 flex items-center justify-center gap-0.5">
                 <Zap className="w-3.5 h-3.5" />
@@ -141,7 +141,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
 
           {/* Computed Allergen Badges */}
           <div className="flex flex-wrap items-center gap-1.5 pt-1">
-            <span className="text-[11px] font-bold text-stone-500 dark:text-stone-400 mr-1">Tetiklenen Alerjenler:</span>
+            <span className="text-[11px] font-bold text-stone-500 dark:text-[var(--dark-text-muted)] mr-1">Tetiklenen Alerjenler:</span>
             {calculatedAllergens.length > 0 ? (
               calculatedAllergens.map(a => {
                 const info = ALLERGEN_MAP[a];
@@ -168,7 +168,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
           
           {/* 1. Size Selection */}
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-2">
+            <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-[var(--dark-text-muted)] mb-2">
               1. İçecek Boyutu
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -179,7 +179,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
                   className={`p-3 rounded-2xl border text-left transition-all ${
                     customization.sizeId === size.id
                       ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold shadow-sm'
-                      : 'bg-stone-100/60 dark:bg-stone-800/60 border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:border-amber-500/30'
+                      : 'bg-stone-100/60 dark:bg-[var(--dark-surface-elevated)]/60 border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)] hover:border-amber-500/30'
                   }`}
                 >
                   <div className="text-xs font-bold">{size.name}</div>
@@ -191,7 +191,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
           {/* 2. Milk Selection */}
           {item.defaultMilkId && (
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-2">
+              <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-[var(--dark-text-muted)] mb-2">
                 2. Süt Türü Seçimi
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -204,7 +204,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
                       className={`p-3 rounded-2xl border text-left flex items-center justify-between transition-all ${
                         isSelected
                           ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold shadow-sm'
-                          : 'bg-stone-100/60 dark:bg-stone-800/60 border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:border-amber-500/30'
+                          : 'bg-stone-100/60 dark:bg-[var(--dark-surface-elevated)]/60 border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)] hover:border-amber-500/30'
                       }`}
                     >
                       <div>
@@ -231,12 +231,12 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
           )}
 
           {/* 3. Syrup Pumps */}
-          <div className="flex items-center justify-between p-3.5 rounded-2xl bg-stone-100/70 dark:bg-stone-800/60 border border-stone-200/60 dark:border-stone-700/60">
+          <div className="flex items-center justify-between p-3.5 rounded-2xl bg-stone-100/70 dark:bg-[var(--dark-surface-elevated)]/60 border border-stone-200/60 dark:border-[var(--dark-border)]/60">
             <div>
-              <div className="text-xs font-bold text-stone-800 dark:text-stone-200">
+              <div className="text-xs font-bold text-stone-800 dark:text-[var(--dark-text)]">
                 Şurup Pompa Sayısı
               </div>
-              <div className="text-[11px] text-stone-500 dark:text-stone-400">
+              <div className="text-[11px] text-stone-500 dark:text-[var(--dark-text-muted)]">
                 Her pompa ~20 kcal ve 5g şeker katar.
               </div>
             </div>
@@ -244,7 +244,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setCustomization(prev => ({ ...prev, syrupPumps: Math.max(0, prev.syrupPumps - 1) }))}
-                className="w-8 h-8 rounded-xl bg-stone-200 dark:bg-stone-700 flex items-center justify-center font-bold text-stone-700 dark:text-stone-200 hover:bg-amber-500 hover:text-white transition-colors"
+                className="w-8 h-8 rounded-xl bg-stone-200 dark:bg-[var(--dark-surface-elevated)] flex items-center justify-center font-bold text-stone-700 dark:text-[var(--dark-text)] hover:bg-amber-500 hover:text-white transition-colors"
               >
                 <Minus className="w-4 h-4" />
               </button>
@@ -255,7 +255,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
 
               <button
                 onClick={() => setCustomization(prev => ({ ...prev, syrupPumps: prev.syrupPumps + 1 }))}
-                className="w-8 h-8 rounded-xl bg-stone-200 dark:bg-stone-700 flex items-center justify-center font-bold text-stone-700 dark:text-stone-200 hover:bg-amber-500 hover:text-white transition-colors"
+                className="w-8 h-8 rounded-xl bg-stone-200 dark:bg-[var(--dark-surface-elevated)] flex items-center justify-center font-bold text-stone-700 dark:text-[var(--dark-text)] hover:bg-amber-500 hover:text-white transition-colors"
               >
                 <Plus className="w-4 h-4" />
               </button>
@@ -264,7 +264,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
 
           {/* 4. Extras & Toppings */}
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400 mb-2">
+            <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-[var(--dark-text-muted)] mb-2">
               Ekstra Eklemler & Malzemeler
             </label>
             
@@ -275,7 +275,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
                 className={`p-3 rounded-2xl border text-left flex items-center justify-between transition-all ${
                   customization.hasWhippedCream
                     ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold'
-                    : 'bg-stone-100/60 dark:bg-stone-800/60 border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300'
+                    : 'bg-stone-100/60 dark:bg-[var(--dark-surface-elevated)]/60 border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)]'
                 }`}
               >
                 <div>
@@ -290,7 +290,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
                 className={`p-3 rounded-2xl border text-left flex items-center justify-between transition-all ${
                   customization.hasColdFoam
                     ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold'
-                    : 'bg-stone-100/60 dark:bg-stone-800/60 border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300'
+                    : 'bg-stone-100/60 dark:bg-[var(--dark-surface-elevated)]/60 border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)]'
                 }`}
               >
                 <div>
@@ -305,7 +305,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
                 className={`p-3 rounded-2xl border text-left flex items-center justify-between transition-all ${
                   customization.extraEspressoShots > 0
                     ? 'bg-purple-500/15 border-purple-500 text-purple-900 dark:text-purple-200 font-bold'
-                    : 'bg-stone-100/60 dark:bg-stone-800/60 border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300'
+                    : 'bg-stone-100/60 dark:bg-[var(--dark-surface-elevated)]/60 border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)]'
                 }`}
               >
                 <div>
@@ -321,15 +321,15 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
         </div>
 
         {/* Footer Actions */}
-        <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between gap-3">
-          <div className="text-xs text-stone-500 dark:text-stone-400">
-            Toplam: <span className="font-extrabold text-stone-900 dark:text-stone-100 text-sm">{calculatedMacros.calories} kcal</span>
+        <div className="pt-4 border-t border-stone-200 dark:border-[var(--dark-border)] flex items-center justify-between gap-3">
+          <div className="text-xs text-stone-500 dark:text-[var(--dark-text-muted)]">
+            Toplam: <span className="font-extrabold text-stone-900 dark:text-[var(--dark-text)] text-sm">{calculatedMacros.calories} kcal</span>
           </div>
 
           <div className="flex items-center gap-2">
             <button
               onClick={onClose}
-              className="px-4 py-2.5 rounded-xl border border-stone-200 dark:border-stone-700 text-xs font-semibold text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800"
+              className="px-4 py-2.5 rounded-xl border border-stone-200 dark:border-[var(--dark-border)] text-xs font-semibold text-stone-600 dark:text-[var(--dark-text-muted)] hover:bg-stone-100 dark:hover:bg-[var(--dark-surface-elevated)]"
             >
               Vazgeç
             </button>

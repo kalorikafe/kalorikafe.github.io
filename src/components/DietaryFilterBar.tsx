@@ -50,7 +50,7 @@ export const DietaryFilterBar: React.FC<DietaryFilterBarProps> = ({
   hasActiveFilters,
 }) => {
   return (
-    <div className="space-y-4 p-4 rounded-3xl bg-white dark:bg-[#1C1816] border border-stone-200 dark:border-stone-800 shadow-sm">
+    <div className="space-y-4 p-4 rounded-3xl bg-white dark:bg-[var(--dark-surface)] border border-stone-200 dark:border-[var(--dark-border)] shadow-sm">
       
       {/* Category Tabs Header */}
       <div className="flex items-center justify-between gap-2 overflow-x-auto pb-2 scrollbar-none">
@@ -64,7 +64,7 @@ export const DietaryFilterBar: React.FC<DietaryFilterBarProps> = ({
                 className={`px-3.5 py-2 rounded-2xl text-xs font-black transition-all shrink-0 flex items-center gap-1.5 ${
                   isSelected
                     ? 'bg-[#2C221E] text-white dark:bg-[#FAF8F5] dark:text-[#2C221E] shadow-md scale-105'
-                    : 'bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-700 border border-stone-200/60 dark:border-stone-700/60'
+                    : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)] hover:bg-stone-200 dark:hover:bg-[var(--dark-surface-elevated)] border border-stone-200/60 dark:border-[var(--dark-border)]/60'
                 }`}
               >
                 <span>{tab.icon}</span>
@@ -76,17 +76,17 @@ export const DietaryFilterBar: React.FC<DietaryFilterBarProps> = ({
       </div>
 
       {/* Second Row: Drink/Food Toggles & Dietary Pills */}
-      <div className="pt-2 border-t border-stone-200 dark:border-stone-800 flex flex-wrap items-center justify-between gap-3">
+      <div className="pt-2 border-t border-stone-200 dark:border-[var(--dark-border)] flex flex-wrap items-center justify-between gap-3">
         
         {/* Drink / Food Switcher */}
-        <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-stone-100 dark:bg-stone-800 border border-stone-200 dark:border-stone-700">
+        <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)]">
           <button
             onClick={() => {
               setIsOnlyDrinks(!isOnlyDrinks);
               if (isOnlyFood) setIsOnlyFood(false);
             }}
             className={`px-3 py-1.5 rounded-xl text-xs font-black transition-all ${
-              isOnlyDrinks ? 'bg-[#6F4E37] text-white dark:bg-[#D4B996] dark:text-[#2C221E] shadow-sm' : 'text-stone-700 dark:text-stone-300'
+              isOnlyDrinks ? 'bg-[#6F4E37] text-white dark:bg-[#D4B996] dark:text-[#2C221E] shadow-sm' : 'text-stone-700 dark:text-[var(--dark-text-muted)]'
             }`}
           >
             🥤 Sadece İçecekler
@@ -98,7 +98,7 @@ export const DietaryFilterBar: React.FC<DietaryFilterBarProps> = ({
               if (isOnlyDrinks) setIsOnlyDrinks(false);
             }}
             className={`px-3 py-1.5 rounded-xl text-xs font-black transition-all ${
-              isOnlyFood ? 'bg-[#6F4E37] text-white dark:bg-[#D4B996] dark:text-[#2C221E] shadow-sm' : 'text-stone-700 dark:text-stone-300'
+              isOnlyFood ? 'bg-[#6F4E37] text-white dark:bg-[#D4B996] dark:text-[#2C221E] shadow-sm' : 'text-stone-700 dark:text-[var(--dark-text-muted)]'
             }`}
           >
             🥪 Sadece Yiyecekler
@@ -107,7 +107,7 @@ export const DietaryFilterBar: React.FC<DietaryFilterBarProps> = ({
 
         {/* Dietary Pills */}
         <div className="flex flex-wrap items-center gap-1.5">
-          <span className="text-[11px] font-black text-stone-500 dark:text-stone-400 flex items-center gap-1 mr-1">
+          <span className="text-[11px] font-black text-stone-500 dark:text-[var(--dark-text-muted)] flex items-center gap-1 mr-1">
             <Filter className="w-3.5 h-3.5 text-[#6F4E37] dark:text-[#D4B996]" /> Diyet Tercihi:
           </span>
 
@@ -120,7 +120,7 @@ export const DietaryFilterBar: React.FC<DietaryFilterBarProps> = ({
                 className={`px-3 py-1.5 rounded-xl text-[11px] font-black border transition-all flex items-center gap-1 ${
                   isSelected
                     ? 'bg-[#2C221E] text-white border-[#2C221E] dark:bg-[#FAF8F5] dark:text-[#2C221E] dark:border-[#FAF8F5] shadow-xs'
-                    : 'bg-stone-100 dark:bg-stone-800 border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:border-[#6F4E37]'
+                    : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)] hover:border-[#6F4E37]'
                 }`}
               >
                 <span>{pill.icon}</span>

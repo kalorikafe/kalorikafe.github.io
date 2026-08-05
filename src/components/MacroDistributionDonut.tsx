@@ -88,7 +88,7 @@ export const MacroDistributionDonut: React.FC<MacroDistributionDonutProps> = ({
         </svg>
 
         <div className="absolute text-center">
-          <span className="text-xs font-black text-stone-800 dark:text-stone-100">
+          <span className="text-xs font-black text-stone-800 dark:text-[var(--dark-text)]">
             {Math.round(totalCal)}
           </span>
           <span className="block text-[9px] font-bold text-stone-400 uppercase">kcal</span>
