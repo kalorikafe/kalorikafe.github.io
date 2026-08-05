@@ -72,11 +72,7 @@ export const ChainSelector: React.FC<ChainSelectorProps> = ({
                   : 'bg-white dark:bg-[var(--dark-surface)] border-stone-200 dark:border-[var(--dark-border)] text-stone-800 dark:text-[var(--dark-text)] hover:border-[#6F4E37]'
               }`}
             >
-              {chain.logo.startsWith('http') ? (
-                <img src={chain.logo} alt={chain.name} className="w-5 h-5 object-contain rounded-full bg-white p-0.5" />
-              ) : (
-                <span>{chain.logo}</span>
-              )}
+              <img src={chain.logo} alt={chain.name} className="w-5 h-5 object-contain rounded-full bg-white p-0.5" />
               <span>{chain.name}</span>
               <span className={`px-2 py-0.5 rounded-full text-[10px] ${
                 isSelected ? 'bg-[#6F4E37] text-white' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-600 dark:text-[var(--dark-text-muted)]'

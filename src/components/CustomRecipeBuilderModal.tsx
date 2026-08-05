@@ -38,7 +38,7 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
     name: recipeName || 'Benim Özel Kahvem',
     category: baseCategory,
     description: 'Kendi oluşturduğum özel lezzet ve makro tarifi.',
-    image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=500&auto=format&fit=crop&q=80',
+    image: '/images/menu/placeholder.webp',
     isDrink: true,
     defaultSizeId: 'tall',
     defaultMilkId: 'whole_milk',

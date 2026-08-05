@@ -58,11 +58,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
 
         {/* Chain Badge Top Left */}
         <div className="absolute top-3 left-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#12100E]/85 backdrop-blur-md border border-white/20 text-white text-xs font-bold shadow-lg">
-          {chainObj?.logo?.startsWith('http') ? (
-            <img src={chainObj.logo} alt={chainObj.name} className="w-4 h-4 object-contain rounded-full bg-white p-0.5" />
-          ) : (
-            <span>{chainObj?.logo}</span>
-          )}
+          <img src={chainObj?.logo} alt={chainObj?.name} className="w-4 h-4 object-contain rounded-full bg-white p-0.5" />
           <span>{chainObj?.name}</span>
         </div>
 

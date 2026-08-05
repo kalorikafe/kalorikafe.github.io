@@ -97,16 +97,12 @@ export const CompareModal: React.FC<CompareModalProps> = ({
                       alt={item.name}
                       className="w-full h-32 rounded-xl object-cover bg-stone-100 dark:bg-[var(--dark-surface-elevated)]"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&auto=format&fit=crop&q=80';
-                      }}
+                                              (e.target as HTMLImageElement).src = '/images/menu/placeholder.webp';
+                                            }}
                     />
 
                     <div className="text-xs font-bold text-amber-600 dark:text-amber-400 flex items-center gap-1">
-                      {chainObj?.logo?.startsWith('http') ? (
-                        <img src={chainObj.logo} alt={chainObj.name} className="w-4 h-4 object-contain rounded-full bg-white p-0.5" />
-                      ) : (
-                        <span>{chainObj?.logo}</span>
-                      )}
+                      <img src={chainObj?.logo} alt={chainObj?.name} className="w-4 h-4 object-contain rounded-full bg-white p-0.5" />
                       <span>{chainObj?.name}</span>
                     </div>
 

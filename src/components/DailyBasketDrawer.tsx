@@ -188,7 +188,7 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
                       alt={b.item.name}
                       className="w-12 h-12 rounded-xl object-cover bg-stone-100 dark:bg-[var(--dark-surface-elevated)]"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&auto=format&fit=crop&q=80';
+                        (e.target as HTMLImageElement).src = '/images/menu/placeholder.webp';
                       }}
                     />
 

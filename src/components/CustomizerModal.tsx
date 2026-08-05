@@ -55,7 +55,7 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
               alt={item.name}
               className="w-16 h-16 shrink-0 rounded-2xl object-cover border border-stone-200 dark:border-[var(--dark-border)] shadow-sm bg-stone-100 dark:bg-[var(--dark-surface-elevated)]"
               onError={(e) => {
-                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&auto=format&fit=crop&q=80';
+                (e.target as HTMLImageElement).src = '/images/menu/placeholder.webp';
               }}
             />
             <div>
