@@ -13,6 +13,8 @@ import { SortAndAnalyticsBar, type SortOption } from './components/SortAndAnalyt
 import { ItemCard } from './components/ItemCard';
 import type { UserMacroGoals } from './components/MacroTargetCalculatorModal';
 import { MobileBottomNav } from './components/MobileBottomNav';
+import { CHAINS } from './data/chains';
+import { normalizeStoredGoals, DEFAULT_USER_GOALS } from './utils/macroGoals';
 import { Coffee, Filter } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
@@ -74,21 +76,16 @@ export const App: React.FC = () => {
     return [...customRecipes, ...MENU_ITEMS];
   }, [customRecipes]);
 
-  // User Personal Macro Goals
-  const [userGoals, setUserGoals] = useState<UserMacroGoals>(() => {
-    try {
-      const saved = localStorage.getItem('kalori_cafe_goals');
-      return saved ? JSON.parse(saved) : {
-        calorieGoal: 2000,
-        proteinGoal: 70,
-        carbGoal: 250,
-        fatGoal: 65,
-        maxCaffeine: 400
-      };
-    } catch {
-      return { calorieGoal: 2000, proteinGoal: 70, carbGoal: 250, fatGoal: 65, maxCaffeine: 400 };
-    }
-  });
+  // User Personal Macro Goals (normalized: legacy numeric records are
+    // migrated in place — values preserved, default profile attached).
+    const [userGoals, setUserGoals] = useState<UserMacroGoals>(() => {
+      try {
+        const saved = localStorage.getItem('kalori_cafe_goals');
+        return saved ? normalizeStoredGoals(JSON.parse(saved)) : DEFAULT_USER_GOALS;
+      } catch {
+        return DEFAULT_USER_GOALS;
+      }
+    });
 
   useEffect(() => {
     try {
@@ -539,27 +536,18 @@ export const App: React.FC = () => {
             <span className="font-bold text-amber-600 dark:text-amber-400">Kalori Cafe</span>
             <span>© 2026 - Tüm Zincir Kafelerin Ortak Makro & Alerjen Platformu</span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 text-stone-400">
-            <span>Starbucks</span>
-            <span>•</span>
-            <span>Kahve Dünyası</span>
-            <span>•</span>
-            <span>Espressolab</span>
-            <span>•</span>
-            <span>Gloria Jean's</span>
-            <span>•</span>
-            <span>Tchibo</span>
-            <span>•</span>
-            <span>Arabica</span>
-            <span>•</span>
-            <span>Caribou</span>
-            <span>•</span>
-            <span>Kronotrop</span>
-          </div>
-        </div>
-        <p className="mx-auto max-w-3xl px-4 text-[11px] leading-relaxed text-stone-400">
-          Besin değerleri referans amaçlıdır. Kaynak ve doğrulama kaydı bulunmayan ürünlerde resmi güncellik veya porsiyon eşleşmesi garanti edilmez.
-        </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 text-stone-400">
+                      {CHAINS.map((chain, index) => (
+                        <React.Fragment key={chain.id}>
+                          {index > 0 && <span className="text-stone-300 dark:text-[var(--dark-border)]">•</span>}
+                          <span>{chain.name}</span>
+                        </React.Fragment>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="mx-auto max-w-3xl px-4 text-[11px] leading-relaxed text-stone-400">
+                    Besin ve kafein değerleri tahminîdir ve yalnızca referans amaçlıdır; resmî ürün güncelliği veya porsiyon eşleşmesi garanti edilmez. Alerjen bilgileri kesin değildir — çapraz bulaşma riski için lütfen markanın güncel resmî bilgilerini kontrol edin.
+                  </p>
       </footer>
 
     </div>

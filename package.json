@@ -8,12 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint src tests/unit tests/e2e playwright.config.ts",
     "catalog:audit": "node scripts/catalog-audit.ts",
-    "lint:legacy": "oxlint tests/tier1-feature-coverage.ts tests/tier2-boundary-corner.ts tests/tier3-cross-feature.ts tests/tier4-real-world.ts",
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "vitest run tests/unit",
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install chromium",
-    "test:legacy": "tsx scripts/run-e2e-tests.ts",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import type { Allergen, MenuItem } from '../types/cafe';
 import { Coffee, Search, ShieldAlert, Scale, ShoppingBag, Sun, Moon, X } from 'lucide-react';
-import { SearchSuggestions, SUGGESTION_LIST_ID } from './SearchSuggestions';
-import { handleSuggestionKeydown, DEFAULT_ACTIVE_INDEX } from '../utils/searchInteraction';
+import { SearchSuggestions } from './SearchSuggestions';
+import { handleSuggestionKeydown, DEFAULT_ACTIVE_INDEX, buildSuggestionIds } from '../utils/searchInteraction';
 
 interface NavbarProps {
   searchQuery: string;
@@ -42,10 +42,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   setIsDarkMode,
 }) => {
   const [activeIndex, setActiveIndex] = useState(DEFAULT_ACTIVE_INDEX);
-  const [panelOpen, setPanelOpen] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const queryLength = searchQuery.trim().length;
-  const suggestionsOpen = queryLength >= 2 && panelOpen && suggestions.length > 0;
+    const [panelOpen, setPanelOpen] = useState(false);
+    const inputRef = useRef<HTMLInputElement>(null);
+    const queryLength = searchQuery.trim().length;
+    const suggestionsOpen = queryLength >= 2 && panelOpen && suggestions.length > 0;
+    // Unique ids for THIS search surface (desktop navbar).
+    const suggestionIds = buildSuggestionIds('desktop-search');
 
   const handleChange = (value: string) => {
     setSearchQuery(value);
@@ -112,13 +114,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Global Search Bar */}
         <div
-          className="flex-1 max-w-md relative hidden md:block"
-          role="combobox"
-          aria-expanded={suggestionsOpen}
-          aria-haspopup="listbox"
-          aria-controls={suggestionsOpen ? SUGGESTION_LIST_ID : undefined}
-          aria-owns={SUGGESTION_LIST_ID}
-        >
+                  className="flex-1 max-w-md relative hidden md:block"
+                  role="combobox"
+                  aria-expanded={suggestionsOpen}
+                  aria-haspopup="listbox"
+                  aria-controls={suggestionsOpen ? suggestionIds.listboxId : undefined}
+                  aria-owns={suggestionIds.listboxId}
+                  aria-activedescendant={suggestionsOpen && activeIndex >= 0 ? suggestionIds.optionId(activeIndex) : undefined}
+                >
           <div className="relative">
             <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 dark:text-[var(--dark-text-muted)]" />
             <input
@@ -145,10 +148,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {suggestionsOpen && (
-            <SearchSuggestions
-              suggestions={suggestions}
-              isOpen
-              activeIndex={activeIndex}
+                      <SearchSuggestions
+                        idPrefix="desktop-search"
+                        suggestions={suggestions}
+                        isOpen
+                        activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
               onSelect={(item) => {
                 setPanelOpen(false);

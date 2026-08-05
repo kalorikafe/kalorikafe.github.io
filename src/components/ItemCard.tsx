@@ -2,7 +2,7 @@ import React from 'react';
 import type { MenuItem, Allergen } from '../types/cafe';
 import { CHAINS } from '../data/chains';
 import { ALLERGEN_MAP } from '../utils/macroCalculator';
-import { SlidersHorizontal, Scale, Plus, ShieldAlert, Check, Flame, Zap, Star, FileText } from 'lucide-react';
+import { SlidersHorizontal, Scale, Plus, ShieldAlert, Check, Flame, Zap, Star, FileText, Info } from 'lucide-react';
 
 interface ItemCardProps {
   item: MenuItem;
@@ -113,6 +113,14 @@ export const ItemCard: React.FC<ItemCardProps> = ({
         <p className="text-xs text-stone-600 dark:text-[var(--dark-text-muted)] font-medium line-clamp-2 leading-relaxed">
           {item.description}
         </p>
+
+        {/* Estimated-value badge: shown unless nutrition was verified */}
+        {item.nutritionSource?.status !== 'verified' && (
+          <div className="flex items-center gap-1.5 text-[10px] font-bold text-stone-500 dark:text-[var(--dark-text-muted)]">
+            <Info className="w-3.5 h-3.5 shrink-0 text-amber-600 dark:text-amber-400" />
+            <span data-testid="estimated-badge">Tahmini değer — resmî besin tablosu yayımlanmıyor</span>
+          </div>
+        )}
 
         {/* Ultra High Contrast Macro Grid Summary */}
         <div className="grid grid-cols-4 gap-1.5 p-2 rounded-2xl bg-stone-50 dark:bg-[var(--dark-surface-elevated)]/60 border border-stone-200 dark:border-[var(--dark-border)]/80 text-center">

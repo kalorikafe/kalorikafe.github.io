@@ -1,6 +1,6 @@
-import { CHAINS } from '../src/data/chains';
-import { MENU_ITEMS } from '../src/data/items';
-import type { Chain, MenuItem, Category, Allergen, DietaryPreference } from '../src/types/cafe';
+import { CHAINS } from '../../src/data/chains';
+import { MENU_ITEMS } from '../../src/data/items';
+import type { Chain, MenuItem, Category, Allergen, DietaryPreference } from '../../src/types/cafe';
 import * as fs from 'fs';
 import * as path from 'path';
 

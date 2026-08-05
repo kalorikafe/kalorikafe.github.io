@@ -1,7 +1,7 @@
-import { runTier1Tests, type TestResult } from '../tests/tier1-feature-coverage';
-import { runTier2Tests } from '../tests/tier2-boundary-corner';
-import { runTier3Tests } from '../tests/tier3-cross-feature';
-import { runTier4Tests } from '../tests/tier4-real-world';
+import { runTier1Tests, type TestResult } from './tier1-feature-coverage';
+import { runTier2Tests } from './tier2-boundary-corner';
+import { runTier3Tests } from './tier3-cross-feature';
+import { runTier4Tests } from './tier4-real-world';
 import { execSync } from 'child_process';
 
 console.log('\n====================================================================');

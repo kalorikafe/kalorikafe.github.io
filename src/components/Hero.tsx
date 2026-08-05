@@ -27,6 +27,14 @@ export const Hero: React.FC<HeroProps> = ({ onSelectQuickFilter, itemCount }) =>
           Starbucks, Espressolab, Caffè Nero, Coffy, Kahve Dünyası ve daha fazlası... Süt türü, boyut ve şuruba göre anlık makro hesabı yapın, glüten ve laktoz risklerini önceden görün.
         </p>
 
+        {/* Honest data disclaimer — always visible */}
+        <p className="mx-auto max-w-3xl text-[11px] leading-relaxed text-stone-500 dark:text-[var(--dark-text-muted)] bg-white/70 dark:bg-[var(--dark-surface-elevated)]/70 border border-stone-200/70 dark:border-[var(--dark-border)]/60 rounded-2xl px-4 py-2.5">
+          ⚖️ Buradaki kalori, makro ve kafein değerleri zincirlerin resmî menülerinden derlenen
+          <strong> tahminî referans değerleridir</strong>; ürün başına resmî besin tablosu yayımlanmıyor.
+          Alerjen bilgileri garanti değildir — çapraz bulaşma riski için markanın güncel resmî
+          bilgilerini kontrol edin. Bu uygulama tıbbi tavsiye vermez.
+        </p>
+
         {/* 4 Professional Feature Highlights Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
           

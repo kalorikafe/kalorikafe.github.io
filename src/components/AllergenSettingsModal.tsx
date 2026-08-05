@@ -14,7 +14,7 @@ interface AllergenSettingsModalProps {
   clearAllUserAllergens: () => void;
 }
 
-const ALLERGEN_KEYS: Allergen[] = ['gluten', 'lactose', 'nuts', 'soy', 'egg', 'celiac_oat_risk'];
+const ALLERGEN_KEYS: Allergen[] = ['gluten', 'lactose', 'nuts', 'peanut', 'soy', 'egg', 'celiac_oat_risk'];
 
 export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
   isOpen,
@@ -88,8 +88,20 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
           })}
         </div>
 
-        {/* Behavior Switch */}
-        <div className="p-4 rounded-2xl bg-stone-100/80 dark:bg-[var(--dark-surface-elevated)]/80 border border-stone-200/80 dark:border-[var(--dark-border)]/80 space-y-3">
+        {/* Cross-contamination & data caveat — always visible */}
+                <div className="p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-[11px] leading-relaxed text-stone-700 dark:text-[var(--dark-text-muted)]">
+                  <div className="flex items-center gap-2 font-black text-stone-800 dark:text-[var(--dark-text)] mb-1">
+                    <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />
+                    <span>Alerjen bilgisi garanti değildir</span>
+                  </div>
+                  Buradaki alerjen işaretleri zincirlerin resmî menü/üretici bilgilerinden derlenen
+                  referans özetlerdir; ürün içerikleri şubeye ve döneme göre değişebilir. Gerçek
+                  alerji veya çapraz bulaşma riski için lütfen markanın güncel resmî bilgilerini
+                  ve ürün ambalajını kontrol edin. Bu uygulama tıbbi tavsiye vermez.
+                </div>
+
+                {/* Behavior Switch */}
+                <div className="p-4 rounded-2xl bg-stone-100/80 dark:bg-[var(--dark-surface-elevated)]/80 border border-stone-200/80 dark:border-[var(--dark-border)]/80 space-y-3">
           <div className="text-xs font-bold text-stone-800 dark:text-[var(--dark-text)] flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 text-amber-500" />
             <span>Filtreleme Davranışı</span>

@@ -46,7 +46,7 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
     text += `💪 Protein: ${totalProtein.toFixed(1)}g / ${userGoals.proteinGoal}g\n`;
     text += `🥖 Karbonhidrat: ${totalCarbs.toFixed(1)}g (${totalSugar.toFixed(1)}g Şeker)\n`;
     text += `🥑 Yağ: ${totalFat.toFixed(1)}g / ${userGoals.fatGoal}g\n`;
-    text += `⚡ Kafein: ${totalCaffeine} mg (Kişisel Güvenli Sınır: ${userGoals.maxCaffeine}mg)\n\n`;
+    text += `⚡ Kafein: ${totalCaffeine} mg (Belirlediğiniz kişisel günlük sınır: ${userGoals.maxCaffeine}mg)\n\n`;
     text += `Tüketilen Ürünler:\n`;
 
     basket.forEach((b, idx) => {

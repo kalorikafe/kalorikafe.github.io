@@ -266,3 +266,90 @@ test('theme toggle persists across reload under kalori_cafe_theme', async ({ pag
     page.getByRole('button', { name: afterToggle ? 'Açık Moda Geç' : 'Koyu Moda Geç' })
   ).toBeVisible();
 });
+
+test('peanut allergen: select, persist to localStorage, warn and hide', async ({ page }) => {
+  // 1. Open the allergen profile modal and pick "Yer Fıstığı".
+  await page.getByRole('button', { name: 'Alerji Profili' }).click();
+  const dialog = page.getByRole('dialog', { name: 'Kişisel Alerjen & Hassasiyet Profili' });
+  await expect(dialog).toBeVisible();
+
+  // The cross-contamination caveat is visible inside the modal.
+  await expect(dialog.getByText('Alerjen bilgisi garanti değildir', { exact: false })).toBeVisible();
+
+  await dialog.getByRole('button', { name: /Yer Fıstığı/ }).click();
+  await dialog.getByRole('button', { name: 'Kaydet & Kapat' }).click();
+  await expect(dialog).toBeHidden();
+
+  // 2) Selection persisted to localStorage.
+  await expect.poll(() => page.evaluate(() => localStorage.getItem('kalori_cafe_allergens'))).toContain('peanut');
+
+  // 3) Warning mode: the peanut product shows the red profile banner.
+  await page.getByRole('textbox', { name: 'Menüde ara' }).fill('Peanut Latte');
+  const peanutCard = page.getByTestId('item-card').filter({ hasText: 'Peanut Latte' });
+  await expect(peanutCard).toHaveCount(1);
+  await expect(peanutCard.getByText(/Profilinizdeki .*Yer Fıstığı/)).toBeVisible();
+
+  // 4) Hide mode: reopening the modal and switching behavior hides the item.
+  await page.getByRole('button', { name: 'Alerji Profili' }).click();
+  await page.getByRole('dialog', { name: 'Kişisel Alerjen & Hassasiyet Profili' })
+    .getByText('Alerji İçeren Tüm Ürünleri Menüden Gizle', { exact: false })
+    .click();
+  await page.getByRole('dialog', { name: 'Kişisel Alerjen & Hassasiyet Profili' })
+    .getByRole('button', { name: 'Kaydet & Kapat' }).click();
+  await expect(page.getByTestId('item-card')).toHaveCount(0);
+});
+
+test('macro goals: legacy record migrates, profile loads, validation gates Apply', async ({ page }) => {
+  // 1. Seed a legacy numeric record (no profile field) — the migration
+  //    must preserve every number and attach the default profile.
+  await page.evaluate(() => {
+      localStorage.setItem('kalori_cafe_goals', JSON.stringify({ calorieGoal: 1500, proteinGoal: 100, carbGoal: 180, fatGoal: 50, maxCaffeine: 300 }));
+    });
+    // The app initializes its goals state at mount, so reload to pick up the
+    // seeded record (migration happens in the state initializer).
+    await page.reload();
+
+    // 2. Legacy values survive in the app state (basket drawer shows 0 / 1500).
+  await page.getByRole('button', { name: /Sepetim/ }).click();
+  const basketDialog = page.getByRole('dialog', { name: 'Günlük Kafe Makro Sepetim' });
+  await expect(basketDialog).toBeVisible();
+  await expect(basketDialog.getByText(/0 \/ 1500 kcal/)).toBeVisible();
+  await basketDialog.getByRole('button', { name: 'Sepeti kapat' }).click();
+
+  // 3. Open the macro calculator from the drawer.
+  await page.getByRole('button', { name: /Sepetim/ }).click();
+  await basketDialog.getByRole('button', { name: 'Hedefleri Değiştir' }).click();
+  const modal = page.getByRole('dialog', { name: 'Kişisel Günlük Makro Hesaplayıcı' });
+  await expect(modal).toBeVisible();
+  await expect(modal.getByText('Kilo (70 kg)', { exact: false })).toBeVisible();
+
+  // 4) Invalid weight disables Apply and shows an inline error.
+  await modal.getByTestId('macro-weight-input').fill('300');
+  await expect(modal.getByText('35–250 arasında bir değer girin', { exact: false })).toBeVisible();
+  await expect(modal.getByTestId('macro-apply-button')).toBeDisabled();
+
+  // 5) Valid values re-enable Apply; Apply saves goals AND the profile.
+  await modal.getByTestId('macro-weight-input').fill('62');
+  await expect(modal.getByTestId('macro-apply-button')).toBeEnabled();
+  await modal.getByTestId('macro-apply-button').click();
+  await expect(modal).toBeHidden();
+
+  // male / 25 / 62 kg / 175 cm / 1.375 / lose →
+  // BMR = 1616.88, TDEE*0.8 = 1778.6 → 1779 kcal · 112 g protein ·
+  // 49 g fat · 223 g carbs · 400 mg caffeine (default personal limit).
+  const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('kalori_cafe_goals')!));
+  expect(stored).toMatchObject({
+    calorieGoal: 1779,
+    proteinGoal: 112,
+    carbGoal: 223,
+    fatGoal: 49,
+    maxCaffeine: 400,
+  });
+  expect(stored.profile).toEqual({ gender: 'male', age: 25, weightKg: 62, heightCm: 175, activity: 1.375, goalType: 'lose' });
+
+  // 6. Reopening the modal loads the SAVED profile (62 kg).
+    await basketDialog.getByRole('button', { name: 'Sepeti kapat' }).click();
+    await page.getByRole('button', { name: /Sepetim/ }).click();
+    await basketDialog.getByRole('button', { name: 'Hedefleri Değiştir' }).click();
+    await expect(page.getByRole('dialog', { name: 'Kişisel Günlük Makro Hesaplayıcı' }).getByText('Kilo (62 kg)', { exact: false })).toBeVisible();
+  });

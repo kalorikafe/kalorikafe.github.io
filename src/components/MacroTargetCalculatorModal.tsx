@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { X, Calculator, Sparkles, Check } from 'lucide-react';
+import { X, Calculator, Sparkles, Check, AlertTriangle } from 'lucide-react';
 import { useModalAccessibility } from '../hooks/useModalAccessibility';
+import {
+  DEFAULT_MACRO_PROFILE,
+  calculateUserMacroGoals,
+  validateProfile,
+  type MacroProfile,
+  type UserMacroGoals,
+} from '../utils/macroGoals';
 
-export interface UserMacroGoals {
-  calorieGoal: number;
-  proteinGoal: number;
-  carbGoal: number;
-  fatGoal: number;
-  maxCaffeine: number;
-}
+export type { UserMacroGoals, MacroProfile };
 
 interface MacroTargetCalculatorModalProps {
   isOpen: boolean;
@@ -20,52 +21,42 @@ interface MacroTargetCalculatorModalProps {
 export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProps> = ({
   isOpen,
   onClose,
-  userGoals: _userGoals,
+  userGoals,
   onSaveGoals,
 }) => {
   const dialogRef = useModalAccessibility(isOpen, onClose);
-  const [gender, setGender] = useState<'male' | 'female'>('male');
-  const [age, setAge] = useState<number>(25);
-  const [weightKg, setWeightKg] = useState<number>(70);
-  const [heightCm, setHeightCm] = useState<number>(175);
-  const [activity, setActivity] = useState<number>(1.375); // 1-3 days sport
-  const [goalType, setGoalType] = useState<'lose' | 'maintain' | 'gain'>('lose');
+
+  // The modal mounts fresh on every open, so initializing from the saved
+  // profile (falling back to the default profile) always reflects the
+  // latest stored state — including migrated legacy records.
+  const savedProfile = userGoals?.profile ?? DEFAULT_MACRO_PROFILE;
+
+  const [gender, setGender] = useState<MacroProfile['gender']>(savedProfile.gender);
+  const [age, setAge] = useState<number>(savedProfile.age);
+  const [weightKg, setWeightKg] = useState<number>(savedProfile.weightKg);
+  const [heightCm, setHeightCm] = useState<number>(savedProfile.heightCm);
+  const [activity, setActivity] = useState<number>(savedProfile.activity); // 1-3 days sport
+  const [goalType, setGoalType] = useState<MacroProfile['goalType']>(savedProfile.goalType);
 
   if (!isOpen) return null;
 
-  // Calculate Harris-Benedict BMR
-  const calculateResult = () => {
-    let bmr = 0;
-    if (gender === 'male') {
-      bmr = 88.362 + (13.397 * weightKg) + (4.799 * heightCm) - (5.677 * age);
-    } else {
-      bmr = 447.593 + (9.247 * weightKg) + (3.098 * heightCm) - (4.330 * age);
-    }
+  const validation = validateProfile({ age, weightKg, heightCm });
+  const isValid = validation.valid;
 
-    let tdee = bmr * activity;
-
-    if (goalType === 'lose') tdee *= 0.8; // 20% deficit
-    else if (goalType === 'gain') tdee *= 1.15; // 15% surplus
-
-    const cal = Math.round(tdee);
-    const protein = Math.round(weightKg * 1.8);
-    const fat = Math.round((cal * 0.25) / 9);
-    const carb = Math.round((cal - (protein * 4) - (fat * 9)) / 4);
-
-    return {
-      calorieGoal: cal,
-      proteinGoal: protein,
-      carbGoal: Math.max(50, carb),
-      fatGoal: Math.max(40, fat),
-      maxCaffeine: 400
-    };
-  };
-
-  const computedGoals = calculateResult();
+  const profile: MacroProfile = { gender, age, weightKg, heightCm, activity, goalType };
+  const computedGoals = calculateUserMacroGoals(profile);
 
   const handleApply = () => {
+    if (!isValid) return;
     onSaveGoals(computedGoals);
     onClose();
+  };
+
+  const fieldError = (field: 'age' | 'weightKg' | 'heightCm'): string | null => {
+    if (validation[field]) return null;
+    const { min, max } =
+      field === 'age' ? { min: 15, max: 75 } : field === 'weightKg' ? { min: 35, max: 250 } : { min: 120, max: 230 };
+    return `${min}–${max} arasında bir değer girin`;
   };
 
   return (
@@ -130,6 +121,11 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
               onChange={(e) => setAge(Number(e.target.value))}
               className="w-full accent-amber-500"
             />
+            {fieldError('age') && (
+              <p className="mt-1 text-[10px] font-bold text-red-600 dark:text-red-400" role="alert">
+                {fieldError('age')}
+              </p>
+            )}
           </div>
 
           {/* Weight */}
@@ -137,10 +133,20 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
             <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Kilo ({weightKg} kg)</label>
             <input
               type="number"
-              value={weightKg}
+              min={35}
+              max={250}
+              value={Number.isFinite(weightKg) ? weightKg : ''}
               onChange={(e) => setWeightKg(Number(e.target.value))}
+              data-testid="macro-weight-input"
+              aria-invalid={!validation.weightKg}
+              aria-describedby={!validation.weightKg ? 'weight-error' : undefined}
               className="w-full px-3 py-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] font-bold"
             />
+            {!validation.weightKg && (
+              <p id="weight-error" className="mt-1 text-[10px] font-bold text-red-600 dark:text-red-400" role="alert">
+                {fieldError('weightKg')}
+              </p>
+            )}
           </div>
 
           {/* Height */}
@@ -148,10 +154,20 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
             <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Boy ({heightCm} cm)</label>
             <input
               type="number"
-              value={heightCm}
+              min={120}
+              max={230}
+              value={Number.isFinite(heightCm) ? heightCm : ''}
               onChange={(e) => setHeightCm(Number(e.target.value))}
+              data-testid="macro-height-input"
+              aria-invalid={!validation.heightCm}
+              aria-describedby={!validation.heightCm ? 'height-error' : undefined}
               className="w-full px-3 py-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] font-bold"
             />
+            {!validation.heightCm && (
+              <p id="height-error" className="mt-1 text-[10px] font-bold text-red-600 dark:text-red-400" role="alert">
+                {fieldError('heightCm')}
+              </p>
+            )}
           </div>
 
           {/* Activity Level */}
@@ -196,6 +212,17 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
         </div>
 
+        {/* Validation summary */}
+        {!isValid && (
+          <div className="p-3 rounded-2xl bg-red-500/10 border border-red-500/40 text-[11px] font-bold text-red-700 dark:text-red-300 flex items-start gap-2">
+            <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+            <span>
+              Geçersiz değerler var: lütfen yaş (15–75), kilo (35–250 kg) ve boy (120–230 cm)
+              alanlarını kontrol edin. Hesaplama geçersiz girdilerle yapılmaz.
+            </span>
+          </div>
+        )}
+
         {/* Calculated Preview Dashboard */}
         <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 space-y-2 text-center">
           <div className="text-xs font-bold text-amber-800 dark:text-amber-300 flex items-center justify-center gap-1">
@@ -233,7 +260,13 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
           <button
             onClick={handleApply}
-            className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 text-white text-xs font-bold shadow-md flex items-center gap-2"
+            disabled={!isValid}
+            data-testid="macro-apply-button"
+            className={`px-6 py-2.5 rounded-xl text-white text-xs font-bold shadow-md flex items-center gap-2 ${
+              isValid
+                ? 'bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400'
+                : 'bg-stone-300 dark:bg-[var(--dark-surface-elevated)] cursor-not-allowed opacity-60'
+            }`}
           >
             <Check className="w-4 h-4" />
             <span>Sepet Hedeflerime Uygula</span>

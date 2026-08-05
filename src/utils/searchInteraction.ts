@@ -6,6 +6,22 @@ export const DEFAULT_ACTIVE_INDEX = -1;
 export const MAX_SUGGESTIONS = 8;
 
 /**
+ * Unique combobox/listbox id pair per search surface. Both the desktop
+ * navbar input and the mobile search modal render SearchSuggestions, so
+ * each instance must own distinct listbox/option ids (aria-controls /
+ * aria-activedescendant would otherwise collide across surfaces).
+ */
+export function buildSuggestionIds(prefix: string): {
+  listboxId: string;
+  optionId: (index: number) => string;
+} {
+  return {
+    listboxId: `${prefix}-suggestions-listbox`,
+    optionId: (index: number) => `${prefix}-suggestion-option-${index}`,
+  };
+}
+
+/**
  * Shared keyboard contract for the desktop navbar input and the mobile
  * search modal input (ArrowDown / ArrowUp / Enter).
  * Returns true when the key was handled by the suggestion panel.

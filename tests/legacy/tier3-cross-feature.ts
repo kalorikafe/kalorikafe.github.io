@@ -1,7 +1,7 @@
-import { MENU_ITEMS } from '../src/data/items';
-import { CHAINS } from '../src/data/chains';
-import { calculateMacrosAndAllergens } from '../src/utils/macroCalculator';
-import type { MenuItem, Category, DietaryPreference, Allergen, CustomizationState, BasketItem } from '../src/types/cafe';
+import { MENU_ITEMS } from '../../src/data/items';
+import { CHAINS } from '../../src/data/chains';
+import { calculateMacrosAndAllergens } from '../../src/utils/macroCalculator';
+import type { MenuItem, Category, DietaryPreference, Allergen, CustomizationState, BasketItem } from '../../src/types/cafe';
 
 export interface TestResult {
   name: string;

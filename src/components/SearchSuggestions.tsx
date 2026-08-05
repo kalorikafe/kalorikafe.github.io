@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { SUGGESTION_LIST_ID } from '../utils/searchInteraction';
+import { buildSuggestionIds } from '../utils/searchInteraction';
 import type { MenuItem } from '../types/cafe';
 import { CHAINS } from '../data/chains';
 import { Search } from 'lucide-react';
@@ -19,6 +19,12 @@ interface SearchSuggestionsProps {
   onClear: () => void;
   /** Total filtered result count announced via aria-live. */
   resultCount: number;
+  /**
+   * Unique id namespace for this search surface (desktop navbar vs mobile
+   * modal). The listbox and every option id derive from it so
+   * aria-controls / aria-activedescendant never collide.
+   */
+  idPrefix?: string;
 }
 
 
@@ -36,8 +42,10 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
   onSubmitQuery: _onSubmitQuery,
   onClear: _onClear,
   resultCount,
+  idPrefix = 'search',
 }) => {
   const listRef = useRef<HTMLUListElement>(null);
+  const ids = buildSuggestionIds(idPrefix);
 
   // Keep the active option in view while navigating with the keyboard.
   useEffect(() => {
@@ -52,11 +60,11 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
     <div className="absolute left-0 right-0 top-full mt-2 z-50">
       <div
         role="listbox"
-        id={SUGGESTION_LIST_ID}
+        id={ids.listboxId}
         aria-label="Arama önerileri"
         className="overflow-hidden rounded-2xl border border-stone-200 dark:border-[var(--dark-border)] bg-white dark:bg-[var(--dark-surface)] shadow-2xl shadow-black/10 dark:shadow-black/40"
       >
-        <div className="px-4 py-2 text-[10px] font-black uppercase tracking-wider text-stone-400 dark:text-[var(--dark-text)]0 border-b border-stone-100 dark:border-[var(--dark-border)] flex items-center justify-between">
+        <div className="px-4 py-2 text-[10px] font-black uppercase tracking-wider text-stone-400 dark:text-[var(--dark-text-muted)] border-b border-stone-100 dark:border-[var(--dark-border)] flex items-center justify-between">
           <span>Öneriler</span>
           <span className="normal-case font-bold tracking-normal">
             {resultCount} sonuç
@@ -69,7 +77,7 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
             return (
               <li
                 key={item.id}
-                id={`search-suggestion-${index}`}
+                id={ids.optionId(index)}
                 role="option"
                 aria-selected={isActive}
                 data-suggestion-index={index}
@@ -115,7 +123,3 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
     </div>
   );
 };
-
-
-// Re-exported for consumers that anchor the combobox aria-controls.
-export { SUGGESTION_LIST_ID };

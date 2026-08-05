@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import type { MenuItem } from '../types/cafe';
 import { Search, X } from 'lucide-react';
 import { useModalAccessibility } from '../hooks/useModalAccessibility';
-import { SearchSuggestions, SUGGESTION_LIST_ID } from './SearchSuggestions';
-import { handleSuggestionKeydown, DEFAULT_ACTIVE_INDEX } from '../utils/searchInteraction';
+import { SearchSuggestions } from './SearchSuggestions';
+import { handleSuggestionKeydown, DEFAULT_ACTIVE_INDEX, buildSuggestionIds } from '../utils/searchInteraction';
 
 interface MobileSearchModalProps {
   isOpen: boolean;
@@ -29,7 +29,9 @@ export const MobileSearchModal: React.FC<MobileSearchModalProps> = ({
   const inputRef = useRef<HTMLInputElement>(null);
   const dialogRef = useModalAccessibility(isOpen, onClose);
   const [activeIndex, setActiveIndex] = useState(DEFAULT_ACTIVE_INDEX);
-  const suggestionsOpen = searchQuery.trim().length >= 2 && suggestions.length > 0;
+    const suggestionsOpen = searchQuery.trim().length >= 2 && suggestions.length > 0;
+    // Unique ids for THIS search surface (mobile modal).
+    const suggestionIds = buildSuggestionIds('mobile-search');
 
   useEffect(() => {
     if (!isOpen) return;
@@ -93,12 +95,14 @@ export const MobileSearchModal: React.FC<MobileSearchModalProps> = ({
       >
         <div className="relative">
           <div
-            className="flex items-center gap-2"
-            role="combobox"
-            aria-expanded={suggestionsOpen}
-            aria-haspopup="listbox"
-            aria-controls={suggestionsOpen ? SUGGESTION_LIST_ID : undefined}
-          >
+                      className="flex items-center gap-2"
+                      role="combobox"
+                      aria-expanded={suggestionsOpen}
+                      aria-haspopup="listbox"
+                      aria-controls={suggestionsOpen ? suggestionIds.listboxId : undefined}
+                      aria-owns={suggestionIds.listboxId}
+                      aria-activedescendant={suggestionsOpen && activeIndex >= 0 ? suggestionIds.optionId(activeIndex) : undefined}
+                    >
           <Search className="w-5 h-5 text-stone-400 dark:text-[var(--dark-text-muted)] shrink-0" />
           <input
             ref={inputRef}
@@ -130,10 +134,11 @@ export const MobileSearchModal: React.FC<MobileSearchModalProps> = ({
           </div>
 
           {suggestionsOpen && (
-            <SearchSuggestions
-              suggestions={suggestions}
-              isOpen
-              activeIndex={activeIndex}
+                      <SearchSuggestions
+                        idPrefix="mobile-search"
+                        suggestions={suggestions}
+                        isOpen
+                        activeIndex={activeIndex}
               setActiveIndex={setActiveIndex}
               onSelect={item => {
                 setActiveIndex(DEFAULT_ACTIVE_INDEX);
