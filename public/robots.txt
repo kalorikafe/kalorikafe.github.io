@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://selimgrsoy0-commits.github.io/sitemap.xml
