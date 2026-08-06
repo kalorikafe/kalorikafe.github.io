@@ -152,6 +152,9 @@ Her kapı bu rapordan önce yeniden çalıştırıldı ve çıkış 0 alındı.
 | `246ab9f` | docs: record live verification results in the release report | provenance/docs |
 | `44a21a8` | docs: add sitemap.xml and expose it via robots.txt for search engines | SEO |
 | `c1142e7` | feat: add WebSite JSON-LD structured data for search engines | SEO |
+| `e8f973a` | docs: switch public site branding to kalorikafe org | public URL |
+| `7ecc7c2` | ci: configure Pages metadata for organization site | deployment |
+| `ede7715` | ci: split Pages quality and deployment jobs | deployment |
 
 ## 7. Legacy suite arşiv bilgisi
 
@@ -188,8 +191,9 @@ yok; `tsx` bağımlılığı eklenmedi.
   `actions/upload-pages-artifact` + `actions/deploy-pages` ile yayınlanır.
 - Vite `base` kök site olduğu için değiştirilmedi; `/images/...` yolları
   korunur.
-- Workflow run `31049494024` (`Deploy static content to Pages`): **success**
-  — kalite kapıları + artifact upload + deploy adımlarının tamamı geçti.
+- CI run `31088623077` (`CI`): **success**.
+- Pages workflow run `31088623962` (`Deploy static content to Pages`): **success**;
+  kalite kapıları, artifact upload ve deploy adımlarının tamamı geçti.
 
 ### Canlı doğrulama (6 Ağustos 2026, yayın sonrası)
 

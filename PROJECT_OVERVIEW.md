@@ -15,10 +15,10 @@
 |---|---|
 | Canlı adres | <https://kalorikafe.github.io/> (HTTP 200, tüm asset'ler doğrulandı) |
 | Repo | <https://github.com/kalorikafe/kalorikafe.github.io> (PUBLIC, `master`) |
-| Branch (fix) | `master` (HEAD `c1142e76`); yayın öncesi güvenlik tag'i `pre-public-2026-08-06` |
+| Branch (fix) | `master` (HEAD `ede7715`); yayın öncesi güvenlik tag'i `pre-public-2026-08-06` |
 | Katalog | 845 ürün · 10 zincir · 4 secondary kayıt (Tchibo) |
 | Kalite kapıları | audit ✓ · lint ✓ · build ✓ (P2 bundle uyarısı) · unit 53/53 · E2E 19/19 · npm audit 0 |
-| CI/Pages | tüm Actions run'ları success; deploy Pages green |
+| CI/Pages | CI `31088623077` + Pages `31088623962` success; deploy green |
 | SEO altyapısı | `sitemap.xml`, `robots.txt` (+Sitemap), JSON-LD `WebSite` canlıda |
 
 **Sırada ne var?**

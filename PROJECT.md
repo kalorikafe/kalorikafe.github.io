@@ -180,4 +180,4 @@ dinamik üretilir (sabit liste yok).
 - (Kullanıcı) Google Search Console → mülk → HTML doğrulama dosyası →
   `sitemap.xml` gönderimi → ilk index isteği.
 - P2: ana bundle ~143 kB gzip chunk (code splitting ertelendi).
-- HEAD: `c1142e76` (master); yayın öncesi tag: `pre-public-2026-08-06`.
+- HEAD: `ede7715` (master); yayın öncesi tag: `pre-public-2026-08-06`.

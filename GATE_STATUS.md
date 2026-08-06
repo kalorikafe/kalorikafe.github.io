@@ -2,11 +2,11 @@
 
 Bu dosya, 6 Ağustos 2026 yayın (public release) hazırlığındaki gerçek
 kapı sonuçlarını gösterir; her sonuç bu çalışmada komutlarla **son
-commit'ten** (HEAD `c1142e76`) yeniden üretildi. "67/67" gibi eski legacy
+commit'ten** (HEAD `ede7715`) yeniden üretildi. "67/67" gibi eski legacy
 paket iddiaları geçersizdir — eski kaynak-metin suite'i `tests/legacy/`
 altına arşivlenmiştir ve aktif kalite kapısı değildir.
 
-## Güncel kalite kapıları (6 Ağustos 2026, HEAD c1142e7)
+## Güncel kalite kapıları (6 Ağustos 2026, HEAD ede7715)
 
 | Komut | Görev | Son sonuç |
 |---|---|---|
@@ -23,7 +23,8 @@ altına arşivlenmiştir ve aktif kalite kapısı değildir.
 - GitHub Pages canlı: <https://kalorikafe.github.io/> (HTTP 200;
   `/favicon.svg`, `/sitemap.xml`, `/images/menu/starbucks/caff_latte.webp`
   doğrulandı).
-- GitHub Actions: CI (master) + Pages deploy run'ları **success**.
+- GitHub Actions: CI run `31088623077` + Pages deploy run `31088623962`
+  **success**.
 - Google Search Console kaydı bekliyor (kullanıcı aksiyonu).
 
 Her çalıştırmada sonuçlar komut çıktısıyla yeniden üretilmelidir; bu
