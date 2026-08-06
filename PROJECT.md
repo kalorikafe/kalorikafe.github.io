@@ -4,8 +4,8 @@ Kalori Cafe; Türkiye'deki 10 büyük kafe zincirine ait **845 ürünün** kalor
 protein, karbonhidrat, şeker, yağ, kafein ve alerjen bilgilerini tek
 platformda karşılaştıran React uygulamasıdır.
 
-- **Canlı adres:** <https://selimgrsoy0-commits.github.io/>
-- **Kaynak:** <https://github.com/selimgrsoy0-commits/selimgrsoy0-commits.github.io>
+- **Canlı adres:** <https://kalorikafe.github.io/>
+- **Kaynak:** <https://github.com/kalorikafe/kalorikafe.github.io>
 - **Hosting:** GitHub Pages + GitHub Actions (yalnızca; third-party hosting yok)
 
 Çalışma kesiti Ağustos 2026'dır; katalog zincirlerin resmî web
@@ -104,7 +104,7 @@ push ve manuel `workflow_dispatch`.</think>
   `favoriteIds`, `compareIds`, `basketItems`, `isDarkMode`).
 - **Data Flow**: `src/data/catalog/<chain>.ts` → `src/data/items.ts`
   (birleştirici) → `App.tsx` memoized `filteredItems` → UI bileşenleri.
-- **Public**: <https://selimgrsoy0-commits.github.io/> (GitHub Pages +
+- **Public**: <https://kalorikafe.github.io/> (GitHub Pages +
   Actions; kök site olduğu için Vite `base` değişmez, `/images/*` korunur).
 
 ## Feature Inventory

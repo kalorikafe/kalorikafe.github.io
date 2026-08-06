@@ -62,7 +62,7 @@ uydurulmaz.
 
 ## Public kaynak hipotezi (GitHub Pages)
 
-- Canlı adres: <https://selimgrsoy0-commits.github.io/>
+- Canlı adres: <https://kalorikafe.github.io/>
 - `sitemap.xml`, `robots.txt` (Allow: / + Sitemap yönergesi) ve
   `index.html` içindeki JSON-LD `WebSite` yapılandırılmış verisi yayında;
   Google Search Console'a kayıt bekliyor (kullanıcı aksiyonu).

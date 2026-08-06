@@ -20,7 +20,7 @@ altına arşivlenmiştir ve aktif kalite kapısı değildir.
 
 ## Public / SEO durumu
 
-- GitHub Pages canlı: <https://selimgrsoy0-commits.github.io/> (HTTP 200;
+- GitHub Pages canlı: <https://kalorikafe.github.io/> (HTTP 200;
   `/favicon.svg`, `/sitemap.xml`, `/images/menu/starbucks/caff_latte.webp`
   doğrulandı).
 - GitHub Actions: CI (master) + Pages deploy run'ları **success**.

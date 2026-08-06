@@ -3,8 +3,8 @@
 - Çalışma kesiti: **6 Ağustos 2026** (Europe/Istanbul), branch
   `codex/release-public-v1` → `master` (fast-forward)
 - Önceki katalog: **199 ürün** · Güncel katalog: **845 ürün** (10 zincir)
-- Public repo: <https://github.com/selimgrsoy0-commits/selimgrsoy0-commits.github.io>
-- Canlı adres: <https://selimgrsoy0-commits.github.io/>
+- Public repo: <https://github.com/kalorikafe/kalorikafe.github.io>
+- Canlı adres: <https://kalorikafe.github.io/>
 
 Bu rapor yalnızca gerçek ölçümleri içerir ("67/67", "always green" gibi
 üretilemeyen iddialar raporda yoktur).
@@ -180,7 +180,7 @@ yok; `tsx` bağımlılığı eklenmedi.
 
 ## 10. Public yayın (GitHub Pages)
 
-- Repo: `selimgrsoy0-commits/selimgrsoy0-commits.github.io` (user site)
+- Repo: `kalorikafe/kalorikafe.github.io` (organization site)
 - Workflow: `.github/workflows/pages.yml` — tetikleyiciler `master` push
   ve `workflow_dispatch`; `permissions: contents: read, pages: write,
   id-token: write`; Node 22; Playwright Chromium kurulumu; kalite kapıları
@@ -195,7 +195,7 @@ yok; `tsx` bağımlılığı eklenmedi.
 
 | Kontrol | Sonuç |
 |---|---|
-| `https://selimgrsoy0-commits.github.io/` | HTTP 200 · `text/html` · başlık "Kalori Cafe \| Tüm Zincir Kafelerin Makro & Alerjen Haritası" |
+| `https://kalorikafe.github.io/` | HTTP 200 · `text/html` · başlık "Kalori Cafe \| Tüm Zincir Kafelerin Makro & Alerjen Haritası" |
 | `/favicon.svg` | HTTP 200 · `image/svg+xml` (kahve temalı favicon) |
 | `/sitemap.xml` | HTTP 200 · `application/xml` (yayında) |
 | `/robots.txt` | `User-agent: *` + `Allow: /` + `Sitemap:` yönergesi yayında |

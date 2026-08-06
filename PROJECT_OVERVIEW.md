@@ -13,8 +13,8 @@
 
 | Durum | Detay |
 |---|---|
-| Canlı adres | <https://selimgrsoy0-commits.github.io/> (HTTP 200, tüm asset'ler doğrulandı) |
-| Repo | <https://github.com/selimgrsoy0-commits/selimgrsoy0-commits.github.io> (PUBLIC, `master`) |
+| Canlı adres | <https://kalorikafe.github.io/> (HTTP 200, tüm asset'ler doğrulandı) |
+| Repo | <https://github.com/kalorikafe/kalorikafe.github.io> (PUBLIC, `master`) |
 | Branch (fix) | `master` (HEAD `c1142e76`); yayın öncesi güvenlik tag'i `pre-public-2026-08-06` |
 | Katalog | 845 ürün · 10 zincir · 4 secondary kayıt (Tchibo) |
 | Kalite kapıları | audit ✓ · lint ✓ · build ✓ (P2 bundle uyarısı) · unit 53/53 · E2E 19/19 · npm audit 0 |
@@ -47,8 +47,8 @@ tek platformda toplayan; kalori, protein, karbonhidrat, şeker, yağ, kafein
 ve alerjen değerlerini inceleme ve karşılaştırma imkânı veren bir Web
 Aggregator uygulamasıdır.
 
-- **Canlı adres:** <https://selimgrsoy0-commits.github.io/>
-- **Repo:** <https://github.com/selimgrsoy0-commits/selimgrsoy0-commits.github.io>
+- **Canlı adres:** <https://kalorikafe.github.io/>
+- **Repo:** <https://github.com/kalorikafe/kalorikafe.github.io>
 - **Stack:** React 19 + Vite 8 + TypeScript + Tailwind v4; GitHub Pages + Actions
 
 ### Hedef Kitle

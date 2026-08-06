@@ -4,8 +4,8 @@ Kalori Cafe; Türkiye'deki 10 büyük kafe zincirine ait **845 ürünün** kalor
 protein, karbonhidrat, şeker, yağ, kafein ve alerjen bilgilerini tek
 platformda karşılaştıran React uygulamasıdır.
 
-- **Canlı adres:** <https://selimgrsoy0-commits.github.io/>
-- **Kaynak:** <https://github.com/selimgrsoy0-commits/selimgrsoy0-commits.github.io>
+- **Canlı adres:** <https://kalorikafe.github.io/>
+- **Kaynak:** <https://github.com/kalorikafe/kalorikafe.github.io>
 - **Hosting:** GitHub Pages + Actions (yalnızca bu; Vercel/Cloudflare/Netlify kullanılmaz)
 
 Çalışma kesiti Ağustos 2026; katalog zincirlerin resmî web menülerinden
@@ -98,7 +98,7 @@ asset yolları `/images/...` kalır). Tetikleyiciler: `master` push ve manuel
 - `index.html` içinde JSON-LD `WebSite` yapılandırılmış verisi, `og:*`
   meta'ları ve `lang="tr"` mevcut.
 - **Bekleyen (kullanıcı):** Google Search Console'da mülk ekle
-  (`https://selimgrsoy0-commits.github.io/`), HTML doğrulama dosyasını
+  (`https://kalorikafe.github.io/`), HTML doğrulama dosyasını
   bize ver → `public/`'e koyup push edelim, sonra `sitemap.xml` gönder ve
   ilk "URL Indexing isteği"ni başlat. Yeni sitenin Google'da çıkması
   günler sürebilir.
