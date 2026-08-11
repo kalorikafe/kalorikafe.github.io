@@ -1,235 +1,191 @@
-# ☕ Kalori Cafe — Proje Özeti & Geliştirici Kılavuzu
+# ☕ Kalori Cafe — Proje Özeti ve Geliştirici Kılavuzu
 
-> **Bu doküman, yeni bir sohbet veya yapay zeka ajanı başlatıldığında
-> projenin geçmişini, amacını, mimarisini ve güncel durumunu eksiksiz
-> aktarmak için hazırlanmıştır.** Son güncelleme: 6 Ağustos 2026
-> (public release tamamlandı).
+> Yeni bir sohbet veya ajan için başlangıç belgesidir. Son güncelleme:
+> **11 Ağustos 2026** (Caffè Nero resmî katalog genişletmesi).
 
----
+## Devir durumu — önce bunu oku
 
-## ⏭️ Devir Durumu — önce bunu oku
+Kalori Cafe, GitHub Pages üzerinde public bir React uygulamasıdır. 6 Ağustos
+2026 public release'i yayındadır. Çalışma ağacındaki en yeni katalog **950
+ürün** içerir; canlı sitenin bu sayıyı göstermesi için değişikliklerin
+`master` üzerinden Pages workflow'u ile yayınlanmış olması gerekir.
 
-**Kalori Cafe public yayında. Google'da görünmek için son adımların bazıları kullanıcıda; kod tarafı tamamıyla hazır ve yeşil doğrulandı.
-
-| Durum | Detay |
+| Konu | Güncel durum |
 |---|---|
-| Canlı adres | <https://kalorikafe.github.io/> (HTTP 200, tüm asset'ler doğrulandı) |
-| Repo | <https://github.com/kalorikafe/kalorikafe.github.io> (PUBLIC, `master`) |
-| Branch (fix) | `master` (HEAD `ede7715`); yayın öncesi güvenlik tag'i `pre-public-2026-08-06` |
-| Katalog | 845 ürün · 10 zincir · 4 secondary kayıt (Tchibo) |
-| Kalite kapıları | audit ✓ · lint ✓ · build ✓ (P2 bundle uyarısı) · unit 53/53 · E2E 19/19 · npm audit 0 |
-| CI/Pages | CI `31088623077` + Pages `31088623962` success; deploy green |
-| SEO altyapısı | `sitemap.xml`, `robots.txt` (+Sitemap), JSON-LD `WebSite` canlıda |
+| Canlı adres | <https://kalorikafe.github.io/> |
+| Repo | <https://github.com/kalorikafe/kalorikafe.github.io> |
+| Katalog | 950 ürün · 10 zincir · 15 sezonluk ürün |
+| Caffè Nero | 125 ürün · 0 sezonluk · 96 resmî + 29 fallback görsel |
+| Besin kaydı | 950 `estimated` · 0 `verified` · 0 `unverified` |
+| Görseller | 950 benzersiz yerel yol · 384 resmî/exact · 566 lisanslı fallback |
+| Provenance | Her üründe katalog, görsel, besin ve bulunurluk kaydı |
+| Hosting | Yalnızca GitHub Pages + GitHub Actions |
 
-**Sırada ne var?**
-1. (Kullanıcı) Google Search Console → mülk ekle → HTML doğrulama dosyası
-   adını ver, `public/`'e ekleyip push edelim → `sitemap.xml` gönder →
-   ilk URL Indexing isteği. Google'da çıkması günler sürebilir.
-2. (Kullanıcı) İsteğe Bağlı: Bing Webmaster Tools (aynı sitemap import).
-3. P2 (ertelendi): ana bundle ~143 kB gzip chunk — code splitting yapılabilir.
-4. P2 (ertelendi): tek sayfa olduğu için SSR/sitemap ekstra gerekmiyor;
-   özel domain ileride eklenebilir.
+### Sıradaki işler
 
-**Bu sohbette ne yapıldı (özet):** public release uçtan uca — kod
-düzeltmeleri (secondary provenance, image E2E), UX/güvenlik (makro profil,
-peanut, ARIA, disclaimer'lar), marka ve starter dosyaların temizliği,
-legacy test arşivi, doküman yenileme, GitHub Pages workflow, canlı
-doğrulama, SEO altyapısı. Tüm detaylar aşağıda ve README.md'de.
+1. Güncel çalışma ağacında bütün kalite kapılarını çalıştır; gerçek sonuçları
+   `GATE_STATUS.md` ile eşleştir.
+2. Kullanıcı isterse değişiklikleri commit/push et ve Pages yayını sonrası
+   canlı ürün sayısı ile görselleri doğrula.
+3. Google Search Console mülk doğrulaması, sitemap gönderimi ve ilk indeks
+   isteği kullanıcı aksiyonudur.
+4. Kahve Dünyası, Coffy ve Tchibo'nun şube bazlı ikincil teslimat listelerini
+   zincir-geneli resmî katalog gibi ekleme. Birden fazla şube, provenance ve
+   görsel lisansı doğrulamasıyla ayrı bir araştırma geçişi gerekir.
 
----
+## Projenin amacı
 
-## 🎯 Projenin Amacı
+Kalori Cafe; Starbucks, Espressolab, Kahve Dünyası, Caffè Nero, Coffy,
+Mackbear Coffee Co., Arabica Coffee House, Gloria Jean's, David People ve
+Tchibo ürünlerini tek yerde toplar. Kullanıcılar kalori/makro/kafein
+değerlerini karşılaştırabilir, alerjen ve diyet filtreleri uygulayabilir,
+ürünleri özelleştirebilir ve kişisel hedeflerini takip edebilir.
 
-**Kalori Cafe**, Türkiye'deki popüler zincir kahve mağazalarının
-(Starbucks, Espressolab, Kahve Dünyası, Caffè Nero, Coffy, Mackbear Coffee
-Co., Arabica Coffee House, Gloria Jean's, David People, Tchibo) menülerini
-tek platformda toplayan; kalori, protein, karbonhidrat, şeker, yağ, kafein
-ve alerjen değerlerini inceleme ve karşılaştırma imkânı veren bir Web
-Aggregator uygulamasıdır.
+Uygulamadaki besin değerleri tıbbi tavsiye değildir. Eksiksiz resmî ürün
+tabloları bulunmadığı için bütün kayıtlar `estimated` olarak gösterilir;
+alerjenlerde güncel marka beyanı ve çapraz bulaşma riski esas alınmalıdır.
 
-- **Canlı adres:** <https://kalorikafe.github.io/>
-- **Repo:** <https://github.com/kalorikafe/kalorikafe.github.io>
-- **Stack:** React 19 + Vite 8 + TypeScript + Tailwind v4; GitHub Pages + Actions
+## Güncel katalog
 
-### Hedef Kitle
+| Zincir | Ürün | Sezonluk |
+|---|---:|---:|
+| Starbucks | 130 | 0 |
+| Espressolab | 116 | 0 |
+| Kahve Dünyası | 20 | 0 |
+| Caffè Nero | 125 | 0 |
+| Coffy | 30 | 9 |
+| Mackbear Coffee Co. | 166 | 3 |
+| Arabica Coffee House | 131 | 0 |
+| Gloria Jean's Coffees | 115 | 1 |
+| David People | 93 | 2 |
+| Tchibo | 24 | 0 |
+| **Toplam** | **950** | **15** |
 
-1. Sporcular ve diyet yapanlar: makro hedeflerine göre kahve/yiyecek seçimi.
-2. Alerjisi olanlar: laktoz, glüten, yumurta, soya, fındık/fıstık, **yer fıstığı** uyarıları.
-3. Kan şekeri takibi yapanlar: şeker ve glisemik etki.
-4. Kafein hassasiyeti olanlar: günlük kişisel kafein sınırı takibi.
+### Caffè Nero — 11 Ağustos 2026
 
----
+- 7 resmî Caffè Nero Türkiye menü sayfası tarandı.
+- İzlenen kaynak anlık görüntüsünde 125 benzersiz ürün satırı vardır:
+  `scripts/catalog_sources/caffe_nero.json`.
+- Eski 20 ürün güncel resmî kayıtlara eşlendi; kimlikleri korunarak net 105
+  ürün eklendi.
+- Audit, derlenmiş Caffè Nero kataloğunun kaynak anlık görüntüsüyle ad/adet
+  bakımından birebir eşleşmesini denetler.
+- 96 ürünün resmî exact görseli, 29 ürünün lisanslı fallback görseli vardır.
+- Resmî menüdeki kullanılabilir değerler hesaba katılsa da tüm şemayı her
+  üründe doğrulayacak eksiksiz bilgi bulunmadığı için 125 kayıt `estimated`
+  kalır.
 
-## 🛠️ Güncel Durum (6 Ağustos 2026)
+Boyut varyasyonları ayrı ürün sayılmaz. Kimliklerin sabit tutulması favori,
+sepet ve localStorage uyumluluğunu korur. Tchibo'nun ürün sayfası olmayan
+dört standart espresso bazlı kaydı `secondary`; diğer kayıtlar resmî katalog
+kaynağına bağlıdır.
 
-### 1. Katalog: 199 → 845 ürün (10 zincir)
+## Mimari ve veri akışı
 
-- Zincir başına ürün: Starbucks 130, Espressolab 116, Mackbear 166,
-  Arabica 131, Gloria Jean's 115, David People 93, Coffy 30, Tchibo 24,
-  Kahve Dünyası 20, Caffè Nero 20.
-- Kaynaklar: Starbucks TR resmî menüsü (19 kategori sayfası), Espressolab
-  resmî menü API'si, Arabica/Gloria Jean's/David People/Mackbear/Coffy
-  resmî sayfaları; Kahve Dünyası kafe menüsü web'de yayınlanmadığı ve
-  Caffè Nero TR sayfası ürün bazında erişilemediği için bu iki zincir
-  20'şer ürünle kaldı (gerekçe raporda).
-- Provenance: `catalogSource.url` önceliği **ürünün exact productUrl** →
-  araştırma zincir kaynağı → katalog varsayılanı (derleyici
-  `compile_catalog.py`). Tchibo'nun 4 standart espresso bazlı ürünü
-  (`tchibo_espresso`, `tchibo_caff_latte`, `tchibo_cappuccino`,
-  `tchibo_americano`) `kind: 'secondary'` ile işaretlidir; geri kalan 20
-  Tchibo ürünü ve tüm diğer zincirler `official`.
-- Kimlikler sabittir (favori/sepet uyumluluğu); boyut varyasyonları
-  (Double/Single/2'li) ayrı ürün sayılmaz.
-- "URL, besin değeri veya kaynak bilgisi uydurulmaz" ilkesi audit'te
-  denetlenir (`npm run catalog:audit`).
-
-### 2. Görseller: 845 yerel WebP
-
-- Tüm görseller `/images/menu/<chain>/<slug>.webp`; %100 benzersiz yol,
-  tekrar sınırı 6, görsel ailesi kuralı denetlenir.
-- Kaynaklar: zincir resmî görselleri (288 ürün) + lisanslı fallback'ler
-  (Wikimedia Commons CC / Unsplash, 557 ürün).
-- Zincir logoları yerel: `/images/chains/<id>.png`.
-- Kart hata fallback'i yerel `/images/menu/placeholder.webp`; uzak
-  hotlink yok. `favicon.svg` kahve temalı (sade kahve/amber) — Vite
-  starter favicon kaldırıldı.
-
-### 3. Arama deneyimi
-
-- Tek normalizasyon yardımcısı (`searchNormalize.ts`): Türkçe karakter ve
-  diakritik katlama (`turk kahvesi` → Türk Kahvesi), boşluk temizliği.
-- Arama alanları: ürün adı, İngilizce ad, zincir adı, açıklama, kategori
-  etiketi, diyet etiketleri.
-- 2+ karakterde en fazla 8 önerilik panel (masaüstü navbar + mobil modal
-  aynı `SearchSuggestions` bileşeni). **Her yüzey benzersiz listbox/option
-  ID'si üretir** (`buildSuggestionIds`; `aria-controls` ve
-  `aria-activedescendant` doğru bağlanır). `ArrowDown/Up`, `Enter`,
-  `Escape` klavye sözleşmesi; Escape sorguyu silmez; sonuç sayısı
-  `aria-live` ile duyurulur; seçim `#menu-results` hedefine kayar.
-
-### 4. Sıcak espresso koyu tema
-
-- Tokenlar `src/index.css` içinde merkezli: `--dark-bg #17120F`,
-  `--dark-surface #211A16`, `--dark-surface-elevated #2B211C`,
-  `--dark-border #49372E`, `--dark-text #F7EFE8`,
-  `--dark-text-muted #C6B4A6`, `--dark-accent #E0A15A`.
-- Tercih `kalori_cafe_theme` (light|dark); kayıtlı tercih sistem
-  tercihinden önce gelir; `index.html` satır içi betiği ilk boyamada tema
-  parlamasını önler; tema düğmesi erişilebilir adını günceller.
-
-### 5. Fonksiyonel bileşenler
-
-- Alerjen profili: gluten, laktoz, kuruyemiş, **yer fıstığı (peanut)**,
-  soya, yumurta, yulaf; uyarı/gizleme modları; modalde **"Alerjen bilgisi
-  garanti değildir"** çapraz bulaşma açıklaması görünür.
-- Canlı özelleştirici (boyut, süt, şurup, shot, krema); günlük makro
-  sepeti (MyFitnessPal kopyalama); 4'e kadar karşılaştırma; FDA tarzı
-  besin etiketi (veri kaynağı notlu); akıllı takas; **BMR/TDEE makro
-  hesaplayıcı** (profil kaydı + validasyon + legacy migrasyonu); özel
-  tarif oluşturucu.
-- **Makro profili:** `MacroProfile { gender, age, weightKg, heightCm,
-  activity, goalType }`; validasyon yaş 15–75 · kilo 35–250 · boy
-  120–230; geçersizde Apply kapalı + satır içi hata; Apply hedefler +
-  profili birlikte kaydeder; modal açılışta kayıtlı profili yükler.
-  Kafein metni "belirlediğiniz kişisel günlük sınır" (varsayılan 400 mg).
-- **Güvenilirlik:** Hero'da tahminî değer/çapraz bulaşma açıklaması;
-  `estimated` ürünlerde kartta "Tahmini değer" rozeti; footer feragat
-  metni tutarlı; tıbbi iddia içermez.
-
-### 6. Testler (aktif)
-
-- Unit (Vitest): `searchNormalize`, `menuFilter`, `dataQuality`,
-  `macroCalculator`, `macroGoals` (migrasyon), `allergenAndProvenance`
-  (peanut + secondary provenance) — **53 test**.
-- E2E (Playwright, Chromium): arama/ARIA/klavye, tema kalıcılığı,
-  390×844 & 1440×900 × iki tema taşma yok, yerel WebP yükleme, peanut
-  seçim/filtre, makro legacy-migrasyon + validasyon — **19 test**.
-- Eski legacy tier suite (67 senaryo) aktif değil: `tests/legacy/`
-  arşivi + README. Bu depodaki dokümanlar güncel sayılarla tutulur.
-
-### 7. Arama motorları (SEO)
-
-- `public/sitemap.xml` — canlı `/sitemap.xml` (HTTP 200 doğrulandı).
-- `public/robots.txt` — `Allow: /` + `Sitemap:` yönergesi.
-- `index.html` — JSON-LD `WebSite` schema, `og:*` meta'ları, `lang="tr"`,
-  `theme-color`. Title: "Kalori Cafe | Tüm Zincir Kafelerin Makro &
-  Alerjen Haritası".
-- **Bekleyen (kullanıcı aksiyonu):** Google Search Console'a mülk ekleme,
-  HTML doğrulama dosyası, sitemap gönderimi, ilk index isteği.
-
-### 8. Otomasyon araçları
-
-- `scripts/compile_catalog.py`: katalog modülleri ve `items.ts` üretici
-  (provenance: ürüne özgü/secondary bilgisi araştırma JSON'larından gelir).
-- `scripts/catalog-audit.ts`: tüm katalog sözleşmelerini denetler.
-- CI: `.github/workflows/ci.yml` (push/PR kalite kapıları);
-  `.github/workflows/pages.yml` (lint/build/test + `dist` Pages'e yayın).
-
----
-
-## 🏗️ Mimari & Dosya Yapısı
-
+```text
+resmî/ikincil araştırma kaynakları
+        ↓
+scripts/catalog_sources/* + geçici araştırma çıktıları
+        ↓
+scripts/compile_catalog.py
+        ↓
+src/data/catalog/<chain>.ts
+        ↓
+src/data/items.ts (MENU_ITEMS)
+        ↓
+App.tsx filtreleri ve UI bileşenleri
 ```
+
+- Stack: React 19, TypeScript 6, Vite 8, Tailwind CSS v4
+- Durum: arama, filtre, tema, alerjen, hedef, favori, sepet ve karşılaştırma
+  durumu `src/App.tsx` çevresinde yönetilir.
+- Görsel hattı: `scripts/build-images.mjs`; resmî kaynakları tercih eder,
+  lisanslı fallback kullanır ve bütün ürün görsellerini yerel WebP'ye çevirir.
+- Katalog denetimi: `scripts/catalog-audit.ts`; provenance, sayısal makro,
+  kimlik, zincir, sezonluk ve görsel sözleşmelerini denetler.
+- Caffè Nero tarayıcısı: `scripts/fetch-caffe-nero.mjs`; 7 resmî sayfadan
+  tekrar üretilebilir kaynak anlık görüntüsü oluşturur.
+
+## Ürün ve provenance sözleşmesi
+
+Her `MenuItem`; sabit `id`, `chainId`, ad, kategori, açıklama, yerel görsel,
+temel makrolar, alerjenler, diyet etiketleri ve şu kayıtları taşır:
+
+- `catalogSource`: URL, kontrol tarihi ve `official|secondary` türü
+- `imageSource`: kaynak URL'si, `official|licensed_fallback` ve exact bayrağı
+- `nutritionSource`: `verified|estimated|unverified`, yöntem ve porsiyon notu
+- `availability`: sezonluk durumu ve açıklaması
+
+Desteklenen alerjenler gluten, laktoz, kuruyemiş, yer fıstığı, soya,
+yumurta, yulaf, balık, hardal, susam ve sülfitlerdir.
+
+## Kullanıcı özellikleri
+
+- Türkçe karakter/diakritik katlamalı arama ve erişilebilir öneriler
+- Zincir, kategori, yiyecek/içecek ve diyet filtreleri
+- Boyut, süt, şurup, shot ve krema özelleştirmesi
+- Favoriler, günlük makro sepeti, karşılaştırma ve besin etiketi
+- Akıllı takas, özel tarif oluşturucu ve BMR/TDEE hedef hesaplayıcı
+- Eski `kalori_cafe_goals` kayıtlarını veri kaybı olmadan migrate eden profil
+  saklama
+- Kalıcı açık/koyu tema
+- Tahminî veri, tıbbi tavsiye ve çapraz bulaşma açıklamaları
+
+## Dosya yapısı
+
+```text
 kalori_cafe/
-├── index.html                  # OG meta, FOUC önleyen tema betiği
+├── index.html
 ├── public/
-│   ├── favicon.svg             # kahve temalı (Vite starter favicon değiştirildi)
-│   ├── images/menu/<chain>/      # 845 ürün görseli (WebP)
-│   ├── images/chains/          # 10 zincir logosu (yerel PNG)
-│   └── robots.txt
-├── scripts/                       # catalog-audit.ts, compile_catalog.py, build-images.mjs…
+│   ├── images/menu/<chain>/
+│   ├── images/chains/
+│   ├── favicon.svg
+│   ├── robots.txt
+│   └── sitemap.xml
+├── scripts/
+│   ├── catalog_sources/caffe_nero.json
+│   ├── fetch-caffe-nero.mjs
+│   ├── compile_catalog.py
+│   ├── build-images.mjs
+│   └── catalog-audit.ts
 ├── src/
-│   ├── components/            # Navbar, Hero, ItemCard, SearchSuggestions,
-│   │                          # MobileSearchModal, modallar, çekmece…
-│   ├── data/                   # catalog/<chain>.ts, items.ts, chains.ts, modifiers.ts
-│   ├── types/cafe.ts              # MenuItem + provenance sözleşmeleri
-│   ├── utils/                  # searchNormalize, searchInteraction, menuFilter,
-│   │                          # macroCalculator, macroGoals
-│   ├── App.tsx                  # merkezi durum, filtreler, modal yönetimi
-│   └── index.css                # Tailwind v4 + koyu tema tokenları
-├── tests/
-│   ├── unit/                    # 6 dosya, 53 test
-│   ├── e2e/                    # critical-flows, image-loading (19 akış)
-│   └── legacy/                # eski tier suite arşivi + README (aktif değil)
-├── .github/workflows/          # ci.yml + pages.yml
-├── README.md, PROJECT.md, PROJECT_OVERVIEW.md, GATE_STATUS.md,
-│   DATA_PROVENANCE.md, DEEPSEEK_NIGHT_REPORT.md
+│   ├── components/
+│   ├── data/catalog/
+│   ├── types/
+│   ├── utils/
+│   └── App.tsx
+├── tests/unit/
+├── tests/e2e/
+├── tests/legacy/
+└── .github/workflows/
 ```
 
----
+`src/data/catalog/<chain>.ts` derleyici ürünüdür; elle düzenlemek yerine
+kaynak anlık görüntüsünü/derleyiciyi güncelle. `tests/legacy/` tarihsel
+arşivdir ve aktif kalite kapısı değildir.
 
-## 🚀 Komutlar
+## Komutlar
 
 ```bash
-npm run dev              # geliştirme sunucusu (5173)
-npm run catalog:audit     # katalog denetimi
-npm test               # unit (53) + E2E (19)
-npm run build          # üretim derlemesi
-npm run lint           # oxlint
-npm audit             # güvenlik taraması
-npm audit --omit=dev  # üretim bağımları taraması
+npm install
+npm run dev
+npm run catalog:audit
+npm run lint
+npm run build
+npm run test:unit
+npm run test:e2e
+npm test
+npm audit
 ```
 
----
+İlk E2E kurulumunda `npm run test:e2e:install` Chromium indirir. Kalite
+sonuçlarını sabit varsayma; her çalışma ağacında yeniden üret ve gerçek
+çıktıyı `GATE_STATUS.md` içine yaz.
 
-## 💡 Yeni Chat / Ajan İçin Notlar
+## Deploy ve SEO
 
-1. **Veri düzenleme:** `src/data/catalog/<chain>.ts` derleyici ürünüdür;
-   araştırma JSON'ları + `compile_catalog.py` ile yeniden üretilir;
-   elle düzenleme yapma, `npm run catalog:audit` ile doğrula. Secondary
-   işaretleme: research kaynağının `secondary`/ürün `productUrl` alanları.
-2. **Koyu tema:** Tokenlar `src/index.css`'te; bileşenlerde
-   `dark:bg-[var(--dark-surface)]` gibi referanslar; hex tekrar etme.
-3. **Görsel ekleme:** Yeni ürün → `build-images.mjs` manifest'ten otomatik
-   WebP üretir; uzak hotlink ekleme; placeholder yereldir.
-4. **Arama:** davranış tek kaynak `searchNormalize.ts` +
-   `searchInteraction.ts`; her yüzeyde `buildSuggestionIds(prefix)` ile
-   benzersiz ARIA ID üret, `aria-controls/aria-activedescendant'ı ona göre bağla.
-5. **Makro hedefleri:** hesap/formülü `macroGoals.ts`; migrasyon
-   `normalizeStoredGoals`; eski kaydı silme.
-6. **Kalite önceliği:** `catalog:audit → lint → build → test → audit
-   sırası kapıdır; gerçek sonuçlar GATE_STATUS.md / raporda saklanır.
-   Deploy yalnız `pages.yml` (master push veya workflow_dispatch).
-7. **SEO:** Yeni içerik eklerken `index.html` meta/JSON-LD'yi ve
-   `public/sitemap.xml`'i güncelle; Google Search Console adımı hâlâ
-   kullanıcıda bekliyor (HTML doğrulama dosyası).
+`.github/workflows/pages.yml`, `master` push veya manuel
+`workflow_dispatch` ile kalite kapılarından sonra `dist/` çıktısını GitHub
+Pages'e yayınlar. Kök site olduğu için Vite `base` değişmez. `sitemap.xml`,
+`robots.txt` ve JSON-LD `WebSite` verisi mevcuttur; Search Console kaydı
+kullanıcı tarafında bekler.

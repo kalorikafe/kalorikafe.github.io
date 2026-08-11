@@ -1,0 +1,5471 @@
+{
+  "chainId": "caffe_nero",
+  "checkedAt": "2026-08-11",
+  "canonicalizeExisting": true,
+  "refreshExisting": true,
+  "sources": [
+    {
+      "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "status": 200,
+      "checkedAt": "2026-08-11",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "status": 200,
+      "checkedAt": "2026-08-11",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.caffenero.com/tr/menu/icecekler/sicak-icecekler",
+      "status": 200,
+      "checkedAt": "2026-08-11",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "status": 200,
+      "checkedAt": "2026-08-11",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "status": 200,
+      "checkedAt": "2026-08-11",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "status": 200,
+      "checkedAt": "2026-08-11",
+      "kind": "official"
+    },
+    {
+      "url": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+      "status": 200,
+      "checkedAt": "2026-08-11",
+      "kind": "official"
+    }
+  ],
+  "products": [
+    {
+      "name": "Americano",
+      "sourceName": "Amerıcano",
+      "aliases": [
+        "Caffè Americano"
+      ],
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Sıcak su üzerine çekilen benzersiz espressomuz. Regular için 2 shot, Grande için 3 shot espresso ile.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/americano.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "americano",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 6,
+        "protein": 0.9,
+        "carbs": 1.6,
+        "sugar": 0,
+        "fat": 0,
+        "satFat": 0,
+        "sodium": 0,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Caffè Latte",
+      "sourceName": "Caffé Latte",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Espresso, buharla ısıtılmış süt ve üzerine ince bir mikro-köpük katmanı.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/latte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "latte",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 117,
+        "protein": 8.9,
+        "carbs": 12.4,
+        "sugar": 11.7,
+        "fat": 4.6,
+        "satFat": 2.8,
+        "sodium": 160,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Antep Fıstıklı Latte",
+      "sourceName": "Antep Fıstıklı Latte",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Antep fıstığı, espresso ve buharla ısıtılmış süt üzerine mikro-köpük katmanı.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/antepfistiklilatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "latte",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 160
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Caramelatte",
+      "sourceName": "Caramelatte",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Espresso, bir shot vanilya şurubu, süt, üzerine kremşanti ve karamel sos",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/caramelatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "latte",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 417,
+        "protein": 2.4,
+        "carbs": 53.5,
+        "sugar": 38.8,
+        "fat": 23.7,
+        "satFat": 11.9,
+        "sodium": 120,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Cappuccino",
+      "sourceName": "Cappuccıno",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Espresso, buharla ısıtılmış süt, mikro-süt köpüğü ve üzerine serpilmiş çikolata tozu.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/cappucino22.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "cappuccino",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 160
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Resmî porsiyon tablosu enerji ve makro tutarlılık kontrolünü geçmediği için değerler içeri alınmadı; makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Flat White",
+      "sourceName": "Flat Whıte",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "İpeksi mikro köpüğü ile ristretto bazlı zengin ve yoğun kahve.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/flatwhite.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "short",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "flat-white",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 160
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada besin alanı bulunuyor ancak sayısal porsiyon verisi yayınlanmadığı için makrolar tahmin edildi."
+      }
+    },
+    {
+      "name": "Cortado",
+      "sourceName": "Cortado",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "130 ml'lik bardaklarda, yaklaşık 1:2 oranında espresso ve köpürtülmüş süte eklenen 0,5 cm mikro köpükle hazırlanır.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/cortado.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "short",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "cortado",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 49,
+        "protein": 2.7,
+        "carbs": 3.6,
+        "sugar": 3.1,
+        "fat": 2.6,
+        "satFat": 1.6,
+        "sodium": 40,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Mocha",
+      "sourceName": "Mocha",
+      "aliases": [
+        "Caffè Mocha"
+      ],
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Benzersiz espressomuzun, buharla ısıtılmış süt ve çikolata ile birleşimi.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/mocha.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "mocha",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 230,
+        "protein": 9.9,
+        "carbs": 36.6,
+        "sugar": 35.9,
+        "fat": 5,
+        "satFat": 3.2,
+        "sodium": 160,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "White Chocolate Mocha",
+      "sourceName": "Whıte Chocolate Mocha",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Benzersiz espressomuzun, buharla ısıtılmış süt ve beyaz çikolata ile birleşimi.",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "white-mocha",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 160
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Espresso",
+      "sourceName": "Espresso",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Benzersiz Classico harmanımızdan çekilmiş tek shot espresso.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/02-espresso.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "short",
+      "defaultMilkId": null,
+      "visualSlot": "espresso",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 80
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Espresso Macchiato",
+      "sourceName": "Espresso Macchıato",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Benzersiz espressomuzun üzerine çok az süt köpüğü.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/ae/macchiato.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "short",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "espresso",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 2,
+        "protein": 0,
+        "carbs": 0.3,
+        "sugar": 0,
+        "fat": 0.1,
+        "satFat": 0,
+        "sodium": 0,
+        "caffeine": 80
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Espresso Ristretto",
+      "sourceName": "Espresso Rıstretto",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Yoğun espresso",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "short",
+      "defaultMilkId": null,
+      "visualSlot": "espresso",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 80
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Espresso Con Panna",
+      "sourceName": "Espresso Con Panna",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "Classico harmanımız ile hazırlanan iki shot espresso üzerine krema.",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "short",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "espresso",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 80
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada besin alanı bulunuyor ancak sayısal porsiyon verisi yayınlanmadığı için makrolar tahmin edildi."
+      }
+    },
+    {
+      "name": "Filtre Kahve",
+      "sourceName": "Filtre Kahve",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/02-filtrekahve.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "americano",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 170
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Türk Kahvesi",
+      "sourceName": "Türk Kahvesi",
+      "category": "espresso_hot",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+      "sourceSection": "Sıcak Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "short",
+      "defaultMilkId": null,
+      "visualSlot": "turkish",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 60
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Iced Americano",
+      "sourceName": "Iced Amerıcano",
+      "category": "espresso_iced",
+      "isDrink": true,
+      "description": "Benzersiz espressomuzun, su ve buz küpleriyle birleşimi.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/icedamericano.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "americano",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 14,
+        "protein": 0.9,
+        "carbs": 2.3,
+        "sugar": 0,
+        "fat": 0,
+        "satFat": 0,
+        "sodium": 0,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Iced Latte",
+      "sourceName": "Iced Latte",
+      "category": "espresso_iced",
+      "isDrink": true,
+      "description": "Benzersiz espressomuzun, süt ve buz küpleri ile birleşimi.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/icedlatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "latte",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 80,
+        "protein": 6.4,
+        "carbs": 8.2,
+        "fat": 2.8,
+        "satFat": 2.1,
+        "sodium": 0,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon değerleri + alan bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Resmî porsiyon tablosundaki güvenilir alanlar kullanıldı; eksik veya tutarsız şeker alanları standart tariften tahmin edildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Antep Fıstıklı Iced Latte",
+      "sourceName": "Antep Fıstıklı Iced Latte",
+      "category": "espresso_iced",
+      "isDrink": true,
+      "description": "Antep fıstıklı, buzlu, sütlü kahve",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/antepfistikliicedlatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "latte",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 160
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Iced Caramelatte",
+      "sourceName": "Iced Caramelatte",
+      "category": "espresso_iced",
+      "isDrink": true,
+      "description": "Espressomuzun, süt, buz ve vanilya lezzeti ile karışımı. Üzerine krema ve karamel sos ile...",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/icedcaramelatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "latte",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 653,
+        "protein": 14.2,
+        "carbs": 117.2,
+        "sugar": 113.6,
+        "fat": 16,
+        "satFat": 8.9,
+        "sodium": 0,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Iced Cappuccino",
+      "sourceName": "ICED CAPPUCCINO",
+      "category": "espresso_iced",
+      "isDrink": true,
+      "description": "Hafif, pürüzsüz ve kremsi yağsız süt köpüğü ve bir tutam tatlı kakao tozu ile soğuk ve yoğun Nero Classico espresso",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/icedcappucino.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "cappuccino",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 69,
+        "protein": 6.2,
+        "carbs": 9.3,
+        "sugar": 8.5,
+        "fat": 0.7,
+        "satFat": 0.2,
+        "sodium": 40,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Iced Flat White",
+      "sourceName": "ICED FLAT WHITE",
+      "category": "espresso_iced",
+      "isDrink": true,
+      "description": "Buzlu sütün üzerine dökülen köpüklü Nero Classico espresso",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/icedflatwhite.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "short",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "flat-white",
+      "sourceAllergens": [
+        "Soya"
+      ],
+      "allergens": [
+        "lactose",
+        "soy"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 62,
+        "protein": 3.1,
+        "carbs": 6.4,
+        "sugar": 5.8,
+        "fat": 2.5,
+        "satFat": 1.1,
+        "sodium": 40,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      },
+      "allergenNotes": "Resmî alerjen listesine ek olarak ürün adı/açıklamasındaki varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi."
+    },
+    {
+      "name": "Freddo Espresso",
+      "sourceName": "Freddo Espresso",
+      "category": "espresso_iced",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/freddo-espresso-1.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "iced-americano",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 160
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Cold Brew",
+      "sourceName": "Cold Brew",
+      "category": "cold_brew",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/cold-brew-2.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "cold-brew",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 170
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Cold Brew Latte",
+      "sourceName": "Cold Brew Latte",
+      "category": "cold_brew",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/coldbrewlatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "cold-brew",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 170
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Iced Mocha",
+      "sourceName": "Iced Mocha",
+      "category": "espresso_iced",
+      "isDrink": true,
+      "description": "Buzlu, çikolatalı, sütlü kahve",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/icemocha.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "mocha",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 160
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Iced White Chocolate Mocha",
+      "sourceName": "ICED WHITE CHOCOLATE MOCHA",
+      "category": "espresso_iced",
+      "isDrink": true,
+      "description": "Buzlu, beyaz çikolatalı, sütlü kahve",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+      "sourceSection": "Soğuk Kahveler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "white-mocha",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 160
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Sıcak Çikolata",
+      "sourceName": "Sıcak Çikolata",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "Üzerindeki gerçek Belçika çikolata tozu ve kreması ile sütlü sıcak çikolata.",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/sicak-icecekler",
+      "sourceSection": "Sıcak İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "hot-chocolate",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 361,
+        "protein": 11.4,
+        "carbs": 63.6,
+        "sugar": 60.4,
+        "fat": 6,
+        "satFat": 3.9,
+        "sodium": 200,
+        "caffeine": 15
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/sicak-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Sıcak Çikolata Milano",
+      "sourceName": "Sıcak Çikolata Mılano",
+      "aliases": [
+        "Milano Sıcak Çikolata"
+      ],
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "Eritilmiş yoğun gerçek Belçika çikolatası. Üzerine krema ve Belçika Çikolatası tozu ile...",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/scakcikolatamilano.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/sicak-icecekler",
+      "sourceSection": "Sıcak İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "hot-chocolate",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 248,
+        "protein": 14.2,
+        "carbs": 42.6,
+        "sugar": 35.5,
+        "fat": 8.9,
+        "satFat": 5.3,
+        "sodium": 0,
+        "caffeine": 15
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/sicak-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Chai Latte",
+      "sourceName": "CHAI LATTE",
+      "aliases": [
+        "Chai Tea Latte"
+      ],
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "Tarçın, baharatlar, siyah çay ve şekerin, buharda ısıtılmış süt ve süt köpüğü ile egzotik birleşimi.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/chailatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/sicak-icecekler",
+      "sourceSection": "Sıcak İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "chai",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 252,
+        "protein": 13.1,
+        "carbs": 31.2,
+        "sugar": 29.5,
+        "fat": 8.9,
+        "satFat": 6.8,
+        "sodium": 160,
+        "caffeine": 60
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/sicak-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Matcha Latte",
+      "sourceName": "Matcha Latte",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "Yeşil çay tozlu, sütlü içecek",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/matcha.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/sicak-icecekler",
+      "sourceSection": "Sıcak İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "matcha",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 65
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/sicak-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Frappé Latte",
+      "sourceName": "Frappé Latte",
+      "category": "frappe_blended",
+      "isDrink": true,
+      "description": "Espressomuzun, özel Frappe tozumuz ve buz ile yumuşak karışımı.",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/frappelatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "frappe",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 209,
+        "protein": 9.2,
+        "carbs": 36.2,
+        "sugar": 28.1,
+        "fat": 3.2,
+        "satFat": 1.8,
+        "sodium": 0,
+        "caffeine": 160
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Caramel Frappé Latte",
+      "sourceName": "Caramel Frappé Latte",
+      "category": "frappe_blended",
+      "isDrink": true,
+      "description": "Karamel Frappé Latte",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/caramelfrappelatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "frappe",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 160
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Chai Frappé Latte",
+      "sourceName": "Chaı Frappé Latte",
+      "category": "frappe_blended",
+      "isDrink": true,
+      "description": "Tarçın, egzotik baharat, çay ve köpürtülmüş süt karışımı",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "frappe",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 60
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Mango & Coconut Frappé Crème",
+      "sourceName": "Mango & Coconut Frappé Crème",
+      "category": "frappe_blended",
+      "isDrink": true,
+      "description": "Mango & Hindistan Cevizi Frappé Crème",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/mangococonutfrappecreme.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "frappe",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "White Chocolate & Strawberry Frappé Crème",
+      "sourceName": "Whıte Chocolate & Strawberry Frappé Crème",
+      "category": "frappe_blended",
+      "isDrink": true,
+      "description": "Beyaz çikolata ve çilek püresinin, buz ile karışımı. Üzerine krema ve sos ile...",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/whitechocolatestrawberrycreme.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "frappe",
+      "sourceAllergens": [
+        "Süt"
+      ],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 213,
+        "protein": 3.6,
+        "carbs": 46.2,
+        "sugar": 46.2,
+        "fat": 1.8,
+        "satFat": 0,
+        "sodium": 0,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "Regular",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Antep Fıstıklı Frappé Crème",
+      "sourceName": "Antep Fıstıklı Frappé Crème",
+      "category": "frappe_blended",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/antepfistiklifrappecreme.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "frappe",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Iced Matcha Latte",
+      "sourceName": "Iced Matcha Latte",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "Buzlu, yeşil çay tozlu, sütlü içecek",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/icedmatcha.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "matcha",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 65
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Iced Strawberry Matcha Latte",
+      "sourceName": "Iced Strawberry Matcha Latte",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "Buzlu, çilek soslu, yeşil çay tozlu, sütlü içecek",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/cileklimatcha.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "matcha",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 65
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Iced Mango Matcha Latte",
+      "sourceName": "Iced Mango Matcha Latte",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/icedmangomatchalatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "matcha",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 65
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Iced Pistachio Matcha Latte",
+      "sourceName": "Iced Pıstachıo Matcha Latte",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "Buzlu, antep fıstığı soslu, yeşil çay tozlu, sütlü içecek",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/icedpistachiomatchalatte.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "matcha",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 65
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Homemade Lemonade",
+      "sourceName": "Homemade Lemonade",
+      "category": "smoothie_juice",
+      "isDrink": true,
+      "description": "Basit ve ferahlatıcı klasik limonata",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/homamadelemonade.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "lemonade",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 189,
+        "protein": 0.4,
+        "carbs": 49.2,
+        "sugar": 47.3,
+        "fat": 0.2,
+        "satFat": 0,
+        "sodium": 0,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Lychee & Strawberry Lemonade",
+      "sourceName": "LYCHEE & STRAWBERRY LEMONADE",
+      "category": "smoothie_juice",
+      "isDrink": true,
+      "description": "Liçi & Çilekli Limonata",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/strawberry&lycheelemonade.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "lemonade",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Fresh Lime & Mint Cooler",
+      "sourceName": "FRESH LIME & MINT COOLER",
+      "category": "smoothie_juice",
+      "isDrink": true,
+      "description": "Misket Limonlu & Naneli Buzlu İçecek",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/freshlimemintcooler.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "refresher",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Matcha Coconut Cooler",
+      "sourceName": "Matcha Coconut Cooler",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "Hindistan cevizi sulu & yeşil çay tozlu, buzlu içecek",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/coconutcooler.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "matcha",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 65
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Watermelon & Strawberry Mint Cooler",
+      "sourceName": "WATERMELON & STRAWBERRY MINT COOLER",
+      "category": "smoothie_juice",
+      "isDrink": true,
+      "description": "Karpuzlu, Çilekli & Naneli Buzlu İçecek",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/watermeloonstrawberrymintcooler.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "refresher",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Hibiskus Çayı - Böğürtlen - Çilek - Portakal Kurusu",
+      "sourceName": "HİBİSKUS ÇAYI - BÖĞÜRTLEN - ÇİLEK - PORTAKAL KURUSU",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/hibiskuscayi.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "refresher",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 35
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Rooibos Çayı - Kurutulmuş Ananas - Kivi Parçacıkları",
+      "sourceName": "Rooıbos Çayı-Kurutulmuş Ananas-Kivi Parçacıkları",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/rooiboscayi.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "refresher",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 35
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Mavi Kelebek Çayı - Yasemin Çiçeği",
+      "sourceName": "MAVİ KELEBEK ÇAYI - YASEMİN ÇİÇEĞİ",
+      "category": "tea_herbal",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/mavikelebekcayi.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "refresher",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 35
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Çilekli Milkshake",
+      "sourceName": "ÇİLEK",
+      "category": "frappe_blended",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/cilekmilkshake.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "frappe",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Çikolatalı Milkshake",
+      "sourceName": "ÇİKOLATA",
+      "category": "frappe_blended",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/cikolatamilkshake.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "frappe",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 15
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Muzlu Milkshake",
+      "sourceName": "MUZ",
+      "category": "frappe_blended",
+      "isDrink": true,
+      "description": "",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": "whole_milk",
+      "visualSlot": "frappe",
+      "sourceAllergens": [],
+      "allergens": [
+        "lactose"
+      ],
+      "allergenSourceAvailable": false,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
+      },
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+    },
+    {
+      "name": "Mango & Passion Fruit",
+      "sourceName": "MANGO & PASSION FRUIT",
+      "category": "smoothie_juice",
+      "isDrink": true,
+      "description": "Mango & Çarkıfelek Meyveli karışım içecek",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/mangopassionfruit.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "smoothie",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 39,
+        "protein": 0,
+        "carbs": 7.5,
+        "fat": 0.3,
+        "satFat": 0,
+        "sodium": 0,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon değerleri + alan bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Resmî porsiyon tablosundaki güvenilir alanlar kullanıldı; eksik veya tutarsız şeker alanları standart tariften tahmin edildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Strawberry & Banana",
+      "sourceName": "STRAWBERRY & BANANA",
+      "category": "smoothie_juice",
+      "isDrink": true,
+      "description": "Çilek & Muzlu karışım içecek",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/strawberrybanana.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+      "sourceSection": "Soğuk İçecekler",
+      "seasonal": false,
+      "defaultSizeId": "tall",
+      "defaultMilkId": null,
+      "visualSlot": "smoothie",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/icecekler/soguk-icecekler",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada besin alanı bulunuyor ancak sayısal porsiyon verisi yayınlanmadığı için makrolar tahmin edildi."
+      }
+    },
+    {
+      "name": "Karabiberli Füme Roast Beef, Mantar, Karamelize Soğan ve Parmesanlı Cıabatta",
+      "sourceName": "KARABİBERLİ FÜME ROAST BEEF, MANTAR, KARAMELİZE SOĞAN VE PARMESANLI CIABATTA",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Ciabatta ekmeği, mantar, karamelize soğan, salatalık turşusu, füme karabiberli dana roast beef, parmesan peyniri, hardal ve mayonez",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/karabiberlifumeroast.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Soya",
+        "Süt",
+        "Hardal"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "soy",
+        "lactose",
+        "mustard"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 425,
+        "protein": 14.6,
+        "carbs": 58,
+        "sugar": 0.8,
+        "fat": 13.6,
+        "satFat": 2.7,
+        "sodium": 1240,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Fırınlanmış Mücver ve Izgara Hellim Peynirli Cıabatta",
+      "sourceName": "FIRINLANMIŞ MÜCVER VE IZGARA HELLİM PEYNİRLİ CIABATTA",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Ciabatta ekmeği, fırınlanmış mücver, hellim peyniri, domates ve marul",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/mucver.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 538,
+        "protein": 26.2,
+        "carbs": 51.4,
+        "sugar": 1.9,
+        "fat": 26.2,
+        "satFat": 9,
+        "sodium": 1160,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Klasik Beyaz Peynir, Domates ve Zeytin Ezmeli Ciabatta",
+      "sourceName": "Klasik Beyaz Peynir, Domates ve Zeytin Ezmeli Ciabatta",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Sandviç ekmeği, klasik beyaz peynir, domates, zeytin ezmesi",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 327,
+        "protein": 13.2,
+        "carbs": 35.3,
+        "sugar": 1.4,
+        "fat": 14.4,
+        "satFat": 7.8,
+        "sodium": 920,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Çeçil Peyniri ve Kurutulmuş Domatesli Panino",
+      "sourceName": "Çeçil Peyniri ve Kurutulmuş Domatesli Panino",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Kepekli panini ekmeği, çeçil peyniri, kurutulmuş domates, çörek otu",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/panino-cecilpeynirivekurutulmusdomatesli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 301,
+        "protein": 14.2,
+        "carbs": 36.7,
+        "sugar": 3,
+        "fat": 9.3,
+        "satFat": 3.3,
+        "sodium": 1000,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Mozzarella ve Domatesli Panino",
+      "sourceName": "Mozzarella ve Domatesli Panino",
+      "aliases": [
+        "Mozzarella & Domatesli Panino"
+      ],
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Sandviç ekmeği, mozzarella peyniri, domates, pesto sos",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 332,
+        "protein": 16.1,
+        "carbs": 34.9,
+        "sugar": 3.1,
+        "fat": 13.9,
+        "satFat": 7.5,
+        "sodium": 560,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Peynir ve Domatesli Panino",
+      "sourceName": "Peynir ve Domatesli Panino",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Kepekli sandviç ekmeği, peynir, domates, tereyağı",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 350,
+        "protein": 11,
+        "carbs": 34.6,
+        "sugar": 2.2,
+        "fat": 16.5,
+        "satFat": 3.7,
+        "sodium": 760,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Marine Tavuk ve Peynirli Panino",
+      "sourceName": "Marine Tavuk ve Peynirli Panino",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Sandviç ekmeği, ızgara marine tavuk, peynir, labne peyniri",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/panino-marinetavukvepeynirli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Soya",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "soy",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 385,
+        "protein": 20.7,
+        "carbs": 34.6,
+        "sugar": 2.2,
+        "fat": 16.4,
+        "satFat": 5.4,
+        "sodium": 440,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Ton Balıklı Club Sandviç",
+      "sourceName": "TON BALIKLI CLUB SANDVİÇ",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Çavdarlı tost ekmeği, ton balığı, mısır, salatalık turşusu, karabiberli mayonez",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tonbalikliclubsandvic.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Balık"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "fish"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 434,
+        "protein": 14.6,
+        "carbs": 78.7,
+        "sugar": 2.9,
+        "fat": 4.1,
+        "satFat": 1.7,
+        "sodium": 1160,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Tavuk Bonfile ve Karamelize Soğanlı Club Sandviç",
+      "sourceName": "Tavuk Bonfile ve Karamelize Soğanlı Club Sandviç",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Domatesli tost ekmeği, piliç bonfile, karamelize soğan, susam, mayonez, teriyaki sos",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/clubsandvic-tavukbonfilevekaramelizesoganli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Soya",
+        "Susam"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "soy",
+        "sesame"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 468,
+        "protein": 19.7,
+        "carbs": 46.9,
+        "sugar": 5.4,
+        "fat": 21.1,
+        "satFat": 3.2,
+        "sodium": 760,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Hindi Füme ve Peynirli Club Sandviç",
+      "sourceName": "Hindi Füme ve Peynirli Club Sandviç",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Kepekli tost ekmeği, hindi füme, labne peyniri",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/clubsandvic-hindifumevepeynirli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 326,
+        "protein": 17.9,
+        "carbs": 36.5,
+        "sugar": 2.1,
+        "fat": 10.7,
+        "satFat": 6,
+        "sodium": 840,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Dana Jambon ve Peynirli Club Sandviç",
+      "sourceName": "Dana Jambon ve Peynirli Club Sandviç",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Tost ekmeği, dana jambon, peynir, turşu, kurutulmuş domatesli labne sos",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 304,
+        "protein": 12.9,
+        "carbs": 39.3,
+        "sugar": 2.8,
+        "fat": 8.9,
+        "satFat": 5.1,
+        "sodium": 1240,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Sucuk ve Peynirli Tost",
+      "sourceName": "Sucuk ve Peynirli Tost",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Tost ekmeği, peynir, dana sucuk, salsa sos",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tost-sucukvepeynirli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Kuruyemişler",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "nuts",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 326,
+        "protein": 11.8,
+        "carbs": 38.1,
+        "sugar": 2.8,
+        "fat": 12.6,
+        "satFat": 5.4,
+        "sodium": 920,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Peynirli Tost",
+      "sourceName": "Peynirli Tost",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Tost ekmeği, peynir, tereyağı",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tost-peynirli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 349,
+        "protein": 11.7,
+        "carbs": 35.9,
+        "sugar": 1.4,
+        "fat": 15.5,
+        "satFat": 5.6,
+        "sodium": 800,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Kepekli Beyaz Peynirli Tost",
+      "sourceName": "Kepekli Beyaz Peynirli Tost",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Kepekli tost ekmeği, beyaz peynir",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 351,
+        "protein": 16.6,
+        "carbs": 33.3,
+        "sugar": 1.6,
+        "fat": 16.1,
+        "satFat": 10.5,
+        "sodium": 1000,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Klasik Beyaz Peyniri, Zeytin Ezmesi ve Domatesli Köy Tostu",
+      "sourceName": "Klasik Beyaz Peyniri, Zeytin Ezmesi ve Domatesli Köy Tostu",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Tam buğday unlu ekmek, klasik beyaz peynir, domates, zeytin ezmesi",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/koytostu-klasikbeyazpeynirzeytinezmesivedomatesli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 380,
+        "protein": 15.6,
+        "carbs": 40.3,
+        "sugar": 2,
+        "fat": 16.8,
+        "satFat": 9.6,
+        "sodium": 1200,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Eski Kaşar, Gravyer ve Biber Salçalı Köy Tostu",
+      "sourceName": "Eski Kaşar, Gravyer ve Biber Salçalı Köy Tostu",
+      "aliases": [
+        "Üç Peynirli Tost"
+      ],
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Tam buğday unlu ekmek, eski kaşar, gravyer, biber salçası, domates salçası",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Kuruyemişler",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "nuts",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 372,
+        "protein": 18,
+        "carbs": 38.5,
+        "sugar": 2.7,
+        "fat": 14.9,
+        "satFat": 2.1,
+        "sodium": 960,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Izgara Sebzeli Wrap",
+      "sourceName": "Izgara Sebzeli Wrap",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Domatesli Tortilla, patlıcan, kapya biber, havuç, tofu, ıspanak, humus, kurutulmuş domates",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/izgarasebzeliwrap.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "wrap",
+      "sourceAllergens": [
+        "Gluten",
+        "Soya",
+        "Susam"
+      ],
+      "allergens": [
+        "gluten",
+        "soy",
+        "sesame"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 309,
+        "protein": 11.5,
+        "carbs": 42,
+        "sugar": 6.2,
+        "fat": 8.4,
+        "satFat": 4,
+        "sodium": 640,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Sezar Tavuklu Wrap",
+      "sourceName": "Sezar Tavuklu Wrap",
+      "aliases": [
+        "Tavuklu Sezar Sandviç"
+      ],
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Tam buğday unlu tortilla ekmeği, tavuk bonfile, marul, kırmızı biber, ceviz, parmesan peyniri, sezar sos",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/wrap-sezartavuklu.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "wrap",
+      "sourceAllergens": [
+        "Gluten",
+        "Kuruyemişler",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "nuts",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 425,
+        "protein": 17.8,
+        "carbs": 40.8,
+        "sugar": 1.7,
+        "fat": 20.4,
+        "satFat": 1.7,
+        "sodium": 280,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Dana Jambon ve Peynirli Mini Panino",
+      "sourceName": "Dana Jambon ve Peynirli Mini Panino",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Sandviç ekmeği, dana jambon, peynir, labne peyniri",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/minipanino-danajambonvepeynirli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 259,
+        "protein": 9.7,
+        "carbs": 29.7,
+        "sugar": 6.8,
+        "fat": 10.4,
+        "satFat": 3.4,
+        "sodium": 640,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Sakallı Mini Panino",
+      "sourceName": "Sakallı Mini Panino",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Sandviç ekmeği, beyaz peynir, labne peyniri, maydanoz",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/minipanino-sakalli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 266,
+        "protein": 9.3,
+        "carbs": 28.6,
+        "sugar": 7.1,
+        "fat": 12.5,
+        "satFat": 5,
+        "sodium": 560,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Hindi Füme ve Peynirli Mini Panino",
+      "sourceName": "Hindi Füme ve Peynirli Mini Panino",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Çavdarlı sandviç ekmeği, hindi füme, peynir, labne peyniri",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 200,
+        "protein": 9.7,
+        "carbs": 27.2,
+        "sugar": 1.1,
+        "fat": 4.8,
+        "satFat": 2.6,
+        "sodium": 480,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Kepekli Beyaz Peynirli Mini Panino",
+      "sourceName": "Kepekli Beyaz Peynirli Mini Panino",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Kepekli sandviç ekmeği, beyaz peynir, domates",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 277,
+        "protein": 12.9,
+        "carbs": 25.7,
+        "sugar": 2,
+        "fat": 12.9,
+        "satFat": 7.4,
+        "sodium": 840,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Peynirli Mini Simit",
+      "sourceName": "Peynirli Mini Simit",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Simit, beyaz peynir, zeytin ezmesi",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "simit",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt",
+        "Susam"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose",
+        "sesame"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 308,
+        "protein": 12.9,
+        "carbs": 33.3,
+        "sugar": 1,
+        "fat": 13.3,
+        "satFat": 7.7,
+        "sodium": 1120,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Köz Biberli Domates Çorbası",
+      "sourceName": "KÖZ BİBERLİ DOMATES ÇORBASI",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Su, domates, köz kapya biber, süt, domates salçası, soğan, buğday unu, tereyağı, sarımsak, tuz, karabiber",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/domates.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 132,
+        "protein": 6.8,
+        "carbs": 5.2,
+        "sugar": 4.4,
+        "fat": 7.6,
+        "satFat": 4.8,
+        "sodium": 1120,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Terbiyeli Tavuk Çorbası",
+      "sourceName": "TERBİYELİ TAVUK ÇORBASI",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Tavuk suyu, tavuk eti, buğday unu, havuç, limon, ayçiçek yağı, tel şehriye, tuz, karabiber",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tavuk.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 196,
+        "protein": 8,
+        "carbs": 25.2,
+        "sugar": 2.4,
+        "fat": 6.8,
+        "satFat": 0.8,
+        "sodium": 640,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Köfte ve Arrabbiata Soslu Sedani Rigati",
+      "sourceName": "Köfte ve Arrabbıata Soslu Sedanı Rıgatı",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Rigatoni makarna, arrabbiata sos, dana köfte, ayçiçek yağı ve maydanoz",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/rigatoni-yeni.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 610,
+        "protein": 24.7,
+        "carbs": 54.5,
+        "sugar": 8.3,
+        "fat": 31.2,
+        "satFat": 2.5,
+        "sodium": 2320,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Ton Balıklı Fusıllı",
+      "sourceName": "TON BALIKLI FUSILLI",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Fusilli makarna, ton balığı, kapya biber, salatalık turşusu, dereotu, limon suyu ve mayonez",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/fusilli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Balık"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "fish"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 718,
+        "protein": 24.2,
+        "carbs": 59.3,
+        "sugar": 8.6,
+        "fat": 42.1,
+        "satFat": 6.6,
+        "sodium": 1640,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Kinoa ve Meksika Fasulyeli Salata",
+      "sourceName": "KİNOA VE MEKSİKA FASULYELİ SALATA",
+      "category": "fit_healthy",
+      "isDrink": false,
+      "description": "Beyaz kinoa, meksika fasulyesi, kapya biber, domates, kırmızı pancar turşusu, maydanoz ve zeytinyaglı, nar ekşili ve balzamik sirkeli sos",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/kinoasalatasi.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "salad-bowl",
+      "sourceAllergens": [
+        "Sülfür Dioksit"
+      ],
+      "allergens": [
+        "sulphites"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 318,
+        "protein": 7.6,
+        "carbs": 34.5,
+        "sugar": 8.2,
+        "fat": 15.5,
+        "satFat": 2.6,
+        "sodium": 760,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Meyveli Müsli ve Chia Pot",
+      "sourceName": "Meyveli Müsli ve Chia Pot",
+      "category": "fit_healthy",
+      "isDrink": false,
+      "description": "Yoğurt, müsli (yulaf, kuş üzümü,kabak çekirdeği, ceviz, kuru çilek),frambuazlı sos, chia tohumu",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/pot-meyvelimuslivechia.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "salad-bowl",
+      "sourceAllergens": [
+        "Kuruyemişler",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "nuts",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 433,
+        "protein": 17.9,
+        "carbs": 53.7,
+        "sugar": 19.1,
+        "fat": 15,
+        "satFat": 4.8,
+        "sodium": 0,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Kuru Meyveli Müsli",
+      "sourceName": "KURU MEYVELİ MÜSLİ",
+      "category": "fit_healthy",
+      "isDrink": false,
+      "description": "Laktozsuz yoğurt, yulaf, kuru kayısı, kuru incir",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/kurumeyvelimuesli.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "salad-bowl",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 270,
+        "protein": 12.5,
+        "carbs": 40.8,
+        "sugar": 24.4,
+        "fat": 5,
+        "satFat": 2.1,
+        "sodium": 168,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Kuru Meyve ve Chia Porridge",
+      "sourceName": "Kuru Meyve ve Chia Porridge",
+      "category": "fit_healthy",
+      "isDrink": false,
+      "description": "Yulaflı içecek, yulaf ezmesi, hindistan cevizi, badem, kuru yaban mersini, muz aromalı sos, chia tohumu, tarçın",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/pot-kurumeyvevechiaporridge.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "salad-bowl",
+      "sourceAllergens": [
+        "Gluten",
+        "Kuruyemişler"
+      ],
+      "allergens": [
+        "gluten",
+        "nuts"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 454,
+        "protein": 9.8,
+        "carbs": 30.2,
+        "sugar": 6.8,
+        "fat": 30,
+        "satFat": 0.9,
+        "sodium": 80,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Granola Pot",
+      "sourceName": "Granola Pot",
+      "category": "fit_healthy",
+      "isDrink": false,
+      "description": "Yoğurt, granola karışımı(yulaf, sütlü çikolata, elma suyu konsantresi, kakao),bal",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+      "sourceSection": "Deli To Go",
+      "seasonal": false,
+      "visualSlot": "salad-bowl",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 428,
+        "protein": 18.2,
+        "carbs": 49.3,
+        "sugar": 26.6,
+        "fat": 16.5,
+        "satFat": 8.7,
+        "sodium": 0,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/deli-to-go",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Mini Üzümlü Çörek",
+      "sourceName": "Mini Üzümlü Çörek",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Buğday unu, tereyağı, kuru üzüm, şeker, yumurta, maya, tuz",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/miniuzumlucorek2.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "pogaca",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 89,
+        "protein": 1.7,
+        "carbs": 12,
+        "sugar": 5.1,
+        "fat": 3.7,
+        "satFat": 2.3,
+        "sodium": 80,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Croissant XL",
+      "sourceName": "Croıssant XL",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Buğday unu, tereyağı, maya, şeker, yumurta, tuz",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tr/croissant-xl.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "croissant",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 425,
+        "protein": 8.1,
+        "carbs": 45,
+        "fat": 23,
+        "satFat": 15,
+        "sodium": 480,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon değerleri + alan bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Resmî porsiyon tablosundaki güvenilir alanlar kullanıldı; eksik veya tutarsız şeker alanları standart tariften tahmin edildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Çikolatalı Croissant",
+      "sourceName": "Çikolatalı Croıssant",
+      "aliases": [
+        "Çikolatalı Kruvasan"
+      ],
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Buğday unu, tereyağı, çikolata, maya, şeker, yumurta, tuz",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tr/cikolatali-croissant.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "chocolat-croissant",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt",
+        "Soya"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose",
+        "soy"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 427,
+        "protein": 7.6,
+        "carbs": 46,
+        "sugar": 12,
+        "fat": 23,
+        "satFat": 15,
+        "sodium": 400,
+        "caffeine": 10
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Sausage Roll",
+      "sourceName": "Sausage Roll",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Kruvasan hamuru, tereyağı, şeker, süt, maya, sosis, salça, ketçap, yumurta, susam",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/sausageroll.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "sandwich",
+      "sourceAllergens": [
+        "Yumurta",
+        "Süt",
+        "Susam"
+      ],
+      "allergens": [
+        "egg",
+        "lactose",
+        "sesame"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 268,
+        "protein": 6,
+        "carbs": 25.2,
+        "sugar": 3.9,
+        "fat": 15.2,
+        "satFat": 7.5,
+        "sodium": 400,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Peynirli Kare Pide",
+      "sourceName": "Peynirli Kare Pide",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Buğday unu, tulum peyniri, taze beyaz peynir, yumurta, şeker, maya, maydanoz, tuz",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/peynirlikarepide.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "pogaca",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 292,
+        "protein": 13.4,
+        "carbs": 39,
+        "sugar": 0,
+        "fat": 8.9,
+        "satFat": 3.6,
+        "sodium": 1120,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Zeytinli Açma",
+      "sourceName": "Zeytinli Açma",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Buğday unu, zeytin ezmesi, yumurta, gri ve beyaz haşhaş, maya",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/zeytinli-acma.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "pogaca",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 338,
+        "protein": 2.9,
+        "carbs": 33.1,
+        "sugar": 3.4,
+        "fat": 18.1,
+        "satFat": 4.6,
+        "sodium": 160,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Dereotlu Peynirli Ev Poğaçası",
+      "sourceName": "Dereotlu Peynirli Ev Poğaçası",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Buğday unu, beyaz peynir, susam, yumurta, rendelenmiş havuç, maydanoz, dereotu, maya",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "pogaca",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt",
+        "Susam"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose",
+        "sesame"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 216,
+        "protein": 2.2,
+        "carbs": 25,
+        "sugar": 0.7,
+        "fat": 12.5,
+        "satFat": 8,
+        "sodium": 200,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Siyez Unlu Yulaflı Kuru Domatesli Poğaça",
+      "sourceName": "Siyez Unlu Yulaflı Kuru Domatesli Poğaça",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Buğday unu, siyez unu, beyaz peynir, yumurta, kurutulmuş domates, yulaf ezmesi, keten tohumu, maya, dereotu, maydanoz",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "pogaca",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 183,
+        "protein": 1.5,
+        "carbs": 18.9,
+        "sugar": 0.8,
+        "fat": 11.9,
+        "satFat": 7.7,
+        "sodium": 120,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Annemin Poğaçası",
+      "sourceName": "Annemin Poğaçası",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Buğday unu, yumurta, beyaz peynir, lor peyniri, kurutulmuş domates, dereotu, çörek otu, maya",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "pogaca",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 454,
+        "protein": 4.6,
+        "carbs": 52.5,
+        "sugar": 1.4,
+        "fat": 26.3,
+        "satFat": 16.8,
+        "sodium": 400,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Vişneli Panna Cotta",
+      "sourceName": "VİŞNELİ PANNA COTTA",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Kremsos, süt, tam buğday unlu bisküvi , şeker, vişne dolgusu, tereyağı, vanilya",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/pannacotta.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Soya",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "soy",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 456,
+        "protein": 8,
+        "carbs": 30,
+        "sugar": 20,
+        "fat": 34,
+        "satFat": 22,
+        "sodium": 160,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Snow Whıte Passıon Fruıt Coconut Cake",
+      "sourceName": "SNOW WHITE PASSION FRUIT COCONUT CAKE",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Kremsos, çarkıfelek meyveli sos, kek karışımı, toz hindistan cevizi, pastacı kreması",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/snowwhitecoconutcake.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Soya",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "soy",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 403,
+        "protein": 8.8,
+        "carbs": 45,
+        "sugar": 35.5,
+        "fat": 21.3,
+        "satFat": 18,
+        "sodium": 20,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Raspberry Whıte Chocolate Cheesecake",
+      "sourceName": "RASPBERRY WHITE CHOCOLATE CHEESECAKE",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Kakaolu bisküvi, taze peynir, frambuazlı dolgu kreması, tereyağı, yoğurt, yumurta, şeker, beyaz çikolata, nişasta, vanilin",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/raspberry.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cheesecake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Soya",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "soy",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 533,
+        "protein": 7.04,
+        "carbs": 50.2,
+        "sugar": 33.7,
+        "fat": 33.6,
+        "satFat": 20.8,
+        "sodium": 80,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Lemon Cheesecake",
+      "sourceName": "Lemon Cheesecake",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Taze beyaz peynir, öğütülmüş bisküvi, süt, yumurta, şeker, tereyağı, pastacı kreması, limonlu sos",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/lemoncheesecake.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cheesecake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt",
+        "Sülfür Dioksit"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose",
+        "sulphites"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 558,
+        "protein": 7.6,
+        "carbs": 49,
+        "sugar": 41,
+        "fat": 36,
+        "satFat": 25,
+        "sodium": 280,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Nero Premıum Apple Raspberry Pıe",
+      "sourceName": "NERO PREMIUM APPLE RASPBERRY PIE",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Yeşil elma, buğday unu, frambuaz, toz şeker, pudra şekeri, yumurta, kurutulmuş üzüm, nişasta, tarçın",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/neropremiumappleraspberrypie.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 342,
+        "protein": 3.3,
+        "carbs": 57,
+        "sugar": 32,
+        "fat": 12,
+        "satFat": 6.2,
+        "sodium": 12,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Nero Mozaik",
+      "sourceName": "Nero Mozaik",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Bisküvi, süt, şeker, krema, bitter çikolata, kakao",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/mozaik.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "brownie",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt",
+        "Sülfür Dioksit"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose",
+        "sulphites"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 483,
+        "protein": 10,
+        "carbs": 56,
+        "sugar": 28,
+        "fat": 24,
+        "satFat": 18,
+        "sodium": 200,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Alman Pastası",
+      "sourceName": "Alman Pastası",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Buğday unu, süt, pastacı kreması, şeker, yumurta, vanilin, maya ve mahlep",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/almanpastasi.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Soya",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "soy",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 366,
+        "protein": 7.6,
+        "carbs": 53,
+        "sugar": 22,
+        "fat": 13.5,
+        "satFat": 8.4,
+        "sodium": 32,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Tiramisu",
+      "sourceName": "Tıramısu",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Fırınlanmış kedi dilli bisküvi, süt, labne peyniri, tam yağlı taze peynir, pastacı kreması, kahve, kakao",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tiramisu.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "tiramisu",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt",
+        "Soya"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose",
+        "soy"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 350,
+        "protein": 11.2,
+        "carbs": 39,
+        "sugar": 31,
+        "fat": 16.8,
+        "satFat": 12.6,
+        "sodium": 160,
+        "caffeine": 35
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Nero Premium SS Cheesecake",
+      "sourceName": "Nero Premıum SS Cheesecake",
+      "aliases": [
+        "Nero Premium San Sebastian Cheesecake"
+      ],
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Taze beyaz peynir, şeker, yumurta, krema, buğday unu",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/nero-premium-ss-cheesecake-new.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "baked-cheesecake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 530,
+        "protein": 10,
+        "carbs": 40.8,
+        "sugar": 32.3,
+        "fat": 37,
+        "satFat": 22,
+        "sodium": 120,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Tart Di Frutti",
+      "sourceName": "Tart Dı Fruttı",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Tereyağlı tart hamuru, yumurta, yaban mersini, frenk üzümü, frambuaz, pastacı kreması, pudra şekeri",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tr/tart-di-frutti.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 329,
+        "protein": 6.2,
+        "carbs": 42,
+        "sugar": 23,
+        "fat": 16,
+        "satFat": 5.9,
+        "sodium": 160,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Limonlu Yaban Mersinli Rulo Pasta",
+      "sourceName": "LİMONLU YABAN MERSİNLİ RULO PASTA",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Yaban mersini, kek karışımı, yumurta, süt, limon aromalı sos, pastacı kreması, rendelenmiş limon kabuğu",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/yabanmersinlirulopasta.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Soya",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "soy",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 678,
+        "protein": 12,
+        "carbs": 59.5,
+        "sugar": 31,
+        "fat": 42.5,
+        "satFat": 19,
+        "sodium": 120,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Belçika Çikolatalı Kat Kat",
+      "sourceName": "Belçika Çikolatalı Kat Kat",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Kakaolu kek karışımı, şeker, bitter çikolata, bitter Belçika çikolatası, sütlü Belçika çikolatası, yumurta",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/belcikacikolatalikatkat.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Soya",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "soy",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 576,
+        "protein": 9,
+        "carbs": 54,
+        "sugar": 33,
+        "fat": 36,
+        "satFat": 20,
+        "sodium": 480,
+        "caffeine": 10
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Kakaolu ve Antep Fıstıklı Kek",
+      "sourceName": "Kakaolu ve Antep Fıstıklı Kek",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Sade kek karışımı, kakaolu kek karışımı, ayçiçek yağı, yumurta, antep fıstıklı ganaj sos, pudra şekeri, antep fıstığı, süt, vanilin",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/antepfistiklikek.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Kuruyemişler",
+        "Yumurta",
+        "Süt",
+        "Sülfür Dioksit"
+      ],
+      "allergens": [
+        "gluten",
+        "nuts",
+        "egg",
+        "lactose",
+        "sulphites"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 346,
+        "protein": 6.3,
+        "carbs": 33.3,
+        "sugar": 11.7,
+        "fat": 23,
+        "satFat": 7.6,
+        "sodium": 40,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Triple Chocolate Cookie",
+      "sourceName": "Trıple Chocolate Cookıe",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Buğday unu, kahverengi şeker, beyaz, sütlü, bitter çikolata, tereyağı, yumurta, kakao",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tr/triple-chocolate-cookie.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cookie",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 286,
+        "protein": 4.5,
+        "carbs": 29.7,
+        "sugar": 13.5,
+        "fat": 16.2,
+        "satFat": 1.98,
+        "sodium": 396,
+        "caffeine": 10
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Yulaf & Cranberry Cookie",
+      "sourceName": "Yulaf & Cranberry Cookıe",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Buğday unu, yulaf ezmesi, şeker, tereyağı, turna yemişi, yumurta",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tr/yulaf-cranberry-cookie.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cookie",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 279,
+        "protein": 2,
+        "carbs": 43,
+        "sugar": 4.1,
+        "fat": 10,
+        "satFat": 2.9,
+        "sodium": 280,
+        "caffeine": 10
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Chocolate Chip Cookie",
+      "sourceName": "Chocolate Chıp Cookıe",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Buğday unu, tereyağı, bitter çikolata, şeker, yumurta",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cookie",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt",
+        "Soya"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose",
+        "soy"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 324,
+        "protein": 6.5,
+        "carbs": 41,
+        "sugar": 5.5,
+        "fat": 14,
+        "satFat": 1.8,
+        "sodium": 760,
+        "caffeine": 10
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Vişneli Fit Brownie",
+      "sourceName": "Vişneli Fit Brownıe",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Bitter çikolata, vişne, yumurta, karabuğday unu, hurma suyu, elma suyu konsantresi ve kakao",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/visnelifitbrownie.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "brownie",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 307,
+        "protein": 4.4,
+        "carbs": 23.1,
+        "sugar": 1.9,
+        "fat": 22,
+        "satFat": 8.2,
+        "sodium": 0,
+        "caffeine": 10
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Nero Brownie",
+      "sourceName": "Nero Brownıe",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Bitter çikolata, yumurta, toz şeker, tereyağı, ceviz, buğday unu, kakao, vanilin",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/nero-brownie.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "brownie",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt",
+        "Kuruyemişler (walnut)",
+        "Soya"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose",
+        "nuts",
+        "soy"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 338,
+        "protein": 4.9,
+        "carbs": 28,
+        "sugar": 9,
+        "fat": 25,
+        "satFat": 7.7,
+        "sodium": 36,
+        "caffeine": 10
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Banana Bread",
+      "sourceName": "Banana Bread",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Vegan sade kek miksi, muz, ayçiçek yağı, bitter çikolata, ceviz",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/bananabread-yeni.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Kuruyemişler"
+      ],
+      "allergens": [
+        "gluten",
+        "nuts"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Havuçlum",
+      "sourceName": "Havuçlum",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Buğday unu, havuç, şeker, yumurta, ceviz, kuru üzüm, yer fıstığı, tarçın, zencefil, muskat",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/havuclum.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Kuruyemişler (walnut)",
+        "Yer Fıstığı",
+        "Sülfür Dioksit"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "nuts",
+        "peanut",
+        "sulphites"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 498,
+        "protein": 7.1,
+        "carbs": 34.8,
+        "sugar": 20.1,
+        "fat": 37.5,
+        "satFat": 13.7,
+        "sodium": 80,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Marble Kek",
+      "sourceName": "Marble Kek",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Sade kek karışımı, kakaolu kek karışımı, yumurta, tereyağı",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 269,
+        "protein": 2.6,
+        "carbs": 16,
+        "sugar": 3.9,
+        "fat": 21,
+        "satFat": 2.5,
+        "sodium": 36,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Berry Muffin",
+      "sourceName": "Berry Muffın",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Sade kek karışımı, yumurta, frambuaz, yaban mersini, yumurta, tereyağı",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/muffin-berry-1.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "muffin",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 280,
+        "protein": 7.3,
+        "carbs": 27,
+        "sugar": 13.6,
+        "fat": 15,
+        "satFat": 12,
+        "sodium": 56,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Çikolatalı Muffin",
+      "sourceName": "Çikolatalı Muffın",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Kakaolu kek karışımı, bitter çikolata, yumurta, tereyağı",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+      "sourceSection": "Bakery",
+      "seasonal": false,
+      "visualSlot": "muffin",
+      "sourceAllergens": [
+        "Gluten",
+        "Yumurta",
+        "Süt",
+        "Soya"
+      ],
+      "allergens": [
+        "gluten",
+        "egg",
+        "lactose",
+        "soy"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 514,
+        "protein": 8.1,
+        "carbs": 54.6,
+        "sugar": 24.7,
+        "fat": 27.3,
+        "satFat": 8.2,
+        "sodium": 120,
+        "caffeine": 10
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/bakery",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Caramel Waffle",
+      "sourceName": "Caramel Waffle",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Karamel dolgu (şeker, tereyağı), waffle hamuru (buğday unu, şeker, tarçın)",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/caramelwaffle.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+      "sourceSection": "Atıştırmalık",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Gluten",
+        "Süt",
+        "Soya"
+      ],
+      "allergens": [
+        "gluten",
+        "lactose",
+        "soy"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Glutensiz Matcha Cookie",
+      "sourceName": "Glutensiz Matcha Cookıe",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Glutensiz buğday unu, şeker, tereyağı, bitter çikolata, yumurta, yeşil çay (matcha) tozu, karnıyarık otu tozu",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+      "sourceSection": "Atıştırmalık",
+      "seasonal": false,
+      "visualSlot": "cookie",
+      "sourceAllergens": [
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 327,
+        "protein": 4.7,
+        "carbs": 48.1,
+        "sugar": 25.8,
+        "fat": 13,
+        "satFat": 6.4,
+        "sodium": 32,
+        "caffeine": 10
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Glutensiz Limonlu Muffin",
+      "sourceName": "Glutensiz Limonlu Muffın",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Glutensiz kek karışımı, yumurta, limon, limonlu sos",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+      "sourceSection": "Atıştırmalık",
+      "seasonal": false,
+      "visualSlot": "muffin",
+      "sourceAllergens": [
+        "Yumurta",
+        "Süt"
+      ],
+      "allergens": [
+        "egg",
+        "lactose"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada besin alanı bulunuyor ancak sayısal porsiyon verisi yayınlanmadığı için makrolar tahmin edildi."
+      }
+    },
+    {
+      "name": "Sütlü Tablet Çikolata",
+      "sourceName": "Sütlü Tablet Çikolata",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Şeker, kakao yağı, yağlı süt tozu, kakao kitlesi (Kakao kuru maddesi en az %33)",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tr/sutlu-tablet-cikolata.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+      "sourceSection": "Atıştırmalık",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Süt",
+        "Soya"
+      ],
+      "allergens": [
+        "lactose",
+        "soy"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 10
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Bitter Tablet Çikolata",
+      "sourceName": "Bitter Tablet Çikolata",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Kakao kitlesi, şeker, kakao yağı (Kakao kuru maddesi en az %54,5)",
+      "imageUrl": "https://caffenero-webassets-production.s3.eu-west-2.amazonaws.com/products/tr/bitter-tablet-cikolata.jpg",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+      "sourceSection": "Atıştırmalık",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [
+        "Soya"
+      ],
+      "allergens": [
+        "soy"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 10
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Acıbadem",
+      "sourceName": "Acıbadem",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Şeker, fındık, yumurta, ceviz, badem",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+      "sourceSection": "Atıştırmalık",
+      "seasonal": false,
+      "visualSlot": "cookie",
+      "sourceAllergens": [
+        "Yumurta",
+        "Kuruyemişler (almond, walnut)",
+        "Sülfür Dioksit"
+      ],
+      "allergens": [
+        "egg",
+        "nuts",
+        "sulphites"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "calories": 292,
+        "protein": 5.5,
+        "carbs": 35.7,
+        "sugar": 2,
+        "fat": 16.1,
+        "satFat": 1.5,
+        "sodium": 40,
+        "caffeine": 0
+      },
+      "officialNutritionFields": [
+        "calories",
+        "protein",
+        "carbs",
+        "sugar",
+        "fat",
+        "satFat",
+        "sodium"
+      ],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Resmî porsiyon makroları + tahmini kafein",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "ürün başına",
+        "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
+      }
+    },
+    {
+      "name": "Lolipop",
+      "sourceName": "Lolipop",
+      "category": "bakery_dessert",
+      "isDrink": false,
+      "description": "Şeker, su, glikoz-fruktoz şurubu ve aroma vericiler",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+      "sourceSection": "Atıştırmalık",
+      "seasonal": false,
+      "visualSlot": "cake",
+      "sourceAllergens": [],
+      "allergens": [],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
+      }
+    },
+    {
+      "name": "Glutensiz Mini Çatal",
+      "sourceName": "Glutensiz Mini Çatal",
+      "category": "sandwich_savory",
+      "isDrink": false,
+      "description": "Glutensiz un karışımı, bitkisel margarin, nohut unu, yumurta, susam, çörek otu, pekmez",
+      "imageUrl": "",
+      "productUrl": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+      "sourceSection": "Atıştırmalık",
+      "seasonal": false,
+      "visualSlot": "pogaca",
+      "sourceAllergens": [
+        "Yumurta",
+        "Susam"
+      ],
+      "allergens": [
+        "egg",
+        "sesame"
+      ],
+      "allergenSourceAvailable": true,
+      "baseMacros": {
+        "caffeine": 0
+      },
+      "officialNutritionFields": [],
+      "nutritionSource": {
+        "status": "estimated",
+        "label": "Standart tarif/porsiyon bazlı tahmin",
+        "url": "https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik",
+        "verifiedAt": "2026-08-11",
+        "servingBasis": "standart porsiyon",
+        "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
+      }
+    }
+  ]
+}

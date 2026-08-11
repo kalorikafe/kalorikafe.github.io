@@ -33,6 +33,35 @@ const WEBP_QUALITY = 82;
 
 const commonsCache = new Map();
 
+function isAllowedFallbackLicense(license) {
+  if (typeof license !== 'string') return false;
+  const normalized = license.trim().toLowerCase();
+  return normalized === 'unsplash license'
+    || normalized === 'public domain'
+    || normalized.startsWith('cc0')
+    || normalized.startsWith('cc by ')
+    || normalized.startsWith('cc by-sa ');
+}
+
+function sourceIdentity(url) {
+  if (typeof url !== 'string') return '';
+  const unsplash = url.match(/(?:\/photos\/|photo-)([^?&/]+)/i);
+  if (unsplash) return `unsplash:${unsplash[1].toLowerCase()}`;
+  let decoded = url;
+  try {
+    decoded = decodeURIComponent(url);
+  } catch {
+    // Keep the original URL when malformed percent escapes are encountered.
+  }
+  const commonsPage = decoded.match(/\/wiki\/File:([^?#]+)/i);
+  if (commonsPage) return `commons:${commonsPage[1].replace(/ /g, '_').toLowerCase()}`;
+  if (/upload\.wikimedia\.org/i.test(decoded)) {
+    const filename = decoded.split(/[/?#]/).filter(Boolean).at(-1);
+    if (filename) return `commons:${filename.replace(/ /g, '_').toLowerCase()}`;
+  }
+  return url;
+}
+
 async function commonsSearch(query, limit = 6) {
   const key = `${query}|${limit}`;
   if (commonsCache.has(key)) return commonsCache.get(key);
@@ -50,8 +79,8 @@ async function commonsSearch(query, limit = 6) {
       if (!info || !info.url) return null;
       if (!['image/jpeg', 'image/png', 'image/webp'].includes(info.mime)) return null;
       if (info.width > 0 && info.width < 480) return null;
-      const license =
-        info.extmetadata?.LicenseShortName?.value || info.extmetadata?.License?.value || 'CC';
+      const license = info.extmetadata?.LicenseShortName?.value || info.extmetadata?.License?.value;
+      if (!isAllowedFallbackLicense(license)) return null;
       const title = (p.title || '').replace(/ /g, '_');
       return {
         direct: info.url,
@@ -266,7 +295,6 @@ const products = manifest.products;
 const assets = fs.existsSync(ASSETS) ? JSON.parse(fs.readFileSync(ASSETS, 'utf-8')) : {};
 const slotPools = new Map();
 const failedSources = new Set();
-let lastPickDirect = null;
 
 // Per-slot fallback demand (products without an official image).
 const slotNeeds = new Map();
@@ -280,6 +308,7 @@ async function build() {
   let officialCount = 0;
   let fallbackCount = 0;
   let placeholderCount = 0;
+  let generatedSinceCheckpoint = 0;
 
   for (const product of products) {
     const entry = makeAsset(product);
@@ -287,12 +316,23 @@ async function build() {
     fs.mkdirSync(path.dirname(target), { recursive: true });
     let succeeded = false;
 
-    // Incremental: keep previous non-placeholder results.
+    // Incremental: keep previous non-placeholder results unless an official
+    // product image has become available (or the official source changed).
+    // This lets later source refreshes upgrade licensed fallbacks without
+    // requiring the whole asset cache to be discarded.
     if (fs.existsSync(target) && assets[product.id] && assets[product.id].kind !== 'placeholder') {
       const prev = assets[product.id];
-      if (!prev.sourceUrl && product.officialUrl) {
-        // want official now — rebuild
-      } else {
+      const shouldUpgradeToOfficial = Boolean(product.officialUrl) && prev.kind !== 'official';
+      const officialSourceChanged =
+        Boolean(product.officialUrl) && prev.kind === 'official' && prev.sourceUrl !== product.officialUrl;
+      const officialSourceRemoved = !product.officialUrl && prev.kind === 'official';
+      const previousSourceIdentity = sourceIdentity(prev.sourceUrl);
+      const previousSourceUse = Object.values(assets)
+        .filter(asset => sourceIdentity(asset.sourceUrl) === previousSourceIdentity).length;
+      const trackedFallbackNeedsRefresh = product.chain === 'caffe_nero'
+        && prev.kind === 'licensed_fallback'
+        && (previousSourceUse > 6 || !isAllowedFallbackLicense(prev.license));
+      if (!shouldUpgradeToOfficial && !officialSourceChanged && !officialSourceRemoved && !trackedFallbackNeedsRefresh) {
         assets[product.id] = prev;
         if (prev.kind === 'official') officialCount++;
         else fallbackCount++;
@@ -359,33 +399,47 @@ async function build() {
 
         // pick the least-used healthy photo in the pool (max 6 repeats stays safe)
         const usage = new Map();
-        for (const p of pool) usage.set(p.direct, 0);
         for (const a of Object.values(assets)) {
-          if (a.kind === 'licensed_fallback') usage.set(a.sourceUrl, (usage.get(a.sourceUrl) || 0) + 1);
+          if (a.kind !== 'licensed_fallback') continue;
+          const identity = sourceIdentity(a.sourceUrl);
+          usage.set(identity, (usage.get(identity) || 0) + 1);
         }
-        let best = null;
-        for (const p of pool) {
-          if (failedSources.has(p.direct)) continue;
-          if (best === null || (usage.get(p.direct) || 0) < (usage.get(best.direct) || 0)) best = p;
+        const candidates = pool
+          .filter(candidate => {
+            const sourceKey = sourceIdentity(candidate.pageUrl || candidate.direct);
+            return !failedSources.has(candidate.direct) && (usage.get(sourceKey) || 0) < 6;
+          })
+          .sort((a, b) => {
+            const aUse = usage.get(sourceIdentity(a.pageUrl || a.direct)) || 0;
+            const bUse = usage.get(sourceIdentity(b.pageUrl || b.direct)) || 0;
+            return aUse - bUse;
+          });
+        if (candidates.length === 0) throw new Error(`no usable fallback photo left for slot ${product.slot}`);
+
+        let lastCandidateError = null;
+        for (const candidate of candidates) {
+          try {
+            // Commons thumbs are CDN-cached 1000px renditions — faster and
+            // far less rate-limited than the original files.
+            const downloadUrl = candidate.thumb || candidate.direct;
+            const bytes = await downloadBytes(downloadUrl);
+            await bakeWebp(bytes, extOf(downloadUrl), target);
+            entry.sourceUrl = candidate.pageUrl || candidate.direct;
+            entry.pageUrl = candidate.pageUrl;
+            entry.kind = 'licensed_fallback';
+            entry.exactProduct = false;
+            entry.license = candidate.license;
+            fallbackCount++;
+            succeeded = true;
+            break;
+          } catch (err) {
+            failedSources.add(candidate.direct);
+            lastCandidateError = err;
+          }
         }
-        if (best === null) throw new Error(`no usable fallback photo left for slot ${product.slot}`);
-        lastPickDirect = best.direct;
-        // Commons thumbs are CDN-cached 1000px renditions — faster and
-        // far less rate-limited than the original files.
-        const downloadUrl = best.thumb || best.direct;
-        const bytes = await downloadBytes(downloadUrl);
-        await bakeWebp(bytes, extOf(downloadUrl), target);
-        entry.sourceUrl = best.pageUrl || best.direct;
-        entry.pageUrl = best.pageUrl;
-        entry.kind = 'licensed_fallback';
-        entry.exactProduct = false;
-        entry.license = best.license;
-        fallbackCount++;
-        succeeded = true;
+        if (!succeeded) throw lastCandidateError || new Error(`fallback candidates failed for slot ${product.slot}`);
       } catch (err) {
         if (err && err.message) console.error(`  fallback failed ${product.id}: ${err.message}`);
-        // remember dead sources so sibling products skip them
-        if (lastPickDirect) failedSources.add(lastPickDirect);
       }
     }
 
@@ -408,6 +462,10 @@ async function build() {
 
     assets[product.id] = entry;
     if (succeeded) console.log(`${entry.kind.padEnd(20)} ${product.id}`);
+    generatedSinceCheckpoint++;
+    if (generatedSinceCheckpoint % 10 === 0) {
+      fs.writeFileSync(ASSETS, JSON.stringify(assets, null, 1));
+    }
     await new Promise(r => setTimeout(r, 80)); // be polite to upstreams
   }
 

@@ -1,6 +1,6 @@
 # ☕ Kalori Cafe — Zincir Kahve Makro ve Alerjen Platformu
 
-Kalori Cafe; Türkiye'deki 10 büyük kafe zincirine ait **845 ürünün** kalori,
+Kalori Cafe; Türkiye'deki 10 büyük kafe zincirine ait **950 ürünün** kalori,
 protein, karbonhidrat, şeker, yağ, kafein ve alerjen bilgilerini tek
 platformda karşılaştıran React uygulamasıdır.
 
@@ -8,9 +8,10 @@ platformda karşılaştıran React uygulamasıdır.
 - **Kaynak:** <https://github.com/kalorikafe/kalorikafe.github.io>
 - **Hosting:** GitHub Pages + Actions (yalnızca bu; Vercel/Cloudflare/Netlify kullanılmaz)
 
-Çalışma kesiti Ağustos 2026; katalog zincirlerin resmî web menülerinden
+Çalışma kesiti 11 Ağustos 2026; katalog zincirlerin resmî web menülerinden
 derlendi (Starbucks TR menüsü, Espressolab resmî menü API'si,
-Arabica/Gloria Jean's/David People/Mackbear/Coffy sayfaları). Her statik
+Arabica/Gloria Jean's/David People/Mackbear/Coffy sayfaları ve Caffè Nero
+Türkiye'nin 7 menü sayfası). Her statik
 ürün `catalogSource`, `imageSource` ve `nutritionSource` provenance
 alanlarını taşır; `npm run catalog:audit` bunu otomatik denetler.
 Tchibo'nun 4 standart espresso bazlı ürünü kendi ürün sayfası olmadığı
@@ -58,14 +59,25 @@ testlere taşınmıştır (bkz. `tests/legacy/README.md`).
 - Ürün verisi `src/data/catalog/<chain>.ts` modüllerinde tutulur;
   `src/data/items.ts` yalnızca birleştirir (`MENU_ITEMS`).
 - Tüm görseller yerel WebP'dir: `/images/menu/<chain>/<slug>.webp`
-  (845 benzersiz görsel; çalışma zamanında uzak hotlink yok).
-- Makrolar ürün başına resmî besin tablosu yayınlanmadığı için
-  `estimated` olarak işaretlenir; tahmin yöntemi her ürünün
-  `nutritionSource.notes` alanındadır. Kartlarda **"Tahmini değer"**
+  (950 benzersiz dosya yolu; 384 resmî/exact ürün görseli, 566 lisanslı
+  fallback; çalışma zamanında uzak hotlink yok).
+- Caffè Nero kataloğu 11 Ağustos 2026'da 7 resmî Türkiye menü sayfasından
+  yeniden derlendi: **125 ürün** (20 → 125, net +105), 96 resmî ürün
+  görseli ve 29 lisanslı fallback. İzlenen kaynak anlık görüntüsü
+  `scripts/catalog_sources/caffe_nero.json` dosyasındadır.
+- Uygulamanın tam makro şemasını her üründe karşılayan resmî tablolar
+  bulunmadığı için 950 kaydın tamamı `estimated` olarak işaretlenir; tahmin
+  yöntemi her ürünün `nutritionSource.notes` alanındadır. Kartlarda
+  **"Tahmini değer"**
   rozeti ve hero/footer'da tahminî veri + çapraz bulaşma açıklaması
   görünür; uygulama tıbbi tavsiye vermez.
 - Alerjen bilgileri garanti değildir; markanın güncel resmî bilgileri
   esas alınmalıdır (çapraz bulaşma riski).
+
+Zincir dağılımı: Starbucks 130, Espressolab 116, Kahve Dünyası 20,
+Caffè Nero 125, Coffy 30, Mackbear 166, Arabica 131, Gloria Jean's 115,
+David People 93 ve Tchibo 24. Toplam 15 sezonluk ürün vardır; Caffè Nero
+kaynağında sezonluk kayıt yoktur.
 
 ## Kişisel makro hedefleri
 

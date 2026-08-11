@@ -217,3 +217,48 @@ yok; `tsx` bağımlılığı eklenmedi.
 
 - Bu raporda yer alan tüm ölçümler bu makinedeki yürütme kayıtlarından
   aktarılmıştır; yayına alınmadan hemen önce kapılar yeniden çalıştırıldı.
+
+## 12. 11 Ağustos 2026 eki — Caffè Nero resmî katalog genişletmesi
+
+Bu bölüm, 6 Ağustos tarihli gece çalışmasının tarihsel sonuçlarını
+değiştirmeden daha sonraki katalog güncellemesini kaydeder. Yukarıdaki 845
+ürün, 288 resmî görsel, 557 fallback ve “Caffè Nero ürün sayfalarına
+erişilemiyor” ifadeleri 6 Ağustos kesitinin kaydıdır.
+
+11 Ağustos 2026'da Caffè Nero Türkiye'nin 7 resmî menü sayfasına ürün bazında
+erişim sağlandı. Böylece raporun 9. bölümündeki Caffè Nero erişim sınırlaması
+**artık güncel değildir**. Sayfalar yeniden üretilebilir bir kaynak anlık
+görüntüsüne (`scripts/catalog_sources/caffe_nero.json`) dönüştürüldü; dosyada
+125 benzersiz ürün satırı vardır. Önceki 20 kayıt resmî güncel ürünlerle
+eşleştirilip kimlikleri korunarak zincire net 105 ürün eklendi.
+
+### Ölçülen yeni katalog durumu
+
+| Zincir | Ürün | Sezonluk |
+|---|---:|---:|
+| Starbucks | 130 | 0 |
+| Espressolab | 116 | 0 |
+| Kahve Dünyası | 20 | 0 |
+| Caffè Nero | 125 | 0 |
+| Coffy | 30 | 9 |
+| Mackbear Coffee Co. | 166 | 3 |
+| Arabica Coffee House | 131 | 0 |
+| Gloria Jean's Coffees | 115 | 1 |
+| David People | 93 | 2 |
+| Tchibo | 24 | 0 |
+| **Toplam** | **950** | **15** |
+
+- Besin provenance: 950 `estimated`, 0 `verified`, 0 `unverified`.
+- Görseller: 950 ürün için 950 benzersiz yerel dosya yolu; 384
+  resmî/exact ve 566 lisanslı fallback.
+- Caffè Nero görselleri: 96 resmî/exact ve 29 lisanslı fallback.
+- Caffè Nero sezonluk ürün sayısı: 0.
+- Kaynak kapısı: 125 satırlık izlenen anlık görüntü ile 125 ürünlük
+  derlenmiş zincir kataloğu ad/adet bakımından eşleşir.
+
+Resmî Caffè Nero sayfalarındaki kullanılabilir sayısal değerler tahmine
+girdi sağlasa da tam makro şeması her ürün için eksiksiz yayınlanmadığından
+ürünler `verified` olarak sunulmaz. Kahve Dünyası, Coffy ve Tchibo için daha
+geniş görünen listeler ise şube bazlı ikincil teslimat yüzeyleridir; birden
+fazla şube ve kaynak/görsel lisansı doğrulaması yapılmadan zincir-geneli
+resmî katalog gibi eklenmemiştir.

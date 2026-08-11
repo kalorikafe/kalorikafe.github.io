@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint src tests/unit tests/e2e playwright.config.ts",
     "catalog:audit": "node scripts/catalog-audit.ts",
+    "catalog:fetch:caffe-nero": "node scripts/fetch-caffe-nero.mjs",
     "test": "npm run test:unit && npm run test:e2e",
     "test:unit": "vitest run tests/unit",
     "test:e2e": "playwright test",

@@ -1,14 +1,49 @@
 import { describe, expect, it } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { MENU_ITEMS } from '../../src/data/items';
 import { filterAndSortMenu } from '../../src/utils/menuFilter';
 import { ALLERGEN_MAP } from '../../src/utils/macroCalculator';
 import type { Allergen } from '../../src/types/cafe';
 
-describe('peanut allergen support', () => {
+const CAFFE_NERO_SOURCE = JSON.parse(
+  readFileSync(new URL('../../scripts/catalog_sources/caffe_nero.json', import.meta.url), 'utf8'),
+) as { products: Array<{ name: string }> };
+const BASELINE_WITHOUT_CAFFE_NERO = 825;
+const LEGACY_CAFFE_NERO_IDS = [
+  'caffe_nero_1_caff__americano',
+  'caffe_nero_2_caff__latte',
+  'caffe_nero_3_cappuccino',
+  'caffe_nero_4_caff__mocha',
+  'caffe_nero_5_cortado',
+  'caffe_nero_6_flat_white',
+  'caffe_nero_7_filtre_kahve',
+  'caffe_nero_8_antep_f_st_kl__latte',
+  'caffe_nero_9_iced_latte',
+  'caffe_nero_10_iced_white_chocolate_mocha',
+  'caffe_nero_11_iced_caramelatte',
+  'caffe_nero_12_freddo_espresso',
+  'caffe_nero_13_cold_brew',
+  'caffe_nero_14_milano_s_cak__ikolata',
+  'caffe_nero_15_chai_tea_latte',
+  'caffe_nero_16_mozzarella___domatesli_panino',
+  'caffe_nero_17_tavuklu_sezar_sandvi_',
+  'caffe_nero_18____peynirli_tost',
+  'caffe_nero_19__ikolatal__kruvasan',
+  'caffe_nero_20_nero_premium_san_sebastian_cheesecake',
+] as const;
+
+describe('allergen support', () => {
   it('registers peanut as a full-fledged allergen with a Turkish label', () => {
     expect(ALLERGEN_MAP.peanut).toBeDefined();
     expect(ALLERGEN_MAP.peanut.name).toBe('Yer Fıstığı');
     expect(ALLERGEN_MAP.peanut.description).toMatch(/Yer fıstığı/i);
+  });
+
+  it('covers the additional official Caffè Nero allergen labels', () => {
+    expect(ALLERGEN_MAP.fish.name).toBe('Balık');
+    expect(ALLERGEN_MAP.mustard.name).toBe('Hardal');
+    expect(ALLERGEN_MAP.sesame.name).toBe('Susam');
+    expect(ALLERGEN_MAP.sulphites.name).toBe('Sülfitler');
   });
 
   it('keeps every catalog allergen inside the known allergen map (incl. peanut)', () => {
@@ -84,11 +119,21 @@ describe('catalog provenance honesty (compile_catalog.py contract)', () => {
     expect(tchiboEspresso.catalogSource?.kind).toBe('secondary');
   });
 
-  it('keeps the full catalog stable: 845 items, 10 chains, unique ids', () => {
-    expect(MENU_ITEMS.length).toBe(845);
+  it('keeps the full catalog stable and includes the tracked Caffè Nero snapshot', () => {
+    const expectedTotal = BASELINE_WITHOUT_CAFFE_NERO + CAFFE_NERO_SOURCE.products.length;
+    expect(MENU_ITEMS.length).toBe(expectedTotal);
     const chainIds = new Set(MENU_ITEMS.map(i => i.chainId));
     expect(chainIds.size).toBe(10);
-    expect(new Set(MENU_ITEMS.map(i => i.id)).size).toBe(845);
+    expect(new Set(MENU_ITEMS.map(i => i.id)).size).toBe(expectedTotal);
+
+    const neroItems = MENU_ITEMS.filter(i => i.chainId === 'caffe_nero');
+    expect(neroItems.length).toBe(CAFFE_NERO_SOURCE.products.length);
+    expect(new Set(neroItems.map(i => i.name))).toEqual(
+      new Set(CAFFE_NERO_SOURCE.products.map(product => product.name)),
+    );
+    for (const legacyId of LEGACY_CAFFE_NERO_IDS) {
+      expect(neroItems.some(item => item.id === legacyId), legacyId).toBe(true);
+    }
     // No fabricated or remote images slipped in.
     for (const item of MENU_ITEMS) {
       expect(item.image, item.id).toMatch(/^\/images\/menu\/.+(\.webp)$/);

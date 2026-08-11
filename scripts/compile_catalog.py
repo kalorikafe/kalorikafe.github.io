@@ -4,6 +4,7 @@
 Inputs:
   tmp_research/items_full.json   existing 199 full product records
   tmp_research/research.json     subagent research (official menus), optional
+  scripts/catalog_sources/*.json tracked, reproducible chain snapshots
   tmp_research/assets.json       image build provenance, optional
 
 Outputs:
@@ -13,7 +14,7 @@ Outputs:
 
 Rules (DEEPSEEK_NIGHT_GOAL §4):
 - existing product IDs preserved (favorites/basket stability)
-- new products come only from research.json (official menus)
+- new products come only from researched official/approved menu snapshots
 - sizes never counted as separate products
 - nutrition marked estimated unless a verified figure is provided
 - catalog + image provenance recorded on every static item
@@ -26,6 +27,7 @@ import unicodedata
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TMP = os.path.join(ROOT, "tmp_research")
 OUT = os.path.join(ROOT, "src", "data", "catalog")
+TRACKED_SOURCE_DIR = os.path.join(ROOT, "scripts", "catalog_sources")
 CHECKED_AT = "2026-08-05"
 
 CHAIN_KEYS = {
@@ -53,6 +55,50 @@ CATALOG_URLS = {
     "david_people": "https://davidpeople.com",
     "tchibo": "https://www.tchibo.com.tr",
 }
+
+
+def load_research() -> dict:
+    """Load scratch research, then overlay committed chain snapshots.
+
+    ``tmp_research`` is intentionally ignored, so a newly researched chain
+    must not live there as its only source of truth.  A JSON file in
+    ``scripts/catalog_sources`` may contain either one chain object or a
+    ``{\"chains\": [...]}`` wrapper; its chainId replaces the scratch entry.
+    """
+    research = {"chains": []}
+    research_file = os.path.join(TMP, "research.json")
+    if os.path.exists(research_file):
+        with open(research_file, encoding="utf-8") as f:
+            research = json.load(f)
+
+    merged = []
+    positions = {}
+
+    def put(chain: dict) -> None:
+        chain_id = chain.get("chainId")
+        if not chain_id:
+            raise ValueError("Research chain is missing chainId")
+        if chain_id in positions:
+            merged[positions[chain_id]] = chain
+        else:
+            positions[chain_id] = len(merged)
+            merged.append(chain)
+
+    for chain in research.get("chains", []):
+        put(chain)
+
+    if os.path.isdir(TRACKED_SOURCE_DIR):
+        for filename in sorted(os.listdir(TRACKED_SOURCE_DIR)):
+            if not filename.endswith(".json"):
+                continue
+            path = os.path.join(TRACKED_SOURCE_DIR, filename)
+            with open(path, encoding="utf-8") as f:
+                payload = json.load(f)
+            chains = payload.get("chains", []) if isinstance(payload, dict) and "chains" in payload else [payload]
+            for chain in chains:
+                put(chain)
+
+    return {"chains": merged}
 
 
 def norm(name: str) -> str:
@@ -154,14 +200,20 @@ def estimate_macros(name: str, category: str, is_drink: bool) -> dict:
             return {"calories": 210, "protein": 6, "carbs": 24, "sugar": 14, "fat": 10, "satFat": 2, "caffeine": 0, "sodium": 30}
         return {"calories": 400, "protein": 14, "carbs": 42, "sugar": 5, "fat": 16, "satFat": 7, "caffeine": 0, "sodium": 600}
     # drinks
+    if "con panna" in n:
+        return {"calories": 45, "protein": 1, "carbs": 2, "sugar": 1, "fat": 4, "satFat": 2.5, "caffeine": 80, "sodium": 15}
     if any(k in n for k in ("americano", "espresso", "filtre", "v60", "long black", "turk", "dibek", "menengic", "freddo")):
         return {"calories": 10, "protein": 0.5, "carbs": 2, "sugar": 0, "fat": 0, "satFat": 0, "caffeine": 140, "sodium": 12}
+    if category == "cold_brew" and "latte" in n:
+        return {"calories": 120, "protein": 6, "carbs": 10, "sugar": 9, "fat": 5, "satFat": 3, "caffeine": 170, "sodium": 80}
     if category == "cold_brew":
         return {"calories": 5, "protein": 0, "carbs": 0, "sugar": 0, "fat": 0, "satFat": 0, "caffeine": 165, "sodium": 15}
     if "cortado" in n or "piccolo" in n or ("macchiato" in n and "caramel" not in n and "iced" not in n):
         return {"calories": 80, "protein": 5, "carbs": 6, "sugar": 5, "fat": 4, "satFat": 2, "caffeine": 150, "sodium": 60}
     if "cappuccino" in n or "capuccin" in n or "kapuc" in n:
         return {"calories": 125, "protein": 8, "carbs": 12, "sugar": 10, "fat": 4.5, "satFat": 2.5, "caffeine": 150, "sodium": 100}
+    if "flat white" in n:
+        return {"calories": 165, "protein": 9, "carbs": 14, "sugar": 13, "fat": 7, "satFat": 4, "caffeine": 160, "sodium": 115}
     if "latte" in n and category == "espresso_hot":
         if any(k in n for k in ("caramel", "vanilla", "vanilya", "findik", "fistik", "biscoff", "oreo", "nut", "pumpkin", "balkabagi")):
             return {"calories": 260, "protein": 8, "carbs": 34, "sugar": 30, "fat": 9, "satFat": 5.5, "caffeine": 150, "sodium": 150}
@@ -170,7 +222,7 @@ def estimate_macros(name: str, category: str, is_drink: bool) -> dict:
         return {"calories": 340, "protein": 10, "carbs": 44, "sugar": 36, "fat": 14, "satFat": 9, "caffeine": 150, "sodium": 140}
     if "white" in n or "beyaz" in n:
         return {"calories": 360, "protein": 10, "carbs": 46, "sugar": 40, "fat": 15, "satFat": 9.5, "caffeine": 20, "sodium": 170}
-    if "sican" in n or "hot chocolate" in n or "milano" in n:
+    if "sicak" in n or "hot chocolate" in n or "milano" in n:
         return {"calories": 360, "protein": 10, "carbs": 46, "sugar": 40, "fat": 15, "satFat": 9.5, "caffeine": 15, "sodium": 170}
     if "matcha" in n:
         return {"calories": 190, "protein": 8, "carbs": 26, "sugar": 24, "fat": 6, "satFat": 3.5, "caffeine": 50, "sodium": 95}
@@ -197,12 +249,12 @@ def estimate_allergens(name: str, category: str, is_drink: bool) -> list:
     n = norm(name)
     out = set()
     if is_drink:
-        black = any(k in n for k in ("americano", "espresso", "filtre", "long black", "turk", "cold brew", "v60", "freddo", "cay", "tea", "limonata", "lemonade", "portakal", "orange", "refresha", "cooler", "smoothie", "dragon", "freeze"))
+        black = "latte" not in n and any(k in n for k in ("americano", "espresso", "filtre", "long black", "turk", "cold brew", "v60", "freddo", "cay", "tea", "limonata", "lemonade", "portakal", "orange", "refresha", "cooler", "smoothie", "dragon", "freeze"))
         if not black:
             out.add("lactose")
         if any(k in n for k in ("mocha", "cikolata", "choc", "white")):
             out.add("soy")
-        if any(k in n for k in ("findik", "fistik", "ceviz", "badem", "nut")):
+        if any(k in n for k in ("findik", "fistik", "ceviz", "badem", "pistachio", "hazelnut", "almond", "walnut")):
             out.add("nuts")
     else:
         out.add("gluten")
@@ -290,6 +342,60 @@ def nutrition_estimated(is_new: bool) -> dict:
     }
 
 
+def product_macros(product: dict, name: str, category: str, is_drink: bool) -> dict:
+    """Use researched macro fields where present and estimate only gaps."""
+    result = estimate_macros(name, category, is_drink)
+    provided = product.get("baseMacros")
+    if isinstance(provided, dict):
+        for key in result:
+            value = provided.get(key)
+            if isinstance(value, (int, float)) and value >= 0:
+                result[key] = value
+    result["sugar"] = min(result["sugar"], result["carbs"])
+    result["satFat"] = min(result["satFat"], result["fat"])
+    return result
+
+
+def product_allergens(product: dict, name: str, category: str, is_drink: bool) -> list:
+    """Keep official empty allergen lists distinct from unavailable data."""
+    if product.get("allergenSourceAvailable"):
+        return list(product.get("allergens", []))
+    if product.get("allergensEstimated"):
+        return list(product.get("allergens", []))
+    return estimate_allergens(name, category, is_drink)
+
+
+def product_nutrition_source(product: dict | None, is_new: bool) -> dict:
+    if product and isinstance(product.get("nutritionSource"), dict):
+        return dict(product["nutritionSource"])
+    return nutrition_estimated(is_new)
+
+
+def refresh_item_from_research(item: dict, product: dict) -> None:
+    """Refresh mutable catalog facts while preserving a legacy product ID."""
+    name = product.get("name") or item["name"]
+    is_drink = product.get("isDrink", item["isDrink"])
+    category = refine_category(name, product.get("category") or item["category"], is_drink)
+    macros = product_macros(product, name, category, is_drink)
+    allergens = product_allergens(product, name, category, is_drink)
+
+    item["name"] = name
+    if product.get("nameEn"):
+        item["nameEn"] = product["nameEn"]
+    item["category"] = category
+    item["isDrink"] = is_drink
+    if product.get("description"):
+        item["description"] = product["description"]
+    item["baseMacros"] = macros
+    item["allergens"] = allergens
+    item["dietaryTags"] = list(product.get("dietaryTags") or estimate_tags(name, macros, allergens, is_drink))
+    item["glycemicImpact"] = glycemic(macros["sugar"], macros["carbs"])
+    item["availability"] = "seasonal" if product.get("seasonal") else "current"
+    for key in ("defaultSizeId", "defaultMilkId", "defaultSyrupPumps"):
+        if key in product:
+            item[key] = product[key]
+
+
 def default_description(name: str, category: str, is_drink: bool) -> str:
     if not is_drink:
         if category in ("bakery_dessert", "fit_healthy"):
@@ -352,32 +458,32 @@ def slot_of(item: dict, research_product=None) -> dict:
         elif any(k in n for k in ("cold brew", "cold_brew", "soğuk demleme")):
             slot = "cold-brew"
         elif "cortado" in n or "piccolo" in n:
-            slot = "cortado"
+            slot = "iced-latte" if any(k in n for k in ("iced", "buzlu", "soguk", "cold")) else "cortado"
         elif "cappuccino" in n or "kapuc" in n:
-            slot = "cappuccino"
+            slot = "iced-latte" if any(k in n for k in ("iced", "buzlu", "soguk", "cold")) else "cappuccino"
         elif "macchiato" in n:
-            slot = "macchiato"
+            slot = "iced-latte" if any(k in n for k in ("iced", "buzlu", "soguk", "cold")) else "macchiato"
         elif "latte" in n:
             slot = "iced-latte" if any(k in n for k in ("iced", "buzlu", "soguk", "cold")) else "latte"
         elif "flat white" in n:
-            slot = "flat-white"
+            slot = "iced-latte" if any(k in n for k in ("iced", "buzlu", "soguk", "cold")) else "flat-white"
         elif "espresso" in n:
             slot = "espresso"
         elif "mocha" in n:
-            slot = "white-mocha" if "white" in n else "mocha"
-        elif any(k in n for k in ("sican", "hot chocolate", "milano")):
+            slot = "iced-latte" if any(k in n for k in ("iced", "buzlu", "soguk", "cold")) else ("white-mocha" if "white" in n else "mocha")
+        elif any(k in n for k in ("sicak cikolata", "hot chocolate", "milano")):
             slot = "hot-chocolate"
         elif "salep" in n:
             slot = "salep"
+        elif any(k in n for k in ("frappe", "esfrappa", "chiller", "milkshake")):
+            slot = "frappe"
         elif "matcha" in n:
             slot = "matcha"
         elif "chai" in n:
             slot = "chai"
-        elif any(k in n for k in ("frappe", "esfrappa", "chiller", "milkshake")):
-            slot = "frappe"
         elif any(k in n for k in ("iced", "buzlu", "soguk", "cold")):
             slot = "iced-latte"
-        elif any(k in n for k in ("smoothie", "freeze", "dragon")):
+        elif any(k in n for k in ("smoothie", "freeze", "dragon", "muz", "cilek")):
             slot = "smoothie"
         elif any(k in n for k in ("limonata", "lemonade", "portakal", "orange")):
             slot = "lemonade" if "limon" in n or "lemon" in n else "orange-juice"
@@ -387,6 +493,9 @@ def slot_of(item: dict, research_product=None) -> dict:
             slot = "tea" if "latte" not in n else "chai"
         else:
             slot = "latte"
+
+    if research_product and research_product.get("visualSlot"):
+        slot = research_product["visualSlot"]
 
     official = None
     page = None
@@ -398,9 +507,11 @@ def slot_of(item: dict, research_product=None) -> dict:
     return {"slot": slot, "officialUrl": official, "pageUrl": page}
 
 
-def refine_category(name: str, fallback: str) -> str:
+def refine_category(name: str, fallback: str, is_drink: bool) -> str:
     """Reclassify from the product name when the researched page placed a
     drink in a misleading section (e.g. iced drinks under hot espresso)."""
+    if not is_drink:
+        return fallback
     n = norm(name)
     if "cold brew" in n:
         return "cold_brew"
@@ -415,7 +526,7 @@ def refine_category(name: str, fallback: str) -> str:
     if any(k in n for k in ("limonata", "lemonade", "portakal", "orange", "suyu", "smoothie", "frozen", "detox")):
         return "smoothie_juice"
     if any(k in n for k in ("latte", "mocha", "macchiato", "cappuccino", "cappucino", "espresso", "americano", "flat white", "cortado", "ristretto", "dolmaca", "misto", "duble")):
-        if any(k in n for k in ("iced", "buzlu", "soguk", "cold")):
+        if any(k in n for k in ("iced", "buzlu", "soguk", "cold", "freddo")):
             return "espresso_iced"
         return "espresso_hot"
     return fallback
@@ -425,11 +536,7 @@ def main() -> None:
     with open(os.path.join(TMP, "items_full.json"), encoding="utf-8") as f:
         existing = json.load(f)
 
-    research = {"chains": []}
-    research_file = os.path.join(TMP, "research.json")
-    if os.path.exists(research_file):
-        with open(research_file, encoding="utf-8") as f:
-            research = json.load(f)
+    research = load_research()
 
     assets = {}
     assets_file = os.path.join(TMP, "assets.json")
@@ -440,18 +547,37 @@ def main() -> None:
 
     research_by_chain = {}
     research_sources = {}
+    research_options = {}
     for chain in research.get("chains", []):
         m = {}
         for p in chain.get("products", []):
             if p.get("name"):
-                m[norm(p["name"])] = p
+                lookup_names = [p["name"], *p.get("aliases", [])]
+                for lookup_name in lookup_names:
+                    key = norm(lookup_name)
+                    prior = m.get(key)
+                    if prior is not None and prior is not p:
+                        raise ValueError(f"Research alias collision for {chain.get('chainId')}: {lookup_name}")
+                    m[key] = p
         research_by_chain[chain.get("chainId")] = m
         research_sources[chain.get("chainId")] = chain.get("sources", [])
+        research_options[chain.get("chainId")] = chain
 
     chain_items = {cid: [] for cid in CHAIN_KEYS}
     for item in existing:
         if item["chainId"] in chain_items:
             chain_items[item["chainId"]].append(item)
+
+    # A tracked snapshot may explicitly reconcile a legacy display name to
+    # the current official name while preserving the stable catalog ID.
+    for cid, items in chain_items.items():
+        if not research_options.get(cid, {}).get("canonicalizeExisting"):
+            continue
+        rmap = research_by_chain.get(cid, {})
+        for item in items:
+            product = rmap.get(norm(item["name"]))
+            if product:
+                item["name"] = product["name"]
 
     existing_ids = {i["id"] for i in existing}
 
@@ -463,15 +589,25 @@ def main() -> None:
         seen = set(norm(i["name"]) for i in chain_items[cid])
         for p in chain.get("products", []):
             name = (p.get("name") or "").strip()
-            if not name or norm(name) in seen:
+            lookup_names = [name, *p.get("aliases", [])]
+            if not name or any(norm(lookup_name) in seen for lookup_name in lookup_names):
                 continue
             if p.get("exclude", False):
                 continue
-            category = refine_category(name, p.get("category") or "espresso_hot")
             is_drink = p.get("isDrink", True)
-            macros = estimate_macros(name, category, is_drink)
-            allergens = estimate_allergens(name, category, is_drink)
-            tags = estimate_tags(name, macros, allergens, is_drink)
+            category = refine_category(name, p.get("category") or "espresso_hot", is_drink)
+            macros = product_macros(p, name, category, is_drink)
+            allergens = product_allergens(p, name, category, is_drink)
+            tags = list(p.get("dietaryTags") or estimate_tags(name, macros, allergens, is_drink))
+            inferred_milk = (
+                "whole_milk"
+                if is_drink
+                and not any(
+                    k in norm(name)
+                    for k in ("americano", "cay", "tea", "limonata", "portakal", "sade", "espresso", "filtre", "cold brew", "turk", "cold_brew", "v60", "freddo", "dibek", "menengic", "refresha", "cooler", "smoothie", "freeze", "dragon")
+                )
+                else None
+            )
             item = {
                 "id": f"{cid}_{slugify(name)}",
                 "chainId": cid,
@@ -481,16 +617,9 @@ def main() -> None:
                 "description": p.get("description") or default_description(name, category, is_drink),
                 "image": "",
                 "isDrink": is_drink,
-                "defaultSizeId": "grande" if cid == "starbucks" else ("tall" if is_drink else None),
-                "defaultMilkId": (
-                    "whole_milk"
-                    if is_drink
-                    and not any(
-                        k in norm(name)
-                        for k in ("americano", "cay", "tea", "limonata", "portakal", "sade", "espresso", "filtre", "cold brew", "turk", "cold_brew", "v60", "freddo", "dibek", "menengic", "refresha", "cooler", "smoothie", "freeze", "dragon")
-                    )
-                    else None
-                ),
+                "defaultSizeId": p.get("defaultSizeId", "grande" if cid == "starbucks" else ("tall" if is_drink else None)),
+                "defaultMilkId": p.get("defaultMilkId", inferred_milk),
+                "defaultSyrupPumps": p.get("defaultSyrupPumps"),
                 "baseMacros": macros,
                 "allergens": allergens,
                 "dietaryTags": tags,
@@ -506,6 +635,9 @@ def main() -> None:
         rmap = research_by_chain.get(cid, {})
         for item in items:
             research_product = rmap.get(norm(item["name"]))
+            if research_product and research_options.get(cid, {}).get("refreshExisting"):
+                refresh_item_from_research(item, research_product)
+                research_product = rmap.get(norm(item["name"]), research_product)
             sl = slot_of(item, research_product)
             manifest_products.append({
                 "id": item["id"],
@@ -516,7 +648,10 @@ def main() -> None:
                 "pageUrl": sl["pageUrl"],
             })
             item["catalogSource"] = catalog_source(cid, research_product, research_sources.get(cid))
-            item["nutritionSource"] = nutrition_estimated(item["id"] not in existing_ids)
+            item["nutritionSource"] = product_nutrition_source(
+                research_product,
+                item["id"] not in existing_ids,
+            )
             item.setdefault("availability", "current")
             if has_assets and item["id"] in assets:
                 a = assets[item["id"]]

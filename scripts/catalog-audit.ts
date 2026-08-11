@@ -46,6 +46,24 @@ function itemId(item: MenuItem): string {
   return `${item.id} (${item.chainId})`;
 }
 
+function imageSourceIdentity(url: string): string {
+  const unsplash = url.match(/(?:\/photos\/|photo-)([^?&/]+)/i);
+  if (unsplash) return `unsplash:${unsplash[1].toLowerCase()}`;
+  let decoded = url;
+  try {
+    decoded = decodeURIComponent(url);
+  } catch {
+    // Keep the original URL when malformed percent escapes are encountered.
+  }
+  const commonsPage = decoded.match(/\/wiki\/File:([^?#]+)/i);
+  if (commonsPage) return `commons:${commonsPage[1].replace(/ /g, '_').toLowerCase()}`;
+  if (/upload\.wikimedia\.org/i.test(decoded)) {
+    const filename = decoded.split(/[/?#]/).filter(Boolean).at(-1);
+    if (filename) return `commons:${filename.replace(/ /g, '_').toLowerCase()}`;
+  }
+  return url;
+}
+
 /* ------------------------------------------------------------------ */
 /* Image family classification: a "normalized visual family"          */
 /* ------------------------------------------------------------------ */
@@ -102,6 +120,16 @@ for (const item of MENU_ITEMS) {
   const values = Object.values(item.baseMacros).filter(v => v !== undefined);
   if (!values.every(v => Number.isFinite(v) && v >= 0)) {
     failures.push(`Non-finite or negative macro in ${itemId(item)}`);
+  }
+  if (item.baseMacros.sugar > item.baseMacros.carbs) {
+    failures.push(`Sugar exceeds total carbs in ${itemId(item)}`);
+  }
+  if (item.baseMacros.satFat > item.baseMacros.fat) {
+    failures.push(`Saturated fat exceeds total fat in ${itemId(item)}`);
+  }
+  const macroEnergy = 4 * (item.baseMacros.protein + item.baseMacros.carbs) + 9 * item.baseMacros.fat;
+  if (macroEnergy > Math.max(item.baseMacros.calories * 1.8, item.baseMacros.calories + 100)) {
+    failures.push(`Macro energy is implausibly above calories in ${itemId(item)}`);
   }
   if (item.baseMacros.calories > 0) positiveCount++;
 }
@@ -277,6 +305,59 @@ check(
   MENU_ITEMS.length > 199,
   `Catalog has ${MENU_ITEMS.length} items; must exceed 199`,
 );
+
+/* Tracked official snapshots must be represented completely. */
+const caffeNeroSourcePath = path.join(PROJECT_ROOT, 'scripts', 'catalog_sources', 'caffe_nero.json');
+if (!statSync(caffeNeroSourcePath, { throwIfNoEntry: false })?.isFile()) {
+  check(false, 'Tracked Caffè Nero source snapshot is missing');
+} else {
+  const source = JSON.parse(readFileSync(caffeNeroSourcePath, 'utf8')) as {
+    chainId: string;
+    products: Array<{ name: string }>;
+  };
+  const sourceNames = new Set(source.products.map(product => product.name));
+  const catalogNames = new Set(
+    MENU_ITEMS.filter(item => item.chainId === source.chainId).map(item => item.name),
+  );
+  const catalogItems = MENU_ITEMS.filter(item => item.chainId === source.chainId);
+  const missingNames = [...sourceNames].filter(name => !catalogNames.has(name));
+  const extraNames = [...catalogNames].filter(name => !sourceNames.has(name));
+  check(sourceNames.size === source.products.length, 'Duplicate names in tracked Caffè Nero source snapshot');
+  check(
+    catalogItems.length === source.products.length,
+    `Caffè Nero row count differs from tracked snapshot (${catalogItems.length} catalog / ${source.products.length} source)`,
+  );
+  check(
+    catalogNames.size === sourceNames.size,
+    `Caffè Nero count differs from tracked snapshot (${catalogNames.size} catalog / ${sourceNames.size} source)`,
+  );
+  check(missingNames.length === 0, `Caffè Nero source products missing from catalog: ${missingNames.slice(0, 5).join(', ')}`);
+  check(extraNames.length === 0, `Caffè Nero catalog products absent from source: ${extraNames.slice(0, 5).join(', ')}`);
+
+  const allSourceUsage = new Map<string, MenuItem[]>();
+  for (const item of MENU_ITEMS) {
+    if (!item.imageSource) continue;
+    const identity = imageSourceIdentity(item.imageSource.url);
+    const group = allSourceUsage.get(identity) ?? [];
+    group.push(item);
+    allSourceUsage.set(identity, group);
+  }
+  const caffeSourceUrls = new Set(
+    catalogItems
+      .map(item => item.imageSource?.url)
+      .filter((url): url is string => Boolean(url))
+      .map(imageSourceIdentity),
+  );
+  const caffeUniqueSourcePercent = (caffeSourceUrls.size / catalogItems.length) * 100;
+  check(
+    caffeUniqueSourcePercent >= 60,
+    `Caffè Nero unique image-source ratio ${caffeUniqueSourcePercent.toFixed(1)}% < 60%`,
+  );
+  for (const sourceUrl of caffeSourceUrls) {
+    const usedBy = allSourceUsage.get(sourceUrl) ?? [];
+    check(usedBy.length <= 6, `Caffè Nero image source ${sourceUrl} is used by ${usedBy.length} products (max 6)`);
+  }
+}
 
 /* ------------------------------------------------------------------ */
 /* Summary (also consumed by the completion report)                    */

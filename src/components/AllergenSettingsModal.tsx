@@ -14,7 +14,19 @@ interface AllergenSettingsModalProps {
   clearAllUserAllergens: () => void;
 }
 
-const ALLERGEN_KEYS: Allergen[] = ['gluten', 'lactose', 'nuts', 'peanut', 'soy', 'egg', 'celiac_oat_risk'];
+const ALLERGEN_KEYS: Allergen[] = [
+  'gluten',
+  'lactose',
+  'nuts',
+  'peanut',
+  'soy',
+  'egg',
+  'fish',
+  'mustard',
+  'sesame',
+  'sulphites',
+  'celiac_oat_risk',
+];
 
 export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
   isOpen,
@@ -30,7 +42,7 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="allergen-dialog-title" tabIndex={-1} className="relative w-full max-w-xl rounded-3xl glass-panel border border-stone-200 dark:border-[var(--dark-border)] shadow-2xl p-6 space-y-6">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="allergen-dialog-title" tabIndex={-1} className="relative w-full max-w-xl max-h-[calc(100vh-2rem)] overflow-y-auto rounded-3xl glass-panel border border-stone-200 dark:border-[var(--dark-border)] shadow-2xl p-6 space-y-6">
         
         {/* Header */}
         <div className="flex items-start justify-between pb-4 border-b border-stone-200 dark:border-[var(--dark-border)]">

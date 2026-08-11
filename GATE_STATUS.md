@@ -1,32 +1,75 @@
 # GATE_STATUS.md — Kalite Kapıları Durumu
 
-Bu dosya, 6 Ağustos 2026 yayın (public release) hazırlığındaki gerçek
-kapı sonuçlarını gösterir; her sonuç bu çalışmada komutlarla **son
-commit'ten** (HEAD `ede7715`) yeniden üretildi. "67/67" gibi eski legacy
-paket iddiaları geçersizdir — eski kaynak-metin suite'i `tests/legacy/`
-altına arşivlenmiştir ve aktif kalite kapısı değildir.
+Bu belge sabit bir “her zaman yeşil” iddiası değildir. Sonuçlar her çalışma
+ağacında komut çıktısıyla yeniden üretilmelidir. Eski 67 senaryoluk
+kaynak-metin suite'i `tests/legacy/` altında tarihsel arşivdir ve aktif kalite
+kapısı sayılmaz.
 
-## Güncel kalite kapıları (6 Ağustos 2026, HEAD ede7715)
+## 11 Ağustos 2026 — Caffè Nero katalog güncellemesi
 
-| Komut | Görev | Son sonuç |
-|---|---|---|
-| `npm run catalog:audit` | Katalog sözleşmeleri: benzersiz ID, zincir, makro, provenance, görsel kuralları, klon denetimi, >199 ürün | ✅ 845 ürün · 845 benzersiz görsel · 0 hata · 4 secondary kayıt (Tchibo) |
-| `npm run lint` | oxlint (src + tests/unit + tests/e2e) | ✅ 0 uyarı / 0 hata (50 dosya, 104 kural) |
-| `npm run build` | TypeScript + Vite üretim derlemesi | ✅ (P2: ana bundle ~143 kB gzip chunk uyarısı — kabul edildi) |
-| `npm run test:unit` | Vitest (normalizasyon, filtre, provenance, makro motoru, makro hedefleri/migrasyon, peanut) | ✅ 53/53 |
-| `npm run test:e2e` | Playwright + Chromium (arama/ARIA, klavye, tema, 390/1440 × iki tema, görsel yükleme, peanut, makro modal/gates) | ✅ 19/19 |
-| `npm test` | unit + E2E birlikte | ✅ |
-| `npm audit` · `npm audit --omit=dev` | Bağımlılık güvenlik taraması | ✅ 0 açık |
+Güncel katalog ölçümü:
+
+```text
+products: 950
+seasonal: 15
+nutrition: { verified: 0, estimated: 950, unverified: 0 }
+images: { uniquePaths: 950, official: 384,
+          licensed_fallback: 566, exactProduct: 384 }
+caffe_nero: { products: 125, seasonal: 0,
+              officialImages: 96, fallbackImages: 29 }
+```
+
+`scripts/catalog_sources/caffe_nero.json`, 11 Ağustos 2026'da 7 resmî
+Caffè Nero Türkiye menü sayfasından üretilmiş 125 benzersiz ürün satırı
+içerir. Katalog denetimi derlenmiş Caffè Nero ürün adları/adedi ile bu
+izlenen anlık görüntü arasında eksik veya fazla kayıt bulunmadığını kontrol
+eder.
+
+| Denetim | Güncel ölçüm |
+|---|---|
+| Toplam ve zincir referansları | ✅ 950 ürün · 10 zincir |
+| Sezonluk kayıtlar | ✅ 15 toplam · Caffè Nero 0 |
+| Caffè Nero kaynak anlık görüntüsü | ✅ 125 kaynak satırı = 125 katalog ürünü |
+| Besin provenance | ✅ 950 `estimated` · 0 `verified` · 0 `unverified` |
+| Görsel yolları | ✅ 950/950 benzersiz yerel yol |
+| Görsel provenance | ✅ 384 resmî/exact · 566 lisanslı fallback |
+| Caffè Nero görselleri | ✅ 96 resmî/exact · 29 lisanslı fallback |
+
+Güncel çalışma ağacında yeniden üretilen kapı sonuçları:
+
+| Komut | 11 Ağustos sonucu |
+|---|---|
+| `npm run catalog:audit` | ✅ 950 ürün · 950 benzersiz yerel yol · 1.089 kontrol · 0 hata |
+| `npm run lint` | ✅ 0 hata |
+| `npm run build` | ✅ TypeScript + Vite; ana bundle 155,51 kB gzip uyarısıyla tamamlandı |
+| `npm run test:unit` | ✅ 54/54 |
+| `npm run test:e2e` | ✅ 19/19 |
+| `npm audit --omit=dev` | ✅ 0 açık |
+
+## Son tam public-release kapısı — 6 Ağustos 2026 (tarihsel)
+
+Aşağıdaki tablo 11 Ağustos katalog genişletmesinden **önceki** public release
+ağacına (`ede7715`) aittir; güncel katalog için sonuç iddiası değildir.
+
+| Komut | 6 Ağustos tarihsel sonuç |
+|---|---|
+| `npm run catalog:audit` | ✅ 845 ürün · 845 benzersiz görsel · 4 secondary kayıt |
+| `npm run lint` | ✅ 0 uyarı / 0 hata |
+| `npm run build` | ✅ P2 ana bundle ~143 kB gzip uyarısıyla tamamlandı |
+| `npm run test:unit` | ✅ 53/53 |
+| `npm run test:e2e` | ✅ 19/19 |
+| `npm test` | ✅ unit + E2E |
+| `npm audit` · `npm audit --omit=dev` | ✅ 0 açık |
 
 ## Public / SEO durumu
 
-- GitHub Pages canlı: <https://kalorikafe.github.io/> (HTTP 200;
-  `/favicon.svg`, `/sitemap.xml`, `/images/menu/starbucks/caff_latte.webp`
-  doğrulandı).
-- GitHub Actions: CI run `31088623077` + Pages deploy run `31088623962`
-  **success**.
-- Google Search Console kaydı bekliyor (kullanıcı aksiyonu).
+- GitHub Pages: <https://kalorikafe.github.io/>
+- 6 Ağustos public release için CI run `31088623077` ve Pages run
+  `31088623962` başarılıydı.
+- 11 Ağustos katalog güncellemesinin canlıya çıktığı ancak yeni Pages run'ı
+  tamamlandıktan ve canlı ürün sayısı/görseller doğrulandıktan sonra
+  kaydedilmelidir.
+- Google Search Console kaydı kullanıcı aksiyonu olarak bekler.
 
-Her çalıştırmada sonuçlar komut çıktısıyla yeniden üretilmelidir; bu
-belge sabit bir "her zaman yeşil" iddiası taşımaz. Detaylı çıktılar
-[DEEPSEEK_NIGHT_REPORT.md](./DEEPSEEK_NIGHT_REPORT.md) bölüm 5'dedir.
+6 Ağustos yayın kanıtları ve 11 Ağustos katalog eki
+`DEEPSEEK_NIGHT_REPORT.md` içindedir.

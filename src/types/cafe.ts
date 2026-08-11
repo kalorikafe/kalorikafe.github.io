@@ -16,7 +16,11 @@ export type Allergen =
   | 'nuts' 
   | 'soy' 
   | 'egg' 
-  | 'peanut';
+  | 'peanut'
+  | 'fish'
+  | 'mustard'
+  | 'sesame'
+  | 'sulphites';
 
 export type DietaryPreference = 
   | 'vegan' 

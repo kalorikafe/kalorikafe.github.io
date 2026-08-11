@@ -50,6 +50,34 @@ export const ALLERGEN_MAP: Record<Allergen, { name: string; icon: string; bg: st
     bg: 'bg-stone-200 dark:bg-[var(--dark-surface-elevated)]',
     text: 'text-stone-800 dark:text-[var(--dark-text)]',
     description: 'Taze yumurta veya yumurta akı tozu içerir.'
+  },
+  fish: {
+    name: 'Balık',
+    icon: '🐟',
+    bg: 'bg-sky-100 dark:bg-sky-950/60',
+    text: 'text-sky-800 dark:text-sky-300',
+    description: 'Balık veya balık türevi içerir.'
+  },
+  mustard: {
+    name: 'Hardal',
+    icon: '🟡',
+    bg: 'bg-yellow-100 dark:bg-yellow-950/60',
+    text: 'text-yellow-800 dark:text-yellow-300',
+    description: 'Hardal tohumu veya hardal türevi içerir.'
+  },
+  sesame: {
+    name: 'Susam',
+    icon: '⚪',
+    bg: 'bg-orange-100 dark:bg-orange-950/60',
+    text: 'text-orange-800 dark:text-orange-300',
+    description: 'Susam tohumu veya susam türevi içerir.'
+  },
+  sulphites: {
+    name: 'Sülfitler',
+    icon: '🧪',
+    bg: 'bg-fuchsia-100 dark:bg-fuchsia-950/60',
+    text: 'text-fuchsia-800 dark:text-fuchsia-300',
+    description: 'Kükürt dioksit veya sülfit içerir.'
   }
 };
 
