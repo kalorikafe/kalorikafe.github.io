@@ -106,7 +106,7 @@ export const ItemCard: React.FC<ItemCardProps> = ({
           <h3 className="text-lg font-black leading-tight drop-shadow-md tracking-tight">
             <Link to={detailsPath} className="rounded-sm underline-offset-4 hover:underline">{item.name}</Link>
           </h3>
-          {item.nameEn && (
+          {item.nameEn && item.nameEn.trim().toLowerCase() !== item.name.trim().toLowerCase() && (
             <p className="text-xs text-stone-300 font-semibold">
               {item.nameEn}
             </p>
