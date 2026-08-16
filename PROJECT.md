@@ -13,12 +13,13 @@ uygulamasında karşılaştırır.
 - Canlı adres: <https://kalorikafe.github.io/>
 - Kaynak: <https://github.com/kalorikafe/kalorikafe.github.io>
 - Hosting: GitHub Pages + GitHub Actions
-- Güncel katalog: **1006 ürün**, 10 zincir, 9 sezonluk ürün
+- Güncel katalog: **1006 ürün** (İçecekler: 564, Yiyecekler: 442), 10 zincir, 9 sezonluk ürün
 - Besin kaydı: 83 `mixed`, 923 `estimated`, 0 `verified`, 0 `unverified`
 - Görseller: 1006 benzersiz yerel WebP yolu; 384 resmî/exact, 622 lisanslı
-  fallback
+  fallback (%98.8 benzersiz hash, maks 3 tekrar)
+- Alt Ajan Denetimleri: 7 bağımsız uzman subagent raporu `reports/` altında
 
-## Katalog dağılımı
+## Katalog dağılımı (16 Ağustos 2026)
 
 | Zincir | Ürün | Sezonluk |
 |---|---:|---:|

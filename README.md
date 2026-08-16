@@ -89,6 +89,8 @@ kişisel günlük sınır** olarak yazılır (varsayılan 400 mg).
 - [PROJECT.md](./PROJECT.md) — proje özeti, katalog ve kalite kapıları
 - [GATE_STATUS.md](./GATE_STATUS.md) — güncel kapı sonuçları
 - [DATA_PROVENANCE.md](./DATA_PROVENANCE.md) — kaynak sözleşmeleri
+- [reports/README.md](./reports/README.md) — 7 uzman alt ajan kategori denetim raporları (2026-08-16)
+- [CATALOG_AUDIT_REPORT.md](./CATALOG_AUDIT_REPORT.md) — 1.006 ürün master makro denetim raporu
 
 ## Deploy
 
