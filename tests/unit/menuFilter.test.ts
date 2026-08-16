@@ -35,4 +35,16 @@ describe('menu filtering with the shared search matcher', () => {
     const result = filterAndSortMenu(MENU_ITEMS, { selectedDietaryTags: ['low_calorie'] });
     expect(result.every(i => i.baseMacros.calories < 150)).toBe(true);
   });
+
+  it('only presents sourced, explicitly safe rows for gluten/lactose filters', () => {
+    const glutenFree = filterAndSortMenu(MENU_ITEMS, { selectedDietaryTags: ['gluten_free'] });
+    expect(glutenFree.every(item => ['official', 'mixed'].includes(item.allergenSource?.status ?? '')
+      && !item.allergens.includes('gluten')
+      && !item.crossContactRisks?.includes('celiac_oat_risk'))).toBe(true);
+
+    const lactoseFree = filterAndSortMenu(MENU_ITEMS, { selectedDietaryTags: ['lactose_free'] });
+    expect(lactoseFree.every(item => ['official', 'mixed'].includes(item.allergenSource?.status ?? '')
+      && item.containsLactose === false
+      && !item.allergens.includes('milk'))).toBe(true);
+  });
 });

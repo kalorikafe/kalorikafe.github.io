@@ -1,6 +1,6 @@
 # ☕ Kalori Cafe — Zincir Kahve Makro ve Alerjen Platformu
 
-Kalori Cafe; Türkiye'deki 10 büyük kafe zincirine ait **950 ürünün** kalori,
+Kalori Cafe; Türkiye'deki 10 büyük kafe zincirine ait **1.006 ürünün** kalori,
 protein, karbonhidrat, şeker, yağ, kafein ve alerjen bilgilerini tek
 platformda karşılaştıran React uygulamasıdır.
 
@@ -8,12 +8,12 @@ platformda karşılaştıran React uygulamasıdır.
 - **Kaynak:** <https://github.com/kalorikafe/kalorikafe.github.io>
 - **Hosting:** GitHub Pages + Actions (yalnızca bu; Vercel/Cloudflare/Netlify kullanılmaz)
 
-Çalışma kesiti 11 Ağustos 2026; katalog zincirlerin resmî web menülerinden
-derlendi (Starbucks TR menüsü, Espressolab resmî menü API'si,
-Arabica/Gloria Jean's/David People/Mackbear/Coffy sayfaları ve Caffè Nero
-Türkiye'nin 7 menü sayfası). Her statik
-ürün `catalogSource`, `imageSource` ve `nutritionSource` provenance
-alanlarını taşır; `npm run catalog:audit` bunu otomatik denetler.
+Çalışma kesiti 16 Ağustos 2026; katalog zincirlerin resmî web menülerinden ve
+kontrollü şube anlık görüntülerinden derlendi (Starbucks TR menüsü, Espressolab
+resmî menü API'si, Arabica/Gloria Jean's/David People/Mackbear sayfaları, Caffè
+Nero Türkiye'nin 7 resmî menü sayfası ve Coffy 5-şube canlı menü anlık
+görüntüsü). Her statik ürün `catalogSource`, `imageSource` ve `nutritionSource`
+provenance alanlarını taşır; `npm run catalog:audit` bunu otomatik denetler.
 Tchibo'nun 4 standart espresso bazlı ürünü kendi ürün sayfası olmadığı
 için `kind: 'secondary'` ile işaretlidir (`tchibo_espresso`,
 `tchibo_caff_latte`, `tchibo_cappuccino`, `tchibo_americano`).
@@ -28,29 +28,27 @@ npm run dev        # http://localhost:5173
 ## Kalite komutları
 
 ```bash
-npm run catalog:audit   # katalog sözleşmeleri + görsel kalite denetimi
-npm run lint            # oxlint (src + tests/unit + tests/e2e)
-npm run build           # TypeScript + Vite üretim derlemesi
-npm run test:unit       # Vitest unit testleri
-npm run test:e2e        # Playwright + Chromium uçtan uca testleri
+npm run catalog:audit   # katalog sözleşmeleri + görsel kalite denetimi (1006 ürün, 0 hata)
+npm run lint            # oxlint (src + tests/unit + tests/e2e - 90 dosya, 0 hata)
+npm run build           # TypeScript + Vite + 1019 Statik SEO Sayfası + 404
+npm run test:unit       # Vitest unit testleri (107/107 passed)
+npm run test:e2e        # Playwright + Chromium E2E (32/32 passed, WCAG AA uyumlu)
 npm test                # unit + E2E birlikte
 npm audit               # bağımlılık güvenlik taraması
 ```
 
 `npm run test:e2e:install` ilk kurulumda Chromium indirir.
 
-Eski 67 senaryoluk kaynak-metin legacy suite'i (tier1–tier4 + eski
-runner) **aktif kalite kapısı değildir** — `tests/legacy/` altında
-tarihsel arşivdir; `test:legacy` / `lint:legacy` komutları kaldırılmıştır
-ve `tsx` bağımlılığı eklenmez. Değer korunan senaryoları (boyut sınırı,
-süt farkı, şurup/shot, peanut, localStorage migrasyonu) güncel unit/E2E
-testlere taşınmıştır (bkz. `tests/legacy/README.md`).
+Eski kaynak-metin legacy suite'i aktif kalite kapısı değildir ve repodan
+kaldırılmıştır. Değer korunan senaryolar (boyut sınırı, süt farkı,
+şurup/shot, peanut, localStorage migrasyonu, WCAG AA erişilebilirlik) güncel
+unit/E2E testlerindedir.
 
 ## Teknolojiler
 
 - React 19, TypeScript 6, Vite 8
 - Tailwind CSS v4 (koyu tema tokenları `src/index.css` içinde merkezli)
-- Vitest birim testleri, Playwright + Chromium E2E
+- Vitest birim testleri (107 test), Playwright + Chromium E2E (32 test)
 - Görsel hattı: `sharp` (WebP), Wikimedia Commons / Unsplash lisanslı
   fallback'ler, zincir resmî görselleri
 
@@ -59,25 +57,23 @@ testlere taşınmıştır (bkz. `tests/legacy/README.md`).
 - Ürün verisi `src/data/catalog/<chain>.ts` modüllerinde tutulur;
   `src/data/items.ts` yalnızca birleştirir (`MENU_ITEMS`).
 - Tüm görseller yerel WebP'dir: `/images/menu/<chain>/<slug>.webp`
-  (950 benzersiz dosya yolu; 384 resmî/exact ürün görseli, 566 lisanslı
+  (1006 benzersiz dosya yolu; 384 resmî/exact ürün görseli, 622 lisanslı
   fallback; çalışma zamanında uzak hotlink yok).
-- Caffè Nero kataloğu 11 Ağustos 2026'da 7 resmî Türkiye menü sayfasından
-  yeniden derlendi: **125 ürün** (20 → 125, net +105), 96 resmî ürün
-  görseli ve 29 lisanslı fallback. İzlenen kaynak anlık görüntüsü
-  `scripts/catalog_sources/caffe_nero.json` dosyasındadır.
+- Caffè Nero kataloğu 125 ürün (96 resmî ürün görseli, 29 lisanslı fallback),
+  Coffy kataloğu 86 üründür (56 yeni ekleme, 22 mutabakat, 8 korunmuş).
+  İzlenen kaynak anlık görüntüleri `scripts/catalog_sources/` altındadır.
 - Uygulamanın tam makro şemasını her üründe karşılayan resmî tablolar
-  bulunmadığı için 950 kaydın tamamı `estimated` olarak işaretlenir; tahmin
-  yöntemi her ürünün `nutritionSource.notes` alanındadır. Kartlarda
-  **"Tahmini değer"**
-  rozeti ve hero/footer'da tahminî veri + çapraz bulaşma açıklaması
-  görünür; uygulama tıbbi tavsiye vermez.
+  bulunmadığı için 83 kayıt `mixed`, 923 kayıt `estimated` olarak işaretlenir;
+  tahmin yöntemi her ürünün `nutritionSource.notes` alanındadır. Kartlarda
+  **"Tahmini değer"** veya **"Karma veri"** rozeti ve hero/footer'da
+  tahminî veri + çapraz bulaşma açıklaması görünür; uygulama tıbbi tavsiye vermez.
 - Alerjen bilgileri garanti değildir; markanın güncel resmî bilgileri
   esas alınmalıdır (çapraz bulaşma riski).
 
 Zincir dağılımı: Starbucks 130, Espressolab 116, Kahve Dünyası 20,
-Caffè Nero 125, Coffy 30, Mackbear 166, Arabica 131, Gloria Jean's 115,
-David People 93 ve Tchibo 24. Toplam 15 sezonluk ürün vardır; Caffè Nero
-kaynağında sezonluk kayıt yoktur.
+Caffè Nero 125, Coffy 86, Mackbear 166, Arabica 131, Gloria Jean's 115,
+David People 93 ve Tchibo 24 (**Toplam: 1.006 ürün**). Toplam 9 sezonluk
+ürün vardır (Coffy 4, Mackbear 3, David People 2).
 
 ## Kişisel makro hedefleri
 
@@ -90,11 +86,9 @@ kişisel günlük sınır** olarak yazılır (varsayılan 400 mg).
 
 ## Dokümanlar
 
-- [PROJECT_OVERVIEW.md](./PROJECT_OVERVIEW.md) — **yeni sohbet için başlangıç noktası**: durum, devir özeti, sıradaki adımlar
-- [PROJECT.md](./PROJECT.md) — katalog & kalite kapıları
+- [PROJECT.md](./PROJECT.md) — proje özeti, katalog ve kalite kapıları
 - [GATE_STATUS.md](./GATE_STATUS.md) — güncel kapı sonuçları
 - [DATA_PROVENANCE.md](./DATA_PROVENANCE.md) — kaynak sözleşmeleri
-- [DEEPSEEK_NIGHT_REPORT.md](./DEEPSEEK_NIGHT_REPORT.md) — gece çalışması + yayın raporu
 
 ## Deploy
 

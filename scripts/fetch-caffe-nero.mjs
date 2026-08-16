@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Fetch the current Caffè Nero Türkiye menu into a committed source snapshot.
+ * Fetch the current Caffè Nero Türkiye menu into a review candidate.
  *
  * The official site renders every product twice (card + detail popover), so
  * this parser deliberately starts only from `button.menu__product` cards.
@@ -9,10 +9,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { semanticCatalogDiff } from './catalog-semantic-diff.mjs';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const OUTPUT = path.join(ROOT, 'scripts', 'catalog_sources', 'caffe_nero.json');
-const CHECKED_AT = '2026-08-11';
+const BASELINE = path.join(ROOT, 'scripts', 'catalog_sources', 'caffe_nero.json');
+const OUTPUT = path.join(ROOT, 'tmp', 'catalog_drift', 'caffe_nero-candidate.json');
+const REPORT = path.join(ROOT, 'tmp', 'catalog_drift', 'caffe_nero-report.json');
+let CHECKED_AT = new Date().toISOString().slice(0, 10);
 const USER_AGENT = 'KaloriCafeCatalog/1.0 (+https://kalorikafe.github.io/)';
 
 const PAGES = [
@@ -36,6 +39,34 @@ const LEGACY_ALIASES = new Map([
   ['Çikolatalı Croissant', ['Çikolatalı Kruvasan']],
   ['Nero Premium SS Cheesecake', ['Nero Premium San Sebastian Cheesecake']],
 ]);
+
+function parseArgs(argv) {
+  const options = {
+    checkedAt: new Date().toISOString().slice(0, 10),
+    baseline: BASELINE,
+    output: OUTPUT,
+    report: REPORT,
+    state: null,
+    maxDropRate: 0.20,
+  };
+  for (let i = 0; i < argv.length; i += 1) {
+    const arg = argv[i];
+    const value = argv[i + 1];
+    if (arg === '--checked-at') { options.checkedAt = value; i += 1; }
+    else if (arg === '--baseline') { options.baseline = path.resolve(value); i += 1; }
+    else if (arg === '--output') { options.output = path.resolve(value); i += 1; }
+    else if (arg === '--report') { options.report = path.resolve(value); i += 1; }
+    else if (arg === '--state') { options.state = path.resolve(value); i += 1; }
+    else if (arg === '--max-drop') { options.maxDropRate = Number(value); i += 1; }
+    else throw new Error(`Unknown or incomplete argument: ${arg}`);
+  }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(options.checkedAt)) throw new Error('--checked-at must be YYYY-MM-DD');
+  if (!(options.maxDropRate >= 0 && options.maxDropRate < 1)) throw new Error('--max-drop must be in [0, 1)');
+  if (path.resolve(options.output) === path.resolve(options.baseline)) {
+    throw new Error('Fetcher output may not overwrite the approved baseline; review the drift report and promote separately');
+  }
+  return options;
+}
 
 function decodeHtml(value = '') {
   return value
@@ -183,15 +214,19 @@ function estimatedCaffeine(name, category, isDrink) {
 function mapAllergen(raw) {
   const n = raw.toLocaleLowerCase('tr-TR');
   if (n.includes('gluten')) return 'gluten';
-  if (n.includes('süt')) return 'lactose';
+  if (n.includes('kabuklu deniz') || n.includes('kabuklular')) return 'crustaceans';
+  if (n.includes('süt')) return 'milk';
   if (n.includes('yer fıstığı')) return 'peanut';
-  if (n.includes('kuruyemiş')) return 'nuts';
+  if (n.includes('kuruyemiş') || n.includes('sert kabuklu')) return 'nuts';
   if (n.includes('yumurta')) return 'egg';
   if (n.includes('soya')) return 'soy';
   if (n.includes('balık')) return 'fish';
+  if (n.includes('kereviz')) return 'celery';
   if (n.includes('hardal')) return 'mustard';
   if (n.includes('susam')) return 'sesame';
   if (n.includes('sülfür') || n.includes('sülfit')) return 'sulphites';
+  if (n.includes('acı bakla') || n.includes('lupin')) return 'lupin';
+  if (n.includes('yumuşakça')) return 'molluscs';
   return null;
 }
 
@@ -227,6 +262,7 @@ function parseNutrition(segment, name, category, isDrink, productUrl) {
     allergenSourceAvailable: Boolean(allergenBlock),
     baseMacros: { caffeine },
     officialNutritionFields: [],
+    derivedNutritionFields: [],
     nutritionSource: {
       status: 'estimated',
       label: 'Standart tarif/porsiyon bazlı tahmin',
@@ -276,7 +312,11 @@ function parseNutrition(segment, name, category, isDrink, productUrl) {
   if (Number.isFinite(baseMacros.sugar) && Number.isFinite(baseMacros.carbs) && baseMacros.sugar > baseMacros.carbs) delete baseMacros.sugar;
   if (Number.isFinite(baseMacros.satFat) && Number.isFinite(baseMacros.fat) && baseMacros.satFat > baseMacros.fat) delete baseMacros.satFat;
   const salt = pick('Tuz');
-  if (Number.isFinite(salt) && salt >= 0 && salt <= 20) baseMacros.sodium = Math.round(salt * 400);
+  const derivedNutritionFields = [];
+  if (Number.isFinite(salt) && salt >= 0 && salt <= 20) {
+    baseMacros.sodium = Math.round(salt * 400);
+    derivedNutritionFields.push('sodium');
+  }
   const derivedEnergy = 4 * ((baseMacros.protein || 0) + (baseMacros.carbs || 0)) + 9 * (baseMacros.fat || 0);
   const energyLooksWrong = Number.isFinite(baseMacros.calories)
     && Number.isFinite(baseMacros.protein)
@@ -290,9 +330,12 @@ function parseNutrition(segment, name, category, isDrink, productUrl) {
     );
   }
   baseMacros.caffeine = caffeine;
-  const officialNutritionFields = Object.keys(baseMacros).filter(key => key !== 'caffeine');
+  const officialNutritionFields = Object.keys(baseMacros).filter(
+    key => key !== 'caffeine' && !derivedNutritionFields.includes(key),
+  );
   const expectedFields = ['calories', 'protein', 'carbs', 'sugar', 'fat', 'satFat', 'sodium'];
-  const estimatedFields = expectedFields.filter(key => !officialNutritionFields.includes(key));
+  const sourcedFields = new Set([...officialNutritionFields, ...derivedNutritionFields]);
+  const estimatedFields = expectedFields.filter(key => !sourcedFields.has(key));
   const fieldLabels = {
     calories: 'kalori', protein: 'protein', carbs: 'karbonhidrat', sugar: 'şeker',
     fat: 'yağ', satFat: 'doymuş yağ', sodium: 'sodyum',
@@ -306,6 +349,7 @@ function parseNutrition(segment, name, category, isDrink, productUrl) {
     allergenSourceAvailable: Boolean(allergenBlock),
     baseMacros,
     officialNutritionFields,
+    derivedNutritionFields,
     nutritionSource: {
       status: 'estimated',
       label: completeOfficialRow ? 'Resmî porsiyon makroları + tahmini kafein' : 'Resmî porsiyon değerleri + alan bazlı tahmin',
@@ -343,24 +387,27 @@ function parsePage(html, page) {
     const category = classify(page, name);
     const nutrition = parseNutrition(segment, name, category, page.isDrink, page.url);
     const milkBased = page.isDrink && /latte|cappuccino|flat white|cortado|mocha|macchiato|caramelatte|con panna|sıcak çikolata|frapp|milkshake/i.test(name);
-    if (milkBased && !nutrition.allergens.includes('lactose')) {
-      nutrition.allergens.push('lactose');
+    if (milkBased && !nutrition.allergens.includes('milk')) {
+      nutrition.allergens.push('milk');
       nutrition.allergens.sort();
       nutrition.allergenNotes = nutrition.allergenSourceAvailable
-        ? 'Resmî alerjen listesine ek olarak ürün adı/açıklamasındaki varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi.'
-        : 'Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.';
+        ? 'Resmî alerjen listesine ek olarak ürün adı/açıklamasındaki varsayılan süt veya krema tarifi nedeniyle süt işaretlendi.'
+        : 'Varsayılan süt veya krema tarifi nedeniyle süt işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.';
     }
+    nutrition.containsLactose = nutrition.allergens.includes('milk');
     return {
       name,
       sourceName,
       ...(LEGACY_ALIASES.has(name) ? { aliases: LEGACY_ALIASES.get(name) } : {}),
       category,
+      productKind: page.isDrink ? 'drink' : 'food',
       isDrink: page.isDrink,
       description: detailDescription || cardDescription.replace(/\.\.\.$/, ''),
       imageUrl,
       productUrl: page.url,
       sourceSection: page.section,
       seasonal: false,
+      lifecycle: 'current',
       ...(page.isDrink ? { defaultSizeId: defaultSizeId(name), defaultMilkId: milkBased ? 'whole_milk' : null } : {}),
       visualSlot: visualSlot(name, category, page.isDrink),
       ...nutrition,
@@ -368,7 +415,9 @@ function parsePage(html, page) {
   }).filter(product => product.name);
 }
 
-async function main() {
+async function main(argv = process.argv.slice(2)) {
+  const options = parseArgs(argv);
+  CHECKED_AT = options.checkedAt;
   const products = [];
   const sources = [];
   for (const page of PAGES) {
@@ -381,13 +430,6 @@ async function main() {
     console.log(`${page.section}: ${pageProducts.length}`);
   }
 
-  const names = new Set(products.map(product => product.name));
-  if (products.length !== 125 || names.size !== 125) {
-    throw new Error(`Expected 125 unique products, got ${products.length} rows / ${names.size} unique names`);
-  }
-  const aliasCount = products.reduce((count, product) => count + (product.aliases?.length || 0), 0);
-  if (aliasCount !== 9) throw new Error(`Expected 9 legacy aliases, got ${aliasCount}`);
-
   const payload = {
     chainId: 'caffe_nero',
     checkedAt: CHECKED_AT,
@@ -396,12 +438,32 @@ async function main() {
     sources,
     products,
   };
-  fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
-  fs.writeFileSync(OUTPUT, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  if (!fs.existsSync(options.baseline)) throw new Error(`Approved baseline not found: ${options.baseline}`);
+  const baseline = JSON.parse(fs.readFileSync(options.baseline, 'utf8'));
+  const state = options.state && fs.existsSync(options.state)
+    ? JSON.parse(fs.readFileSync(options.state, 'utf8'))
+    : { misses: {} };
+  const report = semanticCatalogDiff({
+    baseline,
+    candidate: payload,
+    state,
+    checkedAt: CHECKED_AT,
+    maxDropRate: options.maxDropRate,
+  });
+
+  fs.mkdirSync(path.dirname(options.output), { recursive: true });
+  fs.mkdirSync(path.dirname(options.report), { recursive: true });
+  fs.writeFileSync(options.output, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
+  fs.writeFileSync(options.report, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
 
   const images = products.filter(product => product.imageUrl).length;
   const nutrition = products.filter(product => product.officialNutritionFields?.length).length;
-  console.log(`Wrote ${products.length} products to ${path.relative(ROOT, OUTPUT)} (official images=${images}, official macro rows=${nutrition})`);
+  console.log(`Wrote ${products.length} candidate products to ${path.relative(ROOT, options.output)} (official images=${images}, official macro rows=${nutrition})`);
+  console.log(`Drift report: ${path.relative(ROOT, options.report)}; drop=${(report.dropRate * 100).toFixed(1)}%; blocking=${report.blockingIssues.join(',') || 'none'}`);
+  if (report.blockingIssues.length) process.exitCode = 2;
 }
 
-await main();
+const directRun = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (directRun) await main();
+
+export { mapAllergen, parseArgs, parsePage };

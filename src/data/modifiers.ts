@@ -18,6 +18,7 @@ export const MILK_OPTIONS: MilkOption[] = [
     carbDelta: 0,
     isDairy: true,
     isDairyFree: false,
+    containsLactose: true,
     glycemicLevel: 'Orta'
   },
   {
@@ -30,6 +31,7 @@ export const MILK_OPTIONS: MilkOption[] = [
     carbDelta: 1,
     isDairy: true,
     isDairyFree: false,
+    containsLactose: true,
     glycemicLevel: 'Düşük'
   },
   {
@@ -42,6 +44,7 @@ export const MILK_OPTIONS: MilkOption[] = [
     carbDelta: 0,
     isDairy: true,
     isDairyFree: false,
+    containsLactose: false,
     glycemicLevel: 'Düşük'
   },
   {
@@ -54,6 +57,8 @@ export const MILK_OPTIONS: MilkOption[] = [
     carbDelta: 7,
     isDairy: false,
     isDairyFree: true,
+    containsLactose: false,
+    crossContactRisks: ['celiac_oat_risk'],
     hasCeliacRisk: true,
     celiacRisk: true,
     glycemicLevel: 'Yüksek'
@@ -68,6 +73,7 @@ export const MILK_OPTIONS: MilkOption[] = [
     carbDelta: -5,
     isDairy: false,
     isDairyFree: true,
+    containsLactose: false,
     allergens: ['nuts'],
     glycemicLevel: 'Çok Düşük'
   },
@@ -81,6 +87,7 @@ export const MILK_OPTIONS: MilkOption[] = [
     carbDelta: -2,
     isDairy: false,
     isDairyFree: true,
+    containsLactose: false,
     allergens: ['soy'],
     glycemicLevel: 'Düşük'
   },
@@ -94,6 +101,7 @@ export const MILK_OPTIONS: MilkOption[] = [
     carbDelta: -1,
     isDairy: false,
     isDairyFree: true,
+    containsLactose: false,
     glycemicLevel: 'Düşük'
   }
 ];

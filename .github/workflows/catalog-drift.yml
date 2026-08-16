@@ -1,0 +1,111 @@
+name: Catalog drift
+
+on:
+  schedule:
+    - cron: "23 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: catalog-drift-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  caffe-nero:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test drift and fetch invariants
+        run: npm run catalog:drift:test
+
+      - name: Verify tracked release is byte-equivalent
+        run: npm run catalog:check
+
+      - name: Fetch live Caffè Nero candidate into runner scratch
+        id: fetch
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/catalog-drift"
+          set +e
+          npm run catalog:fetch:caffe-nero -- \
+            --checked-at "$(date -u +%F)" \
+            --output "$RUNNER_TEMP/catalog-drift/caffe_nero-candidate.json" \
+            --report "$RUNNER_TEMP/catalog-drift/caffe_nero-fetch-report.json"
+          status=$?
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Gate semantic catalog drift
+        id: semantic_gate
+        run: |
+          npm run catalog:drift -- \
+            --checked-at "$(date -u +%F)" \
+            --candidate "$RUNNER_TEMP/catalog-drift/caffe_nero-candidate.json" \
+            --report "$RUNNER_TEMP/catalog-drift/caffe_nero-semantic-report.json"
+
+      - name: Write drift review summary
+        if: always()
+        env:
+          FETCH_STATUS: ${{ steps.fetch.outputs.status }}
+          REPORT_PATH: ${{ runner.temp }}/catalog-drift/caffe_nero-semantic-report.json
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+          const reportPath = process.env.REPORT_PATH;
+          const lines = ['## Caffè Nero catalog drift', ''];
+          if (!fs.existsSync(reportPath)) {
+            lines.push(`Semantic report was not produced. Fetch exit status: ${process.env.FETCH_STATUS || 'unknown'}.`);
+          } else {
+            const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+            const counts = report.counts;
+            lines.push('| Baseline | Candidate | Changed | Added | Missing | Drop |');
+            lines.push('| ---: | ---: | ---: | ---: | ---: | ---: |');
+            lines.push(`| ${counts.baseline} | ${counts.candidateUnique} | ${counts.changed} | ${counts.added} | ${counts.missing} | ${(report.dropRate * 100).toFixed(1)}% |`);
+            lines.push('');
+            lines.push(`- Blocking issues: ${report.blockingIssues.join(', ') || 'none'}`);
+            lines.push(`- Review required: ${report.requiresReview ? 'yes' : 'no'}`);
+            lines.push(`- Automatic deletion: ${report.noAutomaticDeletion ? 'disabled' : 'invariant failed'}`);
+            if (report.changed.length) {
+              lines.push('', '### Review-only field changes', '');
+              for (const item of report.changed.slice(0, 25)) {
+                lines.push(`- ${item.name}: ${item.changedFields.join(', ')}`);
+              }
+              if (report.changed.length > 25) lines.push(`- …and ${report.changed.length - 25} more`);
+            }
+            if (report.missing.length) {
+              lines.push('', '### Missing lifecycle proposals', '');
+              for (const item of report.missing.slice(0, 25)) {
+                lines.push(`- ${item.name}: miss ${item.consecutiveMisses} → ${item.lifecycle} (retained)`);
+              }
+            }
+          }
+          fs.appendFileSync(summaryPath, `${lines.join('\n')}\n`);
+          NODE
+
+      - name: Upload drift review artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: caffe-nero-catalog-drift-${{ github.run_id }}
+          path: ${{ runner.temp }}/catalog-drift
+          if-no-files-found: warn
+          retention-days: 14
+

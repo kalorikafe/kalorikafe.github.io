@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "kahve_dunyasi": {
+    "base": [
+      { "category": "Espressolu Kahveler", "name": "Americano", "price": 180 },
+      { "category": "Popüler", "name": "Americano", "price": 170 },
+      { "category": "Paket Kahveler", "name": "Fixture Çekirdek Kahve (250 gr.)", "price": 400 },
+      { "category": "Kampanyalar", "name": "Americano Menü", "price": 300 }
+    ],
+    "firstThree": [
+      { "category": "Tatlılar", "name": "Fixture Core Tart", "price": 250 }
+    ],
+    "firstTwo": [
+      { "category": "Tatlılar", "name": "Fixture Local Cookie", "price": 210 }
+    ]
+  },
+  "tchibo": {
+    "base": [
+      { "category": "Klasik Kahveler", "name": "Latte Macchiato", "price": 225 },
+      { "category": "Atıştırmalıklar", "name": "Fixture Paketli Kraker", "price": 120 },
+      { "category": "Şişe İçecekler", "name": "Su (50 cl.)", "price": 35 }
+    ],
+    "firstThree": [
+      { "category": "Cheesecakeler", "name": "Fixture Core Cheesecake", "price": 295 }
+    ],
+    "firstTwo": [
+      { "category": "Buzlu İçecekler", "name": "Fixture Local Lemonade", "price": 285 }
+    ]
+  }
+}

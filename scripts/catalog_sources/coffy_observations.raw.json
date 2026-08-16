@@ -1,0 +1,678 @@
+{
+  "schemaVersion": 1,
+  "chainId": "coffy",
+  "chainName": "Coffy",
+  "observedAt": "2026-08-11",
+  "officialSources": [
+    {
+      "url": "https://coffy.com.tr/",
+      "sourceKind": "official",
+      "role": "Coffy explicitly directs delivery customers to Yemeksepeti or Getir Yemek.",
+      "accessStatus": "HTTP 200 on 2026-08-11"
+    },
+    {
+      "url": "https://franchisefirsatlari.coffy.com.tr/",
+      "sourceKind": "official",
+      "role": "Official Coffy branch directory used to reconcile sampled branch names and cities.",
+      "accessStatus": "HTTP 200 on 2026-08-11"
+    }
+  ],
+  "branches": [
+    {
+      "id": "ankara-istasyon",
+      "name": "Coffy Ankara İstasyon",
+      "city": "Ankara",
+      "address": "İstasyon Mah. İstasyon Cad. No:31/B, Etimesgut, Ankara",
+      "sourceUrl": "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+      "sourceKind": "secondary",
+      "platform": "Yemeksepeti",
+      "officialDirectoryName": "Etimesgut"
+    },
+    {
+      "id": "ankara-bahcelievler",
+      "name": "Coffy Ankara Bahçelievler",
+      "city": "Ankara",
+      "address": "Bahçelievler Mah. Mareşal Fevzi Çakmak Cad. Yücel Apt. No:8/A, Çankaya, Ankara",
+      "sourceUrl": "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+      "sourceKind": "secondary",
+      "platform": "Yemeksepeti",
+      "officialDirectoryName": "Ankara Bahçelievler"
+    },
+    {
+      "id": "izmir-karsiyaka-girne",
+      "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+      "city": "İzmir",
+      "address": "Aksoy Mah. Girne Bulv. No:10/A, Karşıyaka, İzmir",
+      "sourceUrl": "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+      "sourceKind": "secondary",
+      "platform": "Yemeksepeti",
+      "officialDirectoryName": "İzmir Karşıyaka Girne Bulvarı"
+    },
+    {
+      "id": "izmir-buca-kurucesme",
+      "name": "Coffy İzmir Buca Kuruçeşme",
+      "city": "İzmir",
+      "address": "Kuruçeşme Mah. Doğuş Cad. No:172A, Buca, İzmir",
+      "sourceUrl": "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+      "sourceKind": "secondary",
+      "platform": "Yemeksepeti",
+      "officialDirectoryName": "Buca"
+    },
+    {
+      "id": "istanbul-maslak",
+      "name": "Coffy İstanbul Maslak",
+      "city": "İstanbul",
+      "address": "Maslak, Büyükdere Cad. No:245, USO Center, Şişli, İstanbul",
+      "sourceUrl": "https://www.yemeksepeti.com/restaurant/j4gu/coffy",
+      "sourceKind": "secondary",
+      "platform": "Yemeksepeti",
+      "officialDirectoryName": "Maslak"
+    }
+  ],
+  "aliases": [
+    {
+      "observedName": "Caffé Americano",
+      "canonicalName": "Americano"
+    },
+    {
+      "observedName": "Coffy Caffe Latte",
+      "canonicalName": "Caffé Latte"
+    },
+    {
+      "observedName": "Iced Caffé Americano",
+      "canonicalName": "Iced Americano"
+    },
+    {
+      "observedName": "Iced Caffé Latte",
+      "canonicalName": "Iced Latte"
+    },
+    {
+      "observedName": "Iced Latte Süt Reçelli",
+      "canonicalName": "Iced Süt Reçelli Latte"
+    },
+    {
+      "observedName": "Iced Latte Muzlu Ballı",
+      "canonicalName": "Iced Ballı Muzlu Latte"
+    },
+    {
+      "observedName": "Kuzu Kulağı Freshaa",
+      "canonicalName": "Freshaa (Kuzukulağı)"
+    },
+    {
+      "observedName": "Kuzu Kulağı Freshaa (Küçük)",
+      "canonicalName": "Freshaa (Kuzukulağı)"
+    },
+    {
+      "observedName": "Karışık Sandviç (Sıcak)",
+      "canonicalName": "Karışık Sıcak Sandviç"
+    },
+    {
+      "observedName": "İsli Peynir & Hindi Fümeli Baget Sandviç",
+      "canonicalName": "İsli Peynir & Hindi Fümeli Baget"
+    }
+  ],
+  "manualReconcile": [
+    {
+      "observedName": "Çikolata Dolgulu Kruvasan",
+      "catalogId": "coffy_17__ikolatal__kruvasan",
+      "reason": "Adlar çok yakın fakat kaynak yeni ürünü özellikle dolgulu diye tanımlıyor; otomatik birleştirmeden önce ürün kimliği elle doğrulanmalı."
+    },
+    {
+      "observedName": "Freshaa Cool Lime & Mango",
+      "catalogId": "coffy_mango_lime_cooler",
+      "reason": "Mango ve lime bileşenleri örtüşüyor fakat marka adı ve ürün adı değişmiş; aynı reçete olduğu doğrulanmadan otomatik birleştirilmemeli."
+    }
+  ],
+  "blockers": [
+    "Coffy mobile app and Getir Yemek require app/geolocation state and were not sampled.",
+    "Raw automated HTTP requests to Yemeksepeti returned 403; the five public restaurant pages were inspected through the web reader and each was refreshed on 2026-08-11.",
+    "The in-app interactive browser was unavailable in this workspace session."
+  ],
+  "limitations": [
+    "This is a controlled five-branch snapshot, not an exhaustive nationwide inventory.",
+    "Branch stock and seasonal availability can change after the observation date.",
+    "Only short factual serving or ingredient descriptions are retained; prices, images, calories, and macros are deliberately absent.",
+    "Yemeksepeti is a secondary ordering surface; its use is justified by Coffy's official homepage directing customers there."
+  ],
+  "existingCatalog": [
+    { "id": "coffy_1_americano", "name": "Americano" },
+    { "id": "coffy_2_coffy_caffe_latte", "name": "Coffy Caffe Latte" },
+    { "id": "coffy_3_cappuccino", "name": "Cappuccino" },
+    { "id": "coffy_4_flat_white", "name": "Flat White" },
+    { "id": "coffy_5_mocha", "name": "Mocha" },
+    { "id": "coffy_6_white_chocolate_mocha", "name": "White Chocolate Mocha" },
+    { "id": "coffy_7_filtre_kahve", "name": "Filtre Kahve" },
+    { "id": "coffy_8_iced_latte", "name": "Iced Latte" },
+    { "id": "coffy_9_iced_salted_caramel_latte", "name": "Iced Salted Caramel Latte" },
+    { "id": "coffy_10_iced_strawberry_matcha", "name": "Iced Strawberry Matcha" },
+    { "id": "coffy_11_iced_cherry_brownie_latte", "name": "Iced Cherry Brownie Latte" },
+    { "id": "coffy_12_chocolate_cookie_frappe", "name": "Chocolate Cookie Frappe" },
+    { "id": "coffy_13_ezine_peynirli_focaccia_sandvi_", "name": "Ezine Peynirli Focaccia Sandviç" },
+    { "id": "coffy_14_f_me_etli_peynirli_bagel", "name": "Füme Etli Peynirli Bagel" },
+    { "id": "coffy_15_i_sli_peynir___hindi_f_meli_baget", "name": "İsli Peynir & Hindi Fümeli Baget" },
+    { "id": "coffy_16_kar___k_s_cak_sandvi_", "name": "Karışık Sıcak Sandviç" },
+    { "id": "coffy_17__ikolatal__kruvasan", "name": "Çikolatalı Kruvasan" },
+    { "id": "coffy_18_boyoz", "name": "Boyoz" },
+    { "id": "coffy_19_profiteroll__pasta", "name": "Profiterollü Pasta" },
+    { "id": "coffy_20_tiramisu", "name": "Tiramisu" },
+    { "id": "coffy_freshaa_kuzukulagi", "name": "Freshaa (Kuzukulağı)" },
+    { "id": "coffy_strawberry_lime_cooler", "name": "Strawberry & Lime Cooler" },
+    { "id": "coffy_blueberry_cool_hibiscus", "name": "Blueberry Cool & Hibiscus" },
+    { "id": "coffy_berry_mango", "name": "Berry Mango" },
+    { "id": "coffy_mango_lime_cooler", "name": "Mango & Lime Cooler" },
+    { "id": "coffy_cold_brew", "name": "Cold Brew" },
+    { "id": "coffy_portakalli_kakaolu_kek", "name": "Portakallı Kakaolu Kek" },
+    { "id": "coffy_iced_mango_matcha", "name": "Iced Mango Matcha" },
+    { "id": "coffy_iced_sut_recelli_latte", "name": "Iced Süt Reçelli Latte" },
+    { "id": "coffy_iced_balli_muzlu_latte", "name": "Iced Ballı Muzlu Latte" }
+  ],
+  "observations": [
+    {
+      "name": "Iced Latte Süt Reçelli",
+      "sourceCategory": "Dönemsel Lezzetler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Latte Muzlu Ballı",
+      "sourceCategory": "Dönemsel Lezzetler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Strawberry Matcha",
+      "sourceCategory": "Dönemsel Lezzetler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Mango Matcha",
+      "sourceCategory": "Dönemsel Lezzetler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Berry Matcha",
+      "sourceCategory": "Dönemsel Lezzetler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Kuzu Kulağı Freshaa",
+      "sourceCategory": "Dönemsel Lezzetler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler"]
+    },
+    {
+      "name": "Kuzu Kulağı Freshaa (Küçük)",
+      "sourceCategory": "Dönemsel Lezzetler",
+      "description": "Küçük boy.",
+      "branchIds": ["izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Caffé Americano",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Cappuccino",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Caffé Latte",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Salted Caramel Latte",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Caramel Macchiato",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Mocha",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced White Chocolate Mocha",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Cherry Blossom Zen Iced Latte",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Chocolate Cookie Frappe",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Caramel Frappe",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Mocha Frappe",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Caramel Bubble Latte",
+      "sourceCategory": "Soğuk Kahveler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Caffé Americano",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Caffé Latte",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Flat White",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Filtre Kahve",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Cappuccino",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "White Chocolate Mocha",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Caramel Macchiato",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Mocha",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Salted Karamel Latte",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Cherry Brownie Latte",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Bulletproof Latte",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Chocolate Cookie Latte",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Cherry Brownie Latte",
+      "sourceCategory": "Sıcak Kahveler",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Matcha Latte",
+      "sourceCategory": "Sıcak İçecekler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Vanilla Matcha",
+      "sourceCategory": "Sıcak İçecekler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Earl Grey",
+      "sourceCategory": "Sıcak İçecekler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Matcha",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Iced Vanilla Matcha",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Cool Lime",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Hibiskus",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Orman Meyveli Frozen",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Mangolu Frozen",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Freshaa Hibiskus & Strawberry",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Freshaa Cool Lime & Mango",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Çilekli Milkshake",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Çikolatalı Milkshake",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Coffychino Caramel",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Berry Hibiscus Blueberry Bubble",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Strawberry Lemonade",
+      "sourceCategory": "Soğuk İçecekler",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Corny Kakao Kırmızı Meyve Tahıl Bar",
+      "sourceCategory": "Atıştırmalıklar",
+      "description": "Kasa önü paketli ürün.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Glutensiz Brownie",
+      "sourceCategory": "Atıştırmalıklar",
+      "description": "Kasa önü paketli ürün.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Zbarz Power Coconut Cacao Fruit Bar",
+      "sourceCategory": "Atıştırmalıklar",
+      "description": "Kasa önü paketli ürün.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Dereotlu Ev Poğaçası",
+      "sourceCategory": "Kahvaltılıklar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Çikolata Dolgulu Kruvasan",
+      "sourceCategory": "Kruvasanlar",
+      "description": "İçi çikolata dolgulu tereyağlı kruvasan.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Tereyağlı Kruvasan (85 gr.)",
+      "sourceCategory": "Kruvasanlar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Karışık Sandviç (Sıcak)",
+      "sourceCategory": "Sandviçler",
+      "description": "Sucuk, kaşar peyniri, cheddar peyniri.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Peynirli Sandviç (Sıcak)",
+      "sourceCategory": "Sandviçler",
+      "description": "Tam yağlı beyaz peynir, kaşar peyniri, cheddar peyniri.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme"]
+    },
+    {
+      "name": "Hindi Jambon & Cheddar Peynirli Bagel Sandviç",
+      "sourceCategory": "Sandviçler",
+      "description": "Yulaf ve keten tohumlu ekşi mayalı bagel, hindi jambon, eritme peyniri ve kaşar peyniri.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Köri Soslu & Tavuklu Baget Sandviç",
+      "sourceCategory": "Sandviçler",
+      "description": "Kekikli baget ekmeği, köri soslu tavuk, labne peyniri, kaşar peyniri, kapya biber.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "İsli Peynir & Hindi Fümeli Baget Sandviç",
+      "sourceCategory": "Sandviçler",
+      "description": "Ay çekirdekli baget ekmeği, hindi füme, kuru domatesli mascarpone sos, isli peynir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Hindi Fümeli Sıcak Sandviç",
+      "sourceCategory": "Sandviçler",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Kaşarlı & Zeytin Ezmeli Simit Sandviç",
+      "sourceCategory": "Sandviçler",
+      "description": "Kaşar peyniri, zeytin ezmesi.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Sufle",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Çikolatalı Cookie",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Çikolatalı Muffin",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Çikolata Parçacıklı Cookie",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Frambuazlı Cheesecake",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Limonlu Cheesecake",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme"]
+    },
+    {
+      "name": "Mozaik Kek (Dilim)",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Mozaik Pasta",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Cookie Cups Kakaolu Fındık Kremalı",
+      "sourceCategory": "Tatlılar",
+      "description": "Tek kişilik.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Cookie Cups Karamelli",
+      "sourceCategory": "Tatlılar",
+      "description": "Tek kişilik.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "İspanyol Creamy Cheesecake",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme"]
+    },
+    {
+      "name": "Tiramisu",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Profiterollü Pasta",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Chia Puding",
+      "sourceCategory": "Tatlılar",
+      "description": "Pratik bir chia puding atıştırmalığı.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme"]
+    },
+    {
+      "name": "Kremalı Havuçlu Dilim Kek",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Orman Meyveli Pasta",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Yaban Mersinli Muffin",
+      "sourceCategory": "Tatlılar",
+      "description": "Adet olarak servis edilir.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Latte Pasta",
+      "sourceCategory": "Tatlılar",
+      "description": "Tek kişilik.",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme"]
+    },
+    {
+      "name": "Tatlı Menü",
+      "sourceCategory": "Menüler",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Emaye Kupa - Coffy Logolu",
+      "sourceCategory": "Kupa, Termos ve Aksesuarlar",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Costa Rica (250 gr.)",
+      "sourceCategory": "Çekirdek Kahveler (250 gr.)",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Kapsül Kahve",
+      "sourceCategory": "Çekirdek Kahveler (250 gr.)",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Schweppes Bitter Limon (25 cl.)",
+      "sourceCategory": "İçecekler",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Soda (20 cl.)",
+      "sourceCategory": "Diğer Sıcak & Soğuk İçecekler",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    },
+    {
+      "name": "Su (50 cl.)",
+      "sourceCategory": "Diğer Sıcak & Soğuk İçecekler",
+      "branchIds": ["ankara-istasyon", "ankara-bahcelievler", "izmir-karsiyaka-girne", "izmir-buca-kurucesme", "istanbul-maslak"]
+    }
+  ]
+}

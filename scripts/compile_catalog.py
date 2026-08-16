@@ -2,17 +2,16 @@
 """Catalog compiler for Kalori Cafe.
 
 Inputs:
-  tmp_research/items_full.json   existing 199 full product records
-  tmp_research/research.json     subagent research (official menus), optional
-  scripts/catalog_sources/*.json tracked, reproducible chain snapshots
-  tmp_research/assets.json       image build provenance, optional
+  scripts/catalog_sources/catalog_release.json approved normalized release
+  scripts/catalog_sources/*.json tracked normalized research snapshots
+  tmp_research/*.json            optional scratch overlay, review-only
 
 Outputs:
   src/data/catalog/<chain>.ts    per-chain MenuItem modules
   src/data/items.ts              merged MENU_ITEMS export
   tmp_research/manifest.json     image manifest for build-images.mjs
 
-Rules (DEEPSEEK_NIGHT_GOAL §4):
+Release rules (see scripts/catalog_sources/README.md):
 - existing product IDs preserved (favorites/basket stability)
 - new products come only from researched official/approved menu snapshots
 - sizes never counted as separate products
@@ -20,6 +19,8 @@ Rules (DEEPSEEK_NIGHT_GOAL §4):
 - catalog + image provenance recorded on every static item
 """
 import json
+import argparse
+import difflib
 import os
 import re
 import unicodedata
@@ -28,6 +29,9 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TMP = os.path.join(ROOT, "tmp_research")
 OUT = os.path.join(ROOT, "src", "data", "catalog")
 TRACKED_SOURCE_DIR = os.path.join(ROOT, "scripts", "catalog_sources")
+TRACKED_BASELINE = os.path.join(TRACKED_SOURCE_DIR, "catalog_baseline.json")
+TRACKED_ASSETS = os.path.join(TRACKED_SOURCE_DIR, "catalog_assets.json")
+TRACKED_RELEASE = os.path.join(TRACKED_SOURCE_DIR, "catalog_release.json")
 CHECKED_AT = "2026-08-05"
 
 CHAIN_KEYS = {
@@ -56,21 +60,31 @@ CATALOG_URLS = {
     "tchibo": "https://www.tchibo.com.tr",
 }
 
+FOOD_CATEGORIES = {"bakery_dessert", "sandwich_savory", "fit_healthy"}
+DRINK_CATEGORIES = {
+    "espresso_hot", "espresso_iced", "cold_brew", "frappe_blended",
+    "tea_herbal", "smoothie_juice",
+}
+NUTRITION_FIELDS = (
+    "calories", "protein", "carbs", "sugar", "fat", "satFat", "caffeine", "sodium",
+)
+OFFICIAL_ALLERGENS = {
+    "gluten", "crustaceans", "egg", "fish", "peanut", "soy", "milk",
+    "nuts", "celery", "mustard", "sesame", "sulphites", "lupin", "molluscs",
+}
+CATEGORY_OVERRIDES = {
+    "portakalli kakaolu kek": "bakery_dessert",
+}
 
-def load_research() -> dict:
-    """Load scratch research, then overlay committed chain snapshots.
 
-    ``tmp_research`` is intentionally ignored, so a newly researched chain
-    must not live there as its only source of truth.  A JSON file in
-    ``scripts/catalog_sources`` may contain either one chain object or a
-    ``{\"chains\": [...]}`` wrapper; its chainId replaces the scratch entry.
+def load_research(include_scratch: bool = False) -> dict:
+    """Load committed chain snapshots, optionally overlay scratch research.
+
+    A JSON file in ``scripts/catalog_sources`` may contain either one chain
+    object or a ``{\"chains\": [...]}`` wrapper. Baseline, asset and provenance
+    metadata in the same directory are ignored by this loader. Scratch data is
+    opt-in and wins only for local research work.
     """
-    research = {"chains": []}
-    research_file = os.path.join(TMP, "research.json")
-    if os.path.exists(research_file):
-        with open(research_file, encoding="utf-8") as f:
-            research = json.load(f)
-
     merged = []
     positions = {}
 
@@ -84,9 +98,6 @@ def load_research() -> dict:
             positions[chain_id] = len(merged)
             merged.append(chain)
 
-    for chain in research.get("chains", []):
-        put(chain)
-
     if os.path.isdir(TRACKED_SOURCE_DIR):
         for filename in sorted(os.listdir(TRACKED_SOURCE_DIR)):
             if not filename.endswith(".json"):
@@ -94,8 +105,21 @@ def load_research() -> dict:
             path = os.path.join(TRACKED_SOURCE_DIR, filename)
             with open(path, encoding="utf-8") as f:
                 payload = json.load(f)
-            chains = payload.get("chains", []) if isinstance(payload, dict) and "chains" in payload else [payload]
+            if isinstance(payload, dict) and isinstance(payload.get("chains"), list):
+                chains = payload["chains"]
+            elif isinstance(payload, dict) and payload.get("chainId"):
+                chains = [payload]
+            else:
+                chains = []
             for chain in chains:
+                put(chain)
+
+    if include_scratch:
+        research_file = os.path.join(TMP, "research.json")
+        if os.path.exists(research_file):
+            with open(research_file, encoding="utf-8") as f:
+                scratch = json.load(f)
+            for chain in scratch.get("chains", []):
                 put(chain)
 
     return {"chains": merged}
@@ -107,6 +131,33 @@ def norm(name: str) -> str:
     s = "".join(c for c in s if not unicodedata.combining(c))
     s = s.replace("ı", "i")
     return re.sub(r"[^a-z0-9]+", " ", s).strip()
+
+
+def canonical_category(name: str, fallback: str) -> str:
+    """Apply narrowly reviewed corrections before deriving product kind."""
+    return CATEGORY_OVERRIDES.get(norm(name), fallback)
+
+
+def canonical_product_kind(name: str, category: str, product: dict | None = None) -> str:
+    """Derive the canonical kind from category, never from a truthy default.
+
+    ``isDrink`` remains an output compatibility mirror. Historical research
+    marked entire food sections as drinks, so a recognized category wins over
+    that legacy boolean. An explicit productKind, when supplied, must agree.
+    """
+    product = product or {}
+    explicit = product.get("productKind")
+    if category in FOOD_CATEGORIES:
+        derived = "food"
+    elif category in DRINK_CATEGORIES:
+        derived = "drink"
+    else:
+        raise ValueError(f"Unknown category for {name!r}: {category!r}")
+    if explicit is not None and explicit != derived:
+        raise ValueError(
+            f"productKind/category conflict for {name!r}: {explicit!r} vs {category!r}"
+        )
+    return derived
 
 
 def slugify(name: str) -> str:
@@ -130,14 +181,15 @@ def ts_item(item: dict) -> str:
     if item.get("nameEn"):
         lines.append(f"    nameEn: {ts_str(item['nameEn'])},")
     lines.append(f"    category: {ts_str(item['category'])},")
+    lines.append(f"    productKind: {ts_str(item['productKind'])},")
     lines.append(f"    description: {ts_str(item['description'])},")
     lines.append(f"    image: {ts_str(item.get('image') or '/images/menu/placeholder.webp')},")
-    lines.append(f"    isDrink: {'true' if item['isDrink'] else 'false'},")
-    if item.get("defaultSizeId"):
+    lines.append(f"    isDrink: {'true' if item['productKind'] == 'drink' else 'false'},")
+    if item["productKind"] == "drink" and item.get("defaultSizeId"):
         lines.append(f"    defaultSizeId: {ts_str(item['defaultSizeId'])},")
-    if item.get("defaultMilkId"):
+    if item["productKind"] == "drink" and item.get("defaultMilkId"):
         lines.append(f"    defaultMilkId: {ts_str(item['defaultMilkId'])},")
-    if item.get("defaultSyrupPumps") is not None:
+    if item["productKind"] == "drink" and item.get("defaultSyrupPumps") is not None:
         lines.append(f"    defaultSyrupPumps: {int(item['defaultSyrupPumps'])},")
     m = item["baseMacros"]
     lines.append(
@@ -145,6 +197,20 @@ def ts_item(item: dict) -> str:
         % (m["calories"], m["protein"], m["carbs"], m["sugar"], m["fat"], m["satFat"], m["caffeine"], m["sodium"])
     )
     lines.append(f"    allergens: {json.dumps(item.get('allergens', []), ensure_ascii=False)},")
+    if item.get("containsLactose") is not None:
+        lines.append(f"    containsLactose: {'true' if item['containsLactose'] else 'false'},")
+    if item.get("crossContactRisks"):
+        lines.append(f"    crossContactRisks: {json.dumps(item['crossContactRisks'], ensure_ascii=False)},")
+    allergen_source = item.get("allergenSource") or {"status": "estimated"}
+    lines.append("    allergenSource: {")
+    lines.append(f"      status: {ts_str(allergen_source['status'])},")
+    if allergen_source.get("url"):
+        lines.append(f"      url: {ts_str(allergen_source['url'])},")
+    if allergen_source.get("checkedAt"):
+        lines.append(f"      checkedAt: {ts_str(allergen_source['checkedAt'])},")
+    if allergen_source.get("notes"):
+        lines.append(f"      notes: {ts_str(allergen_source['notes'])},")
+    lines.append("    },")
     lines.append(f"    dietaryTags: {json.dumps(item.get('dietaryTags', []), ensure_ascii=False)},")
     if item.get("glycemicImpact"):
         lines.append(f"    glycemicImpact: {ts_str(item['glycemicImpact'])},")
@@ -157,9 +223,15 @@ def ts_item(item: dict) -> str:
     lines.append("    nutritionSource: {")
     lines.append(f"      status: {ts_str(ns['status'])}, label: {ts_str(ns.get('label', ''))},")
     if ns.get("url"):
-        lines.append(f"      url: {ts_str(ns['url'])}, verifiedAt: {ts_str(ns.get('verifiedAt', ''))}, servingBasis: {ts_str(ns.get('servingBasis', ''))},")
+        lines.append(f"      url: {ts_str(ns['url'])},")
+    if ns.get("verifiedAt"):
+        lines.append(f"      verifiedAt: {ts_str(ns['verifiedAt'])},")
+    if ns.get("servingBasis"):
+        lines.append(f"      servingBasis: {ts_str(ns['servingBasis'])},")
     if ns.get("notes"):
         lines.append(f"      notes: {ts_str(ns['notes'])},")
+    if ns.get("fieldStatus"):
+        lines.append(f"      fieldStatus: {json.dumps(ns['fieldStatus'], ensure_ascii=False)},")
     lines.append("    },")
     img_src = item.get("imageSource") or {"url": "", "kind": "licensed_fallback", "exactProduct": False}
     lines.append("    imageSource: {")
@@ -251,20 +323,46 @@ def estimate_allergens(name: str, category: str, is_drink: bool) -> list:
     if is_drink:
         black = "latte" not in n and any(k in n for k in ("americano", "espresso", "filtre", "long black", "turk", "cold brew", "v60", "freddo", "cay", "tea", "limonata", "lemonade", "portakal", "orange", "refresha", "cooler", "smoothie", "dragon", "freeze"))
         if not black:
-            out.add("lactose")
+            out.add("milk")
         if any(k in n for k in ("mocha", "cikolata", "choc", "white")):
             out.add("soy")
-        if any(k in n for k in ("findik", "fistik", "ceviz", "badem", "pistachio", "hazelnut", "almond", "walnut")):
+        if "yer fistigi" in n or "peanut" in n:
+            out.add("peanut")
+        elif any(k in n for k in ("findik", "fistik", "ceviz", "badem", "pistachio", "hazelnut", "almond", "walnut")):
             out.add("nuts")
     else:
         out.add("gluten")
-        if any(k in n for k in ("peynir", "kasar", "ches", "mozzarella", "mayo", "tereyagi")):
-            out.add("lactose")
-        if any(k in n for k in ("yumurta", "egg")):
+        if category == "bakery_dessert" or any(k in n for k in ("peynir", "kasar", "ches", "mozzarella", "krema", "tereyagi")):
+            out.add("milk")
+        if category == "bakery_dessert" or any(k in n for k in ("yumurta", "egg", "mayo")):
             out.add("egg")
-        if any(k in n for k in ("findik", "ceviz", "badem", "fistik")):
+        if "yer fistigi" in n or "peanut" in n:
+            out.add("peanut")
+        elif any(k in n for k in ("findik", "ceviz", "badem", "fistik")):
             out.add("nuts")
+        if "ton balik" in n or "tuna" in n:
+            out.add("fish")
+        if "hardal" in n or "mustard" in n:
+            out.add("mustard")
+        if "susam" in n or "simit" in n:
+            out.add("sesame")
     return sorted(out)
+
+
+def normalize_allergen_values(values) -> tuple[list, list]:
+    """Split regulated allergens from legacy sensitivity/advisory values."""
+    allergens = set()
+    cross_contact = set()
+    for value in values or []:
+        if value == "lactose":
+            allergens.add("milk")
+        elif value == "celiac_oat_risk":
+            cross_contact.add("celiac_oat_risk")
+        elif value in OFFICIAL_ALLERGENS:
+            allergens.add(value)
+        else:
+            raise ValueError(f"Unknown allergen value: {value!r}")
+    return sorted(allergens), sorted(cross_contact)
 
 
 def estimate_tags(name: str, macros: dict, allergens: list, is_drink: bool) -> list:
@@ -276,7 +374,7 @@ def estimate_tags(name: str, macros: dict, allergens: list, is_drink: bool) -> l
         tags.add("high_protein")
     if macros["sugar"] <= 1:
         tags.add("sugar_free")
-    if macros["calories"] < 40 and "lactose" not in allergens and not is_drink or (macros["calories"] < 40 and "lactose" not in allergens and is_drink):
+    if macros["calories"] < 40 and "milk" not in allergens:
         tags.add("vegan")
     if not is_drink and "gluten" not in allergens and "gluten_free" in n:
         tags.add("gluten_free")
@@ -303,11 +401,8 @@ def catalog_source(chain_id: str, research_product=None, sources=None) -> dict:
       2. the chain's research source URL
       3. the catalog default menu URL
 
-    kind is ``secondary`` only for products that were actually researched
-    from a secondary source — i.e. the matched research product carries
-    ``secondary: true`` OR the chain research sources are marked
-    ``kind: 'secondary'``. Products without a research match keep the
-    chain's default provenance (``official``).
+    A product without a normalized research match is always
+    ``legacy_unverified``; a generic brand URL is not product evidence.
     """
     srcs = sources or []
     secondary = bool(research_product) and (
@@ -327,7 +422,11 @@ def catalog_source(chain_id: str, research_product=None, sources=None) -> dict:
         url = research_product["productUrl"]
     if url is None:
         url = CATALOG_URLS.get(chain_id, f"https://{chain_id}.tr")
-    return {"url": url, "checkedAt": checked_at, "kind": "secondary" if secondary else "official"}
+    if not research_product:
+        kind = "legacy_unverified"
+    else:
+        kind = "secondary" if secondary else "official"
+    return {"url": url, "checkedAt": checked_at, "kind": kind}
 
 
 def nutrition_estimated(is_new: bool) -> dict:
@@ -339,6 +438,7 @@ def nutrition_estimated(is_new: bool) -> dict:
             if is_new
             else "Resmî besin verisi ürün bazlı yayınlanmadığı için makrolar standart tarif/porsiyon üzerinden tahmin."
         ),
+        "fieldStatus": {field: "estimated" for field in NUTRITION_FIELDS},
     }
 
 
@@ -359,23 +459,98 @@ def product_macros(product: dict, name: str, category: str, is_drink: bool) -> d
 def product_allergens(product: dict, name: str, category: str, is_drink: bool) -> list:
     """Keep official empty allergen lists distinct from unavailable data."""
     if product.get("allergenSourceAvailable"):
-        return list(product.get("allergens", []))
-    if product.get("allergensEstimated"):
-        return list(product.get("allergens", []))
-    return estimate_allergens(name, category, is_drink)
+        values = product.get("allergens", [])
+    elif product.get("allergensEstimated"):
+        values = product.get("allergens", [])
+    else:
+        values = estimate_allergens(name, category, is_drink)
+    allergens, _ = normalize_allergen_values(values)
+    return allergens
+
+
+def product_allergen_metadata(product: dict | None, allergens: list) -> dict:
+    product = product or {}
+    raw_values = product.get("allergens", [])
+    _, legacy_risks = normalize_allergen_values(raw_values)
+    risks = sorted(set(legacy_risks) | set(product.get("crossContactRisks", [])))
+    explicit_lactose = product.get("containsLactose")
+    if isinstance(explicit_lactose, bool):
+        contains_lactose = explicit_lactose
+    elif product.get("allergenSourceAvailable"):
+        contains_lactose = "milk" in allergens
+    else:
+        # A milk hit supports a positive intolerance warning. Absence from an
+        # estimated allergen list is not evidence that lactose is absent.
+        contains_lactose = True if "milk" in allergens else None
+
+    explicit_source = product.get("allergenSource")
+    if isinstance(explicit_source, dict):
+        source = dict(explicit_source)
+    elif product.get("allergenSourceAvailable"):
+        nutrition_source = product.get("nutritionSource") or {}
+        source = {
+            "status": "mixed" if product.get("allergenNotes") else "official",
+            "url": product.get("productUrl") or nutrition_source.get("url"),
+            "checkedAt": nutrition_source.get("verifiedAt") or CHECKED_AT,
+        }
+        if product.get("allergenNotes"):
+            source["notes"] = product["allergenNotes"]
+    else:
+        source = {
+            "status": "estimated",
+            "notes": "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
+        }
+    source = {key: value for key, value in source.items() if value is not None}
+    return {
+        "containsLactose": contains_lactose,
+        "crossContactRisks": risks,
+        "allergenSource": source,
+    }
 
 
 def product_nutrition_source(product: dict | None, is_new: bool) -> dict:
-    if product and isinstance(product.get("nutritionSource"), dict):
-        return dict(product["nutritionSource"])
-    return nutrition_estimated(is_new)
+    if not product or not isinstance(product.get("nutritionSource"), dict):
+        return nutrition_estimated(is_new)
+
+    source = dict(product["nutritionSource"])
+    official = set(product.get("officialNutritionFields", []))
+    derived = set(product.get("derivedNutritionFields", []))
+    # Existing Nero snapshots identify sodium among official fields even
+    # though the notes state it was derived from official salt (salt × 400).
+    if "sodium" in official and "tuzdan" in source.get("notes", "").lower():
+        official.remove("sodium")
+        derived.add("sodium")
+    if source.get("status") == "verified" and not official and not derived:
+        official.update(NUTRITION_FIELDS)
+
+    original_status = source.get("status")
+    if original_status == "unverified" and not official and not derived:
+        field_status = {field: "unknown" for field in NUTRITION_FIELDS}
+    else:
+        field_status = {
+            field: "derived" if field in derived else "official" if field in official else "estimated"
+            for field in NUTRITION_FIELDS
+        }
+    statuses = set(field_status.values())
+    if statuses <= {"official", "derived"}:
+        source["status"] = "verified"
+    elif statuses & {"official", "derived"}:
+        source["status"] = "mixed"
+    elif statuses == {"estimated"}:
+        source["status"] = "estimated"
+    else:
+        source["status"] = "unverified"
+    source["fieldStatus"] = field_status
+    return source
 
 
 def refresh_item_from_research(item: dict, product: dict) -> None:
     """Refresh mutable catalog facts while preserving a legacy product ID."""
     name = product.get("name") or item["name"]
-    is_drink = product.get("isDrink", item["isDrink"])
-    category = refine_category(name, product.get("category") or item["category"], is_drink)
+    category = canonical_category(name, product.get("category") or item["category"])
+    product_kind = canonical_product_kind(name, category, product)
+    is_drink = product_kind == "drink"
+    category = refine_category(name, category, is_drink)
     macros = product_macros(product, name, category, is_drink)
     allergens = product_allergens(product, name, category, is_drink)
 
@@ -383,17 +558,66 @@ def refresh_item_from_research(item: dict, product: dict) -> None:
     if product.get("nameEn"):
         item["nameEn"] = product["nameEn"]
     item["category"] = category
+    item["productKind"] = product_kind
     item["isDrink"] = is_drink
     if product.get("description"):
         item["description"] = product["description"]
     item["baseMacros"] = macros
     item["allergens"] = allergens
+    item.update(product_allergen_metadata(product, allergens))
     item["dietaryTags"] = list(product.get("dietaryTags") or estimate_tags(name, macros, allergens, is_drink))
     item["glycemicImpact"] = glycemic(macros["sugar"], macros["carbs"])
     item["availability"] = "seasonal" if product.get("seasonal") else "current"
-    for key in ("defaultSizeId", "defaultMilkId", "defaultSyrupPumps"):
-        if key in product:
-            item[key] = product[key]
+    if is_drink:
+        for key in ("defaultSizeId", "defaultMilkId", "defaultSyrupPumps"):
+            if key in product:
+                item[key] = product[key]
+    else:
+        for key in ("defaultSizeId", "defaultMilkId", "defaultSyrupPumps", "baseCustomization"):
+            item.pop(key, None)
+
+
+def normalize_catalog_item(item: dict, product: dict | None = None) -> None:
+    """Enforce static catalog shape and repair historical food-as-drink rows."""
+    product = product or {}
+    name = product.get("name") or item["name"]
+    original_category = item["category"]
+    category = canonical_category(name, product.get("category") or original_category)
+    product_kind = canonical_product_kind(name, category, product or item)
+    is_drink = product_kind == "drink"
+    was_drink = bool(item.get("isDrink"))
+    category = refine_category(name, category, is_drink)
+
+    item["category"] = category
+    item["productKind"] = product_kind
+    item["isDrink"] = is_drink
+
+    if not is_drink:
+        for key in ("defaultSizeId", "defaultMilkId", "defaultSyrupPumps", "baseCustomization"):
+            item.pop(key, None)
+        if was_drink or category != original_category:
+            macros = product_macros(product, name, category, False)
+            allergens = product_allergens(product, name, category, False)
+            item["baseMacros"] = macros
+            item["allergens"] = allergens
+            item["dietaryTags"] = list(
+                product.get("dietaryTags") or estimate_tags(name, macros, allergens, False)
+            )
+            item["glycemicImpact"] = glycemic(macros["sugar"], macros["carbs"])
+            description = item.get("description", "")
+            if description.endswith(" kafe içeceği.") or "taze meyve ve buzla" in description:
+                item["description"] = default_description(name, category, False)
+
+    normalized_allergens, legacy_risks = normalize_allergen_values(item.get("allergens", []))
+    item["allergens"] = normalized_allergens
+    metadata_input = product if product else item
+    metadata = product_allergen_metadata(metadata_input, normalized_allergens)
+    metadata["crossContactRisks"] = sorted(
+        set(metadata["crossContactRisks"]) | set(legacy_risks) | set(item.get("crossContactRisks", []))
+    )
+    if item.get("containsLactose") is not None and not product:
+        metadata["containsLactose"] = bool(item["containsLactose"])
+    item.update(metadata)
 
 
 def default_description(name: str, category: str, is_drink: bool) -> str:
@@ -533,14 +757,56 @@ def refine_category(name: str, fallback: str, is_drink: bool) -> str:
 
 
 def main() -> None:
-    with open(os.path.join(TMP, "items_full.json"), encoding="utf-8") as f:
-        existing = json.load(f)
+    parser = argparse.ArgumentParser(description="Compile the tracked Kalori Cafe catalog")
+    parser.add_argument(
+        "--include-scratch",
+        action="store_true",
+        help="overlay ignored tmp_research inputs for local research work",
+    )
+    parser.add_argument(
+        "--from-research",
+        action="store_true",
+        help="re-assemble tracked baseline/research inputs for review instead of the approved release snapshot",
+    )
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="compare rendered output with committed files without writing",
+    )
+    parser.add_argument(
+        "--show-diff",
+        action="store_true",
+        help="with --check, print a bounded unified diff for drifted files",
+    )
+    args = parser.parse_args()
 
-    research = load_research()
+    research_mode = args.from_research or args.include_scratch
+    if research_mode and not args.check:
+        parser.error("research assembly is review-only; add --check and promote an approved release explicitly")
+    if args.show_diff and not args.check:
+        parser.error("--show-diff requires --check")
+    scratch_baseline = os.path.join(TMP, "items_full.json")
+    if research_mode:
+        baseline_file = scratch_baseline if args.include_scratch and os.path.exists(scratch_baseline) else TRACKED_BASELINE
+    else:
+        baseline_file = TRACKED_RELEASE
+    if not os.path.exists(baseline_file):
+        raise FileNotFoundError(f"Tracked catalog baseline missing: {baseline_file}")
+    with open(baseline_file, encoding="utf-8") as f:
+        baseline_payload = json.load(f)
+    if research_mode:
+        existing = baseline_payload
+    else:
+        if baseline_payload.get("schemaVersion") != 1 or not isinstance(baseline_payload.get("items"), list):
+            raise ValueError("catalog_release.json must use schemaVersion 1 and contain an items array")
+        existing = baseline_payload["items"]
+
+    research = load_research(include_scratch=args.include_scratch) if research_mode else {"chains": []}
 
     assets = {}
-    assets_file = os.path.join(TMP, "assets.json")
-    if os.path.exists(assets_file):
+    scratch_assets = os.path.join(TMP, "assets.json")
+    assets_file = scratch_assets if args.include_scratch and os.path.exists(scratch_assets) else TRACKED_ASSETS
+    if research_mode and os.path.exists(assets_file):
         with open(assets_file, encoding="utf-8") as f:
             assets = json.load(f)
     has_assets = bool(assets)
@@ -594,10 +860,13 @@ def main() -> None:
                 continue
             if p.get("exclude", False):
                 continue
-            is_drink = p.get("isDrink", True)
-            category = refine_category(name, p.get("category") or "espresso_hot", is_drink)
+            category = canonical_category(name, p.get("category") or "")
+            product_kind = canonical_product_kind(name, category, p)
+            is_drink = product_kind == "drink"
+            category = refine_category(name, category, is_drink)
             macros = product_macros(p, name, category, is_drink)
             allergens = product_allergens(p, name, category, is_drink)
+            allergen_metadata = product_allergen_metadata(p, allergens)
             tags = list(p.get("dietaryTags") or estimate_tags(name, macros, allergens, is_drink))
             inferred_milk = (
                 "whole_milk"
@@ -614,6 +883,7 @@ def main() -> None:
                 "name": name,
                 "nameEn": p.get("nameEn"),
                 "category": category,
+                "productKind": product_kind,
                 "description": p.get("description") or default_description(name, category, is_drink),
                 "image": "",
                 "isDrink": is_drink,
@@ -622,6 +892,7 @@ def main() -> None:
                 "defaultSyrupPumps": p.get("defaultSyrupPumps"),
                 "baseMacros": macros,
                 "allergens": allergens,
+                **allergen_metadata,
                 "dietaryTags": tags,
                 "glycemicImpact": glycemic(macros["sugar"], macros["carbs"]),
                 "availability": "seasonal" if p.get("seasonal") else "current",
@@ -634,10 +905,29 @@ def main() -> None:
     for cid, items in chain_items.items():
         rmap = research_by_chain.get(cid, {})
         for item in items:
+            if not research_mode:
+                expected_kind = canonical_product_kind(item["name"], item["category"], item)
+                if item.get("isDrink") != (expected_kind == "drink"):
+                    raise ValueError(f"productKind/isDrink conflict in release snapshot: {item['id']}")
+                if expected_kind == "food" and any(
+                    key in item for key in ("defaultSizeId", "defaultMilkId", "defaultSyrupPumps", "baseCustomization")
+                ):
+                    raise ValueError(f"Food item carries drink customization in release snapshot: {item['id']}")
+                sl = slot_of(item, None)
+                manifest_products.append({
+                    "id": item["id"],
+                    "chain": cid,
+                    "slug": slugify(item["name"]),
+                    "slot": sl["slot"],
+                    "officialUrl": sl["officialUrl"],
+                    "pageUrl": sl["pageUrl"],
+                })
+                continue
             research_product = rmap.get(norm(item["name"]))
             if research_product and research_options.get(cid, {}).get("refreshExisting"):
                 refresh_item_from_research(item, research_product)
                 research_product = rmap.get(norm(item["name"]), research_product)
+            normalize_catalog_item(item, research_product)
             sl = slot_of(item, research_product)
             manifest_products.append({
                 "id": item["id"],
@@ -665,11 +955,8 @@ def main() -> None:
             if not item.get("imageSource"):
                 item["imageSource"] = {"url": "", "kind": "licensed_fallback", "exactProduct": False}
 
-    with open(os.path.join(TMP, "manifest.json"), "w", encoding="utf-8") as f:
-        json.dump({"products": manifest_products}, f, ensure_ascii=False, indent=1)
-
     # emit per-chain modules + merged items.ts
-    os.makedirs(OUT, exist_ok=True)
+    rendered_outputs = {}
     merged = ["import type { MenuItem } from '../types/cafe';", ""]
     for cid, (fname, export_name) in CHAIN_KEYS.items():
         lines = [
@@ -681,8 +968,7 @@ def main() -> None:
             lines.append(ts_item(item))
         lines.append("];")
         lines.append("")
-        with open(os.path.join(OUT, f"{fname}.ts"), "w", encoding="utf-8") as f:
-            f.write("\n".join(lines))
+        rendered_outputs[os.path.join(OUT, f"{fname}.ts")] = "\n".join(lines)
         merged.append(f"import {{ {export_name} }} from './catalog/{fname}.ts';")
         merged.append("")
     merged.append("export const MENU_ITEMS: MenuItem[] = [")
@@ -690,8 +976,38 @@ def main() -> None:
         merged.append(f"  ...{export_name},")
     merged.append("];")
     merged.append("")
-    with open(os.path.join(ROOT, "src", "data", "items.ts"), "w", encoding="utf-8") as f:
-        f.write("\n".join(merged))
+    rendered_outputs[os.path.join(ROOT, "src", "data", "items.ts")] = "\n".join(merged)
+
+    if args.check:
+        mismatches = []
+        for output_path, rendered in rendered_outputs.items():
+            if not os.path.exists(output_path):
+                mismatches.append(f"missing {os.path.relpath(output_path, ROOT)}")
+                continue
+            with open(output_path, encoding="utf-8", newline="") as f:
+                committed = f.read()
+            if committed != rendered:
+                mismatches.append(os.path.relpath(output_path, ROOT))
+                if args.show_diff:
+                    diff = difflib.unified_diff(
+                        committed.splitlines(),
+                        rendered.splitlines(),
+                        fromfile="committed",
+                        tofile="tracked-source build",
+                        lineterm="",
+                    )
+                    print("\n".join(list(diff)[:80]))
+        if mismatches:
+            raise SystemExit("Tracked-source catalog drift: " + ", ".join(mismatches))
+        print(f"Tracked-source check passed: {len(rendered_outputs)} generated files are byte-equivalent")
+    else:
+        os.makedirs(OUT, exist_ok=True)
+        for output_path, rendered in rendered_outputs.items():
+            with open(output_path, "w", encoding="utf-8", newline="\n") as f:
+                f.write(rendered)
+        os.makedirs(TMP, exist_ok=True)
+        with open(os.path.join(TMP, "manifest.json"), "w", encoding="utf-8") as f:
+            json.dump({"products": manifest_products}, f, ensure_ascii=False, indent=1)
 
     total = sum(len(v) for v in chain_items.values())
     print(f"Compiled catalog: {total} products across {len(CHAIN_KEYS)} chains")

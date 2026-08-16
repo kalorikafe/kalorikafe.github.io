@@ -5,6 +5,7 @@ import { MILK_OPTIONS, SIZE_OPTIONS } from '../data/modifiers';
 import { X, ShoppingBag, Trash2, Copy, Check, ShieldAlert, SlidersHorizontal } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useModalAccessibility } from '../hooks/useModalAccessibility';
+import { prefersReducedMotion } from '../utils/motionPreferences';
 
 interface DailyBasketDrawerProps {
   isOpen: boolean;
@@ -57,7 +58,9 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
 
     navigator.clipboard.writeText(text);
     setCopied(true);
-    confetti({ particleCount: 50, spread: 60, origin: { y: 0.8 } });
+    if (!prefersReducedMotion()) {
+      confetti({ particleCount: 50, spread: 60, origin: { y: 0.8 } });
+    }
     setTimeout(() => setCopied(false), 3000);
   };
 
@@ -207,7 +210,9 @@ export const DailyBasketDrawer: React.FC<DailyBasketDrawerProps> = ({
                     </div>
 
                     <button
+                      type="button"
                       onClick={() => onRemoveItem(b.id)}
+                      aria-label={`${b.item.name} ürününü sepetten kaldır`}
                       className="p-1.5 rounded-lg text-stone-400 hover:text-red-500 transition-colors"
                       title="Kaldır"
                     >

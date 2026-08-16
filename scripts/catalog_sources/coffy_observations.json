@@ -1,0 +1,5440 @@
+{
+  "schemaVersion": 1,
+  "chainId": "coffy",
+  "chainName": "Coffy",
+  "observedAt": "2026-08-11",
+  "generatedBy": "scripts/normalize-coffy-observations.mjs",
+  "methodology": {
+    "coverageMode": "controlled_multi_branch_snapshot",
+    "completeness": "section-complete for the recorded branch claims; not a nationwide inventory",
+    "chainCoreRule": "At least 3 observed branches across at least 2 cities",
+    "normalization": "NFC, Turkish-aware case folding, punctuation folding, and explicit reviewed aliases",
+    "prohibitedFields": [
+      "price",
+      "image",
+      "calories",
+      "macros"
+    ],
+    "exclusionRules": [
+      "combos and menus",
+      "merchandise and accessories",
+      "capsules and packaged/bean coffee",
+      "basic bottled drinks",
+      "whole cakes"
+    ]
+  },
+  "sourceAttribution": {
+    "officialSources": [
+      {
+        "url": "https://coffy.com.tr/",
+        "sourceKind": "official",
+        "role": "Coffy explicitly directs delivery customers to Yemeksepeti or Getir Yemek.",
+        "accessStatus": "HTTP 200 on 2026-08-11"
+      },
+      {
+        "url": "https://franchisefirsatlari.coffy.com.tr/",
+        "sourceKind": "official",
+        "role": "Official Coffy branch directory used to reconcile sampled branch names and cities.",
+        "accessStatus": "HTTP 200 on 2026-08-11"
+      }
+    ],
+    "productSourceKind": "secondary",
+    "productSurface": "Yemeksepeti, explicitly named by Coffy as an ordering channel"
+  },
+  "coverage": {
+    "branchCount": 5,
+    "cityCount": 3,
+    "cities": [
+      "Ankara",
+      "İstanbul",
+      "İzmir"
+    ],
+    "branches": [
+      {
+        "id": "ankara-istasyon",
+        "name": "Coffy Ankara İstasyon",
+        "city": "Ankara",
+        "address": "İstasyon Mah. İstasyon Cad. No:31/B, Etimesgut, Ankara",
+        "sourceUrl": "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "sourceKind": "secondary",
+        "platform": "Yemeksepeti",
+        "officialDirectoryName": "Etimesgut",
+        "observedAt": "2026-08-11",
+        "observedEligibleItemCount": 78
+      },
+      {
+        "id": "ankara-bahcelievler",
+        "name": "Coffy Ankara Bahçelievler",
+        "city": "Ankara",
+        "address": "Bahçelievler Mah. Mareşal Fevzi Çakmak Cad. Yücel Apt. No:8/A, Çankaya, Ankara",
+        "sourceUrl": "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "sourceKind": "secondary",
+        "platform": "Yemeksepeti",
+        "officialDirectoryName": "Ankara Bahçelievler",
+        "observedAt": "2026-08-11",
+        "observedEligibleItemCount": 78
+      },
+      {
+        "id": "izmir-karsiyaka-girne",
+        "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+        "city": "İzmir",
+        "address": "Aksoy Mah. Girne Bulv. No:10/A, Karşıyaka, İzmir",
+        "sourceUrl": "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "sourceKind": "secondary",
+        "platform": "Yemeksepeti",
+        "officialDirectoryName": "İzmir Karşıyaka Girne Bulvarı",
+        "observedAt": "2026-08-11",
+        "observedEligibleItemCount": 78
+      },
+      {
+        "id": "izmir-buca-kurucesme",
+        "name": "Coffy İzmir Buca Kuruçeşme",
+        "city": "İzmir",
+        "address": "Kuruçeşme Mah. Doğuş Cad. No:172A, Buca, İzmir",
+        "sourceUrl": "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "sourceKind": "secondary",
+        "platform": "Yemeksepeti",
+        "officialDirectoryName": "Buca",
+        "observedAt": "2026-08-11",
+        "observedEligibleItemCount": 78
+      },
+      {
+        "id": "istanbul-maslak",
+        "name": "Coffy İstanbul Maslak",
+        "city": "İstanbul",
+        "address": "Maslak, Büyükdere Cad. No:245, USO Center, Şişli, İstanbul",
+        "sourceUrl": "https://www.yemeksepeti.com/restaurant/j4gu/coffy",
+        "sourceKind": "secondary",
+        "platform": "Yemeksepeti",
+        "officialDirectoryName": "Maslak",
+        "observedAt": "2026-08-11",
+        "observedEligibleItemCount": 73
+      }
+    ],
+    "blockers": [
+      "Coffy mobile app and Getir Yemek require app/geolocation state and were not sampled.",
+      "Raw automated HTTP requests to Yemeksepeti returned 403; the five public restaurant pages were inspected through the web reader and each was refreshed on 2026-08-11.",
+      "The in-app interactive browser was unavailable in this workspace session."
+    ],
+    "limitations": [
+      "This is a controlled five-branch snapshot, not an exhaustive nationwide inventory.",
+      "Branch stock and seasonal availability can change after the observation date.",
+      "Only short factual serving or ingredient descriptions are retained; prices, images, calories, and macros are deliberately absent.",
+      "Yemeksepeti is a secondary ordering surface; its use is justified by Coffy's official homepage directing customers there."
+    ]
+  },
+  "counts": {
+    "productCount": 78,
+    "chainCoreCount": 78,
+    "branchObservedCount": 0,
+    "reconcileCandidateCount": 22,
+    "additionCandidateCount": 56,
+    "unobservedExistingCatalogCount": 8,
+    "excludedObservationCount": 7,
+    "excludedBranchClaimCount": 35,
+    "categoryCounts": {
+      "espresso_hot": 12,
+      "espresso_iced": 12,
+      "frappe_blended": 6,
+      "tea_herbal": 10,
+      "smoothie_juice": 7,
+      "bakery_dessert": 22,
+      "sandwich_savory": 7,
+      "fit_healthy": 2
+    }
+  },
+  "products": [
+    {
+      "name": "Americano",
+      "normalizedKey": "americano",
+      "observedVariants": [
+        "Caffé Americano"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Bulletproof Latte",
+      "normalizedKey": "bulletproof latte",
+      "observedVariants": [
+        "Bulletproof Latte"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Caffé Latte",
+      "normalizedKey": "caffe latte",
+      "observedVariants": [
+        "Caffé Latte"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Cappuccino",
+      "normalizedKey": "cappuccino",
+      "observedVariants": [
+        "Cappuccino"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Caramel Macchiato",
+      "normalizedKey": "caramel macchiato",
+      "observedVariants": [
+        "Caramel Macchiato"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Cherry Brownie Latte",
+      "normalizedKey": "cherry brownie latte",
+      "observedVariants": [
+        "Cherry Brownie Latte"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Chocolate Cookie Latte",
+      "normalizedKey": "chocolate cookie latte",
+      "observedVariants": [
+        "Chocolate Cookie Latte"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Filtre Kahve",
+      "normalizedKey": "filtre kahve",
+      "observedVariants": [
+        "Filtre Kahve"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Flat White",
+      "normalizedKey": "flat white",
+      "observedVariants": [
+        "Flat White"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Mocha",
+      "normalizedKey": "mocha",
+      "observedVariants": [
+        "Mocha"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Salted Karamel Latte",
+      "normalizedKey": "salted karamel latte",
+      "observedVariants": [
+        "Salted Karamel Latte"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "White Chocolate Mocha",
+      "normalizedKey": "white chocolate mocha",
+      "observedVariants": [
+        "White Chocolate Mocha"
+      ],
+      "category": "espresso_hot",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Cherry Blossom Zen Iced Latte",
+      "normalizedKey": "cherry blossom zen iced latte",
+      "observedVariants": [
+        "Cherry Blossom Zen Iced Latte"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Americano",
+      "normalizedKey": "iced americano",
+      "observedVariants": [
+        "Iced Caffé Americano"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Ballı Muzlu Latte",
+      "normalizedKey": "iced balli muzlu latte",
+      "observedVariants": [
+        "Iced Latte Muzlu Ballı"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Dönemsel Lezzetler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Cappuccino",
+      "normalizedKey": "iced cappuccino",
+      "observedVariants": [
+        "Iced Cappuccino"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Caramel Bubble Latte",
+      "normalizedKey": "iced caramel bubble latte",
+      "observedVariants": [
+        "Iced Caramel Bubble Latte"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Caramel Macchiato",
+      "normalizedKey": "iced caramel macchiato",
+      "observedVariants": [
+        "Iced Caramel Macchiato"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Cherry Brownie Latte",
+      "normalizedKey": "iced cherry brownie latte",
+      "observedVariants": [
+        "Iced Cherry Brownie Latte"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Sıcak Kahveler"
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Latte",
+      "normalizedKey": "iced latte",
+      "observedVariants": [
+        "Iced Caffé Latte"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Mocha",
+      "normalizedKey": "iced mocha",
+      "observedVariants": [
+        "Iced Mocha"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Salted Caramel Latte",
+      "normalizedKey": "iced salted caramel latte",
+      "observedVariants": [
+        "Iced Salted Caramel Latte"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Süt Reçelli Latte",
+      "normalizedKey": "iced sut recelli latte",
+      "observedVariants": [
+        "Iced Latte Süt Reçelli"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Dönemsel Lezzetler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced White Chocolate Mocha",
+      "normalizedKey": "iced white chocolate mocha",
+      "observedVariants": [
+        "Iced White Chocolate Mocha"
+      ],
+      "category": "espresso_iced",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Caramel Frappe",
+      "normalizedKey": "caramel frappe",
+      "observedVariants": [
+        "Caramel Frappe"
+      ],
+      "category": "frappe_blended",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Chocolate Cookie Frappe",
+      "normalizedKey": "chocolate cookie frappe",
+      "observedVariants": [
+        "Chocolate Cookie Frappe"
+      ],
+      "category": "frappe_blended",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Coffychino Caramel",
+      "normalizedKey": "coffychino caramel",
+      "observedVariants": [
+        "Coffychino Caramel"
+      ],
+      "category": "frappe_blended",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Çikolatalı Milkshake",
+      "normalizedKey": "cikolatali milkshake",
+      "observedVariants": [
+        "Çikolatalı Milkshake"
+      ],
+      "category": "frappe_blended",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Çilekli Milkshake",
+      "normalizedKey": "cilekli milkshake",
+      "observedVariants": [
+        "Çilekli Milkshake"
+      ],
+      "category": "frappe_blended",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Mocha Frappe",
+      "normalizedKey": "mocha frappe",
+      "observedVariants": [
+        "Mocha Frappe"
+      ],
+      "category": "frappe_blended",
+      "sourceCategories": [
+        "Soğuk Kahveler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Berry Hibiscus Blueberry Bubble",
+      "normalizedKey": "berry hibiscus blueberry bubble",
+      "observedVariants": [
+        "Berry Hibiscus Blueberry Bubble"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Earl Grey",
+      "normalizedKey": "earl grey",
+      "observedVariants": [
+        "Earl Grey"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Sıcak İçecekler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Hibiskus",
+      "normalizedKey": "hibiskus",
+      "observedVariants": [
+        "Hibiskus"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Berry Matcha",
+      "normalizedKey": "iced berry matcha",
+      "observedVariants": [
+        "Iced Berry Matcha"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Dönemsel Lezzetler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Mango Matcha",
+      "normalizedKey": "iced mango matcha",
+      "observedVariants": [
+        "Iced Mango Matcha"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Dönemsel Lezzetler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Matcha",
+      "normalizedKey": "iced matcha",
+      "observedVariants": [
+        "Iced Matcha"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Strawberry Matcha",
+      "normalizedKey": "iced strawberry matcha",
+      "observedVariants": [
+        "Iced Strawberry Matcha"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Dönemsel Lezzetler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Iced Vanilla Matcha",
+      "normalizedKey": "iced vanilla matcha",
+      "observedVariants": [
+        "Iced Vanilla Matcha"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Matcha Latte",
+      "normalizedKey": "matcha latte",
+      "observedVariants": [
+        "Matcha Latte"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Sıcak İçecekler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Vanilla Matcha",
+      "normalizedKey": "vanilla matcha",
+      "observedVariants": [
+        "Vanilla Matcha"
+      ],
+      "category": "tea_herbal",
+      "sourceCategories": [
+        "Sıcak İçecekler"
+      ],
+      "descriptions": [
+        "Sıcak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Cool Lime",
+      "normalizedKey": "cool lime",
+      "observedVariants": [
+        "Cool Lime"
+      ],
+      "category": "smoothie_juice",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Freshaa (Kuzukulağı)",
+      "normalizedKey": "freshaa kuzukulagi",
+      "observedVariants": [
+        "Kuzu Kulağı Freshaa",
+        "Kuzu Kulağı Freshaa (Küçük)"
+      ],
+      "category": "smoothie_juice",
+      "sourceCategories": [
+        "Dönemsel Lezzetler"
+      ],
+      "descriptions": [
+        "Küçük boy.",
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Freshaa Cool Lime & Mango",
+      "normalizedKey": "freshaa cool lime ve mango",
+      "observedVariants": [
+        "Freshaa Cool Lime & Mango"
+      ],
+      "category": "smoothie_juice",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Freshaa Hibiskus & Strawberry",
+      "normalizedKey": "freshaa hibiskus ve strawberry",
+      "observedVariants": [
+        "Freshaa Hibiskus & Strawberry"
+      ],
+      "category": "smoothie_juice",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Mangolu Frozen",
+      "normalizedKey": "mangolu frozen",
+      "observedVariants": [
+        "Mangolu Frozen"
+      ],
+      "category": "smoothie_juice",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Orman Meyveli Frozen",
+      "normalizedKey": "orman meyveli frozen",
+      "observedVariants": [
+        "Orman Meyveli Frozen"
+      ],
+      "category": "smoothie_juice",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "descriptions": [
+        "Soğuk servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Strawberry Lemonade",
+      "normalizedKey": "strawberry lemonade",
+      "observedVariants": [
+        "Strawberry Lemonade"
+      ],
+      "category": "smoothie_juice",
+      "sourceCategories": [
+        "Soğuk İçecekler"
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Chia Puding",
+      "normalizedKey": "chia puding",
+      "observedVariants": [
+        "Chia Puding"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Pratik bir chia puding atıştırmalığı."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İzmir"
+      ],
+      "branchCount": 4,
+      "cityCount": 2,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Cookie Cups Kakaolu Fındık Kremalı",
+      "normalizedKey": "cookie cups kakaolu findik kremali",
+      "observedVariants": [
+        "Cookie Cups Kakaolu Fındık Kremalı"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Tek kişilik."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Cookie Cups Karamelli",
+      "normalizedKey": "cookie cups karamelli",
+      "observedVariants": [
+        "Cookie Cups Karamelli"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Tek kişilik."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Çikolata Dolgulu Kruvasan",
+      "normalizedKey": "cikolata dolgulu kruvasan",
+      "observedVariants": [
+        "Çikolata Dolgulu Kruvasan"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Kruvasanlar"
+      ],
+      "descriptions": [
+        "İçi çikolata dolgulu tereyağlı kruvasan."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Çikolata Parçacıklı Cookie",
+      "normalizedKey": "cikolata parcacikli cookie",
+      "observedVariants": [
+        "Çikolata Parçacıklı Cookie"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Çikolatalı Cookie",
+      "normalizedKey": "cikolatali cookie",
+      "observedVariants": [
+        "Çikolatalı Cookie"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Çikolatalı Muffin",
+      "normalizedKey": "cikolatali muffin",
+      "observedVariants": [
+        "Çikolatalı Muffin"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Dereotlu Ev Poğaçası",
+      "normalizedKey": "dereotlu ev pogacasi",
+      "observedVariants": [
+        "Dereotlu Ev Poğaçası"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Kahvaltılıklar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Frambuazlı Cheesecake",
+      "normalizedKey": "frambuazli cheesecake",
+      "observedVariants": [
+        "Frambuazlı Cheesecake"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Glutensiz Brownie",
+      "normalizedKey": "glutensiz brownie",
+      "observedVariants": [
+        "Glutensiz Brownie"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Atıştırmalıklar"
+      ],
+      "descriptions": [
+        "Kasa önü paketli ürün."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "İspanyol Creamy Cheesecake",
+      "normalizedKey": "ispanyol creamy cheesecake",
+      "observedVariants": [
+        "İspanyol Creamy Cheesecake"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İzmir"
+      ],
+      "branchCount": 4,
+      "cityCount": 2,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Kremalı Havuçlu Dilim Kek",
+      "normalizedKey": "kremali havuclu dilim kek",
+      "observedVariants": [
+        "Kremalı Havuçlu Dilim Kek"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Latte Pasta",
+      "normalizedKey": "latte pasta",
+      "observedVariants": [
+        "Latte Pasta"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Tek kişilik."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İzmir"
+      ],
+      "branchCount": 4,
+      "cityCount": 2,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Limonlu Cheesecake",
+      "normalizedKey": "limonlu cheesecake",
+      "observedVariants": [
+        "Limonlu Cheesecake"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İzmir"
+      ],
+      "branchCount": 4,
+      "cityCount": 2,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Mozaik Kek (Dilim)",
+      "normalizedKey": "mozaik kek dilim",
+      "observedVariants": [
+        "Mozaik Kek (Dilim)"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Mozaik Pasta",
+      "normalizedKey": "mozaik pasta",
+      "observedVariants": [
+        "Mozaik Pasta"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Orman Meyveli Pasta",
+      "normalizedKey": "orman meyveli pasta",
+      "observedVariants": [
+        "Orman Meyveli Pasta"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Profiterollü Pasta",
+      "normalizedKey": "profiterollu pasta",
+      "observedVariants": [
+        "Profiterollü Pasta"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Sufle",
+      "normalizedKey": "sufle",
+      "observedVariants": [
+        "Sufle"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Tereyağlı Kruvasan (85 gr.)",
+      "normalizedKey": "tereyagli kruvasan 85 gr",
+      "observedVariants": [
+        "Tereyağlı Kruvasan (85 gr.)"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Kruvasanlar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Tiramisu",
+      "normalizedKey": "tiramisu",
+      "observedVariants": [
+        "Tiramisu"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Yaban Mersinli Muffin",
+      "normalizedKey": "yaban mersinli muffin",
+      "observedVariants": [
+        "Yaban Mersinli Muffin"
+      ],
+      "category": "bakery_dessert",
+      "sourceCategories": [
+        "Tatlılar"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Hindi Fümeli Sıcak Sandviç",
+      "normalizedKey": "hindi fumeli sicak sandvic",
+      "observedVariants": [
+        "Hindi Fümeli Sıcak Sandviç"
+      ],
+      "category": "sandwich_savory",
+      "sourceCategories": [
+        "Sandviçler"
+      ],
+      "descriptions": [
+        "Adet olarak servis edilir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Hindi Jambon & Cheddar Peynirli Bagel Sandviç",
+      "normalizedKey": "hindi jambon ve cheddar peynirli bagel sandvic",
+      "observedVariants": [
+        "Hindi Jambon & Cheddar Peynirli Bagel Sandviç"
+      ],
+      "category": "sandwich_savory",
+      "sourceCategories": [
+        "Sandviçler"
+      ],
+      "descriptions": [
+        "Yulaf ve keten tohumlu ekşi mayalı bagel, hindi jambon, eritme peyniri ve kaşar peyniri."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "İsli Peynir & Hindi Fümeli Baget",
+      "normalizedKey": "isli peynir ve hindi fumeli baget",
+      "observedVariants": [
+        "İsli Peynir & Hindi Fümeli Baget Sandviç"
+      ],
+      "category": "sandwich_savory",
+      "sourceCategories": [
+        "Sandviçler"
+      ],
+      "descriptions": [
+        "Ay çekirdekli baget ekmeği, hindi füme, kuru domatesli mascarpone sos, isli peynir."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Karışık Sıcak Sandviç",
+      "normalizedKey": "karisik sicak sandvic",
+      "observedVariants": [
+        "Karışık Sandviç (Sıcak)"
+      ],
+      "category": "sandwich_savory",
+      "sourceCategories": [
+        "Sandviçler"
+      ],
+      "descriptions": [
+        "Sucuk, kaşar peyniri, cheddar peyniri."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Kaşarlı & Zeytin Ezmeli Simit Sandviç",
+      "normalizedKey": "kasarli ve zeytin ezmeli simit sandvic",
+      "observedVariants": [
+        "Kaşarlı & Zeytin Ezmeli Simit Sandviç"
+      ],
+      "category": "sandwich_savory",
+      "sourceCategories": [
+        "Sandviçler"
+      ],
+      "descriptions": [
+        "Kaşar peyniri, zeytin ezmesi."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Köri Soslu & Tavuklu Baget Sandviç",
+      "normalizedKey": "kori soslu ve tavuklu baget sandvic",
+      "observedVariants": [
+        "Köri Soslu & Tavuklu Baget Sandviç"
+      ],
+      "category": "sandwich_savory",
+      "sourceCategories": [
+        "Sandviçler"
+      ],
+      "descriptions": [
+        "Kekikli baget ekmeği, köri soslu tavuk, labne peyniri, kaşar peyniri, kapya biber."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Peynirli Sandviç (Sıcak)",
+      "normalizedKey": "peynirli sandvic sicak",
+      "observedVariants": [
+        "Peynirli Sandviç (Sıcak)"
+      ],
+      "category": "sandwich_savory",
+      "sourceCategories": [
+        "Sandviçler"
+      ],
+      "descriptions": [
+        "Tam yağlı beyaz peynir, kaşar peyniri, cheddar peyniri."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İzmir"
+      ],
+      "branchCount": 4,
+      "cityCount": 2,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Corny Kakao Kırmızı Meyve Tahıl Bar",
+      "normalizedKey": "corny kakao kirmizi meyve tahil bar",
+      "observedVariants": [
+        "Corny Kakao Kırmızı Meyve Tahıl Bar"
+      ],
+      "category": "fit_healthy",
+      "sourceCategories": [
+        "Atıştırmalıklar"
+      ],
+      "descriptions": [
+        "Kasa önü paketli ürün."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    },
+    {
+      "name": "Zbarz Power Coconut Cacao Fruit Bar",
+      "normalizedKey": "zbarz power coconut cacao fruit bar",
+      "observedVariants": [
+        "Zbarz Power Coconut Cacao Fruit Bar"
+      ],
+      "category": "fit_healthy",
+      "sourceCategories": [
+        "Atıştırmalıklar"
+      ],
+      "descriptions": [
+        "Kasa önü paketli ürün."
+      ],
+      "observedAt": "2026-08-11",
+      "sourceKind": "secondary",
+      "sourceUrls": [
+        "https://www.yemeksepeti.com/restaurant/nv79/coffy-nv79",
+        "https://www.yemeksepeti.com/restaurant/tr0t/coffy-tr0t",
+        "https://www.yemeksepeti.com/restaurant/xmvm/coffy-xmvm",
+        "https://www.yemeksepeti.com/restaurant/rkhk/coffy-rkhk",
+        "https://www.yemeksepeti.com/restaurant/j4gu/coffy"
+      ],
+      "branches": [
+        {
+          "id": "ankara-istasyon",
+          "name": "Coffy Ankara İstasyon",
+          "city": "Ankara"
+        },
+        {
+          "id": "ankara-bahcelievler",
+          "name": "Coffy Ankara Bahçelievler",
+          "city": "Ankara"
+        },
+        {
+          "id": "izmir-karsiyaka-girne",
+          "name": "Coffy İzmir Karşıyaka Girne Bulvarı",
+          "city": "İzmir"
+        },
+        {
+          "id": "izmir-buca-kurucesme",
+          "name": "Coffy İzmir Buca Kuruçeşme",
+          "city": "İzmir"
+        },
+        {
+          "id": "istanbul-maslak",
+          "name": "Coffy İstanbul Maslak",
+          "city": "İstanbul"
+        }
+      ],
+      "cities": [
+        "Ankara",
+        "İstanbul",
+        "İzmir"
+      ],
+      "branchCount": 5,
+      "cityCount": 3,
+      "availabilityScope": "chain_core"
+    }
+  ],
+  "reconcileCandidates": [
+    {
+      "productName": "Americano",
+      "observedVariants": [
+        "Caffé Americano"
+      ],
+      "category": "espresso_hot",
+      "catalogId": "coffy_1_americano",
+      "catalogName": "Americano",
+      "matchKind": "explicit_alias",
+      "availabilityScope": "chain_core",
+      "rationale": "Kaynak ad varyantı, snapshot içindeki açık alias kuralıyla mevcut katalog adına bağlandı."
+    },
+    {
+      "productName": "Caffé Latte",
+      "observedVariants": [
+        "Caffé Latte"
+      ],
+      "category": "espresso_hot",
+      "catalogId": "coffy_2_coffy_caffe_latte",
+      "catalogName": "Coffy Caffe Latte",
+      "matchKind": "explicit_alias",
+      "availabilityScope": "chain_core",
+      "rationale": "Kaynak ad varyantı, snapshot içindeki açık alias kuralıyla mevcut katalog adına bağlandı."
+    },
+    {
+      "productName": "Cappuccino",
+      "observedVariants": [
+        "Cappuccino"
+      ],
+      "category": "espresso_hot",
+      "catalogId": "coffy_3_cappuccino",
+      "catalogName": "Cappuccino",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Filtre Kahve",
+      "observedVariants": [
+        "Filtre Kahve"
+      ],
+      "category": "espresso_hot",
+      "catalogId": "coffy_7_filtre_kahve",
+      "catalogName": "Filtre Kahve",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Flat White",
+      "observedVariants": [
+        "Flat White"
+      ],
+      "category": "espresso_hot",
+      "catalogId": "coffy_4_flat_white",
+      "catalogName": "Flat White",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Mocha",
+      "observedVariants": [
+        "Mocha"
+      ],
+      "category": "espresso_hot",
+      "catalogId": "coffy_5_mocha",
+      "catalogName": "Mocha",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "White Chocolate Mocha",
+      "observedVariants": [
+        "White Chocolate Mocha"
+      ],
+      "category": "espresso_hot",
+      "catalogId": "coffy_6_white_chocolate_mocha",
+      "catalogName": "White Chocolate Mocha",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Iced Ballı Muzlu Latte",
+      "observedVariants": [
+        "Iced Latte Muzlu Ballı"
+      ],
+      "category": "espresso_iced",
+      "catalogId": "coffy_iced_balli_muzlu_latte",
+      "catalogName": "Iced Ballı Muzlu Latte",
+      "matchKind": "explicit_alias",
+      "availabilityScope": "chain_core",
+      "rationale": "Kaynak ad varyantı, snapshot içindeki açık alias kuralıyla mevcut katalog adına bağlandı."
+    },
+    {
+      "productName": "Iced Cherry Brownie Latte",
+      "observedVariants": [
+        "Iced Cherry Brownie Latte"
+      ],
+      "category": "espresso_iced",
+      "catalogId": "coffy_11_iced_cherry_brownie_latte",
+      "catalogName": "Iced Cherry Brownie Latte",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Iced Latte",
+      "observedVariants": [
+        "Iced Caffé Latte"
+      ],
+      "category": "espresso_iced",
+      "catalogId": "coffy_8_iced_latte",
+      "catalogName": "Iced Latte",
+      "matchKind": "explicit_alias",
+      "availabilityScope": "chain_core",
+      "rationale": "Kaynak ad varyantı, snapshot içindeki açık alias kuralıyla mevcut katalog adına bağlandı."
+    },
+    {
+      "productName": "Iced Salted Caramel Latte",
+      "observedVariants": [
+        "Iced Salted Caramel Latte"
+      ],
+      "category": "espresso_iced",
+      "catalogId": "coffy_9_iced_salted_caramel_latte",
+      "catalogName": "Iced Salted Caramel Latte",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Iced Süt Reçelli Latte",
+      "observedVariants": [
+        "Iced Latte Süt Reçelli"
+      ],
+      "category": "espresso_iced",
+      "catalogId": "coffy_iced_sut_recelli_latte",
+      "catalogName": "Iced Süt Reçelli Latte",
+      "matchKind": "explicit_alias",
+      "availabilityScope": "chain_core",
+      "rationale": "Kaynak ad varyantı, snapshot içindeki açık alias kuralıyla mevcut katalog adına bağlandı."
+    },
+    {
+      "productName": "Chocolate Cookie Frappe",
+      "observedVariants": [
+        "Chocolate Cookie Frappe"
+      ],
+      "category": "frappe_blended",
+      "catalogId": "coffy_12_chocolate_cookie_frappe",
+      "catalogName": "Chocolate Cookie Frappe",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Iced Mango Matcha",
+      "observedVariants": [
+        "Iced Mango Matcha"
+      ],
+      "category": "tea_herbal",
+      "catalogId": "coffy_iced_mango_matcha",
+      "catalogName": "Iced Mango Matcha",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Iced Strawberry Matcha",
+      "observedVariants": [
+        "Iced Strawberry Matcha"
+      ],
+      "category": "tea_herbal",
+      "catalogId": "coffy_10_iced_strawberry_matcha",
+      "catalogName": "Iced Strawberry Matcha",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Freshaa (Kuzukulağı)",
+      "observedVariants": [
+        "Kuzu Kulağı Freshaa",
+        "Kuzu Kulağı Freshaa (Küçük)"
+      ],
+      "category": "smoothie_juice",
+      "catalogId": "coffy_freshaa_kuzukulagi",
+      "catalogName": "Freshaa (Kuzukulağı)",
+      "matchKind": "explicit_alias",
+      "availabilityScope": "chain_core",
+      "rationale": "Kaynak ad varyantı, snapshot içindeki açık alias kuralıyla mevcut katalog adına bağlandı."
+    },
+    {
+      "productName": "Freshaa Cool Lime & Mango",
+      "observedVariants": [
+        "Freshaa Cool Lime & Mango"
+      ],
+      "category": "smoothie_juice",
+      "catalogId": "coffy_mango_lime_cooler",
+      "catalogName": "Mango & Lime Cooler",
+      "matchKind": "manual_review",
+      "availabilityScope": "chain_core",
+      "rationale": "Mango ve lime bileşenleri örtüşüyor fakat marka adı ve ürün adı değişmiş; aynı reçete olduğu doğrulanmadan otomatik birleştirilmemeli."
+    },
+    {
+      "productName": "Çikolata Dolgulu Kruvasan",
+      "observedVariants": [
+        "Çikolata Dolgulu Kruvasan"
+      ],
+      "category": "bakery_dessert",
+      "catalogId": "coffy_17__ikolatal__kruvasan",
+      "catalogName": "Çikolatalı Kruvasan",
+      "matchKind": "manual_review",
+      "availabilityScope": "chain_core",
+      "rationale": "Adlar çok yakın fakat kaynak yeni ürünü özellikle dolgulu diye tanımlıyor; otomatik birleştirmeden önce ürün kimliği elle doğrulanmalı."
+    },
+    {
+      "productName": "Profiterollü Pasta",
+      "observedVariants": [
+        "Profiterollü Pasta"
+      ],
+      "category": "bakery_dessert",
+      "catalogId": "coffy_19_profiteroll__pasta",
+      "catalogName": "Profiterollü Pasta",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "Tiramisu",
+      "observedVariants": [
+        "Tiramisu"
+      ],
+      "category": "bakery_dessert",
+      "catalogId": "coffy_20_tiramisu",
+      "catalogName": "Tiramisu",
+      "matchKind": "normalized_exact",
+      "availabilityScope": "chain_core",
+      "rationale": "Ad, Türkçe karakter/noktalama normalizasyonundan sonra mevcut katalog adıyla eşleşiyor."
+    },
+    {
+      "productName": "İsli Peynir & Hindi Fümeli Baget",
+      "observedVariants": [
+        "İsli Peynir & Hindi Fümeli Baget Sandviç"
+      ],
+      "category": "sandwich_savory",
+      "catalogId": "coffy_15_i_sli_peynir___hindi_f_meli_baget",
+      "catalogName": "İsli Peynir & Hindi Fümeli Baget",
+      "matchKind": "explicit_alias",
+      "availabilityScope": "chain_core",
+      "rationale": "Kaynak ad varyantı, snapshot içindeki açık alias kuralıyla mevcut katalog adına bağlandı."
+    },
+    {
+      "productName": "Karışık Sıcak Sandviç",
+      "observedVariants": [
+        "Karışık Sandviç (Sıcak)"
+      ],
+      "category": "sandwich_savory",
+      "catalogId": "coffy_16_kar___k_s_cak_sandvi_",
+      "catalogName": "Karışık Sıcak Sandviç",
+      "matchKind": "explicit_alias",
+      "availabilityScope": "chain_core",
+      "rationale": "Kaynak ad varyantı, snapshot içindeki açık alias kuralıyla mevcut katalog adına bağlandı."
+    }
+  ],
+  "additionCandidates": [
+    {
+      "name": "Bulletproof Latte",
+      "normalizedKey": "bulletproof latte",
+      "category": "espresso_hot",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Caramel Macchiato",
+      "normalizedKey": "caramel macchiato",
+      "category": "espresso_hot",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Cherry Brownie Latte",
+      "normalizedKey": "cherry brownie latte",
+      "category": "espresso_hot",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Chocolate Cookie Latte",
+      "normalizedKey": "chocolate cookie latte",
+      "category": "espresso_hot",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Salted Karamel Latte",
+      "normalizedKey": "salted karamel latte",
+      "category": "espresso_hot",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Cherry Blossom Zen Iced Latte",
+      "normalizedKey": "cherry blossom zen iced latte",
+      "category": "espresso_iced",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Iced Americano",
+      "normalizedKey": "iced americano",
+      "category": "espresso_iced",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Iced Cappuccino",
+      "normalizedKey": "iced cappuccino",
+      "category": "espresso_iced",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Iced Caramel Bubble Latte",
+      "normalizedKey": "iced caramel bubble latte",
+      "category": "espresso_iced",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Iced Caramel Macchiato",
+      "normalizedKey": "iced caramel macchiato",
+      "category": "espresso_iced",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Iced Mocha",
+      "normalizedKey": "iced mocha",
+      "category": "espresso_iced",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Iced White Chocolate Mocha",
+      "normalizedKey": "iced white chocolate mocha",
+      "category": "espresso_iced",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Caramel Frappe",
+      "normalizedKey": "caramel frappe",
+      "category": "frappe_blended",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Coffychino Caramel",
+      "normalizedKey": "coffychino caramel",
+      "category": "frappe_blended",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Çikolatalı Milkshake",
+      "normalizedKey": "cikolatali milkshake",
+      "category": "frappe_blended",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Çilekli Milkshake",
+      "normalizedKey": "cilekli milkshake",
+      "category": "frappe_blended",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Mocha Frappe",
+      "normalizedKey": "mocha frappe",
+      "category": "frappe_blended",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Berry Hibiscus Blueberry Bubble",
+      "normalizedKey": "berry hibiscus blueberry bubble",
+      "category": "tea_herbal",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Earl Grey",
+      "normalizedKey": "earl grey",
+      "category": "tea_herbal",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Hibiskus",
+      "normalizedKey": "hibiskus",
+      "category": "tea_herbal",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Iced Berry Matcha",
+      "normalizedKey": "iced berry matcha",
+      "category": "tea_herbal",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Iced Matcha",
+      "normalizedKey": "iced matcha",
+      "category": "tea_herbal",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Iced Vanilla Matcha",
+      "normalizedKey": "iced vanilla matcha",
+      "category": "tea_herbal",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Matcha Latte",
+      "normalizedKey": "matcha latte",
+      "category": "tea_herbal",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Vanilla Matcha",
+      "normalizedKey": "vanilla matcha",
+      "category": "tea_herbal",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Cool Lime",
+      "normalizedKey": "cool lime",
+      "category": "smoothie_juice",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Freshaa Hibiskus & Strawberry",
+      "normalizedKey": "freshaa hibiskus ve strawberry",
+      "category": "smoothie_juice",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Mangolu Frozen",
+      "normalizedKey": "mangolu frozen",
+      "category": "smoothie_juice",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Orman Meyveli Frozen",
+      "normalizedKey": "orman meyveli frozen",
+      "category": "smoothie_juice",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Strawberry Lemonade",
+      "normalizedKey": "strawberry lemonade",
+      "category": "smoothie_juice",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Chia Puding",
+      "normalizedKey": "chia puding",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 4,
+      "cityCount": 2,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Cookie Cups Kakaolu Fındık Kremalı",
+      "normalizedKey": "cookie cups kakaolu findik kremali",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Cookie Cups Karamelli",
+      "normalizedKey": "cookie cups karamelli",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Çikolata Parçacıklı Cookie",
+      "normalizedKey": "cikolata parcacikli cookie",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Çikolatalı Cookie",
+      "normalizedKey": "cikolatali cookie",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Çikolatalı Muffin",
+      "normalizedKey": "cikolatali muffin",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Dereotlu Ev Poğaçası",
+      "normalizedKey": "dereotlu ev pogacasi",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Frambuazlı Cheesecake",
+      "normalizedKey": "frambuazli cheesecake",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Glutensiz Brownie",
+      "normalizedKey": "glutensiz brownie",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "İspanyol Creamy Cheesecake",
+      "normalizedKey": "ispanyol creamy cheesecake",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 4,
+      "cityCount": 2,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Kremalı Havuçlu Dilim Kek",
+      "normalizedKey": "kremali havuclu dilim kek",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Latte Pasta",
+      "normalizedKey": "latte pasta",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 4,
+      "cityCount": 2,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Limonlu Cheesecake",
+      "normalizedKey": "limonlu cheesecake",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 4,
+      "cityCount": 2,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Mozaik Kek (Dilim)",
+      "normalizedKey": "mozaik kek dilim",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Mozaik Pasta",
+      "normalizedKey": "mozaik pasta",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Orman Meyveli Pasta",
+      "normalizedKey": "orman meyveli pasta",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Sufle",
+      "normalizedKey": "sufle",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Tereyağlı Kruvasan (85 gr.)",
+      "normalizedKey": "tereyagli kruvasan 85 gr",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Yaban Mersinli Muffin",
+      "normalizedKey": "yaban mersinli muffin",
+      "category": "bakery_dessert",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Hindi Fümeli Sıcak Sandviç",
+      "normalizedKey": "hindi fumeli sicak sandvic",
+      "category": "sandwich_savory",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Hindi Jambon & Cheddar Peynirli Bagel Sandviç",
+      "normalizedKey": "hindi jambon ve cheddar peynirli bagel sandvic",
+      "category": "sandwich_savory",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Kaşarlı & Zeytin Ezmeli Simit Sandviç",
+      "normalizedKey": "kasarli ve zeytin ezmeli simit sandvic",
+      "category": "sandwich_savory",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Köri Soslu & Tavuklu Baget Sandviç",
+      "normalizedKey": "kori soslu ve tavuklu baget sandvic",
+      "category": "sandwich_savory",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Peynirli Sandviç (Sıcak)",
+      "normalizedKey": "peynirli sandvic sicak",
+      "category": "sandwich_savory",
+      "availabilityScope": "chain_core",
+      "branchCount": 4,
+      "cityCount": 2,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Corny Kakao Kırmızı Meyve Tahıl Bar",
+      "normalizedKey": "corny kakao kirmizi meyve tahil bar",
+      "category": "fit_healthy",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    },
+    {
+      "name": "Zbarz Power Coconut Cacao Fruit Bar",
+      "normalizedKey": "zbarz power coconut cacao fruit bar",
+      "category": "fit_healthy",
+      "availabilityScope": "chain_core",
+      "branchCount": 5,
+      "cityCount": 3,
+      "catalogImportStatus": "blocked_pending_nutrition_and_image_research"
+    }
+  ],
+  "unobservedCatalogItems": [
+    {
+      "id": "coffy_13_ezine_peynirli_focaccia_sandvi_",
+      "name": "Ezine Peynirli Focaccia Sandviç"
+    },
+    {
+      "id": "coffy_14_f_me_etli_peynirli_bagel",
+      "name": "Füme Etli Peynirli Bagel"
+    },
+    {
+      "id": "coffy_18_boyoz",
+      "name": "Boyoz"
+    },
+    {
+      "id": "coffy_strawberry_lime_cooler",
+      "name": "Strawberry & Lime Cooler"
+    },
+    {
+      "id": "coffy_blueberry_cool_hibiscus",
+      "name": "Blueberry Cool & Hibiscus"
+    },
+    {
+      "id": "coffy_berry_mango",
+      "name": "Berry Mango"
+    },
+    {
+      "id": "coffy_cold_brew",
+      "name": "Cold Brew"
+    },
+    {
+      "id": "coffy_portakalli_kakaolu_kek",
+      "name": "Portakallı Kakaolu Kek"
+    }
+  ]
+}

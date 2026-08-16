@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "chainId": "coffy",
+  "chainName": "Coffy",
+  "observedAt": "2026-08-11",
+  "officialSources": [],
+  "branches": [
+    {
+      "id": "istanbul-a",
+      "name": "İstanbul A",
+      "city": "İstanbul",
+      "address": "A adresi",
+      "sourceUrl": "https://example.test/istanbul-a",
+      "sourceKind": "secondary",
+      "platform": "fixture",
+      "officialDirectoryName": "İstanbul A"
+    },
+    {
+      "id": "istanbul-b",
+      "name": "İstanbul B",
+      "city": "İstanbul",
+      "address": "B adresi",
+      "sourceUrl": "https://example.test/istanbul-b",
+      "sourceKind": "secondary",
+      "platform": "fixture",
+      "officialDirectoryName": "İstanbul B"
+    },
+    {
+      "id": "ankara-a",
+      "name": "Ankara A",
+      "city": "Ankara",
+      "address": "C adresi",
+      "sourceUrl": "https://example.test/ankara-a",
+      "sourceKind": "secondary",
+      "platform": "fixture",
+      "officialDirectoryName": "Ankara A"
+    },
+    {
+      "id": "istanbul-c",
+      "name": "İstanbul C",
+      "city": "İstanbul",
+      "address": "D adresi",
+      "sourceUrl": "https://example.test/istanbul-c",
+      "sourceKind": "secondary",
+      "platform": "fixture",
+      "officialDirectoryName": "İstanbul C"
+    }
+  ],
+  "aliases": [
+    {
+      "observedName": "Caffé Americano",
+      "canonicalName": "Americano"
+    }
+  ],
+  "existingCatalog": [
+    {
+      "id": "coffy_americano",
+      "name": "Americano"
+    }
+  ],
+  "observations": [
+    {
+      "name": "Caffé Americano",
+      "sourceCategory": "Sıcak Kahveler",
+      "description": "Sıcak servis edilir.",
+      "branchIds": ["istanbul-a", "istanbul-b", "ankara-a"]
+    },
+    {
+      "name": "Cool Lime",
+      "sourceCategory": "Soğuk İçecekler",
+      "description": "Soğuk servis edilir.",
+      "branchIds": ["istanbul-a", "istanbul-b", "istanbul-c"]
+    },
+    {
+      "name": "Tatlı Menü",
+      "sourceCategory": "Menüler",
+      "branchIds": ["istanbul-a"]
+    },
+    {
+      "name": "Emaye Kupa",
+      "sourceCategory": "Merchandise",
+      "branchIds": ["istanbul-a"]
+    },
+    {
+      "name": "Kapsül Kahve",
+      "sourceCategory": "Çekirdek Kahveler (250 gr.)",
+      "branchIds": ["istanbul-a"]
+    },
+    {
+      "name": "Su (50 cl.)",
+      "sourceCategory": "Diğer Sıcak & Soğuk İçecekler",
+      "branchIds": ["istanbul-a"]
+    },
+    {
+      "name": "Çikolatalı Bütün Pasta",
+      "sourceCategory": "Tatlılar",
+      "branchIds": ["istanbul-a"]
+    }
+  ]
+}

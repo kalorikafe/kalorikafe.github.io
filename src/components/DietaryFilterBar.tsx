@@ -8,24 +8,24 @@ interface DietaryFilterBarProps {
   selectedDietaryTags: DietaryPreference[];
   onToggleDietaryTag: (tag: DietaryPreference) => void;
   isOnlyDrinks: boolean;
-  setIsOnlyDrinks: (val: boolean) => void;
+  setIsOnlyDrinks: (value: boolean) => void;
   isOnlyFood: boolean;
-  setIsOnlyFood: (val: boolean) => void;
+  setIsOnlyFood: (value: boolean) => void;
   resetAllFilters: () => void;
   hasActiveFilters: boolean;
 }
 
 const CATEGORY_TABS: { id: Category | 'all'; label: string; icon: string }[] = [
-  { id: 'all', label: 'Tüm Menü', icon: '✨' },
-  { id: 'espresso_hot', label: 'Sıcak Kahveler', icon: '☕' },
-  { id: 'espresso_iced', label: 'Soğuk Kahveler', icon: '🧊' },
+  { id: 'all', label: 'Tüm menü', icon: '✨' },
+  { id: 'espresso_hot', label: 'Sıcak kahveler', icon: '☕' },
+  { id: 'espresso_iced', label: 'Soğuk kahveler', icon: '🧊' },
   { id: 'cold_brew', label: 'Cold Brew', icon: '❄️' },
-  { id: 'frappe_blended', label: 'Frappe & Buzlu', icon: '🥤' },
-  { id: 'tea_herbal', label: 'Çay & Matcha', icon: '🍵' },
-  { id: 'smoothie_juice', label: 'Smoothie & Meyve Suyu', icon: '🍹' },
-  { id: 'bakery_dessert', label: 'Fırın & Tatlı', icon: '🍰' },
-  { id: 'sandwich_savory', label: 'Sandviç & Tost', icon: '🥪' },
-  { id: 'fit_healthy', label: 'Fit & Protein Kasesi', icon: '🥗' },
+  { id: 'frappe_blended', label: 'Frappe ve buzlu', icon: '🥤' },
+  { id: 'tea_herbal', label: 'Çay ve matcha', icon: '🍵' },
+  { id: 'smoothie_juice', label: 'Smoothie ve meyve suyu', icon: '🍹' },
+  { id: 'bakery_dessert', label: 'Fırın ve tatlı', icon: '🍰' },
+  { id: 'sandwich_savory', label: 'Sandviç ve tost', icon: '🥪' },
+  { id: 'fit_healthy', label: 'Fit ve sağlıklı', icon: '🥗' },
 ];
 
 const DIETARY_PILLS: { id: DietaryPreference; label: string; icon: string }[] = [
@@ -33,8 +33,8 @@ const DIETARY_PILLS: { id: DietaryPreference; label: string; icon: string }[] = 
   { id: 'lactose_free', label: 'Laktozsuz', icon: '🥛' },
   { id: 'vegan', label: 'Vegan', icon: '🌱' },
   { id: 'vegetarian', label: 'Vejetaryen', icon: '🥬' },
-  { id: 'high_protein', label: 'Yüksek Protein (15g+)', icon: '💪' },
-  { id: 'low_calorie', label: 'Düşük Kalori (<150 kcal)', icon: '🔥' },
+  { id: 'high_protein', label: 'Yüksek protein', icon: '💪' },
+  { id: 'low_calorie', label: '150 kcal altı', icon: '🔥' },
 ];
 
 export const DietaryFilterBar: React.FC<DietaryFilterBarProps> = ({
@@ -48,100 +48,69 @@ export const DietaryFilterBar: React.FC<DietaryFilterBarProps> = ({
   setIsOnlyFood,
   resetAllFilters,
   hasActiveFilters,
-}) => {
-  return (
-    <div className="space-y-4 p-4 rounded-3xl bg-white dark:bg-[var(--dark-surface)] border border-stone-200 dark:border-[var(--dark-border)] shadow-sm">
-      
-      {/* Category Tabs Header */}
-      <div className="flex items-center justify-between gap-2 overflow-x-auto pb-2 scrollbar-none">
-        <div className="flex items-center gap-1.5 shrink-0">
-          {CATEGORY_TABS.map(tab => {
-            const isSelected = selectedCategory === tab.id;
-            return (
-              <button
-                key={tab.id}
-                onClick={() => onSelectCategory(tab.id)}
-                className={`px-3.5 py-2 rounded-2xl text-xs font-black transition-all shrink-0 flex items-center gap-1.5 ${
-                  isSelected
-                    ? 'bg-[#2C221E] text-white dark:bg-[#FAF8F5] dark:text-[#2C221E] shadow-md scale-105'
-                    : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)] hover:bg-stone-200 dark:hover:bg-[var(--dark-surface-elevated)] border border-stone-200/60 dark:border-[var(--dark-border)]/60'
-                }`}
-              >
-                <span>{tab.icon}</span>
-                <span>{tab.label}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Second Row: Drink/Food Toggles & Dietary Pills */}
-      <div className="pt-2 border-t border-stone-200 dark:border-[var(--dark-border)] flex flex-wrap items-center justify-between gap-3">
-        
-        {/* Drink / Food Switcher */}
-        <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)]">
-          <button
-            onClick={() => {
-              setIsOnlyDrinks(!isOnlyDrinks);
-              if (isOnlyFood) setIsOnlyFood(false);
-            }}
-            className={`px-3 py-1.5 rounded-xl text-xs font-black transition-all ${
-              isOnlyDrinks ? 'bg-[#6F4E37] text-white dark:bg-[#D4B996] dark:text-[#2C221E] shadow-sm' : 'text-stone-700 dark:text-[var(--dark-text-muted)]'
-            }`}
-          >
-            🥤 Sadece İçecekler
-          </button>
-
-          <button
-            onClick={() => {
-              setIsOnlyFood(!isOnlyFood);
-              if (isOnlyDrinks) setIsOnlyDrinks(false);
-            }}
-            className={`px-3 py-1.5 rounded-xl text-xs font-black transition-all ${
-              isOnlyFood ? 'bg-[#6F4E37] text-white dark:bg-[#D4B996] dark:text-[#2C221E] shadow-sm' : 'text-stone-700 dark:text-[var(--dark-text-muted)]'
-            }`}
-          >
-            🥪 Sadece Yiyecekler
-          </button>
-        </div>
-
-        {/* Dietary Pills */}
-        <div className="flex flex-wrap items-center gap-1.5">
-          <span className="text-[11px] font-black text-stone-500 dark:text-[var(--dark-text-muted)] flex items-center gap-1 mr-1">
-            <Filter className="w-3.5 h-3.5 text-[#6F4E37] dark:text-[#D4B996]" /> Diyet Tercihi:
-          </span>
-
-          {DIETARY_PILLS.map(pill => {
-            const isSelected = selectedDietaryTags.includes(pill.id);
-            return (
-              <button
-                key={pill.id}
-                onClick={() => onToggleDietaryTag(pill.id)}
-                className={`px-3 py-1.5 rounded-xl text-[11px] font-black border transition-all flex items-center gap-1 ${
-                  isSelected
-                    ? 'bg-[#2C221E] text-white border-[#2C221E] dark:bg-[#FAF8F5] dark:text-[#2C221E] dark:border-[#FAF8F5] shadow-xs'
-                    : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border-stone-200 dark:border-[var(--dark-border)] text-stone-700 dark:text-[var(--dark-text-muted)] hover:border-[#6F4E37]'
-                }`}
-              >
-                <span>{pill.icon}</span>
-                <span>{pill.label}</span>
-              </button>
-            );
-          })}
-
-          {hasActiveFilters && (
-            <button
-              onClick={resetAllFilters}
-              className="p-1.5 rounded-xl text-red-600 hover:bg-red-50 dark:hover:bg-red-950/30 transition-colors"
-              title="Filtreleri Temizle"
-            >
-              <RotateCcw className="w-4 h-4" />
-            </button>
-          )}
-        </div>
-
-      </div>
-
+}) => (
+  <div className="grid gap-3 rounded-2xl border border-stone-200 bg-white p-3 shadow-sm dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface)] sm:grid-cols-[minmax(0,1fr)_auto]">
+    <div>
+      <label htmlFor="category-filter" className="mb-1 block text-[11px] font-black uppercase text-stone-500 dark:text-[var(--dark-text-muted)]">Kategori</label>
+      <select
+        id="category-filter"
+        value={selectedCategory}
+        onChange={event => onSelectCategory(event.target.value as Category | 'all')}
+        className="min-h-11 w-full rounded-xl border border-stone-200 bg-stone-50 px-3 text-xs font-black dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface-elevated)]"
+      >
+        {CATEGORY_TABS.map(tab => <option key={tab.id} value={tab.id}>{tab.icon} {tab.label}</option>)}
+      </select>
     </div>
-  );
-};
+
+    <div className="flex items-end gap-1">
+      <div className="flex min-h-11 items-center gap-1 rounded-xl border border-stone-200 bg-stone-100 p-1 dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface-elevated)]">
+        <button
+          type="button"
+          onClick={() => setIsOnlyDrinks(!isOnlyDrinks)}
+          aria-pressed={isOnlyDrinks}
+          className={`min-h-9 rounded-lg px-3 text-xs font-black transition ${isOnlyDrinks ? 'bg-[#6F4E37] text-white dark:bg-[#D4B996] dark:text-[#2C221E]' : 'text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
+        >
+          🥤 İçecek
+        </button>
+        <button
+          type="button"
+          onClick={() => setIsOnlyFood(!isOnlyFood)}
+          aria-pressed={isOnlyFood}
+          className={`min-h-9 rounded-lg px-3 text-xs font-black transition ${isOnlyFood ? 'bg-[#6F4E37] text-white dark:bg-[#D4B996] dark:text-[#2C221E]' : 'text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
+        >
+          🥪 Yiyecek
+        </button>
+      </div>
+    </div>
+
+    <details className="rounded-xl border border-stone-200 px-3 dark:border-[var(--dark-border)] sm:col-span-2" open={selectedDietaryTags.length > 0 || undefined}>
+      <summary className="flex min-h-11 cursor-pointer items-center gap-2 py-2 text-xs font-black">
+        <Filter className="h-4 w-4" /> Diyet ve beslenme filtreleri {selectedDietaryTags.length > 0 && `(${selectedDietaryTags.length})`}
+      </summary>
+      <div className="flex flex-wrap items-center gap-2 border-t border-stone-200 py-3 dark:border-[var(--dark-border)]">
+        {DIETARY_PILLS.map(pill => {
+          const selected = selectedDietaryTags.includes(pill.id);
+          return (
+            <button
+              type="button"
+              key={pill.id}
+              onClick={() => onToggleDietaryTag(pill.id)}
+              aria-pressed={selected}
+              className={`flex min-h-11 items-center gap-1 rounded-xl border px-3 py-2 text-[11px] font-black transition ${selected ? 'border-[#2C221E] bg-[#2C221E] text-white dark:border-[#FAF8F5] dark:bg-[#FAF8F5] dark:text-[#2C221E]' : 'border-stone-200 bg-stone-100 text-stone-700 dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface-elevated)] dark:text-[var(--dark-text-muted)]'}`}
+            >
+              <span>{pill.icon}</span><span>{pill.label}</span>
+            </button>
+          );
+        })}
+        {hasActiveFilters && (
+          <button type="button" onClick={resetAllFilters} aria-label="Filtreleri temizle" className="min-h-11 min-w-11 rounded-xl text-red-600 hover:bg-red-50 dark:hover:bg-red-950/30" title="Filtreleri temizle">
+            <RotateCcw className="mx-auto h-4 w-4" />
+          </button>
+        )}
+        <p className="w-full text-[10px] leading-relaxed text-stone-500 dark:text-[var(--dark-text-muted)]">
+          Glutensiz ve laktozsuz sonuçlar yalnız kaynaklı alerjen verisi olan ürünlerden gösterilir; yine de çapraz temas ve reçete değişikliği için markadan teyit alın.
+        </p>
+      </div>
+    </details>
+  </div>
+);

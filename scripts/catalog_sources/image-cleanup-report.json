@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "deletionPerformed": true,
+  "basedOnCatalogProducts": 950,
+  "definiteUnused": [
+    {
+      "path": "public/images/americano.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 655052,
+      "sha256": "eb75efb39d0da4a7b5cbae6cda878615397cfa40890a7f8c9bd82e7638d2a165"
+    },
+    {
+      "path": "public/images/caffe_latte.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 772079,
+      "sha256": "d9bfccbdc7e37056f6c068effb4fdfc8043bae5ab999e74888feb1f5bf711c27"
+    },
+    {
+      "path": "public/images/caffe_mocha.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 727857,
+      "sha256": "fe8ea2b7c7910f307400275d610c9cf785fe14e6cd3293d403ab81aad0e5f433"
+    },
+    {
+      "path": "public/images/cappuccino.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 779748,
+      "sha256": "d0a0036f42eda3e42c69ea8dc0a99099622b5a6ce599d6bb2150a43ce5d05084"
+    },
+    {
+      "path": "public/images/caramel_macchiato.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 743485,
+      "sha256": "1b0ea3a1c64f13472aa9de61da544914c306b7fd92f7ca45f3699e9e46e62f13"
+    },
+    {
+      "path": "public/images/cortado.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 745305,
+      "sha256": "9960ba0f80c30f680567f48b6f6331a55b6c0840f110d49af76813e81eda981f"
+    },
+    {
+      "path": "public/images/flat_white.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 751907,
+      "sha256": "4b05de6b33423db9c22a963bfd649ef706442ad079bb421c948d36a2f1de22e5"
+    },
+    {
+      "path": "public/images/hazelnut_latte.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 761942,
+      "sha256": "d103d2d56de7783cc0ba6c16c07c3db7aeeb6a09036d33941e11f60bbc074c91"
+    },
+    {
+      "path": "public/images/iced_americano.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 599028,
+      "sha256": "6ceb89d313462d564638fa48a00a41a6492111fa9501ee725b8e6053e3a0330c"
+    },
+    {
+      "path": "public/images/iced_caramel_macchiato.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 802777,
+      "sha256": "56f30fc1be00efe1aafe81ca2b28d0ec03c9301cac625865dccc198deed69191"
+    },
+    {
+      "path": "public/images/iced_latte.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 812216,
+      "sha256": "fe94c5e836030b86b74c6ea87bc2f4df55aaae20385ecb32e714f7586c2f2f46"
+    },
+    {
+      "path": "public/images/menu/starbucks/caffe_latte.webp",
+      "reason": "orphan WebP not referenced by MENU_ITEMS",
+      "sizeBytes": 13042,
+      "sha256": "2c1bfdbd6d269f2437686cc7e1a8ca05470b8b32afcdca57c406bd2b53cc38c7",
+      "duplicateOfReferencedPaths": [
+        "/images/menu/starbucks/caff_latte.webp"
+      ]
+    },
+    {
+      "path": "public/images/turk_kahvesi.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 893474,
+      "sha256": "5e1ab8597804feb874c12c33aeac9132a3a50a82990a9fea345ca532b7d95b78"
+    },
+    {
+      "path": "public/images/white_choc_mocha.jpg",
+      "reason": "legacy root JPG not referenced by MENU_ITEMS",
+      "sizeBytes": 757012,
+      "sha256": "d5fa372a1087f10a3ea21ce00bbe4fd8307b94e2a1b52e096d1955c31890234d"
+    }
+  ],
+  "orphanWebpForReview": [
+    "/images/menu/placeholder.webp"
+  ],
+  "removedAt": "2026-08-11T11:42:31.056Z"
+}

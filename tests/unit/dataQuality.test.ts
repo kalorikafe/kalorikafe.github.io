@@ -6,6 +6,11 @@ const VALID_CATEGORIES = new Set([
   'espresso_hot', 'espresso_iced', 'cold_brew', 'frappe_blended',
   'tea_herbal', 'smoothie_juice', 'bakery_dessert', 'sandwich_savory', 'fit_healthy',
 ]);
+const FOOD_CATEGORIES = new Set(['bakery_dessert', 'sandwich_savory', 'fit_healthy']);
+const OFFICIAL_ALLERGENS = new Set([
+  'gluten', 'crustaceans', 'egg', 'fish', 'peanut', 'soy', 'milk',
+  'nuts', 'celery', 'mustard', 'sesame', 'sulphites', 'lupin', 'molluscs',
+]);
 
 describe('menu data contracts', () => {
   it('keeps IDs unique and chain references valid', () => {
@@ -27,7 +32,7 @@ describe('menu data contracts', () => {
 
   it('requires complete provenance when a source is marked verified', () => {
     for (const item of MENU_ITEMS) {
-      if (item.nutritionSource?.status !== 'verified') continue;
+      if (!['verified', 'mixed'].includes(item.nutritionSource?.status ?? '')) continue;
       expect(item.nutritionSource.url, `${item.id} source URL`).toMatch(/^https:\/\//);
       expect(item.nutritionSource.verifiedAt, `${item.id} verification date`).toMatch(/^\d{4}-\d{2}-\d{2}$/);
       expect(item.nutritionSource.servingBasis, `${item.id} serving basis`).toBeTruthy();
@@ -39,7 +44,7 @@ describe('menu data contracts', () => {
       expect(item.catalogSource, `${item.id} catalogSource`).toBeDefined();
       expect(item.catalogSource?.url, `${item.id} catalog url`).toMatch(/^https?:\/\//);
       expect(item.catalogSource?.checkedAt, `${item.id} checkedAt`).toMatch(/^\d{4}-\d{2}-\d{2}$/);
-      expect(['official', 'secondary']).toContain(item.catalogSource?.kind);
+      expect(['official', 'secondary', 'legacy_unverified']).toContain(item.catalogSource?.kind);
 
       expect(item.imageSource, `${item.id} imageSource`).toBeDefined();
       expect(['official', 'licensed_fallback']).toContain(item.imageSource?.kind);
@@ -48,9 +53,35 @@ describe('menu data contracts', () => {
       expect(item.image.endsWith('.webp'), `${item.id} webp image`).toBe(true);
 
       expect(item.nutritionSource, `${item.id} nutritionSource`).toBeDefined();
-      expect(['verified', 'estimated', 'unverified']).toContain(item.nutritionSource?.status);
+      expect(['verified', 'mixed', 'estimated', 'unverified']).toContain(item.nutritionSource?.status);
+      expect(Object.keys(item.nutritionSource?.fieldStatus ?? {}).sort()).toEqual(
+        ['calories', 'protein', 'carbs', 'sugar', 'fat', 'satFat', 'caffeine', 'sodium'].sort(),
+      );
+      expect(item.allergenSource, `${item.id} allergenSource`).toBeDefined();
       expect(['current', 'seasonal']).toContain(item.availability);
       expect(VALID_CATEGORIES.has(item.category), `${item.id} category`).toBe(true);
+    }
+  });
+
+  it('keeps canonical product kind aligned with category and strips food modifiers', () => {
+    for (const item of MENU_ITEMS) {
+      const expectedKind = FOOD_CATEGORIES.has(item.category) ? 'food' : 'drink';
+      expect(item.productKind, item.id).toBe(expectedKind);
+      expect(item.isDrink, item.id).toBe(expectedKind === 'drink');
+      if (expectedKind === 'food') {
+        expect(item.defaultSizeId, `${item.id} size`).toBeUndefined();
+        expect(item.defaultMilkId, `${item.id} milk`).toBeUndefined();
+        expect(item.defaultSyrupPumps, `${item.id} syrup`).toBeUndefined();
+      }
+    }
+  });
+
+  it('uses only the regulated 14 allergen groups in static catalog rows', () => {
+    for (const item of MENU_ITEMS) {
+      for (const allergen of item.allergens) {
+        expect(OFFICIAL_ALLERGENS.has(allergen), `${item.id}: ${allergen}`).toBe(true);
+      }
+      if (item.containsLactose) expect(item.allergens, item.id).toContain('milk');
     }
   });
 

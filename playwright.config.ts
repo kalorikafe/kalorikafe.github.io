@@ -1,5 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
+const criticalSmoke = /loads the real catalog and renders product cards|search changes the rendered result set|opens and closes a product detail dialog/;
+
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
@@ -16,9 +18,19 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
+    {
+      name: 'firefox-smoke',
+      grep: criticalSmoke,
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'webkit-smoke',
+      grep: criticalSmoke,
+      use: { ...devices['Desktop Safari'] },
+    },
   ],
   webServer: {
-    command: 'npm run dev -- --host 127.0.0.1 --port 4173',
+    command: 'npm run preview -- --host 127.0.0.1 --port 4173',
     url: 'http://127.0.0.1:4173',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,

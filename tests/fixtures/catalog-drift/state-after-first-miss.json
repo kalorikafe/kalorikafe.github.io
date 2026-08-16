@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "chainId": "fixture_chain",
+  "checkedAt": "2026-08-10",
+  "misses": {
+    "cookie": { "count": 1, "lastMissAt": "2026-08-10" }
+  }
+}

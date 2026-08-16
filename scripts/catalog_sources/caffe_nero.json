@@ -83,8 +83,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -93,7 +92,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Caffè Latte",
@@ -112,7 +116,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -131,8 +135,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -141,7 +144,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Antep Fıstıklı Latte",
@@ -158,7 +166,7 @@
       "visualSlot": "latte",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -173,7 +181,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Caramelatte",
@@ -192,7 +203,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -211,8 +222,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -221,7 +231,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Cappuccino",
@@ -240,7 +255,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -254,7 +269,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Resmî porsiyon tablosu enerji ve makro tutarlılık kontrolünü geçmediği için değerler içeri alınmadı; makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Flat White",
@@ -273,7 +291,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -287,7 +305,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada besin alanı bulunuyor ancak sayısal porsiyon verisi yayınlanmadığı için makrolar tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Cortado",
@@ -306,7 +327,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -325,8 +346,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -335,7 +355,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Mocha",
@@ -357,7 +382,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -376,8 +401,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -386,7 +410,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "White Chocolate Mocha",
@@ -403,7 +432,7 @@
       "visualSlot": "white-mocha",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -418,7 +447,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Espresso",
@@ -447,7 +479,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Espresso Macchiato",
@@ -466,7 +501,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -485,8 +520,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -495,7 +529,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Espresso Ristretto",
@@ -524,7 +563,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Espresso Con Panna",
@@ -543,7 +585,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -557,7 +599,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada besin alanı bulunuyor ancak sayısal porsiyon verisi yayınlanmadığı için makrolar tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Filtre Kahve",
@@ -586,7 +631,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Türk Kahvesi",
@@ -615,7 +663,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Iced Americano",
@@ -649,8 +700,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -659,7 +709,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Iced Latte",
@@ -678,7 +733,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -705,7 +760,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Resmî porsiyon tablosundaki güvenilir alanlar kullanıldı; eksik veya tutarsız şeker alanları standart tariften tahmin edildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Antep Fıstıklı Iced Latte",
@@ -722,7 +780,7 @@
       "visualSlot": "latte",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -737,7 +795,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Iced Caramelatte",
@@ -756,7 +817,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -775,8 +836,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -785,7 +845,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Iced Cappuccino",
@@ -804,7 +869,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -823,8 +888,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -833,7 +897,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Iced Flat White",
@@ -852,7 +921,7 @@
         "Soya"
       ],
       "allergens": [
-        "lactose",
+        "milk",
         "soy"
       ],
       "allergenSourceAvailable": true,
@@ -872,8 +941,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -883,7 +951,12 @@
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
       },
-      "allergenNotes": "Resmî alerjen listesine ek olarak ürün adı/açıklamasındaki varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi."
+      "allergenNotes": "Resmî alerjen listesine ek olarak ürün adı/açıklamasındaki varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Freddo Espresso",
@@ -912,7 +985,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Cold Brew",
@@ -941,7 +1017,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Cold Brew Latte",
@@ -958,7 +1037,7 @@
       "visualSlot": "cold-brew",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -973,7 +1052,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Iced Mocha",
@@ -990,7 +1072,7 @@
       "visualSlot": "mocha",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1005,7 +1087,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Iced White Chocolate Mocha",
@@ -1022,7 +1107,7 @@
       "visualSlot": "white-mocha",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1037,7 +1122,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Sıcak Çikolata",
@@ -1056,7 +1144,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -1075,8 +1163,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -1085,7 +1172,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Sıcak Çikolata Milano",
@@ -1107,7 +1199,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -1126,8 +1218,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -1136,7 +1227,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Chai Latte",
@@ -1158,7 +1254,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -1177,8 +1273,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -1187,7 +1282,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Matcha Latte",
@@ -1204,7 +1304,7 @@
       "visualSlot": "matcha",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1219,7 +1319,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Frappé Latte",
@@ -1238,7 +1341,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -1257,8 +1360,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -1267,7 +1369,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Caramel Frappé Latte",
@@ -1284,7 +1391,7 @@
       "visualSlot": "frappe",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1299,7 +1406,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Chai Frappé Latte",
@@ -1316,7 +1426,7 @@
       "visualSlot": "frappe",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1331,7 +1441,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Mango & Coconut Frappé Crème",
@@ -1348,7 +1461,7 @@
       "visualSlot": "frappe",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1363,7 +1476,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "White Chocolate & Strawberry Frappé Crème",
@@ -1382,7 +1498,7 @@
         "Süt"
       ],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -1401,8 +1517,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -1411,7 +1526,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "Regular",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Antep Fıstıklı Frappé Crème",
@@ -1428,7 +1548,7 @@
       "visualSlot": "frappe",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1443,7 +1563,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Iced Matcha Latte",
@@ -1460,7 +1583,7 @@
       "visualSlot": "matcha",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1475,7 +1598,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Iced Strawberry Matcha Latte",
@@ -1492,7 +1618,7 @@
       "visualSlot": "matcha",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1507,7 +1633,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Iced Mango Matcha Latte",
@@ -1524,7 +1653,7 @@
       "visualSlot": "matcha",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1539,7 +1668,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Iced Pistachio Matcha Latte",
@@ -1556,7 +1688,7 @@
       "visualSlot": "matcha",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1571,7 +1703,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Homemade Lemonade",
@@ -1605,8 +1740,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -1615,7 +1749,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Lychee & Strawberry Lemonade",
@@ -1644,7 +1783,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Fresh Lime & Mint Cooler",
@@ -1673,7 +1815,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Matcha Coconut Cooler",
@@ -1702,7 +1847,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Watermelon & Strawberry Mint Cooler",
@@ -1731,7 +1879,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Hibiskus Çayı - Böğürtlen - Çilek - Portakal Kurusu",
@@ -1760,7 +1911,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Rooibos Çayı - Kurutulmuş Ananas - Kivi Parçacıkları",
@@ -1789,7 +1943,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Mavi Kelebek Çayı - Yasemin Çiçeği",
@@ -1818,7 +1975,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Çilekli Milkshake",
@@ -1835,7 +1995,7 @@
       "visualSlot": "frappe",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1850,7 +2010,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Çikolatalı Milkshake",
@@ -1867,7 +2030,7 @@
       "visualSlot": "frappe",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1882,7 +2045,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Muzlu Milkshake",
@@ -1899,7 +2065,7 @@
       "visualSlot": "frappe",
       "sourceAllergens": [],
       "allergens": [
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": false,
       "baseMacros": {
@@ -1914,7 +2080,10 @@
         "servingBasis": "standart porsiyon",
         "notes": "Resmî ürün sayfasında sayısal besin tablosu yayınlanmadığı için makrolar standart tarif ve porsiyon üzerinden tahmin edildi."
       },
-      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu."
+      "allergenNotes": "Varsayılan süt veya krema tarifi nedeniyle laktoz işaretlendi; resmî sayfada ayrı alerjen tablosu yoktu.",
+      "productKind": "drink",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Mango & Passion Fruit",
@@ -1956,7 +2125,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Resmî porsiyon tablosundaki güvenilir alanlar kullanıldı; eksik veya tutarsız şeker alanları standart tariften tahmin edildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Strawberry & Banana",
@@ -1985,7 +2157,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada besin alanı bulunuyor ancak sayısal porsiyon verisi yayınlanmadığı için makrolar tahmin edildi."
-      }
+      },
+      "productKind": "drink",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Karabiberli Füme Roast Beef, Mantar, Karamelize Soğan ve Parmesanlı Cıabatta",
@@ -2006,11 +2181,11 @@
         "Hardal"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "soy",
-        "lactose",
-        "mustard"
+        "gluten",
+        "milk",
+        "mustard",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2029,8 +2204,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2039,7 +2213,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Fırınlanmış Mücver ve Izgara Hellim Peynirli Cıabatta",
@@ -2058,9 +2237,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2079,8 +2258,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2089,7 +2267,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Klasik Beyaz Peynir, Domates ve Zeytin Ezmeli Ciabatta",
@@ -2108,7 +2291,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2127,8 +2310,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2137,7 +2319,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Çeçil Peyniri ve Kurutulmuş Domatesli Panino",
@@ -2156,7 +2343,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2175,8 +2362,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2185,7 +2371,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Mozzarella ve Domatesli Panino",
@@ -2207,7 +2398,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2226,8 +2417,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2236,7 +2426,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Peynir ve Domatesli Panino",
@@ -2255,7 +2450,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2274,8 +2469,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2284,7 +2478,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Marine Tavuk ve Peynirli Panino",
@@ -2304,8 +2503,8 @@
       ],
       "allergens": [
         "gluten",
-        "soy",
-        "lactose"
+        "milk",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2324,8 +2523,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2334,7 +2532,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Ton Balıklı Club Sandviç",
@@ -2353,9 +2556,9 @@
         "Balık"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "fish"
+        "fish",
+        "gluten"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2374,8 +2577,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2384,7 +2586,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Tavuk Bonfile ve Karamelize Soğanlı Club Sandviç",
@@ -2404,10 +2611,10 @@
         "Susam"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "soy",
-        "sesame"
+        "gluten",
+        "sesame",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2426,8 +2633,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2436,7 +2642,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Hindi Füme ve Peynirli Club Sandviç",
@@ -2455,7 +2666,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2474,8 +2685,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2484,7 +2694,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Dana Jambon ve Peynirli Club Sandviç",
@@ -2503,7 +2718,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2522,8 +2737,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2532,7 +2746,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Sucuk ve Peynirli Tost",
@@ -2552,8 +2771,8 @@
       ],
       "allergens": [
         "gluten",
-        "nuts",
-        "lactose"
+        "milk",
+        "nuts"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2572,8 +2791,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2582,7 +2800,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Peynirli Tost",
@@ -2601,7 +2824,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2620,8 +2843,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2630,7 +2852,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Kepekli Beyaz Peynirli Tost",
@@ -2649,7 +2876,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2668,8 +2895,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2678,7 +2904,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Klasik Beyaz Peyniri, Zeytin Ezmesi ve Domatesli Köy Tostu",
@@ -2697,7 +2928,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2716,8 +2947,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2726,7 +2956,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Eski Kaşar, Gravyer ve Biber Salçalı Köy Tostu",
@@ -2749,8 +2984,8 @@
       ],
       "allergens": [
         "gluten",
-        "nuts",
-        "lactose"
+        "milk",
+        "nuts"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2769,8 +3004,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2779,7 +3013,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Izgara Sebzeli Wrap",
@@ -2799,8 +3038,8 @@
       ],
       "allergens": [
         "gluten",
-        "soy",
-        "sesame"
+        "sesame",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2819,8 +3058,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2829,7 +3067,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Sezar Tavuklu Wrap",
@@ -2852,10 +3095,10 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
-        "nuts",
         "egg",
-        "lactose"
+        "gluten",
+        "milk",
+        "nuts"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2874,8 +3117,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2884,7 +3126,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Dana Jambon ve Peynirli Mini Panino",
@@ -2903,9 +3150,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2924,8 +3171,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2934,7 +3180,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Sakallı Mini Panino",
@@ -2953,9 +3204,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -2974,8 +3225,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -2984,7 +3234,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Hindi Füme ve Peynirli Mini Panino",
@@ -3003,7 +3258,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3022,8 +3277,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3032,7 +3286,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Kepekli Beyaz Peynirli Mini Panino",
@@ -3051,7 +3310,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3070,8 +3329,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3080,7 +3338,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Peynirli Mini Simit",
@@ -3100,7 +3363,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose",
+        "milk",
         "sesame"
       ],
       "allergenSourceAvailable": true,
@@ -3120,8 +3383,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3130,7 +3392,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Köz Biberli Domates Çorbası",
@@ -3149,7 +3416,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3168,8 +3435,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3178,7 +3444,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Terbiyeli Tavuk Çorbası",
@@ -3214,8 +3485,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3224,7 +3494,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Köfte ve Arrabbiata Soslu Sedani Rigati",
@@ -3260,8 +3535,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3270,7 +3544,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Ton Balıklı Fusıllı",
@@ -3289,9 +3568,9 @@
         "Balık"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "fish"
+        "fish",
+        "gluten"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3310,8 +3589,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3320,7 +3598,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Kinoa ve Meksika Fasulyeli Salata",
@@ -3356,8 +3639,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3366,7 +3648,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Meyveli Müsli ve Chia Pot",
@@ -3385,9 +3672,9 @@
         "Süt"
       ],
       "allergens": [
-        "nuts",
         "egg",
-        "lactose"
+        "milk",
+        "nuts"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3406,8 +3693,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3416,7 +3702,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Kuru Meyveli Müsli",
@@ -3435,7 +3726,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3454,8 +3745,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3464,7 +3754,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Kuru Meyve ve Chia Porridge",
@@ -3502,8 +3797,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3512,7 +3806,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Granola Pot",
@@ -3531,7 +3830,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3550,8 +3849,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3560,7 +3858,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Mini Üzümlü Çörek",
@@ -3579,9 +3882,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3600,8 +3903,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3610,7 +3912,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Croissant XL",
@@ -3629,9 +3936,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3658,7 +3965,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Resmî porsiyon tablosundaki güvenilir alanlar kullanıldı; eksik veya tutarsız şeker alanları standart tariften tahmin edildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Çikolatalı Croissant",
@@ -3681,9 +3991,9 @@
         "Soya"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose",
+        "gluten",
+        "milk",
         "soy"
       ],
       "allergenSourceAvailable": true,
@@ -3703,8 +4013,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3713,7 +4022,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Sausage Roll",
@@ -3733,7 +4047,7 @@
       ],
       "allergens": [
         "egg",
-        "lactose",
+        "milk",
         "sesame"
       ],
       "allergenSourceAvailable": true,
@@ -3753,8 +4067,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3763,7 +4076,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Peynirli Kare Pide",
@@ -3782,9 +4100,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3803,8 +4121,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3813,7 +4130,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Zeytinli Açma",
@@ -3832,9 +4154,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3853,8 +4175,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3863,7 +4184,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Dereotlu Peynirli Ev Poğaçası",
@@ -3883,9 +4209,9 @@
         "Susam"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose",
+        "gluten",
+        "milk",
         "sesame"
       ],
       "allergenSourceAvailable": true,
@@ -3905,8 +4231,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3915,7 +4240,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Siyez Unlu Yulaflı Kuru Domatesli Poğaça",
@@ -3934,9 +4264,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -3955,8 +4285,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -3965,7 +4294,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Annemin Poğaçası",
@@ -3984,9 +4318,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4005,8 +4339,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4015,7 +4348,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Vişneli Panna Cotta",
@@ -4035,10 +4373,10 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "soy",
-        "lactose"
+        "gluten",
+        "milk",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4057,8 +4395,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4067,7 +4404,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Snow Whıte Passıon Fruıt Coconut Cake",
@@ -4087,10 +4429,10 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "soy",
-        "lactose"
+        "gluten",
+        "milk",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4109,8 +4451,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4119,7 +4460,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Raspberry Whıte Chocolate Cheesecake",
@@ -4139,10 +4485,10 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "soy",
-        "lactose"
+        "gluten",
+        "milk",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4161,8 +4507,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4171,7 +4516,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Lemon Cheesecake",
@@ -4191,9 +4541,9 @@
         "Sülfür Dioksit"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose",
+        "gluten",
+        "milk",
         "sulphites"
       ],
       "allergenSourceAvailable": true,
@@ -4213,8 +4563,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4223,7 +4572,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Nero Premıum Apple Raspberry Pıe",
@@ -4242,9 +4596,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4263,8 +4617,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4273,7 +4626,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Nero Mozaik",
@@ -4293,7 +4651,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose",
+        "milk",
         "sulphites"
       ],
       "allergenSourceAvailable": true,
@@ -4313,8 +4671,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4323,7 +4680,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Alman Pastası",
@@ -4343,10 +4705,10 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "soy",
-        "lactose"
+        "gluten",
+        "milk",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4365,8 +4727,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4375,7 +4736,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Tiramisu",
@@ -4395,9 +4761,9 @@
         "Soya"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose",
+        "gluten",
+        "milk",
         "soy"
       ],
       "allergenSourceAvailable": true,
@@ -4417,8 +4783,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4427,7 +4792,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Nero Premium SS Cheesecake",
@@ -4449,9 +4819,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4470,8 +4840,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4480,7 +4849,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Tart Di Frutti",
@@ -4499,9 +4873,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4520,8 +4894,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4530,7 +4903,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Limonlu Yaban Mersinli Rulo Pasta",
@@ -4550,10 +4928,10 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "soy",
-        "lactose"
+        "gluten",
+        "milk",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4572,8 +4950,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4582,7 +4959,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Belçika Çikolatalı Kat Kat",
@@ -4602,10 +4984,10 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "soy",
-        "lactose"
+        "gluten",
+        "milk",
+        "soy"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4624,8 +5006,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4634,7 +5015,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Kakaolu ve Antep Fıstıklı Kek",
@@ -4655,10 +5041,10 @@
         "Sülfür Dioksit"
       ],
       "allergens": [
-        "gluten",
-        "nuts",
         "egg",
-        "lactose",
+        "gluten",
+        "milk",
+        "nuts",
         "sulphites"
       ],
       "allergenSourceAvailable": true,
@@ -4678,8 +5064,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4688,7 +5073,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Triple Chocolate Cookie",
@@ -4707,9 +5097,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4728,8 +5118,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4738,7 +5127,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Yulaf & Cranberry Cookie",
@@ -4757,9 +5151,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -4778,8 +5172,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4788,7 +5181,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Chocolate Chip Cookie",
@@ -4808,9 +5206,9 @@
         "Soya"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose",
+        "gluten",
+        "milk",
         "soy"
       ],
       "allergenSourceAvailable": true,
@@ -4830,8 +5228,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4840,7 +5237,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Vişneli Fit Brownie",
@@ -4872,8 +5274,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4882,7 +5283,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Nero Brownie",
@@ -4903,9 +5309,9 @@
         "Soya"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose",
+        "gluten",
+        "milk",
         "nuts",
         "soy"
       ],
@@ -4926,8 +5332,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -4936,7 +5341,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Banana Bread",
@@ -4969,7 +5379,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Havuçlum",
@@ -4990,8 +5403,8 @@
         "Sülfür Dioksit"
       ],
       "allergens": [
-        "gluten",
         "egg",
+        "gluten",
         "nuts",
         "peanut",
         "sulphites"
@@ -5013,8 +5426,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -5023,7 +5435,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Marble Kek",
@@ -5042,9 +5459,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -5063,8 +5480,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -5073,7 +5489,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Berry Muffin",
@@ -5092,9 +5513,9 @@
         "Süt"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose"
+        "gluten",
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -5113,8 +5534,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -5123,7 +5543,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Çikolatalı Muffin",
@@ -5143,9 +5568,9 @@
         "Soya"
       ],
       "allergens": [
-        "gluten",
         "egg",
-        "lactose",
+        "gluten",
+        "milk",
         "soy"
       ],
       "allergenSourceAvailable": true,
@@ -5165,8 +5590,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -5175,7 +5599,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Caramel Waffle",
@@ -5195,7 +5624,7 @@
       ],
       "allergens": [
         "gluten",
-        "lactose",
+        "milk",
         "soy"
       ],
       "allergenSourceAvailable": true,
@@ -5210,7 +5639,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Glutensiz Matcha Cookie",
@@ -5229,7 +5661,7 @@
       ],
       "allergens": [
         "egg",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -5248,8 +5680,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -5258,7 +5689,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Glutensiz Limonlu Muffin",
@@ -5277,7 +5713,7 @@
       ],
       "allergens": [
         "egg",
-        "lactose"
+        "milk"
       ],
       "allergenSourceAvailable": true,
       "baseMacros": {
@@ -5291,7 +5727,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada besin alanı bulunuyor ancak sayısal porsiyon verisi yayınlanmadığı için makrolar tahmin edildi."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Sütlü Tablet Çikolata",
@@ -5309,7 +5748,7 @@
         "Soya"
       ],
       "allergens": [
-        "lactose",
+        "milk",
         "soy"
       ],
       "allergenSourceAvailable": true,
@@ -5324,7 +5763,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": true,
+      "derivedNutritionFields": []
     },
     {
       "name": "Bitter Tablet Çikolata",
@@ -5355,7 +5797,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Acıbadem",
@@ -5395,8 +5840,7 @@
         "carbs",
         "sugar",
         "fat",
-        "satFat",
-        "sodium"
+        "satFat"
       ],
       "nutritionSource": {
         "status": "estimated",
@@ -5405,7 +5849,12 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "ürün başına",
         "notes": "Kalori, protein, karbonhidrat, şeker, yağ ve tuz değerleri resmî Caffè Nero tablosundan alındı; sodyum tuzdan (×400 mg) türetildi. Kafein resmî tabloda bulunmadığı için tarif bazlı tahmindir."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": [
+        "sodium"
+      ]
     },
     {
       "name": "Lolipop",
@@ -5432,7 +5881,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     },
     {
       "name": "Glutensiz Mini Çatal",
@@ -5465,7 +5917,10 @@
         "verifiedAt": "2026-08-11",
         "servingBasis": "standart porsiyon",
         "notes": "Resmî sayfada yalnız 100 g değeri yayınlandığı ve ürün porsiyonu belirtilmediği için bu değer ürün porsiyonu gibi kullanılmadı; makrolar standart porsiyon üzerinden tahmin edildi."
-      }
+      },
+      "productKind": "food",
+      "containsLactose": false,
+      "derivedNutritionFields": []
     }
   ]
 }

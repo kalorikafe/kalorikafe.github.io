@@ -4,12 +4,13 @@
  * Run via `npm run catalog:audit` (node scripts/catalog-audit.ts).
  * Fails with exit code 1 and a descriptive message on any violated gate.
  *
- * Gates (see DEEPSEEK_NIGHT_GOAL.md §8.1):
+ * Catalog quality gates:
  *  - unique product IDs
  *  - valid chain references
  *  - finite, non-negative nutrition values
- *  - catalog/image/nutrition provenance on every static item
- *  - `verified` nutrition sources carry https URL + checkedAt + servingBasis
+ *  - canonical productKind/category agreement and no food modifiers
+ *  - regulated allergen + catalog/image/nutrition provenance on every item
+ *  - field-level nutrition provenance agrees with the aggregate status
  *  - availability limited to current | seasonal
  *  - local WebP image exists, is non-empty and decodable
  *  - unique image ratio >= 60%
@@ -26,13 +27,22 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { MENU_ITEMS } from '../src/data/items.ts';
 import { CHAINS } from '../src/data/chains.ts';
-import type { MenuItem } from '../src/types/cafe.ts';
+import type { MenuItem, NutritionField, OfficialAllergen } from '../src/types/cafe.ts';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 const PUBLIC_IMAGES = path.join(PROJECT_ROOT, 'public', 'images');
 
 const IMAGE_GATES_ENABLED = process.env.CATALOG_AUDIT_SKIP_IMAGES !== '1';
+const FOOD_CATEGORIES = new Set(['bakery_dessert', 'sandwich_savory', 'fit_healthy']);
+const OFFICIAL_ALLERGENS = new Set<OfficialAllergen>([
+  'gluten', 'crustaceans', 'egg', 'fish', 'peanut', 'soy', 'milk',
+  'nuts', 'celery', 'mustard', 'sesame', 'sulphites', 'lupin', 'molluscs',
+]);
+const NUTRITION_FIELDS: NutritionField[] = [
+  'calories', 'protein', 'carbs', 'sugar', 'fat', 'satFat', 'caffeine', 'sodium',
+];
+const NUTRITION_FIELD_STATUSES = new Set(['official', 'derived', 'estimated', 'unknown']);
 
 const failures: string[] = [];
 let checksRun = 0;
@@ -68,7 +78,7 @@ function imageSourceIdentity(url: string): string {
 /* Image family classification: a "normalized visual family"          */
 /* ------------------------------------------------------------------ */
 export function visualFamilyOf(item: MenuItem): string {
-  if (!item.isDrink) {
+  if (item.productKind === 'food') {
     if (item.category === 'bakery_dessert' || item.category === 'fit_healthy') return 'dessert-snack';
     return 'savory-food';
   }
@@ -115,6 +125,38 @@ check(
   `Unknown chain reference(s): ${MENU_ITEMS.filter(i => !chainIds.has(i.chainId)).map(i => i.chainId).join(', ')}`,
 );
 
+/* Canonical product type: category owns the drink/food decision. */
+for (const item of MENU_ITEMS) {
+  const expectedKind = FOOD_CATEGORIES.has(item.category) ? 'food' : 'drink';
+  if (item.productKind !== expectedKind) {
+    failures.push(`productKind/category conflict in ${itemId(item)}: ${item.productKind ?? 'missing'} vs ${item.category}`);
+  }
+  if (item.isDrink !== (item.productKind === 'drink')) {
+    failures.push(`isDrink is not derived from productKind in ${itemId(item)}`);
+  }
+  if (item.productKind === 'food') {
+    const modifiers = ['defaultSizeId', 'defaultMilkId', 'defaultSyrupPumps', 'baseCustomization']
+      .filter(key => item[key as keyof MenuItem] !== undefined);
+    if (modifiers.length > 0) {
+      failures.push(`Food item has drink modifier fallback(s) ${modifiers.join(', ')} in ${itemId(item)}`);
+    }
+  }
+}
+const coffyCake = MENU_ITEMS.find(item => item.id === 'coffy_portakalli_kakaolu_kek');
+check(
+  coffyCake?.category === 'bakery_dessert' && coffyCake.productKind === 'food' && !coffyCake.isDrink,
+  'Coffy Portakallı Kakaolu Kek must remain a bakery food',
+);
+
+const drinkFallback = JSON.stringify({
+  calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6,
+  satFat: 3.5, caffeine: 0, sodium: 90,
+});
+check(
+  !MENU_ITEMS.some(item => item.productKind === 'food' && JSON.stringify(item.baseMacros) === drinkFallback),
+  'Food item still carries the generic drink macro fallback',
+);
+
 let positiveCount = 0;
 for (const item of MENU_ITEMS) {
   const values = Object.values(item.baseMacros).filter(v => v !== undefined);
@@ -140,6 +182,17 @@ check(
   'availability must be current | seasonal',
 );
 
+const legacyManifestPath = path.join(PROJECT_ROOT, 'scripts', 'catalog_sources', 'legacy_unverified.json');
+const legacyManifest = JSON.parse(readFileSync(legacyManifestPath, 'utf8')) as {
+  checkedAt: string;
+  productIds: string[];
+};
+const legacyManifestIds = new Set(legacyManifest.productIds);
+check(
+  legacyManifestIds.size === legacyManifest.productIds.length,
+  'Duplicate IDs in legacy-unverified provenance manifest',
+);
+
 /* Provenance required on every static catalog product. */
 for (const item of MENU_ITEMS) {
   if (!item.catalogSource) {
@@ -151,8 +204,42 @@ for (const item of MENU_ITEMS) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(item.catalogSource.checkedAt)) {
       failures.push(`catalogSource.checkedAt not YYYY-MM-DD on ${itemId(item)}`);
     }
-    if (!['official', 'secondary'].includes(item.catalogSource.kind)) {
+    if (!['official', 'secondary', 'legacy_unverified'].includes(item.catalogSource.kind)) {
       failures.push(`catalogSource.kind invalid on ${itemId(item)}`);
+    }
+    if (legacyManifestIds.has(item.id) && item.catalogSource.kind !== 'legacy_unverified') {
+      failures.push(`Source-unmatched item is presented as ${item.catalogSource.kind} on ${itemId(item)}`);
+    }
+    if (item.catalogSource.kind === 'legacy_unverified' && !legacyManifestIds.has(item.id)) {
+      failures.push(`legacy_unverified item missing from provenance manifest: ${itemId(item)}`);
+    }
+  }
+
+  for (const allergen of item.allergens) {
+    if (!OFFICIAL_ALLERGENS.has(allergen as OfficialAllergen)) {
+      failures.push(`Non-regulated or unknown static allergen ${allergen} on ${itemId(item)}`);
+    }
+  }
+  if (item.containsLactose === true && !item.allergens.includes('milk')) {
+    failures.push(`containsLactose=true without regulated milk allergen on ${itemId(item)}`);
+  }
+  if (item.crossContactRisks?.some(risk => risk !== 'celiac_oat_risk')) {
+    failures.push(`Unknown cross-contact risk on ${itemId(item)}`);
+  }
+  if (!item.allergenSource) {
+    failures.push(`allergenSource missing on ${itemId(item)}`);
+  } else {
+    const source = item.allergenSource;
+    if (!['official', 'mixed', 'estimated', 'unavailable'].includes(source.status)) {
+      failures.push(`allergenSource.status invalid on ${itemId(item)}`);
+    }
+    if (source.status === 'official' || source.status === 'mixed') {
+      if (!source.url || !/^https:\/\//.test(source.url)) {
+        failures.push(`${source.status} allergenSource needs https url on ${itemId(item)}`);
+      }
+      if (!source.checkedAt || !/^\d{4}-\d{2}-\d{2}$/.test(source.checkedAt)) {
+        failures.push(`${source.status} allergenSource needs checkedAt on ${itemId(item)}`);
+      }
     }
   }
 
@@ -174,21 +261,48 @@ for (const item of MENU_ITEMS) {
     failures.push(`nutritionSource missing on ${itemId(item)}`);
     continue;
   }
-  if (item.nutritionSource.status === 'verified') {
-    const ns = item.nutritionSource;
+  const ns = item.nutritionSource;
+  if (ns.status === 'verified' || ns.status === 'mixed') {
     if (!ns.url || !/^https:\/\//.test(ns.url)) {
-      failures.push(`verified nutritionSource needs https url on ${itemId(item)}`);
+      failures.push(`${ns.status} nutritionSource needs https url on ${itemId(item)}`);
     }
     if (!ns.verifiedAt || !/^\d{4}-\d{2}-\d{2}$/.test(ns.verifiedAt)) {
-      failures.push(`verified nutritionSource needs YYYY-MM-DD verifiedAt on ${itemId(item)}`);
+      failures.push(`${ns.status} nutritionSource needs YYYY-MM-DD verifiedAt on ${itemId(item)}`);
     }
     if (!ns.servingBasis) {
-      failures.push(`verified nutritionSource needs servingBasis on ${itemId(item)}`);
+      failures.push(`${ns.status} nutritionSource needs servingBasis on ${itemId(item)}`);
     }
-  } else if (!['estimated', 'unverified'].includes(item.nutritionSource.status)) {
+  } else if (!['estimated', 'unverified'].includes(ns.status)) {
     failures.push(`nutritionSource.status invalid on ${itemId(item)}`);
   }
+
+  if (!ns.fieldStatus) {
+    failures.push(`nutritionSource.fieldStatus missing on ${itemId(item)}`);
+  } else {
+    const statuses = NUTRITION_FIELDS.map(field => ns.fieldStatus?.[field]);
+    if (statuses.some(status => !status || !NUTRITION_FIELD_STATUSES.has(status))) {
+      failures.push(`nutrition field provenance incomplete/invalid on ${itemId(item)}`);
+    } else {
+      const statusSet = new Set(statuses);
+      const hasSourced = statusSet.has('official') || statusSet.has('derived');
+      const hasEstimatedOrUnknown = statusSet.has('estimated') || statusSet.has('unknown');
+      if (ns.status === 'verified' && hasEstimatedOrUnknown) {
+        failures.push(`verified nutrition has estimated/unknown fields on ${itemId(item)}`);
+      }
+      if (ns.status === 'mixed' && (!hasSourced || !hasEstimatedOrUnknown)) {
+        failures.push(`mixed nutrition must contain sourced and estimated/unknown fields on ${itemId(item)}`);
+      }
+      if (ns.status === 'estimated' && !(statusSet.size === 1 && statusSet.has('estimated'))) {
+        failures.push(`estimated nutrition has inconsistent field provenance on ${itemId(item)}`);
+      }
+    }
+  }
 }
+
+check(
+  legacyManifestIds.size === MENU_ITEMS.filter(item => item.catalogSource?.kind === 'legacy_unverified').length,
+  'legacy_unverified catalog count differs from the provenance manifest',
+);
 
 /* ------------------------------------------------------------------ */
 /* Images                                                              */
@@ -313,7 +427,18 @@ if (!statSync(caffeNeroSourcePath, { throwIfNoEntry: false })?.isFile()) {
 } else {
   const source = JSON.parse(readFileSync(caffeNeroSourcePath, 'utf8')) as {
     chainId: string;
-    products: Array<{ name: string }>;
+    products: Array<{
+      name: string;
+      category: string;
+      productKind: 'drink' | 'food';
+      isDrink: boolean;
+      allergens: OfficialAllergen[];
+      containsLactose: boolean;
+      allergenSourceAvailable: boolean;
+      allergenNotes?: string;
+      officialNutritionFields: NutritionField[];
+      derivedNutritionFields?: NutritionField[];
+    }>;
   };
   const sourceNames = new Set(source.products.map(product => product.name));
   const catalogNames = new Set(
@@ -333,6 +458,41 @@ if (!statSync(caffeNeroSourcePath, { throwIfNoEntry: false })?.isFile()) {
   );
   check(missingNames.length === 0, `Caffè Nero source products missing from catalog: ${missingNames.slice(0, 5).join(', ')}`);
   check(extraNames.length === 0, `Caffè Nero catalog products absent from source: ${extraNames.slice(0, 5).join(', ')}`);
+
+  const catalogByName = new Map(catalogItems.map(item => [item.name, item]));
+  for (const product of source.products) {
+    const item = catalogByName.get(product.name);
+    if (!item) continue;
+    check(item.productKind === product.productKind, `Caffè Nero productKind drift on ${product.name}`);
+    check(item.isDrink === product.isDrink, `Caffè Nero isDrink drift on ${product.name}`);
+    check(item.containsLactose === product.containsLactose, `Caffè Nero lactose metadata drift on ${product.name}`);
+    if (product.allergenSourceAvailable) {
+      check(
+        JSON.stringify([...item.allergens].sort()) === JSON.stringify([...product.allergens].sort()),
+        `Caffè Nero official allergen drift on ${product.name}`,
+      );
+      const expectedAllergenStatus = product.allergenNotes ? 'mixed' : 'official';
+      check(
+        item.allergenSource?.status === expectedAllergenStatus,
+        `Caffè Nero allergen provenance drift on ${product.name}`,
+      );
+    }
+
+    const official = new Set(product.officialNutritionFields);
+    const derived = new Set(product.derivedNutritionFields ?? []);
+    const sourcedCount = official.size + derived.size;
+    check(
+      item.nutritionSource?.status === (sourcedCount > 0 ? 'mixed' : 'estimated'),
+      `Caffè Nero nutrition aggregate provenance drift on ${product.name}`,
+    );
+    for (const field of NUTRITION_FIELDS) {
+      const expected = derived.has(field) ? 'derived' : official.has(field) ? 'official' : 'estimated';
+      check(
+        item.nutritionSource?.fieldStatus?.[field] === expected,
+        `Caffè Nero ${field} provenance drift on ${product.name}`,
+      );
+    }
+  }
 
   const allSourceUsage = new Map<string, MenuItem[]>();
   for (const item of MENU_ITEMS) {
@@ -371,7 +531,7 @@ for (const item of MENU_ITEMS) {
   chainCounts[item.chainId] = c;
 }
 
-const nutritionCounts = { verified: 0, estimated: 0, unverified: 0 };
+const nutritionCounts = { verified: 0, mixed: 0, estimated: 0, unverified: 0 };
 for (const item of MENU_ITEMS) {
   const s = item.nutritionSource?.status ?? 'unverified';
   nutritionCounts[s]++;
@@ -390,6 +550,7 @@ const summary = {
   mostRepeatedImage: worstRepeatFile ? { path: worstRepeatFile, count: worstRepeat } : null,
   chains: chainCounts,
   nutrition: nutritionCounts,
+  legacyUnverifiedSources: legacyManifestIds.size,
   images: imageKindCounts,
   checksRun,
   failures: failures.length,

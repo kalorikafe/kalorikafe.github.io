@@ -1,0 +1,6802 @@
+[
+ {
+  "id": "starbucks_1_caff__latte",
+  "chainId": "starbucks",
+  "name": "Caffè Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Zengin espresso ve ısıtılmış süt üzerine hafif süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 190,
+   "protein": 12,
+   "carbs": 18,
+   "sugar": 17,
+   "fat": 7,
+   "satFat": 4.5,
+   "caffeine": 150,
+   "sodium": 150
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_2_caramel_macchiato",
+  "chainId": "starbucks",
+  "name": "Caramel Macchiato",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Vanilya şurubu, sıcak süt ve süt köpüğü üzerine espresso ve karamel sosu.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 3,
+  "baseMacros": {
+   "calories": 250,
+   "protein": 10,
+   "carbs": 35,
+   "sugar": 33,
+   "fat": 7,
+   "satFat": 4.5,
+   "caffeine": 150,
+   "sodium": 150
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_3_white_chocolate_mocha",
+  "chainId": "starbucks",
+  "name": "White Chocolate Mocha",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso, zengin beyaz çikolata sosu, sıcak süt ve krema.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 4,
+  "baseMacros": {
+   "calories": 430,
+   "protein": 12,
+   "carbs": 55,
+   "sugar": 53,
+   "fat": 18,
+   "satFat": 12,
+   "caffeine": 150,
+   "sodium": 240
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_4_flat_white",
+  "chainId": "starbucks",
+  "name": "Flat White",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Ristretto espresso shotları üzerine mikronize kadifemsi süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 170,
+   "protein": 9,
+   "carbs": 13,
+   "sugar": 12,
+   "fat": 9,
+   "satFat": 5,
+   "caffeine": 195,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_5_caff__americano",
+  "chainId": "starbucks",
+  "name": "Caffè Americano",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso shotları üzerine sıcak su eklenerek hazırlanan sek kahve.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 1,
+   "carbs": 3,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 225,
+   "sodium": 15
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_6_geleneksel_t_rk_kahvesi",
+  "chainId": "starbucks",
+  "name": "Geleneksel Türk Kahvesi",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Starbucks harmanı Arabica çekirdeklerinden geleneksel pişim Türk kahvesi.",
+  "image": "/images/turk_kahvesi.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 0.5,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0.4,
+   "satFat": 0.1,
+   "caffeine": 75,
+   "sodium": 5
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_7_iced_white_chocolate_mocha",
+  "chainId": "starbucks",
+  "name": "Iced White Chocolate Mocha",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Buzlu espresso, beyaz çikolata sosu, soğuk süt ve krema.",
+  "image": "/images/white_choc_mocha.jpg",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 4,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 11,
+   "carbs": 54,
+   "sugar": 52,
+   "fat": 18,
+   "satFat": 12,
+   "caffeine": 150,
+   "sodium": 200
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_8_cold_brew",
+  "chainId": "starbucks",
+  "name": "Cold Brew",
+  "nameEn": null,
+  "category": "cold_brew",
+  "description": "20 saat boyunca soğuk suda yavaş demlenmiş pürüzsüz gövdeli kahve.",
+  "image": "/images/iced_americano.jpg",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0,
+   "carbs": 0,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 205,
+   "sodium": 20
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_9_caramel_frappuccino_",
+  "chainId": "starbucks",
+  "name": "Caramel Frappuccino®",
+  "nameEn": null,
+  "category": "frappe_blended",
+  "description": "Kahve, karamel şurubu, süt ve buz çırpıntısı, krema ve karamel gezdirimi.",
+  "image": "/images/caramel_macchiato.jpg",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 3,
+  "baseMacros": {
+   "calories": 380,
+   "protein": 4,
+   "carbs": 57,
+   "sugar": 54,
+   "fat": 16,
+   "satFat": 10,
+   "caffeine": 100,
+   "sodium": 230
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_10_java_chip_frappuccino_",
+  "chainId": "starbucks",
+  "name": "Java Chip Frappuccino®",
+  "nameEn": null,
+  "category": "frappe_blended",
+  "description": "Mocha sosu, çikolata tanecikleri, kahve, süt ve buz çırpıntısı.",
+  "image": "/images/caramel_macchiato.jpg",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 3,
+  "baseMacros": {
+   "calories": 440,
+   "protein": 6,
+   "carbs": 65,
+   "sugar": 60,
+   "fat": 18,
+   "satFat": 12,
+   "caffeine": 110,
+   "sodium": 260
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_11_cool_lime_starbucks_refresha_",
+  "chainId": "starbucks",
+  "name": "Cool Lime Starbucks Refresha®",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Misket limonu lezzeti, narenciye & nane aromalı çalkalanmış serinletici.",
+  "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 110,
+   "protein": 0.2,
+   "carbs": 26,
+   "sugar": 24,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 45,
+   "sodium": 15
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_12_very_berry_hibiscus_refresha_",
+  "chainId": "starbucks",
+  "name": "Very Berry Hibiscus Refresha®",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Böğürtlen ve hibiskus aromalı buzlu serinletici içecek.",
+  "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 120,
+   "protein": 0.3,
+   "carbs": 29,
+   "sugar": 27,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 45,
+   "sodium": 15
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_13_chai_tea_latte",
+  "chainId": "starbucks",
+  "name": "Chai Tea Latte",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Baharatlı siyah çay özü, sıcak süt ve süt köpüğü.",
+  "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "grande",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 4,
+  "baseMacros": {
+   "calories": 240,
+   "protein": 8,
+   "carbs": 45,
+   "sugar": 42,
+   "fat": 4.5,
+   "satFat": 2.5,
+   "caffeine": 95,
+   "sodium": 115
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_14_bel_ika__ikolatal__pasta",
+  "chainId": "starbucks",
+  "name": "Belçika Çikolatalı Pasta",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Kat kat Belçika çikolatalı ganaj ve kek katmanları.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 520,
+   "protein": 7,
+   "carbs": 58,
+   "sugar": 44,
+   "fat": 29,
+   "satFat": 17,
+   "caffeine": 20,
+   "sodium": 280
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_15_kremal__havu_lu_kek",
+  "chainId": "starbucks",
+  "name": "Kremalı Havuçlu Kek",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Havuçlu, tarçınlı ve cevizli kek üzeri krem peynirli krema.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 410,
+   "protein": 5.5,
+   "carbs": 51,
+   "sugar": 34,
+   "fat": 21,
+   "satFat": 6,
+   "caffeine": 0,
+   "sodium": 320
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_16_limonlu_kek",
+  "chainId": "starbucks",
+  "name": "Limonlu Kek",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Taze limon aromalı ve üzeri limon glazürlü dilim kek.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 360,
+   "protein": 4,
+   "carbs": 49,
+   "sugar": 31,
+   "fat": 17,
+   "satFat": 5,
+   "caffeine": 0,
+   "sodium": 290
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_17_very_berry_muffin",
+  "chainId": "starbucks",
+  "name": "Very Berry Muffin",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Orman meyveleri dolgulu ve taneli yumuşak muffin.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 370,
+   "protein": 5,
+   "carbs": 52,
+   "sugar": 29,
+   "fat": 16,
+   "satFat": 4,
+   "caffeine": 0,
+   "sodium": 310
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_18_triple_chocolate_cookie",
+  "chainId": "starbucks",
+  "name": "Triple Chocolate Cookie",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Üç çeşit çikolata parçası içeren dev yumuşak kurabiye.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 390,
+   "protein": 5,
+   "carbs": 50,
+   "sugar": 35,
+   "fat": 19,
+   "satFat": 11,
+   "caffeine": 15,
+   "sodium": 250
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_19_hindi_f_me_jambonlu___peynirli_sandvi_",
+  "chainId": "starbucks",
+  "name": "Hindi Füme Jambonlu & Peynirli Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Tost ekmeğinde hindi füme jambon ve kaşar peyniri.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 380,
+   "protein": 22,
+   "carbs": 36,
+   "sugar": 4,
+   "fat": 16,
+   "satFat": 8,
+   "caffeine": 0,
+   "sodium": 920
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "starbucks_20_mozzarella_peynirli_sandvi_",
+  "chainId": "starbucks",
+  "name": "Mozzarella Peynirli Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Ciabatta ekmeğinde mozzarella, pesto sos ve domates.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 440,
+   "protein": 17,
+   "carbs": 46,
+   "sugar": 3,
+   "fat": 20,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 810
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_1_lab_caffe_latte",
+  "chainId": "espressolab",
+  "name": "Lab Caffe Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espressolab nitelikli çekirdek espresso ve kadifemsi süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 160,
+   "protein": 9,
+   "carbs": 14,
+   "sugar": 13,
+   "fat": 7,
+   "satFat": 4,
+   "caffeine": 140,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_2_cortado",
+  "chainId": "espressolab",
+  "name": "Cortado",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Eşit miktarda espresso shot ve buharlanmış sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 85,
+   "protein": 5,
+   "carbs": 7,
+   "sugar": 6,
+   "fat": 4,
+   "satFat": 2.2,
+   "caffeine": 140,
+   "sodium": 65
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_3_lab_flat_white",
+  "chainId": "espressolab",
+  "name": "Lab Flat White",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Çift ristretto shot üzerine mikronize ince süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 170,
+   "protein": 9,
+   "carbs": 14,
+   "sugar": 13,
+   "fat": 9,
+   "satFat": 5,
+   "caffeine": 180,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_4_spanish_latte",
+  "chainId": "espressolab",
+  "name": "Spanish Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso, sıcak süt ve konsantre tatlı süt harmanı.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 270,
+   "protein": 8,
+   "carbs": 39,
+   "sugar": 36,
+   "fat": 9.5,
+   "satFat": 6,
+   "caffeine": 140,
+   "sodium": 150
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_5_sarelle_mocha",
+  "chainId": "espressolab",
+  "name": "Sarelle Mocha",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Yerli Sarelle fındıklı çikolata ezmesi, espresso ve süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 390,
+   "protein": 10,
+   "carbs": 48,
+   "sugar": 42,
+   "fat": 17,
+   "satFat": 9,
+   "caffeine": 140,
+   "sodium": 160
+  },
+  "allergens": [
+   "lactose",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_6_gold_chocolate_mocha",
+  "chainId": "espressolab",
+  "name": "Gold Chocolate Mocha",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Karamelize altın sarısı çikolata sosu, espresso ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 410,
+   "protein": 10,
+   "carbs": 51,
+   "sugar": 46,
+   "fat": 18,
+   "satFat": 11,
+   "caffeine": 140,
+   "sodium": 180
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_7_t_rk_kahvesi",
+  "chainId": "espressolab",
+  "name": "Türk Kahvesi",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Taze taze kavrulmuş özel Arabica çekirdeklerinden köpüklü Türk kahvesi.",
+  "image": "/images/turk_kahvesi.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 0.5,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0.4,
+   "satFat": 0.1,
+   "caffeine": 75,
+   "sodium": 5
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_8_iced_spanish_latte",
+  "chainId": "espressolab",
+  "name": "Iced Spanish Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Soğuk süt, tatlı süt konsantresi, buz ve taze espresso.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 260,
+   "protein": 7,
+   "carbs": 37,
+   "sugar": 34,
+   "fat": 9,
+   "satFat": 5.5,
+   "caffeine": 140,
+   "sodium": 140
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_9_iced_salted_caramel_latte",
+  "chainId": "espressolab",
+  "name": "Iced Salted Caramel Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Tuzlu karamel aroması, soğuk süt, buz ve zengin espresso.",
+  "image": "/images/iced_caramel_macchiato.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 220,
+   "protein": 6,
+   "carbs": 31,
+   "sugar": 28,
+   "fat": 7,
+   "satFat": 4.2,
+   "caffeine": 140,
+   "sodium": 190
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_10_cold_brew_kenya",
+  "chainId": "espressolab",
+  "name": "Cold Brew Kenya",
+  "nameEn": null,
+  "category": "cold_brew",
+  "description": "Tek kökenli Kenya çekirdeklerinden 18 saat soğuk demlenmiş kahve.",
+  "image": "/images/iced_americano.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0,
+   "carbs": 0,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 180,
+   "sodium": 15
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_11_esfrappa__ikolata",
+  "chainId": "espressolab",
+  "name": "Esfrappa Çikolata",
+  "nameEn": null,
+  "category": "frappe_blended",
+  "description": "Espresso, çikolata sosu, süt ve çırpılmış buzlu ferah içecek.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 390,
+   "protein": 5,
+   "carbs": 61,
+   "sugar": 55,
+   "fat": 15,
+   "satFat": 9,
+   "caffeine": 120,
+   "sodium": 220
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_12_v60_demleme_kahve",
+  "chainId": "espressolab",
+  "name": "V60 Demleme Kahve",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Single origin çekirdeklerin V60 yöntemiyle elde demlenmiş berrak kahvesi.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0.3,
+   "carbs": 1,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 160,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_13_chai_tea_latte",
+  "chainId": "espressolab",
+  "name": "Chai Tea Latte",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Doğal baharat özleri ve kremsi sıcak süt.",
+  "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 220,
+   "protein": 7,
+   "carbs": 39,
+   "sugar": 36,
+   "fat": 4,
+   "satFat": 2.2,
+   "caffeine": 65,
+   "sodium": 100
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_14_cranberry_hibiscus",
+  "chainId": "espressolab",
+  "name": "Cranberry Hibiscus",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Kızılcık ve hibiskus taneli buzlu soğuk bitki çayı.",
+  "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 85,
+   "protein": 0,
+   "carbs": 21,
+   "sugar": 19,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 0,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_15_matcha_latte",
+  "chainId": "espressolab",
+  "name": "Matcha Latte",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Japon yeşil çayı tozu (matcha) ve sıcak/soğuk süt harmanı.",
+  "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 180,
+   "protein": 7,
+   "carbs": 25,
+   "sugar": 23,
+   "fat": 5.5,
+   "satFat": 3.2,
+   "caffeine": 50,
+   "sodium": 90
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_16_hindi_f_meli___ka_ar_peynirli_acuka_sandvi_",
+  "chainId": "espressolab",
+  "name": "Hindi Fümeli & Kaşar Peynirli Acuka Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Acuka sosu sürülmüş ekmek arasında hindi füme ve kaşar.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 410,
+   "protein": 21,
+   "carbs": 39,
+   "sugar": 4,
+   "fat": 18,
+   "satFat": 8,
+   "caffeine": 0,
+   "sodium": 980
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_17_3_peynirli_avokadolu_a_ma_sandvi_",
+  "chainId": "espressolab",
+  "name": "3 Peynirli Avokadolu Açma Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Açma ekmeğinde ezilmiş avokado ve 3 çeşit peynir.",
+  "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 470,
+   "protein": 16,
+   "carbs": 44,
+   "sugar": 4,
+   "fat": 25,
+   "satFat": 11,
+   "caffeine": 0,
+   "sodium": 840
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_18_frambuazl____f_st_kl__cheesecake",
+  "chainId": "espressolab",
+  "name": "Frambuazlı & Fıstıklı Cheesecake",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Frambuaz soslu ve Antep fıstığı kaplamalı cheesecake dilimi.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 460,
+   "protein": 8,
+   "carbs": 43,
+   "sugar": 31,
+   "fat": 28,
+   "satFat": 16,
+   "caffeine": 0,
+   "sodium": 270
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_19_levain_kuki__cookie_",
+  "chainId": "espressolab",
+  "name": "Levain Kuki (Cookie)",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "New York tarzı kalın, içi akışkan çikolatalı kurabiye.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 6,
+   "carbs": 54,
+   "sugar": 38,
+   "fat": 21,
+   "satFat": 12,
+   "caffeine": 10,
+   "sodium": 260
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "espressolab_20_ha_ha_l__limonlu_kek",
+  "chainId": "espressolab",
+  "name": "Haşhaşlı Limonlu Kek",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Mavi haşhaş tohumlu ferah limonlu baton kek dilimi.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 350,
+   "protein": 4,
+   "carbs": 47,
+   "sugar": 28,
+   "fat": 16,
+   "satFat": 4.5,
+   "caffeine": 0,
+   "sodium": 260
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_1_geleneksel_t_rk_kahvesi",
+  "chainId": "kahve_dunyasi",
+  "name": "Geleneksel Türk Kahvesi",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Kahve Dünyası imza kavrumu köpüklü Türk kahvesi.",
+  "image": "/images/turk_kahvesi.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 0.5,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0.4,
+   "satFat": 0.1,
+   "caffeine": 75,
+   "sodium": 5
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_2_damla_sak_zl__t_rk_kahvesi",
+  "chainId": "kahve_dunyasi",
+  "name": "Damla Sakızlı Türk Kahvesi",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Hakiki Ege damla sakızı aromalı pişirme Türk kahvesi.",
+  "image": "/images/turk_kahvesi.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 20,
+   "protein": 0.5,
+   "carbs": 3,
+   "sugar": 1,
+   "fat": 0.4,
+   "satFat": 0.1,
+   "caffeine": 75,
+   "sodium": 5
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_3_caffe_latte",
+  "chainId": "kahve_dunyasi",
+  "name": "Caffe Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Taze çekilmiş espresso ve buharla ısıtılmış kremsi süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 150,
+   "protein": 8,
+   "carbs": 13,
+   "sugar": 12,
+   "fat": 7,
+   "satFat": 4,
+   "caffeine": 75,
+   "sodium": 115
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_4_americano",
+  "chainId": "kahve_dunyasi",
+  "name": "Americano",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso üzerine eklenen sıcak su ile hazırlanan siyah kahve.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 1,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 150,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_5_mocha",
+  "chainId": "kahve_dunyasi",
+  "name": "Mocha",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Kahve Dünyası öz çikolatası, espresso ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 350,
+   "protein": 9,
+   "carbs": 45,
+   "sugar": 37,
+   "fat": 14,
+   "satFat": 9,
+   "caffeine": 95,
+   "sodium": 140
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_6_gofrik_buzlu_latte",
+  "chainId": "kahve_dunyasi",
+  "name": "Gofrik Buzlu Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Antep fıstıklı Gofrik çikolata aroması, soğuk süt, buz ve espresso.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 280,
+   "protein": 7,
+   "carbs": 36,
+   "sugar": 32,
+   "fat": 12,
+   "satFat": 6,
+   "caffeine": 105,
+   "sodium": 160
+  },
+  "allergens": [
+   "lactose",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_7_f_nd_k_kremal__so_uk_buzlu_latte",
+  "chainId": "kahve_dunyasi",
+  "name": "Fındık Kremalı Soğuk Buzlu Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Kahve Dünyası fındık ezmesi aroması, espresso ve soğuk süt.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 260,
+   "protein": 7,
+   "carbs": 33,
+   "sugar": 29,
+   "fat": 11,
+   "satFat": 5,
+   "caffeine": 105,
+   "sodium": 150
+  },
+  "allergens": [
+   "lactose",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_8_buzlu_caffe_latte",
+  "chainId": "kahve_dunyasi",
+  "name": "Buzlu Caffe Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Buz küpleri, soğuk süt ve taze espresso shot.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 130,
+   "protein": 7,
+   "carbs": 11,
+   "sugar": 10,
+   "fat": 6,
+   "satFat": 3.5,
+   "caffeine": 75,
+   "sodium": 95
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_9_cold_brew",
+  "chainId": "kahve_dunyasi",
+  "name": "Cold Brew",
+  "nameEn": null,
+  "category": "cold_brew",
+  "description": "Soğuk suda yavaş demlenmiş berrak cold brew kahve.",
+  "image": "/images/iced_americano.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0,
+   "carbs": 0,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 155,
+   "sodium": 15
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_10_s_cak__ikolata",
+  "chainId": "kahve_dunyasi",
+  "name": "Sıcak Çikolata",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Gerçek eritilmiş Kahve Dünyası çikolatası ve sıcak süt.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 360,
+   "protein": 11,
+   "carbs": 46,
+   "sugar": 40,
+   "fat": 15,
+   "satFat": 9.5,
+   "caffeine": 20,
+   "sodium": 170
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_11_salep",
+  "chainId": "kahve_dunyasi",
+  "name": "Salep",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Geleneksel salep ve üzerine bol tarçın süslemesi.",
+  "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 270,
+   "protein": 9,
+   "carbs": 44,
+   "sugar": 37,
+   "fat": 6,
+   "satFat": 3.8,
+   "caffeine": 0,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_12_ev_yap_m__limonata",
+  "chainId": "kahve_dunyasi",
+  "name": "Ev Yapımı Limonata",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Taze limon kabuğu rendeli ev yapımı soğuk limonata.",
+  "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 125,
+   "protein": 0.3,
+   "carbs": 31,
+   "sugar": 29,
+   "fat": 0.1,
+   "satFat": 0,
+   "caffeine": 0,
+   "sodium": 8
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_13__ikolatal__milkshake",
+  "chainId": "kahve_dunyasi",
+  "name": "Çikolatalı Milkshake",
+  "nameEn": null,
+  "category": "frappe_blended",
+  "description": "Özel çikolatalı dondurma, süt ve buz çırpması.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 8,
+   "carbs": 58,
+   "sugar": 52,
+   "fat": 17,
+   "satFat": 11,
+   "caffeine": 10,
+   "sodium": 230
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_14_mozaik_pasta",
+  "chainId": "kahve_dunyasi",
+  "name": "Mozaik Pasta",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Bisküvili ve yoğun kakaolu dondurulmuş mozaik pasta dilimi.",
+  "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 340,
+   "protein": 5,
+   "carbs": 41,
+   "sugar": 25,
+   "fat": 18,
+   "satFat": 10,
+   "caffeine": 10,
+   "sodium": 180
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_15_limonlu_cheesecake",
+  "chainId": "kahve_dunyasi",
+  "name": "Limonlu Cheesecake",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Ferah limon pelteli kremamsı cheesecake dilimi.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 430,
+   "protein": 7,
+   "carbs": 44,
+   "sugar": 31,
+   "fat": 25,
+   "satFat": 15,
+   "caffeine": 0,
+   "sodium": 260
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_16_kahve_d_nyas__gofrik__antep_f_st_kl__",
+  "chainId": "kahve_dunyasi",
+  "name": "Kahve Dünyası Gofrik (Antep Fıstıklı)",
+  "nameEn": null,
+  "category": "fit_healthy",
+  "description": "%23 Antep fıstığı içeren çıtır çikolatalı gofret.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 185,
+   "protein": 3.5,
+   "carbs": 17,
+   "sugar": 12,
+   "fat": 11,
+   "satFat": 5.5,
+   "caffeine": 0,
+   "sodium": 45
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "nuts",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_17_madlen__ikolata_kutusu",
+  "chainId": "kahve_dunyasi",
+  "name": "Madlen Çikolata Kutusu",
+  "nameEn": null,
+  "category": "fit_healthy",
+  "description": "Sütlü ve bitter kare madlen çikolata çeşitleri.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 220,
+   "protein": 3,
+   "carbs": 22,
+   "sugar": 20,
+   "fat": 13,
+   "satFat": 8,
+   "caffeine": 15,
+   "sodium": 35
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_18_mozzarellal__pesto_soslu_sandvi_",
+  "chainId": "kahve_dunyasi",
+  "name": "Mozzarellalı Pesto Soslu Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Taze mozzarella, fesleğenli pesto ve domatesli sandviç.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 430,
+   "protein": 16,
+   "carbs": 44,
+   "sugar": 3,
+   "fat": 21,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 790
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_19_hindi_f_me_sandvi_",
+  "chainId": "kahve_dunyasi",
+  "name": "Hindi Füme Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Kepekli ekmekte hindi füme dilimleri ve hafif sos.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 350,
+   "protein": 23,
+   "carbs": 38,
+   "sugar": 3,
+   "fat": 12,
+   "satFat": 5,
+   "caffeine": 0,
+   "sodium": 890
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "kahve_dunyasi_20_f_nd_k_kremal__kruvasan_sandvi_",
+  "chainId": "kahve_dunyasi",
+  "name": "Fındık Kremalı Kruvasan Sandviç",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Sıcak kruvasan arası Kahve Dünyası fındık kreması.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 7,
+   "carbs": 46,
+   "sugar": 24,
+   "fat": 23,
+   "satFat": 12,
+   "caffeine": 0,
+   "sodium": 340
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "nuts",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_1_caff__americano",
+  "chainId": "caffe_nero",
+  "name": "Caffè Americano",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Nero Classico espresso shotları ve sıcak su.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 1,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 160,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_2_caff__latte",
+  "chainId": "caffe_nero",
+  "name": "Caffè Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Nero özel kavrum espresso ve kadifemsi sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 155,
+   "protein": 8.5,
+   "carbs": 13,
+   "sugar": 12,
+   "fat": 7,
+   "satFat": 4,
+   "caffeine": 160,
+   "sodium": 115
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_3_cappuccino",
+  "chainId": "caffe_nero",
+  "name": "Cappuccino",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso, sıcak süt ve yoğun kadifemsi süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 125,
+   "protein": 8,
+   "carbs": 12,
+   "sugar": 10,
+   "fat": 4.5,
+   "satFat": 2.5,
+   "caffeine": 160,
+   "sodium": 100
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_4_caff__mocha",
+  "chainId": "caffe_nero",
+  "name": "Caffè Mocha",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "İtalyan kakao sosu, espresso, sıcak süt ve çırpılmış krema.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 370,
+   "protein": 10,
+   "carbs": 45,
+   "sugar": 36,
+   "fat": 16,
+   "satFat": 10,
+   "caffeine": 170,
+   "sodium": 150
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_5_cortado",
+  "chainId": "caffe_nero",
+  "name": "Cortado",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Yoğun çift shot espresso ve eşit oranda sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 80,
+   "protein": 5,
+   "carbs": 6,
+   "sugar": 5,
+   "fat": 4,
+   "satFat": 2,
+   "caffeine": 160,
+   "sodium": 60
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_6_flat_white",
+  "chainId": "caffe_nero",
+  "name": "Flat White",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "İki shot ristretto espresso ve mikronize ince süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 165,
+   "protein": 9,
+   "carbs": 13,
+   "sugar": 12,
+   "fat": 8.5,
+   "satFat": 5,
+   "caffeine": 175,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_7_filtre_kahve",
+  "chainId": "caffe_nero",
+  "name": "Filtre Kahve",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Günün taze demlenmiş Nero harmanı filtre kahvesi.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0.3,
+   "carbs": 1,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 170,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_8_antep_f_st_kl__latte",
+  "chainId": "caffe_nero",
+  "name": "Antep Fıstıklı Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Antep fıstığı aromalı şurup, espresso ve kremsi süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 250,
+   "protein": 8,
+   "carbs": 32,
+   "sugar": 29,
+   "fat": 9,
+   "satFat": 5,
+   "caffeine": 160,
+   "sodium": 130
+  },
+  "allergens": [
+   "lactose",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_9_iced_latte",
+  "chainId": "caffe_nero",
+  "name": "Iced Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Buz küpleri, soğuk süt ve taze Nero espresso.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 135,
+   "protein": 7,
+   "carbs": 11,
+   "sugar": 10,
+   "fat": 6,
+   "satFat": 3.5,
+   "caffeine": 160,
+   "sodium": 95
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_10_iced_white_chocolate_mocha",
+  "chainId": "caffe_nero",
+  "name": "Iced White Chocolate Mocha",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Beyaz çikolata sosu, buz, soğuk süt ve espresso.",
+  "image": "/images/white_choc_mocha.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 330,
+   "protein": 9,
+   "carbs": 43,
+   "sugar": 40,
+   "fat": 14,
+   "satFat": 9,
+   "caffeine": 160,
+   "sodium": 160
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_11_iced_caramelatte",
+  "chainId": "caffe_nero",
+  "name": "Iced Caramelatte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Karamel aromalı soğuk süt, buz ve espresso shot.",
+  "image": "/images/iced_caramel_macchiato.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 210,
+   "protein": 6,
+   "carbs": 28,
+   "sugar": 25,
+   "fat": 8,
+   "satFat": 4.8,
+   "caffeine": 160,
+   "sodium": 140
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_12_freddo_espresso",
+  "chainId": "caffe_nero",
+  "name": "Freddo Espresso",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Buz ile çalkalanıp köpürtülmüş sek İtalyan espressosu.",
+  "image": "/images/iced_americano.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 10,
+   "protein": 0.5,
+   "carbs": 1,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 160,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_13_cold_brew",
+  "chainId": "caffe_nero",
+  "name": "Cold Brew",
+  "nameEn": null,
+  "category": "cold_brew",
+  "description": "Nero harmanından 16 saat soğuk demleme kahve.",
+  "image": "/images/iced_americano.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0,
+   "carbs": 0,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 170,
+   "sodium": 15
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_14_milano_s_cak__ikolata",
+  "chainId": "caffe_nero",
+  "name": "Milano Sıcak Çikolata",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Yoğun Milano usulü İtalyan sıcak çikolatalı süt.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 380,
+   "protein": 10,
+   "carbs": 48,
+   "sugar": 42,
+   "fat": 16,
+   "satFat": 10,
+   "caffeine": 15,
+   "sodium": 180
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_15_chai_tea_latte",
+  "chainId": "caffe_nero",
+  "name": "Chai Tea Latte",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Baharatlı chai aroması ve sıcak buharlanmış süt.",
+  "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 230,
+   "protein": 7.5,
+   "carbs": 41,
+   "sugar": 38,
+   "fat": 4.5,
+   "satFat": 2.5,
+   "caffeine": 60,
+   "sodium": 105
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_16_mozzarella___domatesli_panino",
+  "chainId": "caffe_nero",
+  "name": "Mozzarella & Domatesli Panino",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Sıcak basılmış ciabatta ekmeğinde taze mozzarella ve pesto.",
+  "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 450,
+   "protein": 18,
+   "carbs": 47,
+   "sugar": 3,
+   "fat": 21,
+   "satFat": 10,
+   "caffeine": 0,
+   "sodium": 830
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_17_tavuklu_sezar_sandvi_",
+  "chainId": "caffe_nero",
+  "name": "Tavuklu Sezar Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Izgara tavuk, sezar sos ve parmesanlı tost sandviç.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 490,
+   "protein": 27,
+   "carbs": 46,
+   "sugar": 4,
+   "fat": 21,
+   "satFat": 6,
+   "caffeine": 0,
+   "sodium": 1050
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_18____peynirli_tost",
+  "chainId": "caffe_nero",
+  "name": "Üç Peynirli Tost",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Cheddar, kaşar ve gravyer peynirli sıcak fırın tostu.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 430,
+   "protein": 20,
+   "carbs": 38,
+   "sugar": 2,
+   "fat": 22,
+   "satFat": 12,
+   "caffeine": 0,
+   "sodium": 890
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_19__ikolatal__kruvasan",
+  "chainId": "caffe_nero",
+  "name": "Çikolatalı Kruvasan",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Çıtır tereyağlı hamur içinde erimiş çikolata.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 360,
+   "protein": 6,
+   "carbs": 39,
+   "sugar": 13,
+   "fat": 20,
+   "satFat": 12,
+   "caffeine": 5,
+   "sodium": 360
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "caffe_nero_20_nero_premium_san_sebastian_cheesecake",
+  "chainId": "caffe_nero",
+  "name": "Nero Premium San Sebastian Cheesecake",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Nero özel yapımı yanık yüzeyli İspanyol cheesecake.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 490,
+   "protein": 9,
+   "carbs": 39,
+   "sugar": 29,
+   "fat": 33,
+   "satFat": 20,
+   "caffeine": 0,
+   "sodium": 300
+  },
+  "allergens": [
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "gluten_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_1_americano",
+  "chainId": "coffy",
+  "name": "Americano",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Coffy özel harman espresso ve sıcak su.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 1,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 140,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_2_coffy_caffe_latte",
+  "chainId": "coffy",
+  "name": "Coffy Caffe Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Klasik Coffy harman espresso ve kremsi süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 145,
+   "protein": 8,
+   "carbs": 12,
+   "sugar": 11,
+   "fat": 6.5,
+   "satFat": 3.8,
+   "caffeine": 140,
+   "sodium": 110
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_3_cappuccino",
+  "chainId": "coffy",
+  "name": "Cappuccino",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso, sıcak süt ve köpük dengesi.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 120,
+   "protein": 8,
+   "carbs": 11,
+   "sugar": 10,
+   "fat": 4,
+   "satFat": 2.2,
+   "caffeine": 140,
+   "sodium": 95
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_4_flat_white",
+  "chainId": "coffy",
+  "name": "Flat White",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Yoğun espresso shotları ve ince süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 160,
+   "protein": 8.5,
+   "carbs": 13,
+   "sugar": 12,
+   "fat": 8,
+   "satFat": 4.8,
+   "caffeine": 160,
+   "sodium": 115
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_5_mocha",
+  "chainId": "coffy",
+  "name": "Mocha",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Kakaolu espresso ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 330,
+   "protein": 9,
+   "carbs": 41,
+   "sugar": 33,
+   "fat": 14,
+   "satFat": 8.5,
+   "caffeine": 140,
+   "sodium": 140
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_6_white_chocolate_mocha",
+  "chainId": "coffy",
+  "name": "White Chocolate Mocha",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Beyaz çikolata aroması, espresso ve süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 370,
+   "protein": 10,
+   "carbs": 47,
+   "sugar": 44,
+   "fat": 16,
+   "satFat": 10,
+   "caffeine": 140,
+   "sodium": 190
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_7_filtre_kahve",
+  "chainId": "coffy",
+  "name": "Filtre Kahve",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Demleme sıcak Coffy filtre kahve.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0.3,
+   "carbs": 1,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 150,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_8_iced_latte",
+  "chainId": "coffy",
+  "name": "Iced Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Buzlu soğuk süt ve espresso dökümü.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 125,
+   "protein": 7,
+   "carbs": 10,
+   "sugar": 9,
+   "fat": 5.5,
+   "satFat": 3.2,
+   "caffeine": 140,
+   "sodium": 90
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_9_iced_salted_caramel_latte",
+  "chainId": "coffy",
+  "name": "Iced Salted Caramel Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Tuzlu karamel şurubu, soğuk süt, buz ve espresso.",
+  "image": "/images/iced_caramel_macchiato.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 210,
+   "protein": 6,
+   "carbs": 29,
+   "sugar": 26,
+   "fat": 7,
+   "satFat": 4,
+   "caffeine": 140,
+   "sodium": 180
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_10_iced_strawberry_matcha",
+  "chainId": "coffy",
+  "name": "Iced Strawberry Matcha",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Çilek pürüzlü taban, buzlu süt ve yeşil matcha çayı.",
+  "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 220,
+   "protein": 6,
+   "carbs": 34,
+   "sugar": 31,
+   "fat": 6,
+   "satFat": 3.5,
+   "caffeine": 45,
+   "sodium": 90
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_11_iced_cherry_brownie_latte",
+  "chainId": "coffy",
+  "name": "Iced Cherry Brownie Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Vişne aroması, brownie şurubu, soğuk süt ve espresso.",
+  "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 270,
+   "protein": 7,
+   "carbs": 41,
+   "sugar": 37,
+   "fat": 8,
+   "satFat": 4.8,
+   "caffeine": 140,
+   "sodium": 130
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_12_chocolate_cookie_frappe",
+  "chainId": "coffy",
+  "name": "Chocolate Cookie Frappe",
+  "nameEn": null,
+  "category": "frappe_blended",
+  "description": "Çikolatalı bisküvi parçaları, kahve ve buzlu krema çırpması.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 430,
+   "protein": 6,
+   "carbs": 64,
+   "sugar": 57,
+   "fat": 17,
+   "satFat": 10,
+   "caffeine": 90,
+   "sodium": 280
+  },
+  "allergens": [
+   "lactose",
+   "gluten",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_13_ezine_peynirli_focaccia_sandvi_",
+  "chainId": "coffy",
+  "name": "Ezine Peynirli Focaccia Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Focaccia ekmeğinde Ezine peyniri ve zeytin yağı marinesi.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 14,
+   "carbs": 46,
+   "sugar": 3,
+   "fat": 20,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 870
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_14_f_me_etli_peynirli_bagel",
+  "chainId": "coffy",
+  "name": "Füme Etli Peynirli Bagel",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Bagel içinde füme et ve krem peynir.",
+  "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 410,
+   "protein": 21,
+   "carbs": 42,
+   "sugar": 4,
+   "fat": 17,
+   "satFat": 8,
+   "caffeine": 0,
+   "sodium": 940
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_15_i_sli_peynir___hindi_f_meli_baget",
+  "chainId": "coffy",
+  "name": "İsli Peynir & Hindi Fümeli Baget",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Çıtır baget ekmeğinde isli peynir ve hindi füme.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 430,
+   "protein": 23,
+   "carbs": 45,
+   "sugar": 3,
+   "fat": 18,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 990
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_16_kar___k_s_cak_sandvi_",
+  "chainId": "coffy",
+  "name": "Karışık Sıcak Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Sucuk, kaşar ve salamlı sıcak tost sandviç.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 460,
+   "protein": 20,
+   "carbs": 43,
+   "sugar": 3,
+   "fat": 23,
+   "satFat": 11,
+   "caffeine": 0,
+   "sodium": 1080
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_17__ikolatal__kruvasan",
+  "chainId": "coffy",
+  "name": "Çikolatalı Kruvasan",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Fırınlanmış çıtır kakaolu kruvasan.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 340,
+   "protein": 5,
+   "carbs": 37,
+   "sugar": 11,
+   "fat": 19,
+   "satFat": 11,
+   "caffeine": 5,
+   "sodium": 340
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_18_boyoz",
+  "chainId": "coffy",
+  "name": "Boyoz",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "İzmir usulü geleneksel yağlı kat kat boyoz.",
+  "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 310,
+   "protein": 5,
+   "carbs": 32,
+   "sugar": 2,
+   "fat": 18,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 390
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_19_profiteroll__pasta",
+  "chainId": "coffy",
+  "name": "Profiterollü Pasta",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Üzeri profiterol topları kaplı çikolatalı yaş pasta.",
+  "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 450,
+   "protein": 7,
+   "carbs": 53,
+   "sugar": 38,
+   "fat": 23,
+   "satFat": 14,
+   "caffeine": 10,
+   "sodium": 240
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "coffy_20_tiramisu",
+  "chainId": "coffy",
+  "name": "Tiramisu",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Kahveli kedi dili bisküvili klasik İtalyan tatlısı.",
+  "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 370,
+   "protein": 6,
+   "carbs": 39,
+   "sugar": 27,
+   "fat": 21,
+   "satFat": 13,
+   "caffeine": 35,
+   "sodium": 130
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_1_espresso_single",
+  "chainId": "mackbear",
+  "name": "Espresso Single",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Mackbear harmanı sek espresso shot.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0.3,
+   "carbs": 1,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 80,
+   "sodium": 2
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_2_caffe_latte",
+  "chainId": "mackbear",
+  "name": "Caffe Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Mackbear espresso ve sıcak süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 150,
+   "protein": 8,
+   "carbs": 13,
+   "sugar": 12,
+   "fat": 7,
+   "satFat": 4,
+   "caffeine": 150,
+   "sodium": 115
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_3_americano",
+  "chainId": "mackbear",
+  "name": "Americano",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso shot ve sıcak su.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 1,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 150,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_4_cappuccino",
+  "chainId": "mackbear",
+  "name": "Cappuccino",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Köpüklü sıcak espresso süt harmanı.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 120,
+   "protein": 8,
+   "carbs": 12,
+   "sugar": 10,
+   "fat": 4,
+   "satFat": 2.2,
+   "caffeine": 150,
+   "sodium": 100
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_5_flat_white",
+  "chainId": "mackbear",
+  "name": "Flat White",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Çift shot espresso ve mikronize süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 165,
+   "protein": 9,
+   "carbs": 14,
+   "sugar": 13,
+   "fat": 8.5,
+   "satFat": 5,
+   "caffeine": 180,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_6_biscoff_latte",
+  "chainId": "mackbear",
+  "name": "Biscoff Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Lotus Biscoff bisküvi ezmesi, espresso ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 360,
+   "protein": 8,
+   "carbs": 46,
+   "sugar": 39,
+   "fat": 16,
+   "satFat": 9,
+   "caffeine": 150,
+   "sodium": 180
+  },
+  "allergens": [
+   "lactose",
+   "gluten",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_7_oreo_latte",
+  "chainId": "mackbear",
+  "name": "Oreo Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Oreo bisküvi aroması, espresso ve süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 370,
+   "protein": 8,
+   "carbs": 48,
+   "sugar": 41,
+   "fat": 16.5,
+   "satFat": 9.5,
+   "caffeine": 150,
+   "sodium": 210
+  },
+  "allergens": [
+   "lactose",
+   "gluten",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_8_peanut_latte",
+  "chainId": "mackbear",
+  "name": "Peanut Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Yer fıstığı ezmesi aroması, espresso ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 340,
+   "protein": 10,
+   "carbs": 38,
+   "sugar": 31,
+   "fat": 16,
+   "satFat": 7,
+   "caffeine": 150,
+   "sodium": 190
+  },
+  "allergens": [
+   "lactose",
+   "peanut"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_9_coffeenut",
+  "chainId": "mackbear",
+  "name": "Coffeenut",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Fındık & çikolata soslu Mackbear spesiyal sıcak kahve.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 350,
+   "protein": 9,
+   "carbs": 42,
+   "sugar": 36,
+   "fat": 16,
+   "satFat": 8.5,
+   "caffeine": 150,
+   "sodium": 160
+  },
+  "allergens": [
+   "lactose",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_10_iced_mocha",
+  "chainId": "mackbear",
+  "name": "Iced Mocha",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Buzlu kakao soslu espresso ve soğuk süt.",
+  "image": "/images/white_choc_mocha.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 290,
+   "protein": 8,
+   "carbs": 38,
+   "sugar": 31,
+   "fat": 12,
+   "satFat": 7,
+   "caffeine": 150,
+   "sodium": 130
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_11_cold_brew",
+  "chainId": "mackbear",
+  "name": "Cold Brew",
+  "nameEn": null,
+  "category": "cold_brew",
+  "description": "Soğuk demlenmiş gövdeli sert filtre kahve.",
+  "image": "/images/iced_americano.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0,
+   "carbs": 0,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 185,
+   "sodium": 15
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_12_strawberry_matcha_latte",
+  "chainId": "mackbear",
+  "name": "Strawberry Matcha Latte",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Çilek sosu, soğuk süt ve yeşil matcha katmanı.",
+  "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 210,
+   "protein": 6,
+   "carbs": 32,
+   "sugar": 29,
+   "fat": 6,
+   "satFat": 3.5,
+   "caffeine": 50,
+   "sodium": 90
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_13_mango_frozen",
+  "chainId": "mackbear",
+  "name": "Mango Frozen",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Buzla çırpılmış karlı mango püre içeceği.",
+  "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 190,
+   "protein": 1,
+   "carbs": 46,
+   "sugar": 42,
+   "fat": 0.5,
+   "satFat": 0,
+   "caffeine": 0,
+   "sodium": 25
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_14_chai_tea_latte",
+  "chainId": "mackbear",
+  "name": "Chai Tea Latte",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Baharatlı chai şurubu ve sıcak süt.",
+  "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 230,
+   "protein": 8,
+   "carbs": 41,
+   "sugar": 38,
+   "fat": 4.5,
+   "satFat": 2.5,
+   "caffeine": 70,
+   "sodium": 110
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_15_lotus_cheesecake",
+  "chainId": "mackbear",
+  "name": "Lotus Cheesecake",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Lotus Biscoff bisküvisi ve sosu kaplı cheesecake.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 480,
+   "protein": 8,
+   "carbs": 46,
+   "sugar": 33,
+   "fat": 29,
+   "satFat": 16,
+   "caffeine": 0,
+   "sodium": 290
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_16_marlenka",
+  "chainId": "mackbear",
+  "name": "Marlenka",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Geleneksel ballı ve cevizli kat kat Çek tatlısı.",
+  "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 410,
+   "protein": 6,
+   "carbs": 53,
+   "sugar": 36,
+   "fat": 19,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 190
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_17_red_velvet_pasta",
+  "chainId": "mackbear",
+  "name": "Red Velvet Pasta",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Kırmızı kadife kek katmanları ve peynir kreması.",
+  "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 430,
+   "protein": 6,
+   "carbs": 51,
+   "sugar": 37,
+   "fat": 22,
+   "satFat": 12,
+   "caffeine": 0,
+   "sodium": 310
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_18_linzer_tatl_s_",
+  "chainId": "mackbear",
+  "name": "Linzer Tatlısı",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Bademli hamur ve marmelat dolgulu Avusturya kurabiyesi.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 320,
+   "protein": 5,
+   "carbs": 42,
+   "sugar": 22,
+   "fat": 15,
+   "satFat": 6,
+   "caffeine": 0,
+   "sodium": 150
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "nuts",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_19_mavi_ha_ha_l_____peynirli_bagel",
+  "chainId": "mackbear",
+  "name": "Mavi Haşhaşlı Üç Peynirli Bagel",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Haşhaşlı bagel içinde 3 peynir dolgusu.",
+  "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 17,
+   "carbs": 45,
+   "sugar": 3,
+   "fat": 19,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 860
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "mackbear_20_izgara_tavuk_sandvi_",
+  "chainId": "mackbear",
+  "name": "Izgara Tavuk Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Çabatta ekmeğinde ızgara tavuk ve özel sos.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 450,
+   "protein": 29,
+   "carbs": 42,
+   "sugar": 3,
+   "fat": 17,
+   "satFat": 5,
+   "caffeine": 0,
+   "sodium": 980
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_1_americano",
+  "chainId": "arabica",
+  "name": "Americano",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "%100 Arabica çekirdek espresso ve sıcak su.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 1,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 150,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_2_arabica_caffe_latte",
+  "chainId": "arabica",
+  "name": "Arabica Caffe Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Klasik Arabica harman espresso ve kadifemsi süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 150,
+   "protein": 8,
+   "carbs": 13,
+   "sugar": 12,
+   "fat": 7,
+   "satFat": 4,
+   "caffeine": 150,
+   "sodium": 115
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_3_cappuccino",
+  "chainId": "arabica",
+  "name": "Cappuccino",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso, sıcak süt ve bol süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 120,
+   "protein": 8,
+   "carbs": 12,
+   "sugar": 10,
+   "fat": 4,
+   "satFat": 2.2,
+   "caffeine": 150,
+   "sodium": 100
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_4_toffee_nut_latte",
+  "chainId": "arabica",
+  "name": "Toffee Nut Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Karamelize fındık aroması, espresso ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 260,
+   "protein": 8,
+   "carbs": 35,
+   "sugar": 32,
+   "fat": 9,
+   "satFat": 5,
+   "caffeine": 150,
+   "sodium": 140
+  },
+  "allergens": [
+   "lactose",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_5_salted_caramel_latte",
+  "chainId": "arabica",
+  "name": "Salted Caramel Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Tuzlu karamel sosu, espresso ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 270,
+   "protein": 8,
+   "carbs": 36,
+   "sugar": 33,
+   "fat": 8.5,
+   "satFat": 5,
+   "caffeine": 150,
+   "sodium": 190
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_6_geleneksel_t_rk_kahvesi",
+  "chainId": "arabica",
+  "name": "Geleneksel Türk Kahvesi",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Taze çekilmiş taze kavrum Türk kahvesi.",
+  "image": "/images/turk_kahvesi.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 0.5,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0.4,
+   "satFat": 0.1,
+   "caffeine": 75,
+   "sodium": 5
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_7_iced_americano",
+  "chainId": "arabica",
+  "name": "Iced Americano",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Buzlu soğuk su ve taze espresso.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 1,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 150,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_8_iced_salted_caramel_latte",
+  "chainId": "arabica",
+  "name": "Iced Salted Caramel Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Tuzlu karamel şurubu, soğuk süt, buz ve espresso.",
+  "image": "/images/iced_caramel_macchiato.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 220,
+   "protein": 6,
+   "carbs": 30,
+   "sugar": 27,
+   "fat": 7,
+   "satFat": 4.2,
+   "caffeine": 150,
+   "sodium": 180
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_9_lotus_frappe",
+  "chainId": "arabica",
+  "name": "Lotus Frappe",
+  "nameEn": null,
+  "category": "frappe_blended",
+  "description": "Lotus Biscoff ezmesi, dondurma bazı, buz ve espresso çırpıntısı.",
+  "image": "/images/caramel_macchiato.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 450,
+   "protein": 6,
+   "carbs": 64,
+   "sugar": 56,
+   "fat": 19,
+   "satFat": 11,
+   "caffeine": 90,
+   "sodium": 270
+  },
+  "allergens": [
+   "lactose",
+   "gluten",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_10_nutella_frappe",
+  "chainId": "arabica",
+  "name": "Nutella Frappe",
+  "nameEn": null,
+  "category": "frappe_blended",
+  "description": "Gerçek Nutella kakaolu fındık kreması, espresso ve soğuk buz çırpması.",
+  "image": "/images/caramel_macchiato.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 470,
+   "protein": 7,
+   "carbs": 66,
+   "sugar": 59,
+   "fat": 20,
+   "satFat": 12,
+   "caffeine": 90,
+   "sodium": 250
+  },
+  "allergens": [
+   "lactose",
+   "nuts",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_11_tavuklu_gobit_bun",
+  "chainId": "arabica",
+  "name": "Tavuklu Gobit Bun",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Gobit ekmeğinde baharatlı tavuk ve yeşillik.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 26,
+   "carbs": 41,
+   "sugar": 3,
+   "fat": 16,
+   "satFat": 4,
+   "caffeine": 0,
+   "sodium": 890
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_12_4_peynirli_bagel_sandvi_",
+  "chainId": "arabica",
+  "name": "4 Peynirli Bagel Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Bagel ekmeğinde 4 çeşit erimiş peynir lezzeti.",
+  "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 460,
+   "protein": 19,
+   "carbs": 43,
+   "sugar": 3,
+   "fat": 23,
+   "satFat": 12,
+   "caffeine": 0,
+   "sodium": 910
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_13_ball__hardall__mantarl__bagel_sandvi_",
+  "chainId": "arabica",
+  "name": "Ballı Hardallı Mantarlı Bagel Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Fırınlanmış mantar, bal-hardal sosu ve peynirli bagel.",
+  "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 390,
+   "protein": 14,
+   "carbs": 46,
+   "sugar": 7,
+   "fat": 17,
+   "satFat": 7,
+   "caffeine": 0,
+   "sodium": 780
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_14_dana_salaml__focaccia_sandvi_",
+  "chainId": "arabica",
+  "name": "Dana Salamlı Focaccia Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Zeytinyağlı focaccia ekmeğinde dana salam ve kaşar.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 440,
+   "protein": 20,
+   "carbs": 45,
+   "sugar": 3,
+   "fat": 20,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 1020
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_15_hindi_f_meli_ciabatta",
+  "chainId": "arabica",
+  "name": "Hindi Fümeli Ciabatta",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Ciabatta ekmeğinde hindi füme ve krem peynir.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 370,
+   "protein": 22,
+   "carbs": 39,
+   "sugar": 3,
+   "fat": 13,
+   "satFat": 6,
+   "caffeine": 0,
+   "sodium": 930
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_16_susaml__k_ymal__sandvi__xxl",
+  "chainId": "arabica",
+  "name": "Susamlı Kıymalı Sandviç XXL",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Büyük boy ekmekte baharatlı kıyma ve erimiş peynir.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 560,
+   "protein": 31,
+   "carbs": 51,
+   "sugar": 4,
+   "fat": 26,
+   "satFat": 11,
+   "caffeine": 0,
+   "sodium": 1200
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_17_frambuazl__cheesecake",
+  "chainId": "arabica",
+  "name": "Frambuazlı Cheesecake",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Taze frambuaz soslu kremsi cheesecake.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 440,
+   "protein": 7,
+   "carbs": 42,
+   "sugar": 30,
+   "fat": 26,
+   "satFat": 15,
+   "caffeine": 0,
+   "sodium": 260
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_18_honey_carrot_cake__ball__havu_lu_kek_",
+  "chainId": "arabica",
+  "name": "Honey Carrot Cake (Ballı Havuçlu Kek)",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Doğal bal, havuç ve tarçınlı nemli dilim kek.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 380,
+   "protein": 5,
+   "carbs": 49,
+   "sugar": 32,
+   "fat": 18,
+   "satFat": 4,
+   "caffeine": 0,
+   "sodium": 270
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_19_mozaik_pasta",
+  "chainId": "arabica",
+  "name": "Mozaik Pasta",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Bisküvili geleneksel kakaolu mozaik pasta.",
+  "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 340,
+   "protein": 5,
+   "carbs": 41,
+   "sugar": 25,
+   "fat": 18,
+   "satFat": 10,
+   "caffeine": 10,
+   "sodium": 180
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "arabica_20_ball__f_st_k_toplar_",
+  "chainId": "arabica",
+  "name": "Ballı Fıstık Topları",
+  "nameEn": null,
+  "category": "fit_healthy",
+  "description": "Çiğ fıstık, bal ve yulaf ezmeli sağlıklı enerji topları.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 210,
+   "protein": 6,
+   "carbs": 24,
+   "sugar": 14,
+   "fat": 10,
+   "satFat": 2,
+   "caffeine": 0,
+   "sodium": 30
+  },
+  "allergens": [
+   "nuts",
+   "gluten"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_1_americano",
+  "chainId": "gloria_jeans",
+  "name": "Americano",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Gloria Jean's özel harman espresso ve sıcak su.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 1,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 155,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_2_caffe_latte",
+  "chainId": "gloria_jeans",
+  "name": "Caffe Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Gloria Jean's espresso ve ısıtılmış süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 150,
+   "protein": 8,
+   "carbs": 13,
+   "sugar": 12,
+   "fat": 7,
+   "satFat": 4,
+   "caffeine": 155,
+   "sodium": 115
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_3_cappuccino",
+  "chainId": "gloria_jeans",
+  "name": "Cappuccino",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso, sıcak süt ve bol süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 120,
+   "protein": 8,
+   "carbs": 12,
+   "sugar": 10,
+   "fat": 4,
+   "satFat": 2.2,
+   "caffeine": 155,
+   "sodium": 100
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_4_white_chocolate_mocha",
+  "chainId": "gloria_jeans",
+  "name": "White Chocolate Mocha",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Beyaz çikolata sosu, espresso ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 3,
+  "baseMacros": {
+   "calories": 390,
+   "protein": 11,
+   "carbs": 49,
+   "sugar": 47,
+   "fat": 17,
+   "satFat": 11,
+   "caffeine": 155,
+   "sodium": 200
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_5_very_vanilla",
+  "chainId": "gloria_jeans",
+  "name": "Very Vanilla",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Doğal vanilya aromalı Gloria Jean's imza sıcak espresso içeceği.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 3,
+  "baseMacros": {
+   "calories": 260,
+   "protein": 8,
+   "carbs": 35,
+   "sugar": 32,
+   "fat": 9,
+   "satFat": 5,
+   "caffeine": 155,
+   "sodium": 140
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_6_mocha_java",
+  "chainId": "gloria_jeans",
+  "name": "Mocha Java",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Gloria Jean's imza çikolata ve espresso harmanı.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 370,
+   "protein": 10,
+   "carbs": 46,
+   "sugar": 38,
+   "fat": 16,
+   "satFat": 10,
+   "caffeine": 165,
+   "sodium": 160
+  },
+  "allergens": [
+   "lactose",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_7_t_rk_kahvesi",
+  "chainId": "gloria_jeans",
+  "name": "Türk Kahvesi",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Geleneksel usulle pişirilmiş köpüklü Türk kahvesi.",
+  "image": "/images/turk_kahvesi.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 0.5,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0.4,
+   "satFat": 0.1,
+   "caffeine": 75,
+   "sodium": 5
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_8_piccolo_latte",
+  "chainId": "gloria_jeans",
+  "name": "Piccolo Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Küçük boyutta servis edilen yoğun tek shot espresso latte.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 70,
+   "protein": 4,
+   "carbs": 5,
+   "sugar": 4.5,
+   "fat": 3.5,
+   "satFat": 2.0,
+   "caffeine": 75,
+   "sodium": 50
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_9_cortado",
+  "chainId": "gloria_jeans",
+  "name": "Cortado",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Eşit miktarda espresso ve buharlanmış sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 80,
+   "protein": 5,
+   "carbs": 6,
+   "sugar": 5,
+   "fat": 4,
+   "satFat": 2,
+   "caffeine": 155,
+   "sodium": 60
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_10_gj_s_iced_coffee",
+  "chainId": "gloria_jeans",
+  "name": "GJ's Iced Coffee",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Gloria Jean's özel soğuk demlenmiş buzlu kahvesi.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 20,
+   "protein": 1,
+   "carbs": 3,
+   "sugar": 1,
+   "fat": 0.2,
+   "satFat": 0,
+   "caffeine": 160,
+   "sodium": 15
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_11_white_chocolate_mocha_chiller",
+  "chainId": "gloria_jeans",
+  "name": "White Chocolate Mocha Chiller",
+  "nameEn": null,
+  "category": "frappe_blended",
+  "description": "Buzlu, beyaz çikolatalı ve kremalı soğuk imza Chiller içecek.",
+  "image": "/images/caramel_macchiato.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 6,
+   "carbs": 62,
+   "sugar": 56,
+   "fat": 17,
+   "satFat": 11,
+   "caffeine": 110,
+   "sodium": 240
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_12_lime_cooler",
+  "chainId": "gloria_jeans",
+  "name": "Lime Cooler",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Misket limonlu buzlu ferahlatıcı soğuk içecek.",
+  "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 105,
+   "protein": 0.2,
+   "carbs": 25,
+   "sugar": 23,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 0,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_13_berry_cooler",
+  "chainId": "gloria_jeans",
+  "name": "Berry Cooler",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Orman meyveli ferahlatıcı soğuk yaz içeceği.",
+  "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 115,
+   "protein": 0.3,
+   "carbs": 28,
+   "sugar": 26,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 0,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_14_pink_strawberry_matcha",
+  "chainId": "gloria_jeans",
+  "name": "Pink Strawberry Matcha",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Çilek püre tabanlı, sütlü yeşil çay (matcha) katmanlı içecek.",
+  "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 210,
+   "protein": 6,
+   "carbs": 32,
+   "sugar": 29,
+   "fat": 6,
+   "satFat": 3.5,
+   "caffeine": 50,
+   "sodium": 90
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_15_passionate_lemonade",
+  "chainId": "gloria_jeans",
+  "name": "Passionate Lemonade",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Tutku meyveli (passionate) taze ev yapımı limonata.",
+  "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 130,
+   "protein": 0.4,
+   "carbs": 33,
+   "sugar": 30,
+   "fat": 0.1,
+   "satFat": 0,
+   "caffeine": 0,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_16_soslu_ayval_k_tostu",
+  "chainId": "gloria_jeans",
+  "name": "Soslu Ayvalık Tostu",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Özel domates soslu, sucuk ve eritilmiş kaşarlı Ayvalık tostu.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 480,
+   "protein": 22,
+   "carbs": 45,
+   "sugar": 4,
+   "fat": 24,
+   "satFat": 12,
+   "caffeine": 0,
+   "sodium": 1100
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_17_artisan_jambon_cheddarl__sandvi_",
+  "chainId": "gloria_jeans",
+  "name": "Artisan Jambon Cheddarlı Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Artisan ekmekte dana jambon ve cheddar peyniri.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 23,
+   "carbs": 39,
+   "sugar": 3,
+   "fat": 19,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 960
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_18____peynirli_bagel",
+  "chainId": "gloria_jeans",
+  "name": "Üç Peynirli Bagel",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Cheddar, kaşar ve labne dolu sıcak bagel.",
+  "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 410,
+   "protein": 16,
+   "carbs": 43,
+   "sugar": 3,
+   "fat": 19,
+   "satFat": 10,
+   "caffeine": 0,
+   "sodium": 830
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_19_kremal__havu_lu_kek__creamy_carrot_cake_",
+  "chainId": "gloria_jeans",
+  "name": "Kremalı Havuçlu Kek (Creamy Carrot Cake)",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Havuçlu, cevizli ve kremalı kek dilimi.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 390,
+   "protein": 5,
+   "carbs": 48,
+   "sugar": 32,
+   "fat": 20,
+   "satFat": 6,
+   "caffeine": 0,
+   "sodium": 300
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "gloria_jeans_20_antep_f_st_kl__kaday_fl__panna_cotta",
+  "chainId": "gloria_jeans",
+  "name": "Antep Fıstıklı Kadayıflı Panna Cotta",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Çıtır kadayıf ve Antep fıstıklı İtalyan sütlü tatlısı.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 360,
+   "protein": 6,
+   "carbs": 38,
+   "sugar": 27,
+   "fat": 20,
+   "satFat": 12,
+   "caffeine": 0,
+   "sodium": 140
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_1_italian_caramel_latte",
+  "chainId": "david_people",
+  "name": "Italian Caramel Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Karamel şurubu, İtalyan usulü espresso ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 240,
+   "protein": 8,
+   "carbs": 33,
+   "sugar": 30,
+   "fat": 8,
+   "satFat": 4.8,
+   "caffeine": 150,
+   "sodium": 130
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_2_pumpkin_spice_latte",
+  "chainId": "david_people",
+  "name": "Pumpkin Spice Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Balkabağı ve zencefil-tarçın baharatlı sıcak espresso.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 3,
+  "baseMacros": {
+   "calories": 280,
+   "protein": 8,
+   "carbs": 38,
+   "sugar": 35,
+   "fat": 9,
+   "satFat": 5.5,
+   "caffeine": 150,
+   "sodium": 150
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_3_cinnamon_latte",
+  "chainId": "david_people",
+  "name": "Cinnamon Latte",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Tarçın aromalı sıcak süt ve espresso dökümü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": 2,
+  "baseMacros": {
+   "calories": 230,
+   "protein": 8,
+   "carbs": 30,
+   "sugar": 27,
+   "fat": 7.5,
+   "satFat": 4.5,
+   "caffeine": 150,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_4_flat_white",
+  "chainId": "david_people",
+  "name": "Flat White",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Çift shot espresso ve pürüzsüz süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 165,
+   "protein": 9,
+   "carbs": 13,
+   "sugar": 12,
+   "fat": 8.5,
+   "satFat": 5,
+   "caffeine": 180,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_5_damla_sak_zl__t_rk_kahvesi",
+  "chainId": "david_people",
+  "name": "Damla Sakızlı Türk Kahvesi",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Sakız aromalı özel geleneksel Türk kahvesi.",
+  "image": "/images/turk_kahvesi.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 20,
+   "protein": 0.5,
+   "carbs": 3,
+   "sugar": 1,
+   "fat": 0.4,
+   "satFat": 0.1,
+   "caffeine": 75,
+   "sodium": 5
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_6_damla_sak_zl__salep",
+  "chainId": "david_people",
+  "name": "Damla Sakızlı Salep",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Geleneksel sıcak salep, damla sakızı dokunuşu ile.",
+  "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 280,
+   "protein": 9,
+   "carbs": 45,
+   "sugar": 38,
+   "fat": 6,
+   "satFat": 3.8,
+   "caffeine": 0,
+   "sodium": 130
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_7_fly_nut",
+  "chainId": "david_people",
+  "name": "Fly Nut",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "David People imza fındık aromalı soğuk kahve spesiyali.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 250,
+   "protein": 7,
+   "carbs": 34,
+   "sugar": 30,
+   "fat": 10,
+   "satFat": 5.5,
+   "caffeine": 140,
+   "sodium": 140
+  },
+  "allergens": [
+   "lactose",
+   "nuts"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_8_why_nut",
+  "chainId": "david_people",
+  "name": "Why Nut",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Özel fındık ve çikolata soslu David People soğuk spesiyali.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 290,
+   "protein": 7,
+   "carbs": 40,
+   "sugar": 35,
+   "fat": 12,
+   "satFat": 7,
+   "caffeine": 140,
+   "sodium": 150
+  },
+  "allergens": [
+   "lactose",
+   "nuts",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_9_oreo_bomb",
+  "chainId": "david_people",
+  "name": "Oreo Bomb",
+  "nameEn": null,
+  "category": "frappe_blended",
+  "description": "Oreo bisküvi parçalı dondurmalı soğuk frappe.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 450,
+   "protein": 6,
+   "carbs": 67,
+   "sugar": 59,
+   "fat": 18,
+   "satFat": 11,
+   "caffeine": 15,
+   "sodium": 310
+  },
+  "allergens": [
+   "lactose",
+   "gluten",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_10_cooldrop_lime",
+  "chainId": "david_people",
+  "name": "Cooldrop Lime",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Lime (misket limonu) aromalı soğuk ferahlatıcı içecek.",
+  "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 100,
+   "protein": 0.2,
+   "carbs": 24,
+   "sugar": 22,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 0,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_11_blueberry_hibiscus_refresher",
+  "chainId": "david_people",
+  "name": "Blueberry Hibiscus Refresher",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Yaban mersini ve hibiskus aromalı soğuk çay.",
+  "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 110,
+   "protein": 0.3,
+   "carbs": 27,
+   "sugar": 25,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 0,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_12_dragon_freeze",
+  "chainId": "david_people",
+  "name": "Dragon Freeze",
+  "nameEn": null,
+  "category": "smoothie_juice",
+  "description": "Ejder meyveli karlı ferahlatıcı buzlu içecek.",
+  "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 130,
+   "protein": 0.4,
+   "carbs": 32,
+   "sugar": 29,
+   "fat": 0.1,
+   "satFat": 0,
+   "caffeine": 0,
+   "sodium": 12
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_13_ice_chai_tea_latte",
+  "chainId": "david_people",
+  "name": "Ice Chai Tea Latte",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Baharatlı chai çayı özü, buz ve soğuk süt.",
+  "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 210,
+   "protein": 6,
+   "carbs": 38,
+   "sugar": 36,
+   "fat": 4,
+   "satFat": 2.2,
+   "caffeine": 60,
+   "sodium": 95
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_14_bazlama_tost",
+  "chainId": "david_people",
+  "name": "Bazlama Tost",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Köy bazlamasında kaşar peyniri ve sucuklu tost.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 470,
+   "protein": 20,
+   "carbs": 48,
+   "sugar": 3,
+   "fat": 22,
+   "satFat": 11,
+   "caffeine": 0,
+   "sodium": 1020
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_15_dana_jambonlu_panini",
+  "chainId": "david_people",
+  "name": "Dana Jambonlu Panini",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Dana jambon ve eritilmiş kaşar peynirli sıcak panini.",
+  "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 440,
+   "protein": 22,
+   "carbs": 43,
+   "sugar": 3,
+   "fat": 19,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 980
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_16_fritto_burger",
+  "chainId": "david_people",
+  "name": "Fritto Burger",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Çıtır kaplamalı burger köftesi ve patates kızartması porsiyonu.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 680,
+   "protein": 28,
+   "carbs": 65,
+   "sugar": 6,
+   "fat": 34,
+   "satFat": 12,
+   "caffeine": 0,
+   "sodium": 1250
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_17_pain_au_chocolat",
+  "chainId": "david_people",
+  "name": "Pain au Chocolat",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Çikolatalı Fransız usulü kruvasan çörek.",
+  "image": "https://images.unsplash.com/photo-1623334044303-241021148842?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 350,
+   "protein": 6,
+   "carbs": 38,
+   "sugar": 12,
+   "fat": 20,
+   "satFat": 13,
+   "caffeine": 5,
+   "sodium": 350
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg",
+   "soy"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_18_pizza___rek",
+  "chainId": "david_people",
+  "name": "Pizza Çörek",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Sucuk, zeytin ve kaşarlı tuzlu fırın çöreği.",
+  "image": "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 360,
+   "protein": 11,
+   "carbs": 39,
+   "sugar": 4,
+   "fat": 18,
+   "satFat": 8,
+   "caffeine": 0,
+   "sodium": 780
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "david_people_19_san_sebastian_cheesecake",
+  "chainId": "david_people",
+  "name": "San Sebastian Cheesecake",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Akışkan merkezli İspanyol usulü fırınlanmış cheesecake.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 480,
+   "protein": 9,
+   "carbs": 38,
+   "sugar": 28,
+   "fat": 32,
+   "satFat": 19,
+   "caffeine": 0,
+   "sodium": 290
+  },
+  "allergens": [
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "gluten_free"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_1_latte_macchiato",
+  "chainId": "tchibo",
+  "name": "Latte Macchiato",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Katmanlı sıcak süt, süt köpüğü ve Tchibo espresso.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 160,
+   "protein": 9,
+   "carbs": 14,
+   "sugar": 13,
+   "fat": 7,
+   "satFat": 4.2,
+   "caffeine": 145,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_2_flat_white",
+  "chainId": "tchibo",
+  "name": "Flat White",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Çift shot espresso ve ince kremsi süt köpüğü.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 170,
+   "protein": 9,
+   "carbs": 14,
+   "sugar": 13,
+   "fat": 9,
+   "satFat": 5,
+   "caffeine": 175,
+   "sodium": 120
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_3_cortado",
+  "chainId": "tchibo",
+  "name": "Cortado",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Espresso ve eşit oranda buharlanmış sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "short",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 80,
+   "protein": 5,
+   "carbs": 6,
+   "sugar": 5,
+   "fat": 4,
+   "satFat": 2,
+   "caffeine": 145,
+   "sodium": 60
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_4_protein_latte_vanilla",
+  "chainId": "tchibo",
+  "name": "Protein Latte Vanilla",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Vanilya aromalı, yüksek proteinli sıcak latte kahvesi.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 180,
+   "protein": 18,
+   "carbs": 14,
+   "sugar": 11,
+   "fat": 4,
+   "satFat": 2,
+   "caffeine": 145,
+   "sodium": 160
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_5_protein_latte_biscuit",
+  "chainId": "tchibo",
+  "name": "Protein Latte Biscuit",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Bisküvi aromalı, yüksek proteinli sıcak latte kahvesi.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 190,
+   "protein": 18,
+   "carbs": 16,
+   "sugar": 12,
+   "fat": 4.5,
+   "satFat": 2.2,
+   "caffeine": 145,
+   "sodium": 170
+  },
+  "allergens": [
+   "lactose",
+   "gluten"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_6_s_tl__filtre_kahve",
+  "chainId": "tchibo",
+  "name": "Sütlü Filtre Kahve",
+  "nameEn": null,
+  "category": "espresso_hot",
+  "description": "Tchibo taze demlenmiş filtre kahve ve sıcak süt.",
+  "image": "/images/caffe_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 45,
+   "protein": 2.5,
+   "carbs": 4,
+   "sugar": 3.5,
+   "fat": 2,
+   "satFat": 1.2,
+   "caffeine": 160,
+   "sodium": 40
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_7_s_cak__ikolata",
+  "chainId": "tchibo",
+  "name": "Sıcak Çikolata",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "Yoğun kıvamlı kremalı sıcak çikolata içeceği.",
+  "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 340,
+   "protein": 10,
+   "carbs": 43,
+   "sugar": 36,
+   "fat": 14,
+   "satFat": 9,
+   "caffeine": 15,
+   "sodium": 160
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_8_iced_latte",
+  "chainId": "tchibo",
+  "name": "Iced Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Espresso, soğuk süt ve buz küpleri.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 130,
+   "protein": 7,
+   "carbs": 11,
+   "sugar": 10,
+   "fat": 6,
+   "satFat": 3.5,
+   "caffeine": 145,
+   "sodium": 95
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_9_iced_americano",
+  "chainId": "tchibo",
+  "name": "Iced Americano",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Espresso, soğuk su ve buz.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 15,
+   "protein": 1,
+   "carbs": 2,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 145,
+   "sodium": 10
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_10_cold_brew",
+  "chainId": "tchibo",
+  "name": "Cold Brew",
+  "nameEn": null,
+  "category": "cold_brew",
+  "description": "Uzun süreli soğuk demleme pürüzsüz filtre kahve.",
+  "image": "/images/iced_americano.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 5,
+   "protein": 0,
+   "carbs": 0,
+   "sugar": 0,
+   "fat": 0,
+   "satFat": 0,
+   "caffeine": 165,
+   "sodium": 15
+  },
+  "allergens": [],
+  "dietaryTags": [
+   "vegan",
+   "vegetarian",
+   "gluten_free",
+   "lactose_free",
+   "sugar_free",
+   "low_calorie"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_11_iced_protein_latte",
+  "chainId": "tchibo",
+  "name": "Iced Protein Latte",
+  "nameEn": null,
+  "category": "espresso_iced",
+  "description": "Soğuk servis edilen yüksek proteinli espresso latte.",
+  "image": "/images/iced_latte.jpg",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 175,
+   "protein": 18,
+   "carbs": 13,
+   "sugar": 10,
+   "fat": 3.8,
+   "satFat": 1.8,
+   "caffeine": 145,
+   "sodium": 150
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Düşük",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_12_matcha_latte",
+  "chainId": "tchibo",
+  "name": "Matcha Latte",
+  "nameEn": null,
+  "category": "tea_herbal",
+  "description": "İnce öğütülmüş yeşil çay (matcha) ve sıcak/soğuk süt.",
+  "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=500&auto=format&fit=crop&q=80",
+  "isDrink": true,
+  "defaultSizeId": "tall",
+  "defaultMilkId": "whole_milk",
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 190,
+   "protein": 7,
+   "carbs": 26,
+   "sugar": 24,
+   "fat": 6,
+   "satFat": 3.5,
+   "caffeine": 50,
+   "sodium": 95
+  },
+  "allergens": [
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_13_dana_f_meli_cheddarl__sandvi_",
+  "chainId": "tchibo",
+  "name": "Dana Fümeli Cheddarlı Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Haşhaşlı tahıl ekmeğinde dana füme ve cheddar peyniri.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 430,
+   "protein": 23,
+   "carbs": 39,
+   "sugar": 3,
+   "fat": 20,
+   "satFat": 10,
+   "caffeine": 0,
+   "sodium": 960
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_14_hindi_f_meli___cheddarl__ciabatta",
+  "chainId": "tchibo",
+  "name": "Hindi Fümeli & Cheddarlı Ciabatta",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Ekşi mayalı ciabatta ekmeğinde hindi füme ve cheddar peyniri.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 400,
+   "protein": 22,
+   "carbs": 41,
+   "sugar": 3,
+   "fat": 16,
+   "satFat": 8,
+   "caffeine": 0,
+   "sodium": 920
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_15_f_r_n_sebzeli_peynirli_sandvi_",
+  "chainId": "tchibo",
+  "name": "Fırın Sebzeli Peynirli Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Tam buğday ekmeğinde pesto sos, fırınlanmış sebzeler ve peynir.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 370,
+   "protein": 13,
+   "carbs": 46,
+   "sugar": 5,
+   "fat": 15,
+   "satFat": 6,
+   "caffeine": 0,
+   "sodium": 680
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_16_mozzarellal__sandvi_",
+  "chainId": "tchibo",
+  "name": "Mozzarellalı Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Ekşi mayalı ciabatta ekmeğinde mozzarella ve kurutulmuş domates.",
+  "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 16,
+   "carbs": 44,
+   "sugar": 3,
+   "fat": 20,
+   "satFat": 9,
+   "caffeine": 0,
+   "sodium": 810
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian",
+   "high_protein"
+  ],
+  "glycemicImpact": "Orta",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_17_zeytin_ezmeli___peynirli_simit_sandvi_",
+  "chainId": "tchibo",
+  "name": "Zeytin Ezmeli & Peynirli Simit Sandviç",
+  "nameEn": null,
+  "category": "sandwich_savory",
+  "description": "Susamlı simit bagel içinde zeytin ezmesi ve peynir.",
+  "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 390,
+   "protein": 13,
+   "carbs": 48,
+   "sugar": 3,
+   "fat": 16,
+   "satFat": 7,
+   "caffeine": 0,
+   "sodium": 790
+  },
+  "allergens": [
+   "gluten",
+   "lactose"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_18_raspberry_cheesecake",
+  "chainId": "tchibo",
+  "name": "Raspberry Cheesecake",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Ahududu soslu klasik cheesecake dilimi.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 440,
+   "protein": 7,
+   "carbs": 43,
+   "sugar": 31,
+   "fat": 26,
+   "satFat": 15,
+   "caffeine": 0,
+   "sodium": 270
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_19_lemon_cheesecake",
+  "chainId": "tchibo",
+  "name": "Lemon Cheesecake",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Ferah limon soslu cheesecake.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 420,
+   "protein": 7,
+   "carbs": 45,
+   "sugar": 32,
+   "fat": 24,
+   "satFat": 14,
+   "caffeine": 0,
+   "sodium": 260
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ },
+ {
+  "id": "tchibo_20_apple_crumble_cheesecake",
+  "chainId": "tchibo",
+  "name": "Apple Crumble Cheesecake",
+  "nameEn": null,
+  "category": "bakery_dessert",
+  "description": "Elma ve kıtır hamur parçacıklı fırın cheesecake.",
+  "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&auto=format&fit=crop&q=80",
+  "isDrink": false,
+  "defaultSizeId": null,
+  "defaultMilkId": null,
+  "defaultSyrupPumps": null,
+  "baseMacros": {
+   "calories": 450,
+   "protein": 6,
+   "carbs": 51,
+   "sugar": 34,
+   "fat": 25,
+   "satFat": 14,
+   "caffeine": 0,
+   "sodium": 280
+  },
+  "allergens": [
+   "gluten",
+   "lactose",
+   "egg"
+  ],
+  "dietaryTags": [
+   "vegetarian"
+  ],
+  "glycemicImpact": "Yüksek",
+  "smartSwapNote": null,
+  "smartSwapSaveKcal": null,
+  "nutritionSource": null
+ }
+]

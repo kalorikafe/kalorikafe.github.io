@@ -1,0 +1,10 @@
+{
+  "chainId": "fixture_chain",
+  "products": [
+    { "name": "Americano", "category": "espresso_hot", "isDrink": true },
+    { "name": "Latte", "category": "espresso_hot", "isDrink": true },
+    { "name": "Mocha", "category": "espresso_hot", "isDrink": true },
+    { "name": "Yaz Limonatası", "category": "smoothie_juice", "isDrink": true, "seasonal": true },
+    { "name": "Cookie", "category": "bakery_dessert", "isDrink": false }
+  ]
+}

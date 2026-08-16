@@ -58,19 +58,20 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
 
   return (
     <div className="absolute left-0 right-0 top-full mt-2 z-50">
-      <div
-        role="listbox"
-        id={ids.listboxId}
-        aria-label="Arama önerileri"
-        className="overflow-hidden rounded-2xl border border-stone-200 dark:border-[var(--dark-border)] bg-white dark:bg-[var(--dark-surface)] shadow-2xl shadow-black/10 dark:shadow-black/40"
-      >
+      <div className="overflow-hidden rounded-2xl border border-stone-200 dark:border-[var(--dark-border)] bg-white dark:bg-[var(--dark-surface)] shadow-2xl shadow-black/10 dark:shadow-black/40">
         <div className="px-4 py-2 text-[10px] font-black uppercase tracking-wider text-stone-400 dark:text-[var(--dark-text-muted)] border-b border-stone-100 dark:border-[var(--dark-border)] flex items-center justify-between">
           <span>Öneriler</span>
           <span className="normal-case font-bold tracking-normal">
             {resultCount} sonuç
           </span>
         </div>
-        <ul ref={listRef} className="max-h-80 overflow-y-auto py-1">
+        <ul
+          ref={listRef}
+          id={ids.listboxId}
+          role="listbox"
+          aria-label="Arama önerileri"
+          className="max-h-80 overflow-y-auto py-1"
+        >
           {suggestions.map((item, index) => {
             const chain = CHAINS.find(c => c.id === item.chainId);
             const isActive = index === activeIndex;
@@ -81,40 +82,37 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
                 role="option"
                 aria-selected={isActive}
                 data-suggestion-index={index}
+                onMouseEnter={() => setActiveIndex(index)}
+                onMouseDown={(event) => event.preventDefault()}
+                onClick={() => onSelect(item)}
+                className={`w-full cursor-pointer flex items-center gap-3 px-3 py-2.5 text-left transition-colors ${
+                  isActive
+                    ? 'bg-amber-50 dark:bg-[var(--dark-surface-elevated)]'
+                    : 'bg-transparent hover:bg-stone-50 dark:hover:bg-[#2B211C]/60'
+                }`}
               >
-                <button
-                  type="button"
-                  onMouseEnter={() => setActiveIndex(index)}
-                  onClick={() => onSelect(item)}
-                  className={`w-full flex items-center gap-3 px-3 py-2.5 text-left transition-colors ${
-                    isActive
-                      ? 'bg-amber-50 dark:bg-[var(--dark-surface-elevated)]'
-                      : 'bg-transparent hover:bg-stone-50 dark:hover:bg-[#2B211C]/60'
-                  }`}
-                >
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="w-10 h-10 rounded-xl object-cover bg-stone-100 dark:bg-[var(--dark-surface-elevated)] shrink-0"
-                    loading="lazy"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = '/images/menu/placeholder.webp';
-                    }}
-                  />
-                  <span className="min-w-0 flex-1">
-                    <span
-                      className={`block truncate text-xs font-black ${
-                        isActive ? 'text-amber-800 dark:text-amber-300' : 'text-stone-900 dark:text-[var(--dark-text)]'
-                      }`}
-                    >
-                      {item.name}
-                    </span>
-                    <span className="block truncate text-[11px] font-bold text-stone-500 dark:text-[var(--dark-text-muted)]">
-                      {chain?.name}
-                    </span>
+                <img
+                  src={item.image}
+                  alt=""
+                  className="w-10 h-10 rounded-xl object-cover bg-stone-100 dark:bg-[var(--dark-surface-elevated)] shrink-0"
+                  loading="lazy"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/images/menu/placeholder.webp';
+                  }}
+                />
+                <span className="min-w-0 flex-1">
+                  <span
+                    className={`block truncate text-xs font-black ${
+                      isActive ? 'text-amber-800 dark:text-amber-300' : 'text-stone-900 dark:text-[var(--dark-text)]'
+                    }`}
+                  >
+                    {item.name}
                   </span>
-                  <Search className="w-3.5 h-3.5 text-stone-300 dark:text-[var(--dark-text-muted)] shrink-0" />
-                </button>
+                  <span className="block truncate text-[11px] font-bold text-stone-500 dark:text-[var(--dark-text-muted)]">
+                    {chain?.name}
+                  </span>
+                </span>
+                <Search className="w-3.5 h-3.5 text-stone-300 dark:text-[var(--dark-text-muted)] shrink-0" />
               </li>
             );
           })}

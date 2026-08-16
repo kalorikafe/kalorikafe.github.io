@@ -18,10 +18,10 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     timeout-minutes: 25
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
+    outputs:
+      build_sha: ${{ steps.build_meta.outputs.build_sha }}
+      catalog_count: ${{ steps.build_meta.outputs.catalog_count }}
+      sample_image: ${{ steps.build_meta.outputs.sample_image }}
     steps:
       - uses: actions/checkout@v4
 
@@ -42,16 +42,33 @@ jobs:
       - name: Catalog audit
         run: npm run catalog:audit
 
+      - name: Image integrity and provenance audit
+        run: npm run images:audit
+
       - name: Lint
         run: npm run lint
 
-      - name: Build
+      - name: Unit tests
+        run: npm run test:unit
+
+      - name: Build production artifact
+        env:
+          VITE_GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
+          VITE_UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
+          VITE_UMAMI_SCRIPT_URL: https://cloud.umami.is/script.js
         run: npm run build
 
-      - name: Unit + E2E tests
-        run: npm test
+      - name: Verify production artifact and export metadata
+        id: build_meta
+        run: node scripts/verify-build.mjs --github-output
 
-      - name: Dependency audit
+      - name: Enforce bundle budgets
+        run: npm run budget:check
+
+      - name: Production-preview Chromium E2E
+        run: npm run test:e2e
+
+      - name: Audit production dependencies
         run: npm audit --omit=dev
 
       - name: Upload Pages artifact
@@ -62,14 +79,33 @@ jobs:
   deploy:
     needs: quality
     runs-on: ubuntu-latest
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      pages: write
-      id-token: write
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  post_deploy_smoke:
+    needs: [quality, deploy]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify live SHA, catalog count and sample image
+        env:
+          DEPLOY_URL: ${{ needs.deploy.outputs.page_url }}
+          EXPECTED_SHA: ${{ needs.quality.outputs.build_sha }}
+          EXPECTED_CATALOG_COUNT: ${{ needs.quality.outputs.catalog_count }}
+          SMOKE_IMAGE_PATH: ${{ needs.quality.outputs.sample_image }}
+        run: node scripts/post-deploy-smoke.mjs

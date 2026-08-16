@@ -110,7 +110,7 @@ function itemNormalizedBlob(item: MenuItem): string {
  * Rank candidates for the suggestion panel: exact-name prefix > name
  * contains > other fields. Stable tie-break by id.
  */
-export function rankSearchMatches(items: MenuItem[], rawQuery: string, limit: number): MenuItem[] {
+export function rankSearchMatches(items: readonly MenuItem[], rawQuery: string, limit: number): MenuItem[] {
   const terms = normalizeSearchText(rawQuery)
     .split(/\s+/)
     .filter(Boolean);

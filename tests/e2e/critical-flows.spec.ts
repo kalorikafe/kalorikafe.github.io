@@ -22,20 +22,21 @@ test('search changes the rendered result set', async ({ page }) => {
   const cards = page.getByTestId('item-card');
   await expect(cards).toHaveCount(24);
 
-  await page.getByRole('textbox', { name: 'Menüde ara' }).fill('Sarelle Mocha');
+  await page.getByRole('combobox', { name: 'Menüde ara' }).fill('Sarelle Mocha');
 
   await expect(cards).toHaveCount(1);
   await expect(cards.first()).toContainText('Sarelle Mocha');
 });
 
 test('opens and closes a product detail dialog', async ({ page }) => {
-  const latteCard = page.locator('[data-item-id="starbucks_1_caff__latte"]');
-  await latteCard.getByTitle('FDA Besin Etiketi Göster').click();
+  const firstCard = page.getByTestId('item-card').first();
+  await firstCard.getByRole('button', { name: /besin etiketini göster/i }).click();
 
-  const dialog = page.getByRole('dialog', { name: 'Besin Değerleri' });
+  const dialog = page.getByRole('dialog', { name: 'Besin değerleri' });
   await expect(dialog).toBeVisible();
   await expect(dialog).toContainText('Caffè Latte');
-  await expect(dialog).toContainText('Kaynak doğrulaması bekleniyor');
+  await expect(dialog).toContainText('Veri kaynağı');
+  await expect(dialog).toContainText('% Referans Alım');
 
   await dialog.getByRole('button', { name: 'Besin değerlerini kapat' }).click();
   await expect(dialog).toBeHidden();
@@ -70,6 +71,148 @@ test('dialog traps interaction, locks page scroll and restores focus on Escape',
   await expect.poll(() => page.evaluate(() => document.body.style.overflow)).toBe('');
 });
 
+test('opening goals replaces the basket overlay and Escape releases scroll lock', async ({ page }) => {
+  const basketTrigger = page.getByRole('button', { name: /Sepetim/ }).first();
+  await basketTrigger.click();
+
+  const basketDialog = page.getByRole('dialog', { name: 'Günlük Kafe Makro Sepetim' });
+  const goalTrigger = basketDialog.getByRole('button', { name: 'Hedefleri Değiştir' });
+  await goalTrigger.click();
+
+  const goalDialog = page.getByRole('dialog', { name: 'Kişisel Günlük Makro Hesaplayıcı' });
+  await expect(goalDialog).toBeVisible();
+  await expect(basketDialog).toBeHidden();
+  await expect(page.getByRole('dialog')).toHaveCount(1);
+  await page.keyboard.press('Escape');
+  await expect(goalDialog).toBeHidden();
+  await expect.poll(() => page.evaluate(() => document.body.style.overflow)).toBe('');
+});
+
+test('corrupt local records are quarantined and never blank the app', async ({ page }) => {
+  for (const key of [
+    'kalori_cafe_custom_recipes',
+    'kalori_cafe_favorites',
+    'kalori_cafe_allergens',
+    'kalori_cafe_hide_allergens',
+    'kalori_cafe_basket',
+    'kalori_cafe_goals',
+  ]) {
+    await page.evaluate(storageKey => localStorage.setItem(storageKey, '{}'), key);
+  }
+  await page.reload();
+  await expect(page.getByTestId('item-card')).toHaveCount(24);
+  const quarantine = await page.evaluate(() => JSON.parse(localStorage.getItem('kalori_cafe_storage_quarantine') || '{}'));
+  expect(quarantine.version).toBe(1);
+  expect(quarantine.data.length).toBeGreaterThanOrEqual(6);
+});
+
+test('combobox and filter controls expose their current state', async ({ page }) => {
+  const search = page.getByRole('combobox', { name: 'Menüde ara' });
+  await expect(search).toHaveAttribute('aria-expanded', 'false');
+  await search.fill('la');
+  await expect(search).toHaveAttribute('aria-expanded', 'true');
+  await expect(search).toHaveAttribute('aria-controls', 'desktop-search-suggestions-listbox');
+  await search.press('ArrowDown');
+  await expect(search).toHaveAttribute('aria-activedescendant', /desktop-search-suggestion-option-\d+/);
+
+  const chainFilter = page.getByRole('combobox', { name: 'Kafe zinciri seç' });
+  await expect(chainFilter).toHaveValue('');
+  await chainFilter.selectOption('caffe_nero');
+  await expect(chainFilter).toHaveValue('caffe_nero');
+
+  const categoryFilter = page.getByRole('combobox', { name: 'Kategori' });
+  await expect(categoryFilter).toHaveValue('all');
+  await categoryFilter.selectOption('espresso_iced');
+  await expect(categoryFilter).toHaveValue('espresso_iced');
+
+  await page.locator('summary').filter({ hasText: 'Diyet ve beslenme filtreleri' }).click();
+  const vegan = page.getByRole('button', { name: /Vegan/ });
+  await vegan.click();
+  await expect(vegan).toHaveAttribute('aria-pressed', 'true');
+});
+
+test('drink and food filters remain mutually exclusive in URL history', async ({ page }) => {
+  const drinks = page.getByRole('button', { name: '🥤 İçecek' });
+  const food = page.getByRole('button', { name: '🥪 Yiyecek' });
+
+  await drinks.click();
+  await expect(page).toHaveURL(/\?type=drink$/);
+  await expect(drinks).toHaveAttribute('aria-pressed', 'true');
+
+  await food.click();
+  await expect(page).toHaveURL(/\?type=food$/);
+  await expect(food).toHaveAttribute('aria-pressed', 'true');
+  await expect(drinks).toHaveAttribute('aria-pressed', 'false');
+
+  await drinks.click();
+  await expect(page).toHaveURL(/\?type=drink$/);
+  await page.goBack();
+  await expect(page).toHaveURL(/\?type=food$/);
+  await expect(food).toHaveAttribute('aria-pressed', 'true');
+});
+
+test('custom recipe form exposes labels and selection semantics', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByRole('button', { name: 'Özel Tarif' }).click();
+
+  const dialog = page.getByRole('dialog', { name: 'Kendi Kahveni / Tarifini Oluştur' });
+  await expect(dialog.getByLabel('Özel Tarif Adınız')).toBeVisible();
+  await expect(dialog.getByLabel('Süt Türü')).toBeVisible();
+  await expect(dialog.getByLabel(/Şurup Pompa Sayısı/)).toBeVisible();
+  await expect(dialog.getByLabel(/Espresso Shot/)).toBeVisible();
+
+  const selectedSize = dialog.getByRole('radio').and(page.locator('[aria-checked="true"]'));
+  await expect(selectedSize).toHaveCount(1);
+
+  const cream = dialog.getByRole('button', { name: /Krema/ });
+  await expect(cream).toHaveAttribute('aria-pressed', 'false');
+  await cream.click();
+  await expect(cream).toHaveAttribute('aria-pressed', 'true');
+});
+
+test('custom recipes can be created, edited with a stable id, and deleted', async ({ page }) => {
+  await page.getByRole('button', { name: 'Yeni tarif' }).click();
+  let dialog = page.getByRole('dialog', { name: 'Kendi Kahveni / Tarifini Oluştur' });
+  await dialog.getByLabel('Özel Tarif Adınız').fill('Akşam Latte');
+  await dialog.getByRole('button', { name: 'Tarifi Kaydet & Sepete Ekle' }).click();
+  await expect(page.getByText('Akşam Latte', { exact: true })).toBeVisible();
+
+  const originalId = await page.evaluate(() => {
+    const envelope = JSON.parse(localStorage.getItem('kalori_cafe_custom_recipes') ?? '{}');
+    return envelope.data?.[0]?.id as string | undefined;
+  });
+  expect(originalId).toMatch(/^custom_/);
+
+  await page.getByRole('button', { name: 'Akşam Latte tarifini düzenle' }).click();
+  dialog = page.getByRole('dialog', { name: 'Tarifini Düzenle' });
+  await dialog.getByLabel('Özel Tarif Adınız').fill('Akşam Latte 2');
+  await dialog.getByLabel('Süt Türü').selectOption('soy_milk');
+  await dialog.getByRole('button', { name: 'Değişiklikleri Kaydet' }).click();
+  await expect(page.getByText('Akşam Latte 2', { exact: true })).toBeVisible();
+  await expect(page.getByText('Akşam Latte', { exact: true })).toHaveCount(0);
+
+  const edited = await page.evaluate(() => {
+    const envelope = JSON.parse(localStorage.getItem('kalori_cafe_custom_recipes') ?? '{}');
+    return envelope.data;
+  });
+  expect(edited).toHaveLength(1);
+  expect(edited[0]).toMatchObject({ id: originalId, name: 'Akşam Latte 2' });
+  expect(edited[0].allergens).toContain('soy');
+  expect(edited[0].allergens).not.toContain('nuts');
+  expect(edited[0].containsLactose).toBe(false);
+
+  await page.getByRole('button', { name: 'Akşam Latte 2 tarifini sepete ekle' }).click();
+  await page.getByRole('button', { name: /Sepetim/ }).first().click();
+  const basketDialog = page.getByRole('dialog', { name: 'Günlük Kafe Makro Sepetim' });
+  const savedRecipeRow = basketDialog.getByRole('heading', { name: 'Akşam Latte 2' }).locator('..');
+  await expect(savedRecipeRow).toContainText(`${edited[0].baseMacros.calories} kcal`);
+  await expect(savedRecipeRow).toContainText(`${edited[0].baseMacros.caffeine}mg K`);
+  await basketDialog.getByRole('button', { name: 'Sepeti kapat' }).click();
+
+  await page.getByRole('button', { name: 'Akşam Latte 2 tarifini sil' }).click();
+  await expect(page.getByText('Akşam Latte 2', { exact: true })).toHaveCount(0);
+});
+
 test('390px and 1440px layouts have no horizontal overflow in both themes', async ({ page }) => {
   for (const viewport of [
     { width: 390, height: 844 },
@@ -95,7 +238,7 @@ test('390px and 1440px layouts have no horizontal overflow in both themes', asyn
       expect(layout.overflow, `${JSON.stringify(viewport)} ${theme}: ${JSON.stringify(layout.offenders)}`).toBeLessThanOrEqual(0);
 
       // Basket and theme toggle remain accessible regardless of compactness
-            await expect(page.getByRole('button', { name: /Sepetim/ })).toBeVisible();
+            await expect(page.getByRole('button', { name: /Sepetim/ }).first()).toBeVisible();
             await expect(page.getByRole('button', { name: /Açık Moda Geç|Koyu Moda Geç/ })).toBeVisible();
             if (viewport.width < 768) {
               await expect(page.getByRole('button', { name: 'Arama' })).toBeVisible();
@@ -113,7 +256,7 @@ test('mobile search dialog filters results at 390px and Escape/close work', asyn
   const dialog = page.getByRole('dialog', { name: 'Mobil arama' });
   await expect(dialog).toBeVisible();
 
-  await dialog.getByRole('textbox', { name: 'Mobil aramada ara' }).fill('Sarelle Mocha');
+  await dialog.getByRole('combobox', { name: 'Mobil aramada ara' }).fill('Sarelle Mocha');
   await expect(cards).toHaveCount(1);
   await expect(cards.first()).toContainText('Sarelle Mocha');
 
@@ -125,7 +268,7 @@ test('mobile search dialog filters results at 390px and Escape/close work', asyn
   // Reopen, type again, then Escape closes it
   await page.getByRole('button', { name: 'Arama' }).click();
   await expect(dialog).toBeVisible();
-  await dialog.getByRole('textbox', { name: 'Mobil aramada ara' }).fill('Latte');
+  await dialog.getByRole('combobox', { name: 'Mobil aramada ara' }).fill('Latte');
   await page.keyboard.press('Escape');
   await expect(dialog).toBeHidden();
 });
@@ -138,19 +281,16 @@ test('hero quick pills filter to the correct chain', async ({ page }) => {
   // Dynamic against the real catalog: the ChainSelector chip shows each
   // chain's live product count, which must equal the filtered card count.
   const cases = [
-    { pill: '☕ Espressolab', chainChip: 'Espressolab', idPrefix: 'espressolab_' },
-    { pill: '☕ Kahve Dünyası', chainChip: 'Kahve Dünyası', idPrefix: 'kahve_dunyasi_' },
-    { pill: '☕ Caffè Nero', chainChip: 'Caffè Nero', idPrefix: 'caffe_nero_' },
+    { pill: '☕ Starbucks', chainId: 'starbucks', idPrefix: 'starbucks_' },
+    { pill: '☕ Caffè Nero', chainId: 'caffe_nero', idPrefix: 'caffe_nero_' },
   ];
 
   for (const c of cases) {
-    const badge = page
-      .getByRole('button', { name: new RegExp(`${c.chainChip} \\d+`) })
-      .getByText(/^\d+$/)
-      .first();
-    await expect(badge).toBeVisible();
-    const expectedCount = Number(await badge.textContent());
+    const optionText = await page.locator(`#chain-filter option[value="${c.chainId}"]`).textContent();
+    const expectedCount = Number(optionText?.match(/\((\d+)\)$/)?.[1]);
+    expect(expectedCount).toBeGreaterThan(0);
 
+    await page.evaluate(() => window.scrollTo(0, 0));
     await page.getByRole('button', { name: c.pill }).click();
     const more = page.getByRole('button', { name: 'Daha fazla göster' });
     while (await more.isVisible().catch(() => false)) {
@@ -167,16 +307,16 @@ test('hero quick pills filter to the correct chain', async ({ page }) => {
 });
 
 test('catalog total count exceeds the legacy 199 baseline', async ({ page }) => {
-  const badge = page
-    .getByRole('button', { name: /Tüm Kafeler/ })
-    .getByText(/^\d+$/)
-    .first();
-  await expect(badge).toBeVisible();
-  expect(Number(await badge.textContent())).toBeGreaterThan(199);
+  const allChainsOption = page
+    .getByRole('combobox', { name: 'Kafe zinciri seç' })
+    .getByRole('option', { name: /Tüm kafeler \(\d+\)/ });
+  const optionLabel = await allChainsOption.textContent();
+  const totalCount = Number(optionLabel?.match(/\((\d+)\)/)?.[1]);
+  expect(totalCount).toBeGreaterThan(199);
 });
 
 test('suggestion panel opens after 2 characters and filters live', async ({ page }) => {
-  const input = page.getByRole('textbox', { name: 'Menüde ara' });
+  const input = page.getByRole('combobox', { name: 'Menüde ara' });
   const listbox = page.getByRole('listbox', { name: 'Arama önerileri' });
 
   await input.fill('l');
@@ -192,7 +332,7 @@ test('suggestion panel opens after 2 characters and filters live', async ({ page
 });
 
 test('ArrowDown + Enter activate a suggestion and jump to results', async ({ page }) => {
-  const input = page.getByRole('textbox', { name: 'Menüde ara' });
+  const input = page.getByRole('combobox', { name: 'Menüde ara' });
   const listbox = page.getByRole('listbox', { name: 'Arama önerileri' });
   await input.fill('turk');
   await expect(listbox).toBeVisible();
@@ -207,7 +347,7 @@ test('ArrowDown + Enter activate a suggestion and jump to results', async ({ pag
 });
 
 test('Escape closes the panel without clearing the query; ArrowUp cycles', async ({ page }) => {
-  const input = page.getByRole('textbox', { name: 'Menüde ara' });
+  const input = page.getByRole('combobox', { name: 'Menüde ara' });
   const listbox = page.getByRole('listbox', { name: 'Arama önerileri' });
   await input.fill('latte');
   await expect(listbox).toBeVisible();
@@ -220,7 +360,7 @@ test('Escape closes the panel without clearing the query; ArrowUp cycles', async
 });
 
 test('clear button resets query, panel and active suggestion', async ({ page }) => {
-  const input = page.getByRole('textbox', { name: 'Menüde ara' });
+  const input = page.getByRole('combobox', { name: 'Menüde ara' });
   await input.fill('latte');
   await expect(page.getByRole('listbox', { name: 'Arama önerileri' })).toBeVisible();
   await input.press('ArrowDown');
@@ -237,7 +377,7 @@ test('mobile search modal shows the same suggestions and Enter closes it', async
   const dialog = page.getByRole('dialog', { name: 'Mobil arama' });
   await expect(dialog).toBeVisible();
 
-  const input = dialog.getByRole('textbox', { name: 'Mobil aramada ara' });
+  const input = dialog.getByRole('combobox', { name: 'Mobil aramada ara' });
   await input.fill('sarelle');
   await expect(page.getByTestId('item-card')).toHaveCount(1);
   await expect(page.getByTestId('item-card').first()).toContainText('Sarelle Mocha');
@@ -284,7 +424,7 @@ test('peanut allergen: select, persist to localStorage, warn and hide', async ({
   await expect.poll(() => page.evaluate(() => localStorage.getItem('kalori_cafe_allergens'))).toContain('peanut');
 
   // 3) Warning mode: the peanut product shows the red profile banner.
-  await page.getByRole('textbox', { name: 'Menüde ara' }).fill('Peanut Latte');
+  await page.getByRole('combobox', { name: 'Menüde ara' }).fill('Peanut Latte');
   const peanutCard = page.getByTestId('item-card').filter({ hasText: 'Peanut Latte' });
   await expect(peanutCard).toHaveCount(1);
   await expect(peanutCard.getByText(/Profilinizdeki .*Yer Fıstığı/)).toBeVisible();
@@ -292,7 +432,7 @@ test('peanut allergen: select, persist to localStorage, warn and hide', async ({
   // 4) Hide mode: reopening the modal and switching behavior hides the item.
   await page.getByRole('button', { name: 'Alerji Profili' }).click();
   await page.getByRole('dialog', { name: 'Kişisel Alerjen & Hassasiyet Profili' })
-    .getByText('Alerji İçeren Tüm Ürünleri Menüden Gizle', { exact: false })
+    .getByText('Seçili riski olan veya alerjen verisi doğrulanmamış ürünleri gizle', { exact: false })
     .click();
   await page.getByRole('dialog', { name: 'Kişisel Alerjen & Hassasiyet Profili' })
     .getByRole('button', { name: 'Kaydet & Kapat' }).click();
@@ -338,18 +478,17 @@ test('macro goals: legacy record migrates, profile loads, validation gates Apply
   // BMR = 1616.88, TDEE*0.8 = 1778.6 → 1779 kcal · 112 g protein ·
   // 49 g fat · 223 g carbs · 400 mg caffeine (default personal limit).
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('kalori_cafe_goals')!));
-  expect(stored).toMatchObject({
+  expect(stored).toMatchObject({ version: 1, data: {
     calorieGoal: 1779,
     proteinGoal: 112,
     carbGoal: 223,
     fatGoal: 49,
     maxCaffeine: 400,
-  });
-  expect(stored.profile).toEqual({ gender: 'male', age: 25, weightKg: 62, heightCm: 175, activity: 1.375, goalType: 'lose' });
+  }});
+  expect(stored.data.profile).toEqual({ gender: 'male', age: 25, weightKg: 62, heightCm: 175, activity: 1.375, goalType: 'lose' });
 
   // 6. Reopening the modal loads the SAVED profile (62 kg).
-    await basketDialog.getByRole('button', { name: 'Sepeti kapat' }).click();
-    await page.getByRole('button', { name: /Sepetim/ }).click();
-    await basketDialog.getByRole('button', { name: 'Hedefleri Değiştir' }).click();
-    await expect(page.getByRole('dialog', { name: 'Kişisel Günlük Makro Hesaplayıcı' }).getByText('Kilo (62 kg)', { exact: false })).toBeVisible();
-  });
+  await page.getByRole('button', { name: /Sepetim/ }).click();
+  await basketDialog.getByRole('button', { name: 'Hedefleri Değiştir' }).click();
+  await expect(page.getByRole('dialog', { name: 'Kişisel Günlük Makro Hesaplayıcı' }).getByText('Kilo (62 kg)', { exact: false })).toBeVisible();
+});

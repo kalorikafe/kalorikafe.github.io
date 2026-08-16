@@ -4,6 +4,7 @@ import { MILK_OPTIONS, SIZE_OPTIONS } from '../data/modifiers';
 import { calculateMacrosAndAllergens, ALLERGEN_MAP } from '../utils/macroCalculator';
 import { X, Sparkles, Plus, Minus, Check, Flame, Zap } from 'lucide-react';
 import { useModalAccessibility } from '../hooks/useModalAccessibility';
+import { handleRadioGroupKeyDown } from '../utils/radioGroup';
 
 interface CustomizerModalProps {
   item: MenuItem | null;
@@ -168,14 +169,24 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
           
           {/* 1. Size Selection */}
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-[var(--dark-text-muted)] mb-2">
+            <div id="customizer-size-label" className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-[var(--dark-text-muted)] mb-2">
               1. İçecek Boyutu
-            </label>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              {SIZE_OPTIONS.map(size => (
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2" role="radiogroup" aria-labelledby="customizer-size-label">
+              {SIZE_OPTIONS.map((size, index) => (
                 <button
+                  type="button"
+                  role="radio"
                   key={size.id}
                   onClick={() => setCustomization(prev => ({ ...prev, sizeId: size.id }))}
+                  onKeyDown={(event) => handleRadioGroupKeyDown(
+                    event,
+                    index,
+                    SIZE_OPTIONS.length,
+                    nextIndex => setCustomization(prev => ({ ...prev, sizeId: SIZE_OPTIONS[nextIndex].id })),
+                  )}
+                  aria-checked={customization.sizeId === size.id}
+                  tabIndex={customization.sizeId === size.id ? 0 : -1}
                   className={`p-3 rounded-2xl border text-left transition-all ${
                     customization.sizeId === size.id
                       ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold shadow-sm'
@@ -191,16 +202,26 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
           {/* 2. Milk Selection */}
           {item.defaultMilkId && (
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-[var(--dark-text-muted)] mb-2">
+              <div id="customizer-milk-label" className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-[var(--dark-text-muted)] mb-2">
                 2. Süt Türü Seçimi
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                {MILK_OPTIONS.map(milk => {
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2" role="radiogroup" aria-labelledby="customizer-milk-label">
+                {MILK_OPTIONS.map((milk, index) => {
                   const isSelected = customization.milkId === milk.id;
                   return (
                     <button
+                      type="button"
+                      role="radio"
                       key={milk.id}
                       onClick={() => setCustomization(prev => ({ ...prev, milkId: milk.id }))}
+                      onKeyDown={(event) => handleRadioGroupKeyDown(
+                        event,
+                        index,
+                        MILK_OPTIONS.length,
+                        nextIndex => setCustomization(prev => ({ ...prev, milkId: MILK_OPTIONS[nextIndex].id })),
+                      )}
+                      aria-checked={isSelected}
+                      tabIndex={isSelected ? 0 : -1}
                       className={`p-3 rounded-2xl border text-left flex items-center justify-between transition-all ${
                         isSelected
                           ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold shadow-sm'
@@ -241,20 +262,25 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
               </div>
             </div>
             
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3" role="group" aria-label="Şurup pompa sayısı">
               <button
+                type="button"
                 onClick={() => setCustomization(prev => ({ ...prev, syrupPumps: Math.max(0, prev.syrupPumps - 1) }))}
+                disabled={customization.syrupPumps === 0}
+                aria-label="Şurup pompasını azalt"
                 className="w-8 h-8 rounded-xl bg-stone-200 dark:bg-[var(--dark-surface-elevated)] flex items-center justify-center font-bold text-stone-700 dark:text-[var(--dark-text)] hover:bg-amber-500 hover:text-white transition-colors"
               >
                 <Minus className="w-4 h-4" />
               </button>
 
-              <span className="text-base font-black text-amber-600 dark:text-amber-400 min-w-[20px] text-center">
+              <span className="text-base font-black text-amber-600 dark:text-amber-400 min-w-[20px] text-center" aria-live="polite" aria-atomic="true">
                 {customization.syrupPumps}
               </span>
 
               <button
+                type="button"
                 onClick={() => setCustomization(prev => ({ ...prev, syrupPumps: prev.syrupPumps + 1 }))}
+                aria-label="Şurup pompasını artır"
                 className="w-8 h-8 rounded-xl bg-stone-200 dark:bg-[var(--dark-surface-elevated)] flex items-center justify-center font-bold text-stone-700 dark:text-[var(--dark-text)] hover:bg-amber-500 hover:text-white transition-colors"
               >
                 <Plus className="w-4 h-4" />
@@ -264,14 +290,16 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
 
           {/* 4. Extras & Toppings */}
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-[var(--dark-text-muted)] mb-2">
+            <div id="customizer-extras-label" className="block text-xs font-bold uppercase tracking-wider text-stone-500 dark:text-[var(--dark-text-muted)] mb-2">
               Ekstra Eklemler & Malzemeler
-            </label>
+            </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2" role="group" aria-labelledby="customizer-extras-label">
               
               <button
+                type="button"
                 onClick={() => setCustomization(prev => ({ ...prev, hasWhippedCream: !prev.hasWhippedCream }))}
+                aria-pressed={customization.hasWhippedCream}
                 className={`p-3 rounded-2xl border text-left flex items-center justify-between transition-all ${
                   customization.hasWhippedCream
                     ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold'
@@ -286,7 +314,9 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
               </button>
 
               <button
+                type="button"
                 onClick={() => setCustomization(prev => ({ ...prev, hasColdFoam: !prev.hasColdFoam }))}
+                aria-pressed={customization.hasColdFoam}
                 className={`p-3 rounded-2xl border text-left flex items-center justify-between transition-all ${
                   customization.hasColdFoam
                     ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold'
@@ -301,7 +331,9 @@ export const CustomizerModal: React.FC<CustomizerModalProps> = ({
               </button>
 
               <button
+                type="button"
                 onClick={() => setCustomization(prev => ({ ...prev, extraEspressoShots: prev.extraEspressoShots > 0 ? 0 : 1 }))}
+                aria-pressed={customization.extraEspressoShots > 0}
                 className={`p-3 rounded-2xl border text-left flex items-center justify-between transition-all ${
                   customization.extraEspressoShots > 0
                     ? 'bg-purple-500/15 border-purple-500 text-purple-900 dark:text-purple-200 font-bold'

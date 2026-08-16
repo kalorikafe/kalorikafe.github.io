@@ -1,31 +1,41 @@
 import React, { useState } from 'react';
-import type { MenuItem, CustomizationState, Category } from '../types/cafe';
+import type { MenuItem, CustomizationState, Category, CustomRecipeItem } from '../types/cafe';
 import { MILK_OPTIONS, SIZE_OPTIONS } from '../data/modifiers';
 import { calculateMacrosAndAllergens } from '../utils/macroCalculator';
 import { MacroDistributionDonut } from './MacroDistributionDonut';
 import { X, Plus, Check, Wand2 } from 'lucide-react';
-import confetti from 'canvas-confetti';
 import { useModalAccessibility } from '../hooks/useModalAccessibility';
+import { prefersReducedMotion } from '../utils/motionPreferences';
+import { handleRadioGroupKeyDown } from '../utils/radioGroup';
+
+const CUSTOM_SIZE_OPTIONS = SIZE_OPTIONS.map((option, index) => ({
+  ...option,
+  name: `${['Küçük', 'Orta', 'Büyük', 'Ekstra büyük'][index]} (${option.volumeMl} ml)`,
+}));
 
 interface CustomRecipeBuilderModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSaveCustomRecipe: (item: MenuItem, customization: CustomizationState) => void;
+  initialRecipe?: MenuItem;
+  onSaveCustomRecipe: (item: CustomRecipeItem, customization: CustomizationState) => void;
 }
 
 export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> = ({
   isOpen,
   onClose,
+  initialRecipe,
   onSaveCustomRecipe,
 }) => {
   const dialogRef = useModalAccessibility(isOpen, onClose);
-  const [recipeName, setRecipeName] = useState<string>('Benim Özel Kahvem');
-  const [sizeId, setSizeId] = useState<string>('tall');
-  const [milkId, setMilkId] = useState<string>('almond_milk');
-  const [syrupPumps, setSyrupPumps] = useState<number>(1);
-  const [hasWhippedCream, setHasWhippedCream] = useState<boolean>(false);
-  const [hasColdFoam, setHasColdFoam] = useState<boolean>(false);
-  const [extraEspressoShots, setExtraEspressoShots] = useState<number>(1);
+  const initialCustomization = initialRecipe?.baseCustomization;
+  const [recipeId] = useState(() => initialRecipe?.id ?? `custom_${globalThis.crypto?.randomUUID?.() ?? Date.now().toString(36)}`);
+  const [recipeName, setRecipeName] = useState<string>(initialRecipe?.name ?? 'Benim Özel Kahvem');
+  const [sizeId, setSizeId] = useState<string>(initialCustomization?.sizeId ?? 'tall');
+  const [milkId, setMilkId] = useState<string>(initialCustomization?.milkId ?? 'almond_milk');
+  const [syrupPumps, setSyrupPumps] = useState<number>(initialCustomization?.syrupPumps ?? 1);
+  const [hasWhippedCream, setHasWhippedCream] = useState<boolean>(initialCustomization?.hasWhippedCream ?? false);
+  const [hasColdFoam, setHasColdFoam] = useState<boolean>(initialCustomization?.hasColdFoam ?? false);
+  const [extraEspressoShots, setExtraEspressoShots] = useState<number>(initialCustomization?.extraEspressoShots ?? 1);
 
   if (!isOpen) return null;
 
@@ -33,17 +43,19 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
 
   // Template base item for calculation
   const templateItem: MenuItem = {
-    id: `custom_${Date.now()}`,
-    chainId: 'starbucks',
+    ...initialRecipe,
+    id: recipeId,
+    chainId: 'custom',
     name: recipeName || 'Benim Özel Kahvem',
     category: baseCategory,
     description: 'Kendi oluşturduğum özel lezzet ve makro tarifi.',
     image: '/images/menu/placeholder.webp',
+    productKind: 'drink',
     isDrink: true,
-    defaultSizeId: 'tall',
-    defaultMilkId: 'whole_milk',
-    defaultSyrupPumps: 0,
-    baseMacros: {
+    defaultSizeId: initialRecipe?.defaultSizeId ?? 'tall',
+    defaultMilkId: initialRecipe?.defaultMilkId ?? 'whole_milk',
+    defaultSyrupPumps: initialRecipe?.defaultSyrupPumps ?? 0,
+    baseMacros: initialRecipe?.baseMacros ?? {
       calories: 45,
       protein: 1.5,
       carbs: 4.0,
@@ -52,9 +64,29 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
       caffeine: 75,
       sodium: 50
     },
-    allergens: [],
-    dietaryTags: ['vegetarian'],
-    glycemicImpact: 'Düşük'
+    // The template macros represent whole milk. Its baseline allergen must be
+    // present so the calculator can correctly replace it with the user's milk.
+    allergens: initialRecipe?.allergens ?? ['milk'],
+    containsLactose: initialRecipe?.containsLactose ?? true,
+    crossContactRisks: initialRecipe?.crossContactRisks ?? [],
+    dietaryTags: initialRecipe?.dietaryTags ?? ['vegetarian'],
+    glycemicImpact: 'Düşük',
+    nutritionSource: {
+      status: 'estimated',
+      label: 'Kullanıcı tarifi',
+      servingBasis: 'Seçilen boyut ve malzemeler',
+      notes: 'Değerler uygulamadaki standart malzeme varsayımlarından hesaplanır.',
+      fieldStatus: {
+        calories: 'estimated',
+        protein: 'estimated',
+        carbs: 'estimated',
+        sugar: 'estimated',
+        fat: 'estimated',
+        satFat: 'estimated',
+        caffeine: 'estimated',
+        sodium: 'estimated',
+      },
+    },
   };
 
   const customization: CustomizationState = {
@@ -67,10 +99,15 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
   };
 
   const { calculatedMacros, calculatedAllergens } = calculateMacrosAndAllergens(templateItem, customization);
+  const selectedMilk = MILK_OPTIONS.find(option => option.id === milkId) ?? MILK_OPTIONS[0];
+  const hasDairyExtra = hasWhippedCream || hasColdFoam;
 
   const handleSave = () => {
-    const finalItem: MenuItem = {
+    const finalItem: CustomRecipeItem = {
       ...templateItem,
+      chainId: 'custom',
+      productKind: 'drink',
+      isDrink: true,
       name: recipeName.trim() || 'Benim Özel Kahvem',
       // Set defaults to match the chosen customization so the engine is
       // idempotent: re-running with the same config returns baseMacros.
@@ -80,10 +117,18 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
       baseCustomization: customization,
       baseMacros: calculatedMacros,
       allergens: calculatedAllergens,
+      containsLactose: selectedMilk.containsLactose === true || hasDairyExtra,
+      crossContactRisks: [...(selectedMilk.crossContactRisks ?? [])],
+      allergenSource: {
+        status: 'estimated',
+        notes: 'Kullanıcının seçtiği süt ve ek malzemelerden hesaplandı.',
+      },
     };
 
     onSaveCustomRecipe(finalItem, customization);
-    confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
+    if (!initialRecipe && !prefersReducedMotion()) void import('canvas-confetti').then(({ default: confetti }) => {
+      confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
+    });
     onClose();
   };
 
@@ -99,10 +144,12 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
             </div>
             <div>
               <h2 id="recipe-builder-dialog-title" className="text-xl font-extrabold text-stone-900 dark:text-[var(--dark-text)]">
-                Kendi Kahveni / Tarifini Oluştur
+                {initialRecipe ? 'Tarifini Düzenle' : 'Kendi Kahveni / Tarifini Oluştur'}
               </h2>
               <p className="text-xs text-stone-500 dark:text-[var(--dark-text-muted)]">
-                Malzemeleri kendin seç, makrolarını anlık hesapla ve sepetine ekle!
+                {initialRecipe
+                  ? 'Malzemeleri değiştir; kayıt aynı kimlikle güvenle güncellensin.'
+                  : 'Malzemeleri seç, makroları anlık hesapla ve tarifini kaydet.'}
               </p>
             </div>
           </div>
@@ -158,10 +205,11 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
           
           {/* Recipe Name */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">
+            <label htmlFor="custom-recipe-name" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">
               Özel Tarif Adınız
             </label>
             <input
+              id="custom-recipe-name"
               type="text"
               value={recipeName}
               onChange={(e) => setRecipeName(e.target.value)}
@@ -172,15 +220,25 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
 
           {/* Size Choice */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Boyut Seçimi</label>
-            <div className="grid grid-cols-4 gap-2">
-              {SIZE_OPTIONS.map(size => (
+            <div id="custom-recipe-size-label" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Boyut Seçimi</div>
+            <div className="grid grid-cols-4 gap-2" role="radiogroup" aria-labelledby="custom-recipe-size-label">
+              {CUSTOM_SIZE_OPTIONS.map((size, index) => (
                 <button
+                  type="button"
+                  role="radio"
                   key={size.id}
                   onClick={() => setSizeId(size.id)}
+                  onKeyDown={(event) => handleRadioGroupKeyDown(
+                    event,
+                    index,
+                    CUSTOM_SIZE_OPTIONS.length,
+                    nextIndex => setSizeId(CUSTOM_SIZE_OPTIONS[nextIndex].id),
+                  )}
+                  aria-checked={sizeId === size.id}
+                  tabIndex={sizeId === size.id ? 0 : -1}
                   className={`py-2 rounded-xl border font-bold ${sizeId === size.id ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
                 >
-                  {size.name.split(' ')[0]}
+                  {size.name}
                 </button>
               ))}
             </div>
@@ -188,8 +246,9 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
 
           {/* Milk Choice */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Süt Türü</label>
+            <label htmlFor="custom-recipe-milk" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Süt Türü</label>
             <select
+              id="custom-recipe-milk"
               value={milkId}
               onChange={(e) => setMilkId(e.target.value)}
               className="w-full px-3 py-2.5 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] font-semibold"
@@ -205,10 +264,11 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
           {/* Syrup & Extra Shots */}
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">
+              <label htmlFor="custom-recipe-syrup" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">
                 Şurup Pompa Sayısı ({syrupPumps})
               </label>
               <input
+                id="custom-recipe-syrup"
                 type="range"
                 min={0}
                 max={6}
@@ -219,10 +279,11 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
             </div>
 
             <div>
-              <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">
+              <label htmlFor="custom-recipe-shots" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">
                 Espresso Shot ({extraEspressoShots})
               </label>
               <input
+                id="custom-recipe-shots"
                 type="range"
                 min={1}
                 max={4}
@@ -234,9 +295,11 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
           </div>
 
           {/* Extras */}
-          <div className="grid grid-cols-2 gap-2">
+          <div className="grid grid-cols-2 gap-2" role="group" aria-label="Ekstra malzemeler">
             <button
+              type="button"
               onClick={() => setHasWhippedCream(!hasWhippedCream)}
+              aria-pressed={hasWhippedCream}
               className={`p-2.5 rounded-xl border flex items-center justify-between font-bold ${hasWhippedCream ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
             >
               <span>Krema (+82 kcal)</span>
@@ -244,7 +307,9 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
             </button>
 
             <button
+              type="button"
               onClick={() => setHasColdFoam(!hasColdFoam)}
+              aria-pressed={hasColdFoam}
               className={`p-2.5 rounded-xl border flex items-center justify-between font-bold ${hasColdFoam ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
             >
               <span>Cold Foam (+110 kcal)</span>
@@ -268,7 +333,7 @@ export const CustomRecipeBuilderModal: React.FC<CustomRecipeBuilderModalProps> =
             className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 text-white text-xs font-bold shadow-md flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
-            <span>Tarifi Kaydet & Sepete Ekle</span>
+            <span>{initialRecipe ? 'Değişiklikleri Kaydet' : 'Tarifi Kaydet & Sepete Ekle'}</span>
           </button>
         </div>
 

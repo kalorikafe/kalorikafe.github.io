@@ -1,6 +1,6 @@
 # Project: Kalori Cafe — Katalog ve Kalite Kapıları
 
-Son güncelleme: **11 Ağustos 2026**. Bu belge çalışma ağacındaki güncel
+Son güncelleme: **16 Ağustos 2026**. Bu belge çalışma ağacındaki güncel
 katalog durumunu anlatır; canlı GitHub Pages sürümü ancak ilgili değişiklikler
 `master` üzerinden yayınlandıktan sonra aynı duruma gelir.
 
@@ -13,9 +13,9 @@ uygulamasında karşılaştırır.
 - Canlı adres: <https://kalorikafe.github.io/>
 - Kaynak: <https://github.com/kalorikafe/kalorikafe.github.io>
 - Hosting: GitHub Pages + GitHub Actions
-- Güncel katalog: **950 ürün**, 10 zincir, 15 sezonluk ürün
-- Besin kaydı: 950 `estimated`, 0 `verified`, 0 `unverified`
-- Görseller: 950 benzersiz yerel WebP yolu; 384 resmî/exact, 566 lisanslı
+- Güncel katalog: **1006 ürün**, 10 zincir, 9 sezonluk ürün
+- Besin kaydı: 83 `mixed`, 923 `estimated`, 0 `verified`, 0 `unverified`
+- Görseller: 1006 benzersiz yerel WebP yolu; 384 resmî/exact, 622 lisanslı
   fallback
 
 ## Katalog dağılımı
@@ -26,13 +26,13 @@ uygulamasında karşılaştırır.
 | Espressolab | 116 | 0 |
 | Kahve Dünyası | 20 | 0 |
 | Caffè Nero | 125 | 0 |
-| Coffy | 30 | 9 |
+| Coffy | 86 | 4 |
 | Mackbear Coffee Co. | 166 | 3 |
 | Arabica Coffee House | 131 | 0 |
 | Gloria Jean's Coffees | 115 | 1 |
 | David People | 93 | 2 |
 | Tchibo | 24 | 0 |
-| **Toplam** | **950** | **15** |
+| **Toplam** | **1006** | **9** |
 
 ### Caffè Nero güncellemesi
 
@@ -110,7 +110,6 @@ bulaşma riski her zaman ayrıca değerlendirilmelidir.
 - `scripts/build-images.mjs`: yerel WebP üretim hattı
 - `scripts/catalog-audit.ts`: katalog/provenance/görsel sözleşmesi denetimi
 - `tests/unit/` ve `tests/e2e/`: aktif testler
-- `tests/legacy/`: yalnızca tarihsel arşiv; aktif kalite kapısı değildir
 
 ## Kalite kapıları
 
@@ -143,8 +142,5 @@ senaryoluk kaynak-metin suite'i güncel kapı sayılmaz.
 ## İlgili belgeler
 
 - `README.md`: hızlı başlangıç ve kısa proje özeti
-- `PROJECT_OVERVIEW.md`: yeni sohbet/ajan devir kılavuzu
 - `GATE_STATUS.md`: gerçek kalite kapısı sonuçları
 - `DATA_PROVENANCE.md`: kaynaklandırma politikası
-- `DEEPSEEK_NIGHT_REPORT.md`: 6 Ağustos tarihsel yayın raporu ve 11 Ağustos
-  katalog eki

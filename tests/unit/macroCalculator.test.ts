@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { MENU_ITEMS } from '../../src/data/items';
 import type { CustomizationState, MenuItem } from '../../src/types/cafe';
-import { calculateMacrosAndAllergens } from '../../src/utils/macroCalculator';
+import { calculateMacrosAndAllergens, getDefaultCustomization } from '../../src/utils/macroCalculator';
 
 const latte = MENU_ITEMS.find(item => item.id === 'starbucks_1_caff__latte')!;
 
@@ -63,6 +63,19 @@ describe('calculateMacrosAndAllergens', () => {
     expect(result.calculatedMacros).toMatchObject({ calories: 190, carbs: 20, sugar: 18 });
   });
 
+  it('removes milk for plant milk but keeps it for lactose-free dairy milk', () => {
+    const plant = calculateMacrosAndAllergens(latte, { ...defaults, milkId: 'almond_milk' });
+    expect(plant.calculatedAllergens).not.toContain('milk');
+    expect(plant.calculatedAllergens).toContain('nuts');
+
+    const lactoseFreeDairy = calculateMacrosAndAllergens(latte, {
+      ...defaults,
+      milkId: 'lactose_free_milk',
+    });
+    expect(lactoseFreeDairy.calculatedAllergens).toContain('milk');
+    expect(lactoseFreeDairy.calculatedAllergens).not.toContain('lactose');
+  });
+
   it('does not recalculate an already baked custom recipe', () => {
     const selected: CustomizationState = {
       ...defaults,
@@ -84,5 +97,35 @@ describe('calculateMacrosAndAllergens', () => {
     };
 
     expect(calculateMacrosAndAllergens(savedRecipe, selected)).toEqual(baked);
+    expect(getDefaultCustomization(savedRecipe)).toEqual(selected);
+  });
+
+  it('rebuilds milk and dairy-extra allergens instead of retaining stale milk warnings', () => {
+    const blankTemplate: MenuItem = {
+      ...latte,
+      id: 'custom_blank_template',
+      allergens: [],
+      defaultMilkId: 'whole_milk',
+    };
+    const wholeMilk = calculateMacrosAndAllergens(blankTemplate, defaults);
+    expect(wholeMilk.calculatedAllergens).toEqual(['milk']);
+
+    const almondWithCream = calculateMacrosAndAllergens(blankTemplate, {
+      ...defaults,
+      milkId: 'almond_milk',
+      hasWhippedCream: true,
+    });
+    expect(almondWithCream.calculatedAllergens).toEqual(expect.arrayContaining(['nuts', 'milk']));
+
+    const savedAlmond: MenuItem = {
+      ...blankTemplate,
+      allergens: ['nuts'],
+      defaultMilkId: 'almond_milk',
+      baseCustomization: { ...defaults, milkId: 'almond_milk' },
+    };
+    const editedToSoy = calculateMacrosAndAllergens(savedAlmond, { ...defaults, milkId: 'soy_milk' });
+    expect(editedToSoy.calculatedAllergens).toContain('soy');
+    expect(editedToSoy.calculatedAllergens).not.toContain('nuts');
+    expect(editedToSoy.calculatedAllergens).not.toContain('milk');
   });
 });

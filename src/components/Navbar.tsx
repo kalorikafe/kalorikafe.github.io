@@ -35,7 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenAllergenModal,
   compareCount,
   onOpenCompareModal,
-  basketCount: _basketCount,
+  basketCount = 0,
   totalBasketCalories,
   onOpenBasketDrawer,
   isDarkMode,
@@ -113,22 +113,19 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Global Search Bar */}
-        <div
-                  className="flex-1 max-w-md relative hidden md:block"
-                  role="combobox"
-                  aria-expanded={suggestionsOpen}
-                  aria-haspopup="listbox"
-                  aria-controls={suggestionsOpen ? suggestionIds.listboxId : undefined}
-                  aria-owns={suggestionIds.listboxId}
-                  aria-activedescendant={suggestionsOpen && activeIndex >= 0 ? suggestionIds.optionId(activeIndex) : undefined}
-                >
+        <div className="flex-1 max-w-md relative hidden md:block">
           <div className="relative">
             <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 dark:text-[var(--dark-text-muted)]" />
             <input
               ref={inputRef}
               type="text"
+              role="combobox"
               aria-label="Menüde ara"
               aria-autocomplete="list"
+              aria-expanded={suggestionsOpen}
+              aria-haspopup="listbox"
+              aria-controls={suggestionsOpen ? suggestionIds.listboxId : undefined}
+              aria-activedescendant={suggestionsOpen && activeIndex >= 0 ? suggestionIds.optionId(activeIndex) : undefined}
               value={searchQuery}
               onChange={(e) => handleChange(e.target.value)}
               onKeyDown={handleKeyDown}
@@ -171,7 +168,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           
           {/* Allergen Profile Button */}
           <button
+            type="button"
             onClick={onOpenAllergenModal}
+            aria-label={userAllergens.length > 0
+              ? `Alerji Profili, ${userAllergens.length} seçim${hideAllergens ? ', eşleşen ürünler gizleniyor' : ''}`
+              : 'Alerji Profili'}
             className={`relative flex items-center gap-1.5 px-2.5 sm:px-3.5 py-2 rounded-2xl border text-xs font-black transition-all ${
               userAllergens.length > 0
                 ? hideAllergens
@@ -191,8 +192,10 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Compare Modal Trigger */}
           <button
+            type="button"
             onClick={onOpenCompareModal}
             disabled={compareCount === 0}
+            aria-label={`Karşılaştırma, ${compareCount} ürün seçili`}
             className={`relative hidden sm:flex items-center gap-1.5 px-3.5 py-2 rounded-2xl border text-xs font-black transition-all ${
               compareCount > 0
                 ? 'bg-[#6F4E37] hover:bg-[#5C402C] text-white border-[#6F4E37] shadow-md shadow-[#6F4E37]/20'
@@ -210,7 +213,9 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Daily Basket Trigger */}
           <button
+            type="button"
             onClick={onOpenBasketDrawer}
+            aria-label={`Sepetim, ${basketCount} ürün, ${totalBasketCalories} kcal`}
             className="flex items-center gap-2 px-2.5 sm:px-4 py-2 rounded-2xl bg-[#2C221E] hover:bg-[#3D2B1F] dark:bg-[#FAF8F5] dark:hover:bg-stone-200 text-white dark:text-[#2C221E] font-black text-xs shadow-md shadow-[#2C221E]/20 border border-[#2C221E]/20 transition-all active:scale-95"
           >
             <ShoppingBag className="w-4 h-4" />

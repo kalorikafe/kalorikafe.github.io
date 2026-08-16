@@ -2,12 +2,19 @@ import type { MenuItem, CustomizationState, Macros, Allergen } from '../types/ca
 import { SIZE_OPTIONS, MILK_OPTIONS, EXTRAS_MACROS } from '../data/modifiers';
 
 export const ALLERGEN_MAP: Record<Allergen, { name: string; icon: string; bg: string; text: string; description: string }> = {
-  lactose: {
-    name: 'Süt / Laktoz',
+  milk: {
+    name: 'Süt',
     icon: '🥛',
     bg: 'bg-blue-100 dark:bg-blue-950/60',
     text: 'text-blue-800 dark:text-blue-300',
-    description: 'Hayvansal süt protein ve laktozu içerir. Bitkisel süt tercihi ile çıkarılabilir.'
+    description: 'Süt proteini veya süt ürünü içerir. Laktozsuz süt de süt alerjeni içerebilir.'
+  },
+  lactose: {
+    name: 'Laktoz',
+    icon: '🥛',
+    bg: 'bg-blue-100 dark:bg-blue-950/60',
+    text: 'text-blue-800 dark:text-blue-300',
+    description: 'Laktoz intoleransı uyarısıdır; süt proteini alerjisinden farklıdır.'
   },
   gluten: {
     name: 'Gluten',
@@ -78,8 +85,49 @@ export const ALLERGEN_MAP: Record<Allergen, { name: string; icon: string; bg: st
     bg: 'bg-fuchsia-100 dark:bg-fuchsia-950/60',
     text: 'text-fuchsia-800 dark:text-fuchsia-300',
     description: 'Kükürt dioksit veya sülfit içerir.'
+  },
+  crustaceans: {
+    name: 'Kabuklular',
+    icon: '🦐',
+    bg: 'bg-rose-100 dark:bg-rose-950/60',
+    text: 'text-rose-800 dark:text-rose-300',
+    description: 'Karides, yengeç veya diğer kabuklu deniz ürünlerini içerir.'
+  },
+  celery: {
+    name: 'Kereviz',
+    icon: '🌿',
+    bg: 'bg-lime-100 dark:bg-lime-950/60',
+    text: 'text-lime-800 dark:text-lime-300',
+    description: 'Kereviz veya kereviz türevi içerir.'
+  },
+  lupin: {
+    name: 'Acı Bakla',
+    icon: '🌱',
+    bg: 'bg-violet-100 dark:bg-violet-950/60',
+    text: 'text-violet-800 dark:text-violet-300',
+    description: 'Acı bakla (lupin) veya türevlerini içerir.'
+  },
+  molluscs: {
+    name: 'Yumuşakçalar',
+    icon: '🐚',
+    bg: 'bg-cyan-100 dark:bg-cyan-950/60',
+    text: 'text-cyan-800 dark:text-cyan-300',
+    description: 'Midye, kalamar veya diğer yumuşakçaları içerir.'
   }
 };
+
+export function getDefaultCustomization(item: MenuItem): CustomizationState {
+  return item.baseCustomization
+    ? { ...item.baseCustomization }
+    : {
+        sizeId: item.defaultSizeId || 'tall',
+        milkId: item.defaultMilkId || 'whole_milk',
+        syrupPumps: item.defaultSyrupPumps || 0,
+        hasWhippedCream: false,
+        hasColdFoam: false,
+        extraEspressoShots: 0,
+      };
+}
 
 /**
  * Single-source, idempotent macro engine.
@@ -98,14 +146,7 @@ export function calculateMacrosAndAllergens(
   item: MenuItem,
   customization: CustomizationState
 ): { calculatedMacros: Macros; calculatedAllergens: Allergen[] } {
-  const baseline: CustomizationState = item.baseCustomization ?? {
-    sizeId: item.defaultSizeId || 'tall',
-    milkId: item.defaultMilkId || 'whole_milk',
-    syrupPumps: item.defaultSyrupPumps || 0,
-    hasWhippedCream: false,
-    hasColdFoam: false,
-    extraEspressoShots: 0,
-  };
+  const baseline = getDefaultCustomization(item);
 
   const defaultSize = SIZE_OPTIONS.find(s => s.id === baseline.sizeId) || SIZE_OPTIONS[1]; // default Tall
   const size = SIZE_OPTIONS.find(s => s.id === customization.sizeId) || defaultSize;
@@ -129,7 +170,7 @@ export function calculateMacrosAndAllergens(
   // 1. Milk modifications (only if item is a milk-based drink).
   //    baseMacros already includes the item's DEFAULT milk, so only the delta
   //    relative to the default milk is applied.
-  if (item.isDrink && (item.defaultMilkId || item.baseCustomization)) {
+  if ((item.productKind ? item.productKind === 'drink' : item.isDrink) && (item.defaultMilkId || item.baseCustomization)) {
     const baseMilk = defaultMilk || MILK_OPTIONS[0];
     calories += (milk.calDelta - baseMilk.calDelta) * mult;
     protein += (milk.proteinDelta - baseMilk.proteinDelta) * mult;
@@ -180,31 +221,40 @@ export function calculateMacrosAndAllergens(
     caffeine += shotDelta * EXTRAS_MACROS.extraShot.caffeine;
   }
 
-  // Calculate dynamic allergens
+  // Rebuild customization-derived allergens from the saved/default baseline.
+  // Without this reset, changing a saved almond recipe to soy leaves a stale
+  // `nuts` warning, while dairy milk and dairy extras can be missed entirely.
   const calculatedAllergens: Allergen[] = [...item.allergens];
-
-  // If user chose non-dairy milk and NO whipped cream / cold foam, remove lactose allergen!
-  if (!milk.isDairy && !customization.hasWhippedCream && !customization.hasColdFoam) {
-    const idx = calculatedAllergens.indexOf('lactose');
-    if (idx !== -1) {
-      calculatedAllergens.splice(idx, 1);
+  const removeAllergen = (allergen: Allergen) => {
+    let index = calculatedAllergens.indexOf(allergen);
+    while (index !== -1) {
+      calculatedAllergens.splice(index, 1);
+      index = calculatedAllergens.indexOf(allergen);
     }
+  };
+  const addAllergen = (allergen: Allergen) => {
+    if (!calculatedAllergens.includes(allergen)) calculatedAllergens.push(allergen);
+  };
+
+  for (const allergen of defaultMilk?.allergens ?? []) removeAllergen(allergen);
+  if (defaultMilk?.isDairy) {
+    removeAllergen('milk');
+    removeAllergen('lactose');
+  }
+  if (defaultMilk?.crossContactRisks?.includes('celiac_oat_risk') || defaultMilk?.hasCeliacRisk || defaultMilk?.celiacRisk) {
+    removeAllergen('celiac_oat_risk');
+  }
+  if (baseline.hasWhippedCream || baseline.hasColdFoam) {
+    removeAllergen('milk');
+    removeAllergen('lactose');
   }
 
-  // If user chose plant milk with celiac oat risk, add oat warning
-  if (milk.hasCeliacRisk || milk.celiacRisk) {
-    if (!calculatedAllergens.includes('celiac_oat_risk')) {
-      calculatedAllergens.push('celiac_oat_risk');
-    }
-  }
-
-  // If milk has specific allergens (e.g. soy/nuts)
-  if (milk.allergens) {
-    milk.allergens.forEach((a: Allergen) => {
-      if (!calculatedAllergens.includes(a)) {
-        calculatedAllergens.push(a);
-      }
-    });
+  if (milk.isDairy || customization.hasWhippedCream || customization.hasColdFoam) addAllergen('milk');
+  for (const allergen of milk.allergens ?? []) addAllergen(allergen);
+  if (milk.crossContactRisks?.includes('celiac_oat_risk') || milk.hasCeliacRisk || milk.celiacRisk) {
+    // Compatibility warning for saved profiles; the recipe itself also stores
+    // the dedicated crossContactRisks field.
+    addAllergen('celiac_oat_risk');
   }
 
   return {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { CHAINS } from '../data/chains';
 import { Layers } from 'lucide-react';
+import { CHAINS } from '../data/chains';
 
 interface ChainSelectorProps {
   selectedChainId: string | null;
@@ -14,76 +14,32 @@ export const ChainSelector: React.FC<ChainSelectorProps> = ({
   onSelectChain,
   chainCounts,
   totalCount,
-}) => {
-  return (
-    <section className="space-y-3 min-w-0 max-w-full overflow-hidden" aria-labelledby="chain-selector-title">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-xl bg-[#6F4E37]/15 flex items-center justify-center text-[#6F4E37] dark:text-[#D4B996]">
-            <Layers className="w-4 h-4" />
-          </div>
-          <h2 id="chain-selector-title" className="text-sm font-black text-stone-900 dark:text-[var(--dark-text)] uppercase tracking-wider">
-            Kafe Zincirleri ({CHAINS.length} Popüler Marka)
-          </h2>
+}) => (
+  <section className="flex min-w-0 max-w-full flex-wrap items-end gap-3" aria-labelledby="chain-selector-title">
+    <div className="min-w-56 flex-1">
+      <div className="mb-2 flex items-center gap-2">
+        <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-[#6F4E37]/15 text-[#6F4E37] dark:text-[#D4B996]">
+          <Layers className="h-4 w-4" />
         </div>
-
-        {selectedChainId && (
-          <button
-            onClick={() => onSelectChain(null)}
-            className="text-xs font-bold text-[#6F4E37] dark:text-[#D4B996] hover:underline"
-          >
-            Tüm Zincirleri Göster
-          </button>
-        )}
+        <h2 id="chain-selector-title" className="text-xs font-black uppercase tracking-wider text-stone-900 dark:text-[var(--dark-text)]">Kafe zinciri</h2>
       </div>
-
-      {/* Horizontal Scrollable Pills */}
-      <div className="flex w-full max-w-full items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none">
-        
-        {/* All Chains Badge */}
-        <button
-          onClick={() => onSelectChain(null)}
-          className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-2xl border text-xs font-black transition-all ${
-            selectedChainId === null
-              ? 'bg-[#2C221E] text-white dark:bg-[#FAF8F5] dark:text-[#2C221E] border-[#2C221E] dark:border-[#FAF8F5] shadow-md scale-105'
-              : 'bg-white dark:bg-[var(--dark-surface)] border-stone-200 dark:border-[var(--dark-border)] text-stone-800 dark:text-[var(--dark-text)] hover:border-[#6F4E37]'
-          }`}
-        >
-          <span>☕ Tüm Kafeler</span>
-          <span className={`px-2 py-0.5 rounded-full text-[10px] ${
-            selectedChainId === null ? 'bg-white/20 dark:bg-black/20 text-white dark:text-[#2C221E]' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-600 dark:text-[var(--dark-text-muted)]'
-          }`}>
-            {totalCount}
-          </span>
-        </button>
-
-        {/* Chain Items */}
-        {CHAINS.map(chain => {
-          const isSelected = selectedChainId === chain.id;
-          const count = chainCounts[chain.id] || 0;
-
-          return (
-            <button
-              key={chain.id}
-              onClick={() => onSelectChain(chain.id)}
-              className={`shrink-0 flex items-center gap-2 px-4 py-2.5 rounded-2xl border text-xs font-black transition-all ${
-                isSelected
-                  ? 'bg-[#2C221E] text-white dark:bg-[#FAF8F5] dark:text-[#2C221E] border-[#2C221E] dark:border-[#FAF8F5] shadow-md scale-105'
-                  : 'bg-white dark:bg-[var(--dark-surface)] border-stone-200 dark:border-[var(--dark-border)] text-stone-800 dark:text-[var(--dark-text)] hover:border-[#6F4E37]'
-              }`}
-            >
-              <img src={chain.logo} alt={chain.name} className="w-5 h-5 object-contain rounded-full bg-white p-0.5" />
-              <span>{chain.name}</span>
-              <span className={`px-2 py-0.5 rounded-full text-[10px] ${
-                isSelected ? 'bg-[#6F4E37] text-white' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-600 dark:text-[var(--dark-text-muted)]'
-              }`}>
-                {count}
-              </span>
-            </button>
-          );
-        })}
-
-      </div>
-    </section>
-  );
-};
+      <label className="sr-only" htmlFor="chain-filter">Kafe zinciri seç</label>
+      <select
+        id="chain-filter"
+        value={selectedChainId ?? ''}
+        onChange={event => onSelectChain(event.target.value || null)}
+        className="min-h-11 w-full rounded-xl border border-stone-200 bg-white px-3 text-sm font-bold text-stone-900 dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface)] dark:text-[var(--dark-text)]"
+      >
+        <option value="">Tüm kafeler ({totalCount})</option>
+        {CHAINS.map(chain => (
+          <option key={chain.id} value={chain.id}>{chain.name} ({chainCounts[chain.id] || 0})</option>
+        ))}
+      </select>
+    </div>
+    {selectedChainId && (
+      <button type="button" onClick={() => onSelectChain(null)} className="min-h-11 rounded-xl px-3 text-xs font-black text-[#6F4E37] underline dark:text-[#D4B996]">
+        Tümünü göster
+      </button>
+    )}
+  </section>
+);

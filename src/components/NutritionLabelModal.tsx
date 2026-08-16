@@ -1,8 +1,8 @@
 import React from 'react';
-import type { MenuItem } from '../types/cafe';
+import type { MenuItem, NutritionField, NutritionFieldStatus } from '../types/cafe';
 import { calculateMacrosAndAllergens, ALLERGEN_MAP } from '../utils/macroCalculator';
 import { SIZE_OPTIONS, MILK_OPTIONS } from '../data/modifiers';
-import { X, Zap } from 'lucide-react';
+import { ExternalLink, X, Zap } from 'lucide-react';
 import { useModalAccessibility } from '../hooks/useModalAccessibility';
 
 interface NutritionLabelModalProps {
@@ -10,162 +10,106 @@ interface NutritionLabelModalProps {
   onClose: () => void;
 }
 
+const RI = { fat: 70, satFat: 20, carbs: 260, sugar: 90, protein: 50, salt: 6 } as const;
+const FIELD_STATUS_LABELS: Record<NutritionFieldStatus, string> = {
+  official: 'resmî', derived: 'türetilmiş', estimated: 'tahmini', unknown: 'bilinmiyor',
+};
+
+const fieldStatus = (item: MenuItem, field: NutritionField): string | undefined => {
+  const status = item.nutritionSource?.fieldStatus?.[field];
+  return status ? FIELD_STATUS_LABELS[status] : undefined;
+};
+
 export const NutritionLabelModal: React.FC<NutritionLabelModalProps> = ({ item, onClose }) => {
   const dialogRef = useModalAccessibility(Boolean(item), onClose);
   if (!item) return null;
 
   const defaultCustomization = {
-    sizeId: item.defaultSizeId || 'tall',
-    milkId: item.defaultMilkId || 'whole_milk',
+    sizeId: item.defaultSizeId || 'standard',
+    milkId: item.defaultMilkId || 'none',
     syrupPumps: item.defaultSyrupPumps || 0,
     hasWhippedCream: false,
     hasColdFoam: false,
-    extraEspressoShots: 0
+    extraEspressoShots: 0,
   };
-
   const { calculatedMacros, calculatedAllergens } = calculateMacrosAndAllergens(item, defaultCustomization);
-  const sizeObj = SIZE_OPTIONS.find(s => s.id === item.defaultSizeId);
-  const milkObj = MILK_OPTIONS.find(m => m.id === item.defaultMilkId);
+  const size = SIZE_OPTIONS.find(option => option.id === item.defaultSizeId);
+  const milk = MILK_OPTIONS.find(option => option.id === item.defaultMilkId);
   const source = item.nutritionSource;
+  const salt = ((calculatedMacros.sodium || 0) * 2.5) / 1000;
 
-  // Daily Value % calculation based on 2000 kcal diet
-  const dvFat = Math.round((calculatedMacros.fat / 78) * 100);
-  const dvSatFat = Math.round(((calculatedMacros.satFat || 0) / 20) * 100);
-  const dvCarb = Math.round((calculatedMacros.carbs / 275) * 100);
-  const dvSugar = Math.round((calculatedMacros.sugar / 50) * 100);
-  const dvProtein = Math.round((calculatedMacros.protein / 50) * 100);
-  const dvSodium = Math.round(((calculatedMacros.sodium || 0) / 2300) * 100);
+  const rows: Array<{ label: string; value: string; percent?: number; field: NutritionField; indent?: boolean }> = [
+    { label: 'Toplam yağ', value: `${calculatedMacros.fat} g`, percent: Math.round(calculatedMacros.fat / RI.fat * 100), field: 'fat' },
+    { label: 'Doymuş yağ', value: `${calculatedMacros.satFat || 0} g`, percent: Math.round((calculatedMacros.satFat || 0) / RI.satFat * 100), field: 'satFat', indent: true },
+    { label: 'Tuz', value: `${salt.toFixed(2)} g`, percent: Math.round(salt / RI.salt * 100), field: 'sodium' },
+    { label: 'Karbonhidrat', value: `${calculatedMacros.carbs} g`, percent: Math.round(calculatedMacros.carbs / RI.carbs * 100), field: 'carbs' },
+    { label: 'Şekerler', value: `${calculatedMacros.sugar} g`, percent: Math.round(calculatedMacros.sugar / RI.sugar * 100), field: 'sugar', indent: true },
+    { label: 'Protein', value: `${calculatedMacros.protein} g`, percent: Math.round(calculatedMacros.protein / RI.protein * 100), field: 'protein' },
+  ];
+
+  const sourceHeading = source?.status === 'verified'
+    ? 'Resmî besin verisi'
+    : source?.status === 'mixed'
+      ? 'Resmî ve tahmini alanlar birlikte'
+      : source?.status === 'estimated'
+        ? 'Tahmini besin verisi'
+        : 'Doğrulama bekleniyor';
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-sm animate-fadeIn">
-      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="nutrition-title" tabIndex={-1} className="relative w-full max-w-sm rounded-3xl bg-white text-black shadow-2xl p-6 border-4 border-black space-y-4 font-sans">
-        
-        {/* Close Button Top Right */}
-        <button
-          onClick={onClose}
-          aria-label="Besin değerlerini kapat"
-          className="absolute top-4 right-4 p-1 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 transition-colors"
-        >
-          <X className="w-5 h-5" />
-        </button>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm motion-safe:animate-fadeIn">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="nutrition-title" tabIndex={-1} className="relative max-h-[92vh] w-full max-w-md space-y-4 overflow-y-auto rounded-3xl border-4 border-black bg-white p-6 font-sans text-black shadow-2xl">
+        <button onClick={onClose} aria-label="Besin değerlerini kapat" className="absolute right-3 top-3 min-h-11 min-w-11 rounded-full bg-stone-100 text-stone-700 hover:bg-stone-200"><X className="mx-auto h-5 w-5" /></button>
 
-        {/* FDA Style Header */}
-        <div className="border-b-8 border-black pb-1">
-          <h2 id="nutrition-title" className="text-2xl font-black tracking-tight leading-none">
-            Besin Değerleri
-          </h2>
-          <div className="text-sm font-bold mt-1">
-            Nutrition Facts
-          </div>
-          <div className="text-xs text-stone-600 font-semibold mt-0.5">
-            Ürün: {item.name}
-          </div>
+        <header className="border-b-8 border-black pb-2 pr-10">
+          <h2 id="nutrition-title" className="text-2xl font-black tracking-tight">Besin değerleri</h2>
+          <p className="mt-1 text-xs font-bold text-stone-600">{item.name}</p>
+        </header>
+
+        <div className="flex justify-between gap-4 border-b-4 border-black pb-2 text-xs font-bold">
+          <span>Porsiyon</span>
+          <span className="text-right">{source?.servingBasis || size?.name || 'Standart porsiyon'}{milk ? ` · ${milk.name}` : ''}</span>
         </div>
 
-        {/* Serving Size info */}
-        <div className="border-b-4 border-black pb-2 text-xs font-bold flex justify-between">
-          <span>Porsiyon Miktarı:</span>
-          <span>{sizeObj ? sizeObj.name : '1 Porsiyon'} {milkObj ? `(${milkObj.name})` : ''}</span>
+        <div className="flex items-end justify-between border-b-8 border-black pb-2">
+          <div><div className="text-xs font-bold uppercase">Porsiyon başına</div><div className="text-2xl font-black">Enerji</div></div>
+          <div className="text-right"><div className="text-4xl font-black">{calculatedMacros.calories}</div><div className="text-xs font-bold">kcal {fieldStatus(item, 'calories') && `· ${fieldStatus(item, 'calories')}`}</div></div>
         </div>
 
-        {/* Calories Header */}
-        <div className="border-b-8 border-black pb-1 flex items-baseline justify-between">
-          <div>
-            <div className="text-xs font-bold uppercase">Porsiyon Başına</div>
-            <div className="text-2xl font-black tracking-tight">Kalori (kcal)</div>
-          </div>
-          <div className="text-4xl font-black">
-            {calculatedMacros.calories}
-          </div>
-        </div>
-
-        {/* Daily Value Header */}
-        <div className="text-[11px] font-bold text-right border-b border-black pb-1">
-          % Günlük Değer (*DV)
-        </div>
-
-        {/* Macro Lines */}
-        <div className="space-y-1 text-xs divide-y divide-black/30 font-medium">
-          
-          <div className="flex justify-between pt-1">
-            <span><strong>Toplam Yağ (Total Fat)</strong> {calculatedMacros.fat}g</span>
-            <strong>{dvFat}%</strong>
-          </div>
-
-          <div className="flex justify-between pt-1 pl-4">
-            <span>Doymuş Yağ (Saturated Fat) {calculatedMacros.satFat || 0}g</span>
-            <strong>{dvSatFat}%</strong>
-          </div>
-
-          <div className="flex justify-between pt-1">
-            <span><strong>Sodyum (Sodium)</strong> {calculatedMacros.sodium || 0}mg</span>
-            <strong>{dvSodium}%</strong>
-          </div>
-
-          <div className="flex justify-between pt-1">
-            <span><strong>Toplam Karbonhidrat</strong> {calculatedMacros.carbs}g</span>
-            <strong>{dvCarb}%</strong>
-          </div>
-
-          <div className="flex justify-between pt-1 pl-4">
-            <span>Toplam Şeker (Total Sugars) {calculatedMacros.sugar}g</span>
-            <strong>{dvSugar}%</strong>
-          </div>
-
-          <div className="flex justify-between pt-1">
-            <span><strong>Protein</strong> {calculatedMacros.protein}g</span>
-            <strong>{dvProtein}%</strong>
-          </div>
-
-          <div className="flex justify-between pt-1 text-purple-900 font-bold">
-            <span className="flex items-center gap-1">
-              <Zap className="w-3.5 h-3.5 text-purple-600" /> Kafein Oranı:
-            </span>
-            <span>{calculatedMacros.caffeine} mg</span>
-          </div>
-
-        </div>
-
-        {/* Thick Border Divider */}
-        <div className="border-t-4 border-black pt-2 text-[10px] text-stone-600 font-medium leading-tight">
-          * Yüzdelik Günlük Değerler (%DV), 2.000 kalorilik bir diyeti temel almaktadır. Günlük gereksinimleriniz kişisel kalori ihtiyacınıza göre değişebilir.
-        </div>
-
-        {/* Allergen List section */}
-        {calculatedAllergens.length > 0 && (
-          <div className="pt-2 border-t border-stone-300">
-            <div className="text-[10px] font-bold uppercase text-red-600">İçerdiği Alerjenler:</div>
-            <div className="flex flex-wrap gap-1 mt-1">
-              {calculatedAllergens.map(a => (
-                <span key={a} className="text-[10px] px-1.5 py-0.5 rounded bg-red-100 text-red-800 font-bold">
-                  {ALLERGEN_MAP[a]?.icon} {ALLERGEN_MAP[a]?.name}
-                </span>
-              ))}
+        <div className="border-b border-black pb-1 text-right text-[11px] font-bold">% Referans Alım</div>
+        <dl className="divide-y divide-black/30 text-xs">
+          {rows.map(row => (
+            <div key={row.field} className={`grid grid-cols-[1fr_auto] gap-3 py-1.5 ${row.indent ? 'pl-4' : ''}`}>
+              <dt><strong>{row.label}</strong> {row.value} {fieldStatus(item, row.field) && <span className="text-[9px] font-bold text-stone-500">({fieldStatus(item, row.field)})</span>}</dt>
+              <dd className="font-black">{row.percent}%</dd>
             </div>
+          ))}
+          <div className="flex justify-between py-2 font-black text-purple-900">
+            <dt className="flex items-center gap-1"><Zap className="h-3.5 w-3.5" /> Kafein</dt>
+            <dd>{calculatedMacros.caffeine} mg {fieldStatus(item, 'caffeine') && <span className="text-[9px] text-stone-500">({fieldStatus(item, 'caffeine')})</span>}</dd>
           </div>
-        )}
+        </dl>
 
-        <div className="border-t border-stone-300 pt-2 text-[10px] leading-relaxed text-stone-600">
-          <div className="font-black uppercase text-stone-800">Veri kaynağı</div>
-          {source?.status === 'verified' ? (
-            <div className="space-y-0.5">
-              <p>
-                Doğrulandı{source.verifiedAt ? ` · ${source.verifiedAt}` : ''}
-                {source.servingBasis ? ` · ${source.servingBasis}` : ''}
-              </p>
-              {source.url ? (
-                <a href={source.url} target="_blank" rel="noreferrer" className="font-bold underline">
-                  {source.label || 'Kaynağı aç'}
-                </a>
-              ) : source.label ? <p>{source.label}</p> : null}
+        <p className="border-t-4 border-black pt-2 text-[10px] leading-relaxed text-stone-600">
+          Referans Alım: 2.000 kcal; yağ 70 g, doymuş yağ 20 g, karbonhidrat 260 g, şeker 90 g, protein 50 g ve tuz 6 g. Tuz, sodyum değerinden ×2,5 ile hesaplanır. Kafein için Referans Alım yüzdesi verilmez.
+        </p>
+
+        <section className="border-t border-stone-300 pt-3 text-[10px]">
+          <h3 className="font-black uppercase text-red-700">Alerjen değerlendirmesi</h3>
+          {calculatedAllergens.length > 0 ? (
+            <div className="mt-1 flex flex-wrap gap-1">
+              {calculatedAllergens.map(allergen => <span key={allergen} className="rounded bg-red-100 px-2 py-1 font-bold text-red-800">{ALLERGEN_MAP[allergen]?.icon} {ALLERGEN_MAP[allergen]?.name}</span>)}
             </div>
-          ) : (
-            <p>
-              Kaynak doğrulaması bekleniyor. Bu değerleri referans kabul edin; resmi güncellik ve porsiyon eşleşmesi garanti edilmez.
-            </p>
-          )}
-        </div>
+          ) : <p className="mt-1">{item.allergenSource?.status === 'official' ? 'Kaynakta bildirilen alerjen yok.' : 'Alerjen bilgisi bulunmuyor veya doğrulanmadı; “alerjen yok” anlamına gelmez.'}</p>}
+          {item.containsLactose && <p className="mt-1 font-bold">Laktoz içerir.</p>}
+          {item.crossContactRisks?.includes('celiac_oat_risk') && <p className="mt-1 font-bold">Yulaf/glüten çapraz temas riski olabilir.</p>}
+        </section>
 
+        <section className="border-t border-stone-300 pt-3 text-[10px] leading-relaxed text-stone-600">
+          <h3 className="font-black uppercase text-stone-800">Veri kaynağı</h3>
+          <p className="font-bold">{sourceHeading}{source?.verifiedAt ? ` · ${source.verifiedAt}` : ''}</p>
+          {source?.notes && <p className="mt-1">{source.notes}</p>}
+          {source?.url && <a href={source.url} target="_blank" rel="noreferrer" className="mt-1 inline-flex min-h-11 items-center gap-1 font-black underline">{source.label || 'Kaynağı aç'} <ExternalLink className="h-3 w-3" /></a>}
+        </section>
       </div>
     </div>
   );

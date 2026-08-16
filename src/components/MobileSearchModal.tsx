@@ -94,21 +94,18 @@ export const MobileSearchModal: React.FC<MobileSearchModalProps> = ({
         className="relative w-full max-w-md rounded-2xl bg-white dark:bg-[var(--dark-surface)] border border-stone-200 dark:border-[var(--dark-border)] p-3 shadow-2xl"
       >
         <div className="relative">
-          <div
-                      className="flex items-center gap-2"
-                      role="combobox"
-                      aria-expanded={suggestionsOpen}
-                      aria-haspopup="listbox"
-                      aria-controls={suggestionsOpen ? suggestionIds.listboxId : undefined}
-                      aria-owns={suggestionIds.listboxId}
-                      aria-activedescendant={suggestionsOpen && activeIndex >= 0 ? suggestionIds.optionId(activeIndex) : undefined}
-                    >
+          <div className="flex items-center gap-2">
           <Search className="w-5 h-5 text-stone-400 dark:text-[var(--dark-text-muted)] shrink-0" />
           <input
             ref={inputRef}
             type="text"
+            role="combobox"
             aria-label="Mobil aramada ara"
             aria-autocomplete="list"
+            aria-expanded={suggestionsOpen}
+            aria-haspopup="listbox"
+            aria-controls={suggestionsOpen ? suggestionIds.listboxId : undefined}
+            aria-activedescendant={suggestionsOpen && activeIndex >= 0 ? suggestionIds.optionId(activeIndex) : undefined}
             value={searchQuery}
             onChange={e => handleChange(e.target.value)}
             onKeyDown={handleKeyDown}

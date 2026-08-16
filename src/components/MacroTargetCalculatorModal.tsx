@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Calculator, Sparkles, Check, AlertTriangle } from 'lucide-react';
 import { useModalAccessibility } from '../hooks/useModalAccessibility';
+import { handleRadioGroupKeyDown } from '../utils/radioGroup';
 import {
   DEFAULT_MACRO_PROFILE,
   calculateUserMacroGoals,
@@ -93,16 +94,26 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
           
           {/* Gender */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Cinsiyet</label>
-            <div className="grid grid-cols-2 gap-2">
+            <div id="macro-gender-label" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Cinsiyet</div>
+            <div className="grid grid-cols-2 gap-2" role="radiogroup" aria-labelledby="macro-gender-label">
               <button
+                type="button"
+                role="radio"
                 onClick={() => setGender('male')}
+                onKeyDown={(event) => handleRadioGroupKeyDown(event, 0, 2, nextIndex => setGender(nextIndex === 0 ? 'male' : 'female'))}
+                aria-checked={gender === 'male'}
+                tabIndex={gender === 'male' ? 0 : -1}
                 className={`py-2 rounded-xl border font-bold ${gender === 'male' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 Erkek
               </button>
               <button
+                type="button"
+                role="radio"
                 onClick={() => setGender('female')}
+                onKeyDown={(event) => handleRadioGroupKeyDown(event, 1, 2, nextIndex => setGender(nextIndex === 0 ? 'male' : 'female'))}
+                aria-checked={gender === 'female'}
+                tabIndex={gender === 'female' ? 0 : -1}
                 className={`py-2 rounded-xl border font-bold ${gender === 'female' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 Kadın
@@ -112,17 +123,20 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
           {/* Age */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Yaş ({age})</label>
+            <label htmlFor="macro-age" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Yaş ({age})</label>
             <input
+              id="macro-age"
               type="range"
               min={15}
               max={75}
               value={age}
               onChange={(e) => setAge(Number(e.target.value))}
+              aria-invalid={!validation.age}
+              aria-describedby={!validation.age ? 'age-error' : undefined}
               className="w-full accent-amber-500"
             />
             {fieldError('age') && (
-              <p className="mt-1 text-[10px] font-bold text-red-600 dark:text-red-400" role="alert">
+              <p id="age-error" className="mt-1 text-[10px] font-bold text-red-600 dark:text-red-400" role="alert">
                 {fieldError('age')}
               </p>
             )}
@@ -130,8 +144,9 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
           {/* Weight */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Kilo ({weightKg} kg)</label>
+            <label htmlFor="macro-weight" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Kilo ({weightKg} kg)</label>
             <input
+              id="macro-weight"
               type="number"
               min={35}
               max={250}
@@ -151,8 +166,9 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
           {/* Height */}
           <div>
-            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Boy ({heightCm} cm)</label>
+            <label htmlFor="macro-height" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Boy ({heightCm} cm)</label>
             <input
+              id="macro-height"
               type="number"
               min={120}
               max={230}
@@ -172,8 +188,9 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
           {/* Activity Level */}
           <div className="sm:col-span-2">
-            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Haftalık Aktivite Seviyesi</label>
+            <label htmlFor="macro-activity" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Haftalık Aktivite Seviyesi</label>
             <select
+              id="macro-activity"
               value={activity}
               onChange={(e) => setActivity(Number(e.target.value))}
               className="w-full px-3 py-2 rounded-xl bg-stone-100 dark:bg-[var(--dark-surface-elevated)] border border-stone-200 dark:border-[var(--dark-border)] font-semibold"
@@ -187,22 +204,37 @@ export const MacroTargetCalculatorModal: React.FC<MacroTargetCalculatorModalProp
 
           {/* Goal Type */}
           <div className="sm:col-span-2">
-            <label className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Ana Hedefiniz</label>
-            <div className="grid grid-cols-3 gap-2">
+            <div id="macro-goal-label" className="block font-bold text-stone-700 dark:text-[var(--dark-text-muted)] mb-1">Ana Hedefiniz</div>
+            <div className="grid grid-cols-3 gap-2" role="radiogroup" aria-labelledby="macro-goal-label">
               <button
+                type="button"
+                role="radio"
                 onClick={() => setGoalType('lose')}
+                onKeyDown={(event) => handleRadioGroupKeyDown(event, 0, 3, nextIndex => setGoalType((['lose', 'maintain', 'gain'] as const)[nextIndex]))}
+                aria-checked={goalType === 'lose'}
+                tabIndex={goalType === 'lose' ? 0 : -1}
                 className={`py-2 px-2 rounded-xl border text-[11px] font-bold ${goalType === 'lose' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 🔥 Yağ Yakmak (-20%)
               </button>
               <button
+                type="button"
+                role="radio"
                 onClick={() => setGoalType('maintain')}
+                onKeyDown={(event) => handleRadioGroupKeyDown(event, 1, 3, nextIndex => setGoalType((['lose', 'maintain', 'gain'] as const)[nextIndex]))}
+                aria-checked={goalType === 'maintain'}
+                tabIndex={goalType === 'maintain' ? 0 : -1}
                 className={`py-2 px-2 rounded-xl border text-[11px] font-bold ${goalType === 'maintain' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 ⚖️ Kilo Korumak
               </button>
               <button
+                type="button"
+                role="radio"
                 onClick={() => setGoalType('gain')}
+                onKeyDown={(event) => handleRadioGroupKeyDown(event, 2, 3, nextIndex => setGoalType((['lose', 'maintain', 'gain'] as const)[nextIndex]))}
+                aria-checked={goalType === 'gain'}
+                tabIndex={goalType === 'gain' ? 0 : -1}
                 className={`py-2 px-2 rounded-xl border text-[11px] font-bold ${goalType === 'gain' ? 'bg-amber-500 text-white border-amber-500' : 'bg-stone-100 dark:bg-[var(--dark-surface-elevated)] text-stone-700 dark:text-[var(--dark-text-muted)]'}`}
               >
                 💪 Kas Yapmak (+15%)

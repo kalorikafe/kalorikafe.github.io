@@ -3,12 +3,14 @@ import { readFileSync } from 'node:fs';
 import { MENU_ITEMS } from '../../src/data/items';
 import { filterAndSortMenu } from '../../src/utils/menuFilter';
 import { ALLERGEN_MAP } from '../../src/utils/macroCalculator';
-import type { Allergen } from '../../src/types/cafe';
+import { MILK_OPTIONS } from '../../src/data/modifiers';
+import type { Allergen, OfficialAllergen } from '../../src/types/cafe';
 
 const CAFFE_NERO_SOURCE = JSON.parse(
   readFileSync(new URL('../../scripts/catalog_sources/caffe_nero.json', import.meta.url), 'utf8'),
 ) as { products: Array<{ name: string }> };
-const BASELINE_WITHOUT_CAFFE_NERO = 825;
+// Approved release after the controlled 56-product Coffy publication.
+const CATALOG_WITHOUT_CAFFE_NERO = 881;
 const LEGACY_CAFFE_NERO_IDS = [
   'caffe_nero_1_caff__americano',
   'caffe_nero_2_caff__latte',
@@ -46,6 +48,32 @@ describe('allergen support', () => {
     expect(ALLERGEN_MAP.sulphites.name).toBe('Sülfitler');
   });
 
+  it('covers all 14 regulated allergen groups and keeps advisories separate', () => {
+    const regulated: OfficialAllergen[] = [
+      'gluten', 'crustaceans', 'egg', 'fish', 'peanut', 'soy', 'milk',
+      'nuts', 'celery', 'mustard', 'sesame', 'sulphites', 'lupin', 'molluscs',
+    ];
+    for (const allergen of regulated) expect(ALLERGEN_MAP[allergen], allergen).toBeDefined();
+    for (const item of MENU_ITEMS) {
+      expect(item.allergens).not.toContain('lactose');
+      expect(item.allergens).not.toContain('celiac_oat_risk');
+    }
+  });
+
+  it('separates the milk allergen, lactose content and oat cross-contact risk', () => {
+    const latte = MENU_ITEMS.find(item => item.id === 'starbucks_1_caff__latte')!;
+    expect(latte.allergens).toContain('milk');
+    expect(latte.containsLactose).toBe(true);
+    expect(latte.allergens).not.toContain('lactose');
+
+    const lactoseFree = MILK_OPTIONS.find(option => option.id === 'lactose_free_milk')!;
+    expect(lactoseFree.isDairy).toBe(true);
+    expect(lactoseFree.containsLactose).toBe(false);
+    const oat = MILK_OPTIONS.find(option => option.id === 'oat_milk')!;
+    expect(oat.crossContactRisks).toContain('celiac_oat_risk');
+    expect(oat.allergens ?? []).not.toContain('celiac_oat_risk');
+  });
+
   it('keeps every catalog allergen inside the known allergen map (incl. peanut)', () => {
     const known = new Set<Allergen>(Object.keys(ALLERGEN_MAP) as Allergen[]);
     for (const item of MENU_ITEMS) {
@@ -65,6 +93,7 @@ describe('allergen support', () => {
     });
     for (const item of filtered) {
       expect(item.allergens).not.toContain('peanut');
+      expect(['official', 'mixed']).toContain(item.allergenSource?.status);
     }
     expect(filtered.length).toBeLessThan(MENU_ITEMS.length);
     expect(withPeanut.length).toBeGreaterThan(0);
@@ -84,23 +113,37 @@ describe('allergen support', () => {
 });
 
 describe('catalog provenance honesty (compile_catalog.py contract)', () => {
-  it('marks exactly the four Tchibo espresso-base products as secondary', () => {
+  it('marks the four Tchibo products and 78 observed Coffy products as secondary', () => {
     const secondaryIds = MENU_ITEMS
       .filter(i => i.catalogSource?.kind === 'secondary')
       .map(i => i.id)
       .sort();
-    expect(secondaryIds).toEqual(['tchibo_americano', 'tchibo_caff_latte', 'tchibo_cappuccino', 'tchibo_espresso']);
+    expect(secondaryIds).toHaveLength(82);
+    expect(secondaryIds.filter(id => id.startsWith('coffy_'))).toHaveLength(78);
+    expect(secondaryIds.filter(id => id.startsWith('tchibo_'))).toEqual([
+      'tchibo_americano', 'tchibo_caff_latte', 'tchibo_cappuccino', 'tchibo_espresso',
+    ]);
   });
 
-  it('keeps every other chain product official', () => {
-    const nonTchiboSecondary = MENU_ITEMS.filter(
-      i => i.catalogSource?.kind === 'secondary' && i.chainId !== 'tchibo'
-    );
-    expect(nonTchiboSecondary).toEqual([]);
-    const tchiboOfficial = MENU_ITEMS.filter(
-      i => i.chainId === 'tchibo' && i.catalogSource?.kind === 'official'
-    );
-    expect(tchiboOfficial.length).toBe(20);
+  it('marks source-unmatched rows as legacy_unverified instead of official', () => {
+    const legacy = MENU_ITEMS.filter(i => i.catalogSource?.kind === 'legacy_unverified');
+    expect(legacy.length).toBe(116);
+    expect(Object.fromEntries(
+      [...new Set(legacy.map(item => item.chainId))].map(chainId => [
+        chainId,
+        legacy.filter(item => item.chainId === chainId).length,
+      ]),
+    )).toEqual({
+      starbucks: 6,
+      espressolab: 20,
+      kahve_dunyasi: 20,
+      coffy: 3,
+      mackbear: 13,
+      arabica: 13,
+      gloria_jeans: 14,
+      david_people: 7,
+      tchibo: 20,
+    });
   });
 
   it('prefers the exact researched product URL when available', () => {
@@ -120,7 +163,7 @@ describe('catalog provenance honesty (compile_catalog.py contract)', () => {
   });
 
   it('keeps the full catalog stable and includes the tracked Caffè Nero snapshot', () => {
-    const expectedTotal = BASELINE_WITHOUT_CAFFE_NERO + CAFFE_NERO_SOURCE.products.length;
+    const expectedTotal = CATALOG_WITHOUT_CAFFE_NERO + CAFFE_NERO_SOURCE.products.length;
     expect(MENU_ITEMS.length).toBe(expectedTotal);
     const chainIds = new Set(MENU_ITEMS.map(i => i.chainId));
     expect(chainIds.size).toBe(10);
@@ -138,5 +181,25 @@ describe('catalog provenance honesty (compile_catalog.py contract)', () => {
     for (const item of MENU_ITEMS) {
       expect(item.image, item.id).toMatch(/^\/images\/menu\/.+(\.webp)$/);
     }
+  });
+
+  it('preserves field-level official Caffè Nero nutrition provenance', () => {
+    const neroItems = MENU_ITEMS.filter(item => item.chainId === 'caffe_nero');
+    expect(neroItems.filter(item => item.nutritionSource?.status === 'mixed')).toHaveLength(83);
+    expect(neroItems.filter(item => item.nutritionSource?.status === 'estimated')).toHaveLength(42);
+
+    const americano = neroItems.find(item => item.name === 'Americano')!;
+    expect(americano.nutritionSource?.fieldStatus).toEqual({
+      calories: 'official',
+      protein: 'official',
+      carbs: 'official',
+      sugar: 'official',
+      fat: 'official',
+      satFat: 'official',
+      caffeine: 'estimated',
+      sodium: 'derived',
+    });
+    expect(americano.nutritionSource?.url).toMatch(/^https:\/\//);
+    expect(americano.nutritionSource?.servingBasis).toBe('Regular');
   });
 });

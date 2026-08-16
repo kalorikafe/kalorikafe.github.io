@@ -23,7 +23,7 @@ export interface MenuFilterOptions {
  * instead of a duplicated copy.
  */
 export function filterAndSortMenu(
-  menuItems: MenuItem[],
+  menuItems: readonly MenuItem[],
   options: MenuFilterOptions = {}
 ): MenuItem[] {
   const searchQuery = options.searchQuery || '';
@@ -54,15 +54,30 @@ export function filterAndSortMenu(
     if (selectedCategory !== 'all' && item.category !== selectedCategory) return false;
 
     // 5. Drink / Food Only
-    if (isOnlyDrinks && !item.isDrink) return false;
-    if (isOnlyFood && item.isDrink) return false;
+    const itemIsDrink = item.productKind ? item.productKind === 'drink' : item.isDrink;
+    if (isOnlyDrinks && !itemIsDrink) return false;
+    if (isOnlyFood && itemIsDrink) return false;
 
     // 6. Dietary Tags Filter
     if (selectedDietaryTags.length > 0) {
       if (selectedDietaryTags.includes('low_calorie') && item.baseMacros.calories >= 150) {
         return false;
       }
-      const otherTags = selectedDietaryTags.filter(t => t !== 'low_calorie');
+      if (selectedDietaryTags.includes('gluten_free')) {
+        const hasSourcedAllergenData = ['official', 'mixed'].includes(item.allergenSource?.status ?? '');
+        if (!item.dietaryTags.includes('gluten_free')
+          || !hasSourcedAllergenData
+          || item.allergens.includes('gluten')
+          || item.crossContactRisks?.includes('celiac_oat_risk')) return false;
+      }
+      if (selectedDietaryTags.includes('lactose_free')) {
+        const hasSourcedAllergenData = ['official', 'mixed'].includes(item.allergenSource?.status ?? '');
+        if (!item.dietaryTags.includes('lactose_free')
+          || !hasSourcedAllergenData
+          || item.containsLactose !== false
+          || item.allergens.includes('milk')) return false;
+      }
+      const otherTags = selectedDietaryTags.filter(t => !['low_calorie', 'gluten_free', 'lactose_free'].includes(t));
       if (otherTags.length > 0 && !otherTags.every(t => item.dietaryTags.includes(t))) {
         return false;
       }
@@ -70,7 +85,18 @@ export function filterAndSortMenu(
 
     // 7. User Allergen Hide Mode
     if (hideAllergens && userAllergens.length > 0) {
-      if (item.allergens.some(a => userAllergens.includes(a))) {
+      // Strict mode must never turn missing/heuristic evidence into a claim of
+      // safety. Unknown or estimated allergen rows stay visible in the default
+      // warning mode, but are excluded from the conservative hide mode.
+      if (!item.allergenSource || ['estimated', 'unavailable'].includes(item.allergenSource.status)) {
+        return false;
+      }
+      const hasRisk = userAllergens.some(allergen => {
+        if (allergen === 'lactose') return item.containsLactose === true;
+        if (allergen === 'celiac_oat_risk') return item.crossContactRisks?.includes('celiac_oat_risk') === true;
+        return item.allergens.includes(allergen);
+      });
+      if (hasRisk) {
         return false;
       }
     }

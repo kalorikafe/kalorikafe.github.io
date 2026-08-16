@@ -1,7 +1,0 @@
-export const SMART_SWAPS = [
-  { original: 'Starbucks White Chocolate Mocha (Grande)', originalCal: 460, originalSugar: 53, swapTitle: 'Light White Chocolate Mocha', swapDescription: 'Kremayı çıkartın ve Tam Yağlı süt yerine Yağsız Süt tercih edin.', savedCal: 170, savedSugar: 12, badge: '170 kcal tasarruf!' },
-  { original: 'Iced Caramel Macchiato (Tall)', originalCal: 210, originalSugar: 25, swapTitle: 'Skinny Iced Caramel Macchiato', swapDescription: 'Standart vanilya yerine Şekersiz Vanilya şurubu + Yağsız süt isteyin.', savedCal: 110, savedSugar: 14, badge: '110 kcal tasarruf!' },
-  { original: "Gloria Jean's Voltage Chiller", originalCal: 450, originalSugar: 62, swapTitle: 'Fit Iced Coffee Chiller', swapDescription: 'Kremayı çıkartın, yarım ölçek vanilya bazı ile çalkalatın.', savedCal: 180, savedSugar: 22, badge: '180 kcal tasarruf!' },
-  { original: 'Espressolab Spanish Latte', originalCal: 260, originalSugar: 35, swapTitle: 'Klasik Iced Latte + Tarçın', swapDescription: 'Koyulaştırılmış şekerli süt yerine 2 shot espresso ve soğuk süt üzerine bol tarçın serpin.', savedCal: 140, savedSugar: 23, badge: '140 kcal tasarruf!' },
-  { original: 'Tam Yağlı Sütlü Latte', originalCal: 150, originalSugar: 12, swapTitle: 'Şekersiz Badem Sütlü Latte', swapDescription: 'Sütü Şekersiz Badem Sütü ile değiştirin. Karbonhidrat ve yağ minimuma insin.', savedCal: 75, savedSugar: 6, badge: '75 kcal tasarruf!' },
-] as const;

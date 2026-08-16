@@ -1,7 +1,6 @@
 import React, { lazy, Suspense, useState, useEffect, useMemo, useRef } from 'react';
-import type { MenuItem, Category, DietaryPreference, Allergen, CustomizationState, BasketItem } from './types/cafe';
-import { MENU_ITEMS } from './data/items';
-import { calculateMacrosAndAllergens } from './utils/macroCalculator';
+import type { MenuItem, Category, DietaryPreference, Allergen, CustomizationState, BasketItem, CustomRecipeItem } from './types/cafe';
+import { calculateMacrosAndAllergens, getDefaultCustomization } from './utils/macroCalculator';
 import { filterAndSortMenu } from './utils/menuFilter';
 import { rankSearchMatches } from './utils/searchNormalize';
 import { MAX_SUGGESTIONS } from './utils/searchInteraction';
@@ -14,11 +13,18 @@ import { ItemCard } from './components/ItemCard';
 import type { UserMacroGoals } from './components/MacroTargetCalculatorModal';
 import { MobileBottomNav } from './components/MobileBottomNav';
 import { CHAINS } from './data/chains';
-import { normalizeStoredGoals, DEFAULT_USER_GOALS } from './utils/macroGoals';
-import { Coffee, Filter } from 'lucide-react';
-import confetti from 'canvas-confetti';
+import { appStorage } from './utils/persistentStorage';
+import { prefersReducedMotion } from './utils/motionPreferences';
+import { trackEvent } from './utils/analytics';
+import { Coffee, Filter, NotebookPen, Pencil, Plus, Trash2 } from 'lucide-react';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { chainSlug, createProductSlugMap, productPath } from './utils/slugs';
+import { setDocumentMetadata } from './utils/documentMetadata';
 
 const PAGE_SIZE = 24;
+const CATEGORIES = new Set<Category>(['espresso_hot', 'espresso_iced', 'cold_brew', 'frappe_blended', 'tea_herbal', 'smoothie_juice', 'bakery_dessert', 'sandwich_savory', 'fit_healthy']);
+const DIETARY_TAGS = new Set<DietaryPreference>(['vegan', 'vegetarian', 'gluten_free', 'lactose_free', 'sugar_free', 'high_protein', 'low_calorie']);
+const SORT_OPTIONS = new Set<SortOption>(['default', 'cal_asc', 'protein_desc', 'sugar_asc', 'fat_asc', 'caffeine_desc']);
 
 const CustomizerModal = lazy(() => import('./components/CustomizerModal').then(module => ({ default: module.CustomizerModal })));
 const AllergenSettingsModal = lazy(() => import('./components/AllergenSettingsModal').then(module => ({ default: module.AllergenSettingsModal })));
@@ -30,7 +36,27 @@ const MacroTargetCalculatorModal = lazy(() => import('./components/MacroTargetCa
 const CustomRecipeBuilderModal = lazy(() => import('./components/CustomRecipeBuilderModal').then(module => ({ default: module.CustomRecipeBuilderModal })));
 const MobileSearchModal = lazy(() => import('./components/MobileSearchModal').then(module => ({ default: module.MobileSearchModal })));
 
-export const App: React.FC = () => {
+interface AppProps {
+  catalogItems: readonly MenuItem[];
+  initialChainId?: string | null;
+}
+
+type OverlayState =
+  | { kind: 'customizer'; item: MenuItem }
+  | { kind: 'nutrition'; item: MenuItem }
+  | { kind: 'custom-recipe'; item?: MenuItem }
+  | { kind: 'allergens' | 'compare' | 'basket' | 'smart-swap' | 'macro-calculator' | 'mobile-search' }
+  | null;
+
+const celebrate = async (): Promise<void> => {
+  if (prefersReducedMotion()) return;
+  const { default: confetti } = await import('canvas-confetti');
+  confetti({ particleCount: 35, spread: 50, origin: { y: 0.7 } });
+};
+
+export const App: React.FC<AppProps> = ({ catalogItems, initialChainId = null }) => {
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   // Theme State — persisted under `kalori_cafe_theme` (light | dark).
     // A saved choice wins over the system preference; the inline script in
     // index.html applies the class before first paint to avoid a flash.
@@ -54,132 +80,123 @@ export const App: React.FC = () => {
       }
     }, [isDarkMode]);
 
-  // Dynamic Menu Items State (includes base items + user custom recipes)
-  const [customRecipes, setCustomRecipes] = useState<MenuItem[]>(() => {
-    try {
-      const saved = localStorage.getItem('kalori_cafe_custom_recipes');
-      return saved ? JSON.parse(saved) : [];
-    } catch {
-      return [];
-    }
-  });
+  // User recipes are intentionally separate from the public catalog. They do
+  // not alter chain counts, search results, or canonical product URLs.
+  const [customRecipes, setCustomRecipes] = useState<MenuItem[]>(() => appStorage.customRecipes.load());
 
   useEffect(() => {
-    try {
-      localStorage.setItem('kalori_cafe_custom_recipes', JSON.stringify(customRecipes));
-    } catch {
-      // fallback
-    }
+    appStorage.customRecipes.save(customRecipes);
   }, [customRecipes]);
 
-  const allMenuItems = useMemo(() => {
-    return [...customRecipes, ...MENU_ITEMS];
-  }, [customRecipes]);
+  const allMenuItems = catalogItems;
+  const productSlugs = useMemo(() => createProductSlugMap(catalogItems), [catalogItems]);
 
   // User Personal Macro Goals (normalized: legacy numeric records are
     // migrated in place — values preserved, default profile attached).
-    const [userGoals, setUserGoals] = useState<UserMacroGoals>(() => {
-      try {
-        const saved = localStorage.getItem('kalori_cafe_goals');
-        return saved ? normalizeStoredGoals(JSON.parse(saved)) : DEFAULT_USER_GOALS;
-      } catch {
-        return DEFAULT_USER_GOALS;
-      }
-    });
+    const [userGoals, setUserGoals] = useState<UserMacroGoals>(() => appStorage.userGoals.load());
 
   useEffect(() => {
-    try {
-      localStorage.setItem('kalori_cafe_goals', JSON.stringify(userGoals));
-    } catch {
-      // fallback
-    }
+    appStorage.userGoals.save(userGoals);
   }, [userGoals]);
 
-  // Filter States
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [selectedChainId, setSelectedChainId] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<Category | 'all'>('all');
-  const [selectedDietaryTags, setSelectedDietaryTags] = useState<DietaryPreference[]>([]);
-  const [isOnlyDrinks, setIsOnlyDrinks] = useState<boolean>(false);
-  const [isOnlyFood, setIsOnlyFood] = useState<boolean>(false);
-  const [sortBy, setSortBy] = useState<SortOption>('default');
+  // Public discovery state lives in the URL, so reload/back/forward/share all
+  // reproduce the same result set. Sensitive profile choices stay local.
+  const selectedChainId = initialChainId;
+  const searchQuery = searchParams.get('q') ?? '';
+  const categoryParam = searchParams.get('category');
+  const selectedCategory: Category | 'all' = categoryParam && CATEGORIES.has(categoryParam as Category)
+    ? categoryParam as Category
+    : 'all';
+  const dietaryParam = searchParams.get('diet') ?? '';
+  const selectedDietaryTags = useMemo(() => dietaryParam
+    .split(',')
+    .filter((tag): tag is DietaryPreference => DIETARY_TAGS.has(tag as DietaryPreference)), [dietaryParam]);
+  const productType = searchParams.get('type');
+  const isOnlyDrinks = productType === 'drink';
+  const isOnlyFood = productType === 'food';
+  const sortParam = searchParams.get('sort');
+  const sortBy: SortOption = sortParam && SORT_OPTIONS.has(sortParam as SortOption) ? sortParam as SortOption : 'default';
   const [showOnlyFavorites, setShowOnlyFavorites] = useState<boolean>(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
+  const updateParam = (key: string, value: string | null, replace = false) => {
+    const next = new URLSearchParams(searchParams);
+    if (value) next.set(key, value);
+    else next.delete(key);
+    setSearchParams(next, { replace });
+  };
+
+  const setSearchQuery = (value: string) => updateParam('q', value.trimStart() || null, true);
+  const setSelectedCategory = (value: Category | 'all') => updateParam('category', value === 'all' ? null : value);
+  const setSelectedDietaryTags = (values: DietaryPreference[]) => updateParam('diet', values.length > 0 ? [...new Set(values)].sort().join(',') : null);
+  const setIsOnlyDrinks = (value: boolean) => updateParam('type', value ? 'drink' : null);
+  const setIsOnlyFood = (value: boolean) => updateParam('type', value ? 'food' : null);
+  const setSortBy = (value: SortOption) => updateParam('sort', value === 'default' ? null : value);
+
   // Favorites State
-  const [favorites, setFavorites] = useState<string[]>(() => {
-    try {
-      const saved = localStorage.getItem('kalori_cafe_favorites');
-      return saved ? JSON.parse(saved) : [];
-    } catch {
-      return [];
-    }
-  });
+  const [favorites, setFavorites] = useState<string[]>(() => appStorage.favorites.load());
 
   useEffect(() => {
-    try {
-      localStorage.setItem('kalori_cafe_favorites', JSON.stringify(favorites));
-    } catch {
-      // fallback
-    }
+    appStorage.favorites.save(favorites);
   }, [favorites]);
 
   const handleToggleFavorite = (id: string) => {
-    setFavorites(prev =>
-      prev.includes(id) ? prev.filter(fId => fId !== id) : [...prev, id]
-    );
+    const isRemoving = favorites.includes(id);
+    setFavorites(isRemoving ? favorites.filter(favoriteId => favoriteId !== id) : [...favorites, id]);
+    const itemName = catalogItems.find(item => item.id === id)?.name ?? 'Ürün';
+    announce(`${itemName} ${isRemoving ? 'favorilerden çıkarıldı' : 'favorilere eklendi'}.`);
+    trackEvent('favorite_toggle', { action: isRemoving ? 'remove' : 'add' });
   };
 
   // User Allergen Profile State
-  const [userAllergens, setUserAllergens] = useState<Allergen[]>(() => {
-    try {
-      const saved = localStorage.getItem('kalori_cafe_allergens');
-      return saved ? JSON.parse(saved) : [];
-    } catch {
-      return [];
-    }
-  });
+  const [userAllergens, setUserAllergens] = useState<Allergen[]>(() => appStorage.userAllergens.load());
 
-  const [hideAllergens, setHideAllergens] = useState<boolean>(false);
+  const [hideAllergens, setHideAllergens] = useState<boolean>(() => appStorage.hideAllergens.load());
 
   useEffect(() => {
-    try {
-      localStorage.setItem('kalori_cafe_allergens', JSON.stringify(userAllergens));
-    } catch {
-      // fallback
-    }
+    appStorage.userAllergens.save(userAllergens);
   }, [userAllergens]);
 
-  // Modals & Drawers
-  const [isAllergenModalOpen, setIsAllergenModalOpen] = useState<boolean>(false);
-  const [isCompareModalOpen, setIsCompareModalOpen] = useState<boolean>(false);
-  const [isBasketDrawerOpen, setIsBasketDrawerOpen] = useState<boolean>(false);
-  const [isSmartSwapModalOpen, setIsSmartSwapModalOpen] = useState<boolean>(false);
-  const [isMacroCalculatorOpen, setIsMacroCalculatorOpen] = useState<boolean>(false);
-  const [isCustomBuilderOpen, setIsCustomBuilderOpen] = useState<boolean>(false);
-  const [isMobileSearchOpen, setIsMobileSearchOpen] = useState<boolean>(false);
-  const [nutritionLabelItem, setNutritionLabelItem] = useState<MenuItem | null>(null);
+  useEffect(() => {
+    appStorage.hideAllergens.save(hideAllergens);
+  }, [hideAllergens]);
+
+  // One overlay state prevents two aria-modal surfaces and stale scroll locks.
+  const [overlay, setOverlay] = useState<OverlayState>(null);
+  const [statusMessage, setStatusMessage] = useState('');
+
+  useEffect(() => {
+    const chainName = CHAINS.find(chain => chain.id === selectedChainId)?.name;
+    setDocumentMetadata({
+      title: chainName
+        ? `${chainName} Kalori ve Alerjen Rehberi | Kalori Cafe`
+        : 'Kalori Cafe | Kafe Kalori, Makro ve Alerjen Rehberi',
+      description: chainName
+        ? `${chainName} ürünlerini kalori, makro, kafein, alerjen ve veri kaynağıyla karşılaştırın.`
+        : 'Türkiye’deki zincir kafe ürünlerini kalori, makro, kafein, alerjen ve veri güven düzeyiyle karşılaştırın.',
+      path: selectedChainId ? `/zincir/${chainSlug(selectedChainId)}/` : '/',
+    });
+  }, [selectedChainId]);
 
   // Compare & Daily Basket States
   const [compareItems, setCompareItems] = useState<MenuItem[]>([]);
-  const [basket, setBasket] = useState<BasketItem[]>(() => {
-    try {
-      const saved = localStorage.getItem('kalori_cafe_basket');
-      return saved ? JSON.parse(saved) : [];
-    } catch {
-      return [];
-    }
-  });
+  const [basket, setBasket] = useState<BasketItem[]>(() => appStorage.basket.load());
 
   useEffect(() => {
-    try {
-      localStorage.setItem('kalori_cafe_basket', JSON.stringify(basket));
-    } catch {
-      // fallback
-    }
+    appStorage.basket.save(basket);
   }, [basket]);
 
-  const [activeCustomizerItem, setActiveCustomizerItem] = useState<MenuItem | null>(null);
+  const announce = (message: string) => setStatusMessage(message);
+  const openCompare = () => {
+    trackEvent('compare_open', { count: compareItems.length });
+    setOverlay({ kind: 'compare' });
+  };
+
+  useEffect(() => {
+    if (!statusMessage) return;
+    const timeout = window.setTimeout(() => setStatusMessage(''), 4000);
+    return () => window.clearTimeout(timeout);
+  }, [statusMessage]);
 
   // Handlers for Allergens
   const handleToggleUserAllergen = (allergen: Allergen) => {
@@ -194,17 +211,16 @@ export const App: React.FC = () => {
 
   // Handlers for Compare
   const handleToggleCompare = (item: MenuItem) => {
-    setCompareItems(prev => {
-      const exists = prev.some(i => i.id === item.id);
-      if (exists) {
-        return prev.filter(i => i.id !== item.id);
-      }
-      if (prev.length >= 4) {
-        alert('En fazla 4 ürünü aynı anda karşılaştırabilirsiniz.');
-        return prev;
-      }
-      return [...prev, item];
-    });
+    const exists = compareItems.some(candidate => candidate.id === item.id);
+    if (!exists && compareItems.length >= 4) {
+      announce('En fazla 4 ürünü aynı anda karşılaştırabilirsiniz.');
+      return;
+    }
+    setCompareItems(exists
+      ? compareItems.filter(candidate => candidate.id !== item.id)
+      : [...compareItems, item]);
+    announce(`${item.name} ${exists ? 'karşılaştırmadan çıkarıldı' : 'karşılaştırmaya eklendi'}.`);
+    trackEvent('compare_toggle', { action: exists ? 'remove' : 'add', chain: item.chainId });
   };
 
   // Handlers for Basket
@@ -220,23 +236,25 @@ export const App: React.FC = () => {
     };
 
     setBasket(prev => [newBasketItem, ...prev]);
-    confetti({ particleCount: 35, spread: 50, origin: { y: 0.7 } });
+    announce(`${item.name} sepete eklendi.`);
+    trackEvent('basket_add', { chain: item.chainId, category: item.category });
+    void celebrate();
   };
 
   const handleQuickAddToBasket = (item: MenuItem) => {
-    const defaultCustomization: CustomizationState = {
-      sizeId: item.defaultSizeId || 'tall',
-      milkId: item.defaultMilkId || 'whole_milk',
-      syrupPumps: item.defaultSyrupPumps || 0,
-      hasWhippedCream: false,
-      hasColdFoam: false,
-      extraEspressoShots: 0
-    };
-    handleAddToBasket(item, defaultCustomization);
+    handleAddToBasket(item, getDefaultCustomization(item));
   };
 
-  const handleSaveCustomRecipe = (customItem: MenuItem, customization: CustomizationState) => {
-    setCustomRecipes(prev => [customItem, ...prev]);
+  const handleSaveCustomRecipe = (customItem: CustomRecipeItem, customization: CustomizationState) => {
+    const isEditing = customRecipes.some(recipe => recipe.id === customItem.id);
+    setCustomRecipes(previous => isEditing
+      ? previous.map(recipe => recipe.id === customItem.id ? customItem : recipe)
+      : [customItem, ...previous]);
+    if (isEditing) {
+      announce(`${customItem.name} tarifi güncellendi.`);
+      trackEvent('custom_recipe_save', { action: 'edit' });
+      return;
+    }
     // The custom recipe builder already computed macros/allergens and baked
     // them into `customItem.baseMacros`/`allergens`. Reuse those values
     // verbatim — never re-run the engine on an already-computed recipe.
@@ -249,7 +267,16 @@ export const App: React.FC = () => {
       addedAt: new Date()
     };
     setBasket(prev => [newBasketItem, ...prev]);
-    confetti({ particleCount: 35, spread: 50, origin: { y: 0.7 } });
+    announce(`${customItem.name} tarifi kaydedildi ve sepete eklendi.`);
+    trackEvent('custom_recipe_save', { action: 'create' });
+    void celebrate();
+  };
+
+  const handleRemoveCustomRecipe = (id: string) => {
+    const recipeName = customRecipes.find(recipe => recipe.id === id)?.name ?? 'Tarif';
+    setCustomRecipes(previous => previous.filter(recipe => recipe.id !== id));
+    announce(`${recipeName} silindi.`);
+    trackEvent('custom_recipe_delete');
   };
 
   const handleRemoveBasketItem = (id: string) => {
@@ -262,20 +289,27 @@ export const App: React.FC = () => {
 
   // Toggle Dietary Tag
   const handleToggleDietaryTag = (tag: DietaryPreference) => {
-    setSelectedDietaryTags(prev =>
-      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+    setSelectedDietaryTags(
+      selectedDietaryTags.includes(tag)
+        ? selectedDietaryTags.filter(selected => selected !== tag)
+        : [...selectedDietaryTags, tag],
     );
+    // Dietary selections may reveal health-related preferences. Measure only
+    // feature use, never the selected tag.
+    trackEvent('filter_apply', { action: 'dietary' });
+  };
+
+  const handleSelectChain = (chainId: string | null) => {
+    trackEvent('chain_select', { chain: chainId ?? 'all' });
+    const query = searchParams.toString();
+    navigate(`${chainId ? `/zincir/${chainSlug(chainId)}/` : '/'}${query ? `?${query}` : ''}`);
   };
 
   // Reset all filters
   const resetAllFilters = () => {
     setSearchQuery('');
-    setSelectedChainId(null);
-    setSelectedCategory('all');
-    setSelectedDietaryTags([]);
-    setIsOnlyDrinks(false);
-    setIsOnlyFood(false);
-    setSortBy('default');
+    if (selectedChainId) navigate('/');
+    else setSearchParams(new URLSearchParams());
     setShowOnlyFavorites(false);
   };
 
@@ -322,13 +356,13 @@ export const App: React.FC = () => {
 
   const scrollToResults = () => {
     window.requestAnimationFrame(() => {
-      resultsGridRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      resultsGridRef.current?.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'start' });
     });
   };
 
   const handleSelectSuggestion = (item: MenuItem) => {
     setSearchQuery(item.name);
-    setIsMobileSearchOpen(false);
+    if (overlay?.kind === 'mobile-search') setOverlay(null);
     scrollToResults();
   };
 
@@ -339,11 +373,11 @@ export const App: React.FC = () => {
   // Chain counts map
   const chainCounts = useMemo(() => {
     const counts: Record<string, number> = {};
-    allMenuItems.forEach(i => {
+    catalogItems.forEach(i => {
       counts[i.chainId] = (counts[i.chainId] || 0) + 1;
     });
     return counts;
-  }, [allMenuItems]);
+  }, [catalogItems]);
 
   const totalBasketCalories = basket.reduce((acc, b) => acc + b.calculatedMacros.calories, 0);
 
@@ -360,12 +394,12 @@ export const App: React.FC = () => {
         onSubmitQuery={handleSubmitQuery}
         userAllergens={userAllergens}
         hideAllergens={hideAllergens}
-        onOpenAllergenModal={() => setIsAllergenModalOpen(true)}
+        onOpenAllergenModal={() => setOverlay({ kind: 'allergens' })}
         compareCount={compareItems.length}
-        onOpenCompareModal={() => setIsCompareModalOpen(true)}
+        onOpenCompareModal={openCompare}
         basketCount={basket.length}
         totalBasketCalories={totalBasketCalories}
-        onOpenBasketDrawer={() => setIsBasketDrawerOpen(true)}
+        onOpenBasketDrawer={() => setOverlay({ kind: 'basket' })}
         isDarkMode={isDarkMode}
         setIsDarkMode={setIsDarkMode}
       />
@@ -375,12 +409,12 @@ export const App: React.FC = () => {
         
         {/* Banner Hero */}
         <Hero
-          itemCount={allMenuItems.length}
+          itemCount={catalogItems.length}
           onSelectQuickFilter={(filterStr) => {
-            if (filterStr === 'Starbucks') setSelectedChainId('starbucks');
-            else if (filterStr === 'Espressolab') setSelectedChainId('espressolab');
-            else if (filterStr === 'Kahve Dünyası') setSelectedChainId('kahve_dunyasi');
-            else if (filterStr === 'Nero') setSelectedChainId('caffe_nero');
+            if (filterStr === 'Starbucks') handleSelectChain('starbucks');
+            else if (filterStr === 'Espressolab') handleSelectChain('espressolab');
+            else if (filterStr === 'Kahve Dünyası') handleSelectChain('kahve_dunyasi');
+            else if (filterStr === 'Nero') handleSelectChain('caffe_nero');
             else if (filterStr === 'Glutensiz') setSelectedDietaryTags(['gluten_free']);
             else if (filterStr === 'Soğuk Kahve') setSelectedCategory('espresso_iced');
             else if (filterStr === 'High Protein') setSelectedDietaryTags(['high_protein']);
@@ -394,10 +428,53 @@ export const App: React.FC = () => {
           {/* Chain Selector */}
           <ChainSelector
             selectedChainId={selectedChainId}
-            onSelectChain={setSelectedChainId}
+            onSelectChain={handleSelectChain}
             chainCounts={chainCounts}
-            totalCount={allMenuItems.length}
+            totalCount={catalogItems.length}
           />
+
+          <section aria-labelledby="my-recipes-title" className="rounded-2xl border border-stone-200 bg-white/80 p-4 dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface)]">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <h2 id="my-recipes-title" className="flex items-center gap-2 text-sm font-black">
+                  <NotebookPen className="h-4 w-4 text-amber-600" /> Tariflerim
+                </h2>
+                <p className="mt-1 text-xs text-stone-500 dark:text-[var(--dark-text-muted)]">
+                  Yalnız bu cihazda saklanır; kafe ürün sayılarına eklenmez.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setOverlay({ kind: 'custom-recipe' })}
+                className="inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#2C221E] px-4 py-2 text-xs font-black text-white dark:bg-[#FAF8F5] dark:text-[#2C221E]"
+              >
+                <Plus className="h-4 w-4" /> Yeni tarif
+              </button>
+            </div>
+            {customRecipes.length > 0 && (
+              <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                {customRecipes.map(recipe => (
+                  <li key={recipe.id} className="flex items-center justify-between gap-3 rounded-xl border border-stone-200 p-3 text-xs dark:border-[var(--dark-border)]">
+                    <div className="min-w-0">
+                      <div className="truncate font-black">{recipe.name}</div>
+                      <div className="text-stone-500 dark:text-[var(--dark-text-muted)]">{recipe.baseMacros.calories} kcal · {recipe.baseMacros.protein} g protein</div>
+                    </div>
+                    <div className="flex shrink-0 gap-1">
+                      <button type="button" onClick={() => handleQuickAddToBasket(recipe)} className="min-h-11 min-w-11 rounded-lg bg-amber-500 text-white" aria-label={`${recipe.name} tarifini sepete ekle`}>
+                        <Plus className="mx-auto h-4 w-4" />
+                      </button>
+                      <button type="button" onClick={() => setOverlay({ kind: 'custom-recipe', item: recipe })} className="min-h-11 min-w-11 rounded-lg border border-stone-200 text-amber-700 dark:border-[var(--dark-border)] dark:text-amber-300" aria-label={`${recipe.name} tarifini düzenle`}>
+                        <Pencil className="mx-auto h-4 w-4" />
+                      </button>
+                      <button type="button" onClick={() => handleRemoveCustomRecipe(recipe.id)} className="min-h-11 min-w-11 rounded-lg border border-stone-200 text-red-600 dark:border-[var(--dark-border)]" aria-label={`${recipe.name} tarifini sil`}>
+                        <Trash2 className="mx-auto h-4 w-4" />
+                      </button>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
 
           {/* Category & Dietary Filter Bar */}
           <DietaryFilterBar
@@ -420,7 +497,7 @@ export const App: React.FC = () => {
             showOnlyFavorites={showOnlyFavorites}
             setShowOnlyFavorites={setShowOnlyFavorites}
             favoriteCount={favorites.length}
-            onOpenSmartSwapModal={() => setIsSmartSwapModalOpen(true)}
+            onOpenSmartSwapModal={() => setOverlay({ kind: 'smart-swap' })}
           />
 
           {/* Active Filter Summary Banner */}
@@ -472,14 +549,21 @@ export const App: React.FC = () => {
                   <ItemCard
                     key={item.id}
                     item={item}
+                    detailsPath={productPath(item, productSlugs)}
                     userAllergens={userAllergens}
                     isComparing={compareItems.some(i => i.id === item.id)}
                     onToggleCompare={handleToggleCompare}
-                    onOpenCustomizer={(selectedItem) => setActiveCustomizerItem(selectedItem)}
+                    onOpenCustomizer={(selectedItem) => {
+                      trackEvent('customizer_open', { chain: selectedItem.chainId, category: selectedItem.category });
+                      setOverlay({ kind: 'customizer', item: selectedItem });
+                    }}
                     onQuickAddToBasket={handleQuickAddToBasket}
                     isFavorite={favorites.includes(item.id)}
                     onToggleFavorite={handleToggleFavorite}
-                    onOpenNutritionLabel={(selectedItem) => setNutritionLabelItem(selectedItem)}
+                    onOpenNutritionLabel={(selectedItem) => {
+                      trackEvent('product_view', { chain: selectedItem.chainId, category: selectedItem.category, surface: 'nutrition' });
+                      setOverlay({ kind: 'nutrition', item: selectedItem });
+                    }}
                   />
                 ))}
                 </div>
@@ -507,47 +591,52 @@ export const App: React.FC = () => {
 
       {/* Mobile Bottom Floating Action Bar */}
       <MobileBottomNav
-        onOpenSearch={() => setIsMobileSearchOpen(true)}
-        onOpenCustomBuilder={() => setIsCustomBuilderOpen(true)}
-        onOpenCompare={() => setIsCompareModalOpen(true)}
+        onOpenSearch={() => setOverlay({ kind: 'mobile-search' })}
+        onOpenCustomBuilder={() => setOverlay({ kind: 'custom-recipe' })}
+        onOpenCompare={openCompare}
         compareCount={compareItems.length}
-        onOpenBasket={() => setIsBasketDrawerOpen(true)}
+        onOpenBasket={() => setOverlay({ kind: 'basket' })}
         basketCount={basket.length}
         totalCalories={totalBasketCalories}
       />
 
       {/* Modals & drawers load only when the corresponding interaction opens them. */}
-      <Suspense fallback={null}>
-        {activeCustomizerItem && <CustomizerModal item={activeCustomizerItem} onClose={() => setActiveCustomizerItem(null)} onAddToBasket={handleAddToBasket} />}
-        {isAllergenModalOpen && <AllergenSettingsModal isOpen onClose={() => setIsAllergenModalOpen(false)} userAllergens={userAllergens} onToggleUserAllergen={handleToggleUserAllergen} hideAllergens={hideAllergens} setHideAllergens={setHideAllergens} clearAllUserAllergens={handleClearAllUserAllergens} />}
-        {isCompareModalOpen && <CompareModal isOpen onClose={() => setIsCompareModalOpen(false)} items={compareItems} onRemoveItem={(id) => setCompareItems(prev => prev.filter(i => i.id !== id))} onClearAll={() => setCompareItems([])} />}
-        {isBasketDrawerOpen && <DailyBasketDrawer isOpen onClose={() => setIsBasketDrawerOpen(false)} basket={basket} onRemoveItem={handleRemoveBasketItem} onClearBasket={handleClearBasket} userGoals={userGoals} onOpenMacroCalculator={() => setIsMacroCalculatorOpen(true)} />}
-        {isSmartSwapModalOpen && <SmartSwapModal isOpen onClose={() => setIsSmartSwapModalOpen(false)} />}
-        {nutritionLabelItem && <NutritionLabelModal item={nutritionLabelItem} onClose={() => setNutritionLabelItem(null)} />}
-        {isMacroCalculatorOpen && <MacroTargetCalculatorModal isOpen onClose={() => setIsMacroCalculatorOpen(false)} userGoals={userGoals} onSaveGoals={(newGoals) => setUserGoals(newGoals)} />}
-        {isCustomBuilderOpen && <CustomRecipeBuilderModal isOpen onClose={() => setIsCustomBuilderOpen(false)} onSaveCustomRecipe={handleSaveCustomRecipe} />}
-        {isMobileSearchOpen && <MobileSearchModal isOpen onClose={() => setIsMobileSearchOpen(false)} searchQuery={searchQuery} setSearchQuery={setSearchQuery} suggestions={searchSuggestions} resultCount={filteredItems.length} onSelectSuggestion={handleSelectSuggestion} onSubmitQuery={handleSubmitQuery} />}
+      <Suspense fallback={<div className="sr-only" role="status">Pencere yükleniyor…</div>}>
+        {overlay?.kind === 'customizer' && <CustomizerModal item={overlay.item} onClose={() => setOverlay(null)} onAddToBasket={handleAddToBasket} />}
+        {overlay?.kind === 'allergens' && <AllergenSettingsModal isOpen onClose={() => setOverlay(null)} userAllergens={userAllergens} onToggleUserAllergen={handleToggleUserAllergen} hideAllergens={hideAllergens} setHideAllergens={setHideAllergens} clearAllUserAllergens={handleClearAllUserAllergens} />}
+        {overlay?.kind === 'compare' && <CompareModal isOpen onClose={() => setOverlay(null)} items={compareItems} onRemoveItem={(id) => setCompareItems(prev => prev.filter(i => i.id !== id))} onClearAll={() => setCompareItems([])} />}
+        {overlay?.kind === 'basket' && <DailyBasketDrawer isOpen onClose={() => setOverlay(null)} basket={basket} onRemoveItem={handleRemoveBasketItem} onClearBasket={handleClearBasket} userGoals={userGoals} onOpenMacroCalculator={() => setOverlay({ kind: 'macro-calculator' })} />}
+        {overlay?.kind === 'smart-swap' && <SmartSwapModal isOpen onClose={() => setOverlay(null)} items={filteredItems.filter(item => item.chainId !== 'custom')} detailsPath={(item) => productPath(item, productSlugs)} />}
+        {overlay?.kind === 'nutrition' && <NutritionLabelModal item={overlay.item} onClose={() => setOverlay(null)} />}
+        {overlay?.kind === 'macro-calculator' && <MacroTargetCalculatorModal isOpen onClose={() => setOverlay(null)} userGoals={userGoals} onSaveGoals={(newGoals) => setUserGoals(newGoals)} />}
+        {overlay?.kind === 'custom-recipe' && <CustomRecipeBuilderModal isOpen initialRecipe={overlay.item} onClose={() => setOverlay(null)} onSaveCustomRecipe={handleSaveCustomRecipe} />}
+        {overlay?.kind === 'mobile-search' && <MobileSearchModal isOpen onClose={() => setOverlay(null)} searchQuery={searchQuery} setSearchQuery={setSearchQuery} suggestions={searchSuggestions} resultCount={filteredItems.length} onSelectSuggestion={handleSelectSuggestion} onSubmitQuery={handleSubmitQuery} />}
       </Suspense>
+
+      <div aria-live="polite" aria-atomic="true" className="pointer-events-none fixed inset-x-4 bottom-24 z-[70] flex justify-center md:bottom-6">
+        {statusMessage && <div role="status" className="rounded-xl bg-[#2C221E] px-4 py-3 text-sm font-bold text-white shadow-xl dark:bg-[#FAF8F5] dark:text-[#2C221E]">{statusMessage}</div>}
+      </div>
 
       {/* Footer */}
       <footer className="w-full border-t border-stone-200 dark:border-[var(--dark-border)] bg-white/50 dark:bg-[var(--dark-surface)]/50 py-8 mt-16 text-center text-xs text-stone-500 dark:text-[var(--dark-text-muted)] space-y-2">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <span className="font-bold text-amber-600 dark:text-amber-400">Kalori Cafe</span>
-            <span>© 2026 - Tüm Zincir Kafelerin Ortak Makro & Alerjen Platformu</span>
+            <span className="font-bold text-amber-800 dark:text-amber-300">Kalori Cafe</span>
+            <span className="text-stone-600 dark:text-stone-400 font-medium">© 2026 - Tüm Zincir Kafelerin Ortak Makro & Alerjen Platformu</span>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-2 text-stone-400">
-                      {CHAINS.map((chain, index) => (
-                        <React.Fragment key={chain.id}>
-                          {index > 0 && <span className="text-stone-300 dark:text-[var(--dark-border)]">•</span>}
-                          <span>{chain.name}</span>
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  </div>
-                  <p className="mx-auto max-w-3xl px-4 text-[11px] leading-relaxed text-stone-400">
-                    Besin ve kafein değerleri tahminîdir ve yalnızca referans amaçlıdır; resmî ürün güncelliği veya porsiyon eşleşmesi garanti edilmez. Alerjen bilgileri kesin değildir — çapraz bulaşma riski için lütfen markanın güncel resmî bilgilerini kontrol edin.
-                  </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 text-stone-600 dark:text-stone-400 font-medium">
+            {CHAINS.map((chain, index) => (
+              <React.Fragment key={chain.id}>
+                {index > 0 && <span className="text-stone-400 dark:text-[var(--dark-border)]">•</span>}
+                <Link to={`/zincir/${chainSlug(chain.id)}/`} className="min-h-11 content-center hover:underline hover:text-stone-900 dark:hover:text-stone-200">{chain.name}</Link>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+        <p className="mx-auto max-w-3xl px-4 text-[11px] leading-relaxed text-stone-600 dark:text-stone-400 font-medium">
+          Her kartta resmî, karma veya tahmini veri durumu gösterilir. Porsiyonlar değişebilir; alerjenler için markadan teyit alın.{' '}
+          <Link to="/metodoloji/" className="underline hover:text-stone-900 dark:hover:text-stone-200">Metodoloji</Link> · <Link to="/gizlilik/" className="underline hover:text-stone-900 dark:hover:text-stone-200">Gizlilik</Link>
+        </p>
       </footer>
 
     </div>

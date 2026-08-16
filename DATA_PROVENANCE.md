@@ -1,10 +1,10 @@
 # Besin Verisi Kaynaklandırma Politikası
 
-Katalog, 11 Ağustos 2026 çalışma kesitinde zincirlerin resmî menü
-sayfalarından derlenmiştir ve `src/data/catalog/<chain>.ts` modüllerinde
-saklanır. Her statik ürün `availability`, `catalogSource`, `imageSource`
-ve `nutritionSource` alanlarını taşır; `npm run catalog:audit` bu
-sözleşmeleri otomatik denetler.
+Katalog, 16 Ağustos 2026 çalışma kesitinde zincirlerin resmî menü
+sayfalarından ve çoklu-şube canlı gözlemlerinden derlenmiştir ve
+`src/data/catalog/<chain>.ts` modüllerinde saklanır. Her statik ürün
+`availability`, `catalogSource`, `imageSource` ve `nutritionSource` alanlarını
+taşır; `npm run catalog:audit` bu sözleşmeleri otomatik denetler.
 
 ## Katalog kaynakları (catalogSource)
 
@@ -13,19 +13,21 @@ sözleşmeleri otomatik denetler.
 - `kind: 'secondary'` — resmî sayfaya doğrudan erişilemediğinde kullanılan
   güvenilir ikincil kaynak; gerekçesi final raporda belirtilir. Yalnızca
   gerçekten bu kaynaktan araştırılan ürünler `secondary` işaretlenir
-  (2026-08-11 itibarıyla tam olarak 4 kayıt: `tchibo_espresso`,
-  `tchibo_caff_latte`, `tchibo_cappuccino`, `tchibo_americano`).
+  (Tchibo standart espresso bazlı 4 kayıt: `tchibo_espresso`,
+  `tchibo_caff_latte`, `tchibo_cappuccino`, `tchibo_americano` ve Coffy
+  çoklu-şube sipariş yüzeyi gözlemleri).
 
-### Caffè Nero izlenen kaynak anlık görüntüsü
+### Caffè Nero & Coffy izlenen kaynak anlık görüntüleri
 
-`scripts/catalog_sources/caffe_nero.json`, 11 Ağustos 2026'da Caffè Nero
-Türkiye'nin 7 resmî menü sayfasından yeniden üretildi. Dosyada **125
-benzersiz ürün satırı** vardır; derlenmiş Caffè Nero kataloğu da 125 üründür
-ve sezonluk kayıt içermez. `scripts/catalog-audit.ts`, kaynak anlık
-görüntüsündeki ad/adet ile katalog arasındaki eksik ve fazla kayıtları kapı
-hatası olarak raporlar.
+1. **Caffè Nero**: `scripts/catalog_sources/caffe_nero.json`, Caffè Nero
+   Türkiye'nin 7 resmî menü sayfasından üretilmiştir. Dosyada **125 benzersiz
+   ürün satırı** vardır; derlenmiş Caffè Nero kataloğu 125 üründür.
+2. **Coffy**: `scripts/catalog_sources/coffy_observations.json` ve
+   `coffy_catalog_publication.json`, 5 farklı şubeden toplanan kontrollü
+   gözlemleri içerir. Toplam **86 ürün** (56 yeni ekleme, 22 mutabakat, 8
+   korunmuş) yayındadır.
 
-Taranan resmî sayfalar:
+Taranan resmî Caffè Nero sayfaları:
 
 - <https://www.caffenero.com/tr/menu/kahveler/sicak-kahveler>
 - <https://www.caffenero.com/tr/menu/kahveler/soguk-kahveler>
@@ -35,10 +37,8 @@ Taranan resmî sayfalar:
 - <https://www.caffenero.com/tr/menu/yiyecekler/bakery>
 - <https://www.caffenero.com/tr/menu/yiyecekler/atistirmalik>
 
-Önceki 20 Caffè Nero kaydı resmî güncel ürünlerle eşleştirilirken kimlikleri
-korundu; 105 yeni kayıt eklendi. Kaynak anlık görüntüsünü güncellemek için
-`npm run catalog:fetch:caffe-nero` (`scripts/fetch-caffe-nero.mjs`) kullanılır.
-Bir ürünün yalnızca boyut
+Kaynak anlık görüntüsünü güncellemek için `npm run catalog:fetch:caffe-nero`
+(`scripts/fetch-caffe-nero.mjs`) kullanılır. Bir ürünün yalnızca boyut
 varyasyonları ayrı katalog ürünü sayılmaz.
 
 ### `compile_catalog.py` URL önceliği (derleyici kuralı)
@@ -60,29 +60,29 @@ olmasından türetilir. URL/besin/kaynak bilgisi uydurulmaz.
 - Boyut/gramaj/porsiyon temeli (`servingBasis`)
 
 Resmî ürün başına besin tablosu yayınlanmadığında makrolar standart tarif
-ve porsiyon üzerinden tahmin edilir; bu durum `status: 'estimated'` ile
-birlikte yöntemi anlatan `notes` alanıyla işaretlenir. URL veya tarih
-uydurulmaz.
+ve porsiyon üzerinden tahmin edilir; bu durum `status: 'estimated'` veya
+kısmi resmî girdilerde `status: 'mixed'` ile birlikte yöntemi anlatan
+`notes` alanıyla işaretlenir. URL veya tarih uydurulmaz.
 
-11 Ağustos 2026 ölçümünde 950 ürünün tamamı `estimated` durumundadır
-(`verified: 0`, `unverified: 0`). Caffè Nero resmî menü sayfalarındaki
-kullanılabilir sayısal değerler tahmine girdi sağlayabilir; ancak uygulamanın
-tam makro şeması — özellikle kafein — her üründe resmî ve eksiksiz
-yayınlanmadığı için kayıt `verified` olarak yükseltilmez.
+16 Ağustos 2026 ölçümünde 1006 ürünün dağılımı:
+- `mixed`: 83 ürün
+- `estimated`: 923 ürün
+- `verified`: 0 (tam makro tablosu yayınlanmadıkça dürüstçe verified yapılmaz)
+- `unverified`: 0
 
 ## Görsel kaynakları (imageSource)
 
 - `kind: 'official', exactProduct: true` — zincirin kendi medya
-  sunucusundan ürünün gerçek görseli (ör. Starbucks PIM: `api.mircate.com`).
+  sunucusundan ürünün gerçek görseli (ör. Starbucks PIM: `api.mircate.com`,
+  Caffè Nero resmî CDN).
 - `kind: 'licensed_fallback', exactProduct: false` — ürünün sıcak/soğuk
   oluşunu, tipini ve sunumunu doğru temsil eden, kaynak sayfası
   doğrulanabilir lisanslı bir görsel (Wikimedia Commons dosya sayfası veya
   Unsplash foto sayfası).
 - Tüm görseller yerel WebP'dir: `/images/menu/<chain>/<slug>.webp`.
 
-11 Ağustos 2026 ölçümü: 950 ürün için 950 benzersiz yerel dosya yolu;
-384 `official` ve `exactProduct: true`, 566 `licensed_fallback` kayıt.
-Caffè Nero özelinde dağılım 96 resmî/exact ve 29 lisanslı fallback'tir.
+16 Ağustos 2026 ölçümü: **1.006 ürün için 1.006 benzersiz yerel WebP dosya yolu** (%100);
+384 `official` ve `exactProduct: true`, 622 `licensed_fallback` kayıt.
 
 ## Kalite kapıları
 
@@ -92,10 +92,9 @@ Caffè Nero özelinde dağılım 96 resmî/exact ve 29 lisanslı fallback'tir.
   geçemez.
 - Her statik ürün `availability`, `catalogSource`, `imageSource` ve
   `nutritionSource` taşımalı (denetim hatası: eksik provenance).
-- Benzersiz yerel görsel oranı ≥ %60; tek görsel dosyası en fazla 6 üründe;
-  tekrar eden dosya yalnızca aynı görsel ailede kullanılabilir.
-- İzlenen Caffè Nero kaynak anlık görüntüsü 125 benzersiz ürün içermeli ve
-  derlenmiş zincir kataloğuyla ad/adet bakımından birebir eşleşmeli.
+- Benzersiz yerel görsel oranı %100 (1006/1006).
+- İzlenen Caffè Nero ve Coffy kaynak anlık görüntüleri derlenmiş katalogla
+  ad/adet bakımından birebir eşleşmeli.
 
 ## Public kaynak hipotezi (GitHub Pages)
 

@@ -56,6 +56,7 @@ export const SortAndAnalyticsBar: React.FC<SortAndAnalyticsBarProps> = ({
         
         {/* Smart Swap Button */}
         <button
+          type="button"
           onClick={onOpenSmartSwapModal}
           className="flex items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-[#2C221E] hover:bg-[#3D2B1F] dark:bg-[#FAF8F5] dark:hover:bg-[var(--dark-surface-elevated)] text-white dark:text-[#2C221E] font-black text-xs shadow-md border border-[#2C221E]/20 transition-all active:scale-95"
         >
@@ -65,7 +66,9 @@ export const SortAndAnalyticsBar: React.FC<SortAndAnalyticsBarProps> = ({
 
         {/* Favorites Filter Button */}
         <button
+          type="button"
           onClick={() => setShowOnlyFavorites(!showOnlyFavorites)}
+          aria-pressed={showOnlyFavorites}
           className={`flex items-center gap-1.5 px-3.5 py-2 rounded-2xl border text-xs font-black transition-all ${
             showOnlyFavorites
               ? 'bg-[#6F4E37] text-white border-[#6F4E37] dark:bg-[#D4B996] dark:text-[#2C221E] shadow-md'

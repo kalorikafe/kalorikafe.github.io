@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Allergen } from '../types/cafe';
+import type { Allergen, OfficialAllergen } from '../types/cafe';
 import { ALLERGEN_MAP } from '../utils/macroCalculator';
 import { useModalAccessibility } from '../hooks/useModalAccessibility';
 import { X, ShieldAlert, Check, AlertTriangle } from 'lucide-react';
@@ -14,17 +14,25 @@ interface AllergenSettingsModalProps {
   clearAllUserAllergens: () => void;
 }
 
-const ALLERGEN_KEYS: Allergen[] = [
+const OFFICIAL_ALLERGEN_KEYS: OfficialAllergen[] = [
   'gluten',
-  'lactose',
-  'nuts',
-  'peanut',
-  'soy',
+  'crustaceans',
   'egg',
   'fish',
+  'peanut',
+  'soy',
+  'milk',
+  'nuts',
+  'celery',
   'mustard',
   'sesame',
   'sulphites',
+  'lupin',
+  'molluscs',
+];
+
+const SENSITIVITY_KEYS: Allergen[] = [
+  'lactose',
   'celiac_oat_risk',
 ];
 
@@ -69,16 +77,19 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
           </button>
         </div>
 
-        {/* Allergen Checkboxes */}
+        <div>
+          <h3 className="mb-2 text-xs font-black uppercase tracking-wide text-stone-600 dark:text-[var(--dark-text-muted)]">14 resmî alerjen grubu</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-          {ALLERGEN_KEYS.map(key => {
+          {OFFICIAL_ALLERGEN_KEYS.map(key => {
             const info = ALLERGEN_MAP[key];
             const isSelected = userAllergens.includes(key);
 
             return (
               <button
+                type="button"
                 key={key}
                 onClick={() => onToggleUserAllergen(key)}
+                aria-pressed={isSelected}
                 className={`p-3.5 rounded-2xl border text-left flex items-start gap-3 transition-all ${
                   isSelected
                     ? 'bg-amber-500/15 border-amber-500 text-amber-900 dark:text-amber-200 font-bold shadow-sm'
@@ -98,6 +109,23 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
               </button>
             );
           })}
+        </div>
+        </div>
+
+        <div>
+          <h3 className="mb-2 text-xs font-black uppercase tracking-wide text-stone-600 dark:text-[var(--dark-text-muted)]">İntolerans ve çapraz temas tercihleri</h3>
+          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+            {SENSITIVITY_KEYS.map(key => {
+              const info = ALLERGEN_MAP[key];
+              const isSelected = userAllergens.includes(key);
+              return (
+                <button type="button" key={key} onClick={() => onToggleUserAllergen(key)} aria-pressed={isSelected} className={`flex items-start gap-3 rounded-2xl border p-3.5 text-left transition-all ${isSelected ? 'border-amber-500 bg-amber-500/15 font-bold text-amber-900 dark:text-amber-200' : 'border-stone-200 bg-stone-100/60 text-stone-700 dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface-elevated)]/60 dark:text-[var(--dark-text-muted)]'}`}>
+                  <span className="text-2xl">{info.icon}</span>
+                  <span><span className="flex items-center justify-between text-xs font-bold">{info.name}{isSelected && <Check className="h-4 w-4" />}</span><span className="mt-0.5 block text-[10px] font-normal text-stone-500 dark:text-[var(--dark-text-muted)]">{info.description}</span></span>
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         {/* Cross-contamination & data caveat — always visible */}
@@ -142,7 +170,7 @@ export const AllergenSettingsModal: React.FC<AllergenSettingsModalProps> = ({
                 className="w-4 h-4 text-amber-600 focus:ring-amber-500"
               />
               <span className="text-stone-700 dark:text-[var(--dark-text-muted)] font-medium">
-                Alerji İçeren Tüm Ürünleri Menüden Gizle
+                Seçili riski olan veya alerjen verisi doğrulanmamış ürünleri gizle (en korumacı)
               </span>
             </label>
           </div>

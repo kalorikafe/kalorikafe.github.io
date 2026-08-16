@@ -84,7 +84,9 @@ export const CompareModal: React.FC<CompareModalProps> = ({
                   className="relative p-4 rounded-2xl glass-panel border border-stone-200/80 dark:border-[var(--dark-border)]/80 flex flex-col justify-between space-y-3"
                 >
                   <button
+                    type="button"
                     onClick={() => onRemoveItem(item.id)}
+                    aria-label={`${item.name} ürününü karşılaştırmadan kaldır`}
                     className="absolute top-2 right-2 p-1.5 rounded-full bg-stone-200/80 dark:bg-[var(--dark-surface-elevated)] text-stone-500 hover:text-red-500 transition-colors"
                     title="Kaldır"
                   >
@@ -102,7 +104,7 @@ export const CompareModal: React.FC<CompareModalProps> = ({
                     />
 
                     <div className="text-xs font-bold text-amber-600 dark:text-amber-400 flex items-center gap-1">
-                      <img src={chainObj?.logo} alt={chainObj?.name} className="w-4 h-4 object-contain rounded-full bg-white p-0.5" />
+                      <img src={chainObj?.logo} alt="" className="w-4 h-4 object-contain rounded-full bg-white p-0.5" />
                       <span>{chainObj?.name}</span>
                     </div>
 
