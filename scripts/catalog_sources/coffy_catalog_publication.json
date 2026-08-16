@@ -4,7 +4,7 @@
   "observationSnapshot": "scripts/catalog_sources/coffy_observations.json",
   "observationSnapshotSha256": "fb5f42969607447855644ad0f2e4b78517cbde928e9e94d5141a192e197fd9a7",
   "approvedRelease": "scripts/catalog_sources/catalog_release.json",
-  "approvedReleaseSha256": "1d36bd5b80a469bffbd7e84c52b10a90b3e729407152826f8a15328105065fc4",
+  "approvedReleaseSha256": "32eac579846534ed4b3dc8e2ec04637d7620005a96f0ab3773ae9d010f99d289",
   "sourcePolicy": "Five Yemeksepeti branches across three cities; Coffy officially directs ordering users to Yemeksepeti. Catalog provenance is secondary, never official.",
   "inclusionRule": "chain_core: observed at no fewer than 3 branches across no fewer than 2 cities",
   "nutritionPolicy": "No official product nutrition was found; all eight fields are conservative name/category estimates for one unspecified standard serving.",
@@ -205,13 +205,13 @@
       "id": "coffy_hindi_fumeli_sicak_sandvic",
       "seedId": "espressolab_eslab_mix_sandvic",
       "image": "/images/menu/coffy/hindi_fumeli_sicak_sandvic.webp",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg"
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg"
     },
     {
       "id": "coffy_hindi_jambon_cheddar_peynirli_bagel_sandvic",
       "seedId": "espressolab_eslab_mix_sandvic",
       "image": "/images/menu/coffy/hindi_jambon_cheddar_peynirli_bagel_sandvic.webp",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg"
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg"
     },
     {
       "id": "coffy_iced_americano",
@@ -283,7 +283,7 @@
       "id": "coffy_kori_soslu_tavuklu_baget_sandvic",
       "seedId": "espressolab_eslab_mix_sandvic",
       "image": "/images/menu/coffy/kori_soslu_tavuklu_baget_sandvic.webp",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg"
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg"
     },
     {
       "id": "coffy_kremali_havuclu_dilim_kek",
@@ -349,7 +349,7 @@
       "id": "coffy_peynirli_sandvic_sicak",
       "seedId": "espressolab_eslab_mix_sandvic",
       "image": "/images/menu/coffy/peynirli_sandvic_sicak.webp",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg"
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg"
     },
     {
       "id": "coffy_salted_karamel_latte",

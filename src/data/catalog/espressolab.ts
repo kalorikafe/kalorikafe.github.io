@@ -517,7 +517,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -548,7 +548,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -934,7 +934,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AWhite_mocha_ice_cream.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ACrazy_Mocha_polaroid.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1353,7 +1353,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Mocha_by_Phil.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3AMcDonald%27s_McCafe_Frappe_Chocolate_Chip_%2844443234744%29.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1386,7 +1386,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Mocha_by_Phil.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1419,7 +1419,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Mocha_by_Phil.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1452,7 +1452,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AWhite_mocha_ice_cream.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3AWhite_chocolate_mocha_coffee.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1584,7 +1584,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1683,7 +1683,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1716,7 +1716,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3AFrappe_(4547117210).jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1749,7 +1749,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1848,7 +1848,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1881,7 +1881,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ANCI_iced_tea.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1947,7 +1947,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3AFrappe_(4547117210).jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2079,7 +2079,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ANCI_iced_tea.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2112,7 +2112,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2178,7 +2178,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ANCI_iced_tea.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2270,7 +2270,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2300,7 +2300,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2309,7 +2309,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Kruvasan",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Geleneksel Fransız usulü, bol tereyağlı ve çıtır katmanlı taze kruvasan.",
+    description: "Kafenin taze hazırlanan Kruvasan lezzeti.",
     image: "/images/menu/espressolab/kruvasan.webp",
     isDrink: false,
     baseMacros: { calories: 355, protein: 6, carbs: 38, sugar: 12, fat: 20, satFat: 12, caffeine: 0, sodium: 350 },
@@ -2337,13 +2337,13 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     id: "espressolab_uzumlu_scone_sekersiz",
     chainId: "espressolab",
     name: "Üzümlü Scone (Şekersiz)",
-    category: "sandwich_savory",
+    category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan Üzümlü Scone (Şekersiz) lezzeti.",
     image: "/images/menu/espressolab/uzumlu_scone_sekersiz.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -2360,7 +2360,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2369,7 +2369,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Zeytinli Kurabiye",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Dışı çıtır, içi yumuşak dokulu, parça çikolatalı ve tereyağlı taze kurabiye.",
+    description: "Kafenin taze hazırlanan Zeytinli Kurabiye lezzeti.",
     image: "/images/menu/espressolab/zeytinli_kurabiye.webp",
     isDrink: false,
     baseMacros: { calories: 400, protein: 6, carbs: 50, sugar: 33, fat: 21, satFat: 12, caffeine: 10, sodium: 255 },
@@ -2420,7 +2420,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2451,7 +2451,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2482,7 +2482,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2513,7 +2513,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2543,7 +2543,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2574,7 +2574,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3APanini_2.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2634,7 +2634,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2665,7 +2665,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2756,7 +2756,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2765,7 +2765,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Antep Fıstıklı Levain Cookie",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Dışı çıtır, içi yumuşak dokulu, parça çikolatalı ve tereyağlı taze kurabiye.",
+    description: "Kafenin taze hazırlanan Antep Fıstıklı Levain Cookie lezzeti.",
     image: "/images/menu/espressolab/antep_fistikli_levain_cookie.webp",
     isDrink: false,
     baseMacros: { calories: 400, protein: 6, carbs: 50, sugar: 33, fat: 21, satFat: 12, caffeine: 10, sodium: 255 },
@@ -2795,11 +2795,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "İzmir Bombası",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan İzmir Bombası lezzeti.",
     image: "/images/menu/espressolab/i_zmir_bombasi.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -2816,7 +2816,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2825,7 +2825,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Strawberry Pistachio Shortcake",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Yumuşacık pandispanya katları, zengin krema dolgusu ve lezzetli üst kaplamasıyla taze pasta dilimi.",
+    description: "Kafenin taze hazırlanan Strawberry Pistachio Shortcake lezzeti.",
     image: "/images/menu/espressolab/strawberry_pistachio_shortcake.webp",
     isDrink: false,
     baseMacros: { calories: 380, protein: 5, carbs: 50, sugar: 33, fat: 18, satFat: 6, caffeine: 0, sodium: 270 },
@@ -2855,7 +2855,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Levain Cookie",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Dışı çıtır, içi yumuşak dokulu, parça çikolatalı ve tereyağlı taze kurabiye.",
+    description: "Kafenin taze hazırlanan Levain Cookie lezzeti.",
     image: "/images/menu/espressolab/levain_cookie.webp",
     isDrink: false,
     baseMacros: { calories: 400, protein: 6, carbs: 50, sugar: 33, fat: 21, satFat: 12, caffeine: 10, sodium: 255 },
@@ -2885,7 +2885,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Brownie",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Yoğun bitter çikolata ve tereyağı ile hazırlanan, içi hafif nemli fırın özel tarifi.",
+    description: "Kafenin taze hazırlanan Brownie lezzeti.",
     image: "/images/menu/espressolab/brownie.webp",
     isDrink: false,
     baseMacros: { calories: 420, protein: 7, carbs: 55, sugar: 36, fat: 20, satFat: 12, caffeine: 10, sodium: 240 },
@@ -2915,7 +2915,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Kakaolu Levain Cookie",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Dışı çıtır, içi yumuşak dokulu, parça çikolatalı ve tereyağlı taze kurabiye.",
+    description: "Kafenin taze hazırlanan Kakaolu Levain Cookie lezzeti.",
     image: "/images/menu/espressolab/kakaolu_levain_cookie.webp",
     isDrink: false,
     baseMacros: { calories: 400, protein: 6, carbs: 50, sugar: 33, fat: 21, satFat: 12, caffeine: 10, sodium: 255 },
@@ -2945,11 +2945,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Çikolatalı Ekler",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan Çikolatalı Ekler lezzeti.",
     image: "/images/menu/espressolab/cikolatali_ekler.webp",
     isDrink: false,
-    baseMacros: { calories: 330, protein: 6, carbs: 38, sugar: 28, fat: 17, satFat: 10, caffeine: 0, sodium: 110 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -2966,7 +2966,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ATunnocks-Caramel-Wafer-Split.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2975,7 +2975,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Beyaz Çikolatalı Mini Red Velvet Cookie",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Dışı çıtır, içi yumuşak dokulu, parça çikolatalı ve tereyağlı taze kurabiye.",
+    description: "Kafenin taze hazırlanan Beyaz Çikolatalı Mini Red Velvet Cookie lezzeti.",
     image: "/images/menu/espressolab/beyaz_cikolatali_mini_red_velvet_cookie.webp",
     isDrink: false,
     baseMacros: { calories: 400, protein: 6, carbs: 50, sugar: 33, fat: 21, satFat: 12, caffeine: 10, sodium: 255 },
@@ -3005,11 +3005,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Pastel De Nata",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Çıtır çıtır kavrulmuş tel kadayıf ve bol Antep fıstığı ile zenginleştirilmiş özel tatlı.",
+    description: "Kafenin taze hazırlanan Pastel De Nata lezzeti.",
     image: "/images/menu/espressolab/pastel_de_nata.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3026,7 +3026,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3035,11 +3035,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Muzlu Cicibebeli",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan Muzlu Cicibebeli lezzeti.",
     image: "/images/menu/espressolab/muzlu_cicibebeli.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3056,7 +3056,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3065,11 +3065,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Muzlu Rulo",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan Muzlu Rulo lezzeti.",
     image: "/images/menu/espressolab/muzlu_rulo.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3086,7 +3086,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3095,7 +3095,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Mozaik Pasta",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Yumuşacık pandispanya katları, zengin krema dolgusu ve lezzetli üst kaplamasıyla taze pasta dilimi.",
+    description: "Kafenin taze hazırlanan Mozaik Pasta lezzeti.",
     image: "/images/menu/espressolab/mozaik_pasta.webp",
     isDrink: false,
     baseMacros: { calories: 420, protein: 7, carbs: 55, sugar: 36, fat: 20, satFat: 12, caffeine: 10, sodium: 240 },
@@ -3125,7 +3125,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Mermer Kek",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Özenle kabartılmış, yumuşak dokulu ve aromatik taze fırın keki.",
+    description: "Kafenin taze hazırlanan Mermer Kek lezzeti.",
     image: "/images/menu/espressolab/mermer_kek.webp",
     isDrink: false,
     baseMacros: { calories: 380, protein: 5, carbs: 50, sugar: 33, fat: 18, satFat: 6, caffeine: 0, sodium: 270 },
@@ -3155,7 +3155,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Tiramisu",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Espresso ile ıslatılmış savoiardi bisküvileri ve ipeksi mascarpone kreması üzeri kakao kaplı İtalyan klasiği.",
+    description: "Kafenin taze hazırlanan Tiramisu lezzeti.",
     image: "/images/menu/espressolab/tiramisu.webp",
     isDrink: false,
     baseMacros: { calories: 370, protein: 6, carbs: 39, sugar: 27, fat: 21, satFat: 13, caffeine: 35, sodium: 130 },
@@ -3185,7 +3185,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Çikolatalı & Pistachio Profiterol",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan Çikolatalı & Pistachio Profiterol lezzeti.",
     image: "/images/menu/espressolab/cikolatali_pistachio_profiterol.webp",
     isDrink: false,
     baseMacros: { calories: 420, protein: 7, carbs: 55, sugar: 36, fat: 20, satFat: 12, caffeine: 10, sodium: 240 },
@@ -3206,7 +3206,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ATunnocks-Caramel-Wafer-Split.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3215,11 +3215,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Kakaolu Fındıklı Donut",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan Kakaolu Fındıklı Donut lezzeti.",
     image: "/images/menu/espressolab/kakaolu_findikli_donut.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg", "nuts"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten", "nuts"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3236,7 +3236,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3245,68 +3245,8 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Frambuazlı Donut",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan Frambuazlı Donut lezzeti.",
     image: "/images/menu/espressolab/frambuazli_donut.webp",
-    isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg", "nuts"],
-    allergenSource: {
-      status: "estimated",
-      notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
-    },
-    dietaryTags: [],
-    glycemicImpact: "Orta",
-    availability: "current",
-    catalogSource: {
-      url: "https://espressolab.com/kurumsal/menu", checkedAt: "2026-08-05", kind: "official",
-    },
-    nutritionSource: {
-      status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
-      notes: "Resmî ürün sayfasında ürün başına besin tablosu yayınlanmıyor; makrolar standart tarif ve porsiyon üzerinden tahmin edildi.",
-      fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
-    },
-    imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
-    },
-  },
-  {
-    id: "espressolab_karamelli_donut",
-    chainId: "espressolab",
-    name: "Karamelli Donut",
-    category: "bakery_dessert",
-    productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
-    image: "/images/menu/espressolab/karamelli_donut.webp",
-    isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg", "nuts"],
-    allergenSource: {
-      status: "estimated",
-      notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
-    },
-    dietaryTags: [],
-    glycemicImpact: "Orta",
-    availability: "current",
-    catalogSource: {
-      url: "https://espressolab.com/kurumsal/menu", checkedAt: "2026-08-05", kind: "official",
-    },
-    nutritionSource: {
-      status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
-      notes: "Resmî ürün sayfasında ürün başına besin tablosu yayınlanmıyor; makrolar standart tarif ve porsiyon üzerinden tahmin edildi.",
-      fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
-    },
-    imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
-    },
-  },
-  {
-    id: "espressolab_meyveli_granola",
-    chainId: "espressolab",
-    name: "Meyveli Granola",
-    category: "fit_healthy",
-    productKind: "food",
-    description: "Probiyotik yoğurt, çıtır fırınlanmış yulaf granolası ve taze meyve parçalarıyla fit kase.",
-    image: "/images/menu/espressolab/meyveli_granola.webp",
     isDrink: false,
     baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
     allergens: ["gluten"],
@@ -3326,7 +3266,67 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+    },
+  },
+  {
+    id: "espressolab_karamelli_donut",
+    chainId: "espressolab",
+    name: "Karamelli Donut",
+    category: "bakery_dessert",
+    productKind: "food",
+    description: "Kafenin taze hazırlanan Karamelli Donut lezzeti.",
+    image: "/images/menu/espressolab/karamelli_donut.webp",
+    isDrink: false,
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten"],
+    allergenSource: {
+      status: "estimated",
+      notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
+    },
+    dietaryTags: [],
+    glycemicImpact: "Orta",
+    availability: "current",
+    catalogSource: {
+      url: "https://espressolab.com/kurumsal/menu", checkedAt: "2026-08-05", kind: "official",
+    },
+    nutritionSource: {
+      status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
+      notes: "Resmî ürün sayfasında ürün başına besin tablosu yayınlanmıyor; makrolar standart tarif ve porsiyon üzerinden tahmin edildi.",
+      fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
+    },
+    imageSource: {
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+    },
+  },
+  {
+    id: "espressolab_meyveli_granola",
+    chainId: "espressolab",
+    name: "Meyveli Granola",
+    category: "fit_healthy",
+    productKind: "food",
+    description: "Probiyotik yoğurt, çıtır fırınlanmış yulaf granolası ve taze meyve parçalarıyla fit kase.",
+    image: "/images/menu/espressolab/meyveli_granola.webp",
+    isDrink: false,
+    baseMacros: { calories: 330, protein: 12, carbs: 48, sugar: 20, fat: 10, satFat: 3.5, caffeine: 0, sodium: 110 },
+    allergens: ["gluten", "milk"],
+    allergenSource: {
+      status: "estimated",
+      notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
+    },
+    dietaryTags: [],
+    glycemicImpact: "Orta",
+    availability: "current",
+    catalogSource: {
+      url: "https://espressolab.com/kurumsal/menu", checkedAt: "2026-08-05", kind: "official",
+    },
+    nutritionSource: {
+      status: "estimated", label: "Standart tarif/porsiyon bazlı tahmin",
+      notes: "Resmî ürün sayfasında ürün başına besin tablosu yayınlanmıyor; makrolar standart tarif ve porsiyon üzerinden tahmin edildi.",
+      fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
+    },
+    imageSource: {
+      url: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3335,7 +3335,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Yaban Mersinli Bardakta Cheesecake",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Fırınlanmış tereyağlı bisküvi tabanı ve yoğun taze peynir dolgulu klasik cheesecake dilimi.",
+    description: "Kafenin taze hazırlanan Yaban Mersinli Bardakta Cheesecake lezzeti.",
     image: "/images/menu/espressolab/yaban_mersinli_bardakta_cheesecake.webp",
     isDrink: false,
     baseMacros: { calories: 450, protein: 8, carbs: 42, sugar: 30, fat: 27, satFat: 16, caffeine: 0, sodium: 280 },
@@ -3365,11 +3365,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Ice Crone",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan Ice Crone lezzeti.",
     image: "/images/menu/espressolab/ice_crone.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3386,7 +3386,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3395,11 +3395,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Fıstıklı Rocher",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Çıtır çıtır kavrulmuş tel kadayıf ve bol Antep fıstığı ile zenginleştirilmiş özel tatlı.",
+    description: "Kafenin taze hazırlanan Fıstıklı Rocher lezzeti.",
     image: "/images/menu/espressolab/fistikli_rocher.webp",
     isDrink: false,
-    baseMacros: { calories: 450, protein: 7, carbs: 54, sugar: 38, fat: 23, satFat: 9, caffeine: 0, sodium: 90 },
-    allergens: ["gluten", "milk", "egg", "nuts"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten", "nuts"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3416,7 +3416,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3425,11 +3425,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Lemon Curd",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Taze fırınlanmış, enfes hamur dokusu ve özenli malzemelerle hazırlanan tatlı lezzet.",
+    description: "Kafenin taze hazırlanan Lemon Curd lezzeti.",
     image: "/images/menu/espressolab/lemon_curd.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3446,7 +3446,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3455,7 +3455,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Kremalı Acıbadem Pasta",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Yumuşacık pandispanya katları, zengin krema dolgusu ve lezzetli üst kaplamasıyla taze pasta dilimi.",
+    description: "Kafenin taze hazırlanan Kremalı Acıbadem Pasta lezzeti.",
     image: "/images/menu/espressolab/kremali_acibadem_pasta.webp",
     isDrink: false,
     baseMacros: { calories: 380, protein: 5, carbs: 50, sugar: 33, fat: 18, satFat: 6, caffeine: 0, sodium: 270 },
@@ -3485,7 +3485,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Frambuazlı Pasta",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Yumuşacık pandispanya katları, zengin krema dolgusu ve lezzetli üst kaplamasıyla taze pasta dilimi.",
+    description: "Kafenin taze hazırlanan Frambuazlı Pasta lezzeti.",
     image: "/images/menu/espressolab/frambuazli_pasta.webp",
     isDrink: false,
     baseMacros: { calories: 380, protein: 5, carbs: 50, sugar: 33, fat: 18, satFat: 6, caffeine: 0, sodium: 270 },
@@ -3515,11 +3515,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Antep Fıstıklı Tart",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Çıtır çıtır kavrulmuş tel kadayıf ve bol Antep fıstığı ile zenginleştirilmiş özel tatlı.",
+    description: "Kafenin taze hazırlanan Antep Fıstıklı Tart lezzeti.",
     image: "/images/menu/espressolab/antep_fistikli_tart.webp",
     isDrink: false,
-    baseMacros: { calories: 450, protein: 7, carbs: 54, sugar: 38, fat: 23, satFat: 9, caffeine: 0, sodium: 90 },
-    allergens: ["gluten", "milk", "egg", "nuts"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten", "nuts"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3536,7 +3536,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3545,11 +3545,11 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Çilek & Fıstıklı Crumble",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Çıtır çıtır kavrulmuş tel kadayıf ve bol Antep fıstığı ile zenginleştirilmiş özel tatlı.",
+    description: "Kafenin taze hazırlanan Çilek & Fıstıklı Crumble lezzeti.",
     image: "/images/menu/espressolab/cilek_fistikli_crumble.webp",
     isDrink: false,
-    baseMacros: { calories: 450, protein: 7, carbs: 54, sugar: 38, fat: 23, satFat: 9, caffeine: 0, sodium: 90 },
-    allergens: ["gluten", "milk", "egg", "nuts"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten", "nuts"],
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3566,7 +3566,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3575,7 +3575,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Key Lime Cheesecake",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Fırınlanmış tereyağlı bisküvi tabanı ve yoğun taze peynir dolgulu klasik cheesecake dilimi.",
+    description: "Kafenin taze hazırlanan Key Lime Cheesecake lezzeti.",
     image: "/images/menu/espressolab/key_lime_cheesecake.webp",
     isDrink: false,
     baseMacros: { calories: 450, protein: 8, carbs: 42, sugar: 30, fat: 27, satFat: 16, caffeine: 0, sodium: 280 },
@@ -3605,7 +3605,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "Super Oreo Cheesecake",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Fırınlanmış tereyağlı bisküvi tabanı ve yoğun taze peynir dolgulu klasik cheesecake dilimi.",
+    description: "Kafenin taze hazırlanan Super Oreo Cheesecake lezzeti.",
     image: "/images/menu/espressolab/super_oreo_cheesecake.webp",
     isDrink: false,
     baseMacros: { calories: 450, protein: 8, carbs: 42, sugar: 30, fat: 27, satFat: 16, caffeine: 0, sodium: 280 },
@@ -3635,7 +3635,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     name: "San Sebastian Cheesecake",
     category: "bakery_dessert",
     productKind: "food",
-    description: "Karamelize yanık üst dokusu ve akışkan kremsi iç kıvamıyla fırınlanmış San Sebastian cheesecake.",
+    description: "Kafenin taze hazırlanan San Sebastian Cheesecake lezzeti.",
     image: "/images/menu/espressolab/san_sebastian_cheesecake.webp",
     isDrink: false,
     baseMacros: { calories: 450, protein: 8, carbs: 42, sugar: 30, fat: 27, satFat: 16, caffeine: 0, sodium: 280 },

@@ -320,7 +320,7 @@ export const CHAIN_KAHVE_DUNYASI_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3AHot_chocolate_p1150797.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -486,7 +486,7 @@ export const CHAIN_KAHVE_DUNYASI_ITEMS: MenuItem[] = [
     id: "kahve_dunyasi_16_kahve_d_nyas__gofrik__antep_f_st_kl__",
     chainId: "kahve_dunyasi",
     name: "Kahve Dünyası Gofrik (Antep Fıstıklı)",
-    category: "fit_healthy",
+    category: "bakery_dessert",
     productKind: "food",
     description: "%23 Antep fıstığı içeren çıtır çikolatalı gofret.",
     image: "/images/menu/kahve_dunyasi/kahve_dunyasi_gofrik_antep_fistikli.webp",
@@ -517,7 +517,7 @@ export const CHAIN_KAHVE_DUNYASI_ITEMS: MenuItem[] = [
     id: "kahve_dunyasi_17_madlen__ikolata_kutusu",
     chainId: "kahve_dunyasi",
     name: "Madlen Çikolata Kutusu",
-    category: "fit_healthy",
+    category: "bakery_dessert",
     productKind: "food",
     description: "Sütlü ve bitter kare madlen çikolata çeşitleri.",
     image: "/images/menu/kahve_dunyasi/madlen_cikolata_kutusu.webp",
@@ -603,7 +603,7 @@ export const CHAIN_KAHVE_DUNYASI_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {

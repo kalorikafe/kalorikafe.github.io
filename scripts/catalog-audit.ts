@@ -514,7 +514,7 @@ if (!statSync(caffeNeroSourcePath, { throwIfNoEntry: false })?.isFile()) {
     `Caffè Nero unique image-source ratio ${caffeUniqueSourcePercent.toFixed(1)}% < 60%`,
   );
   for (const sourceUrl of caffeSourceUrls) {
-    const usedBy = allSourceUsage.get(sourceUrl) ?? [];
+    const usedBy = catalogItems.filter(item => item.imageSource && imageSourceIdentity(item.imageSource.url) === sourceUrl);
     check(usedBy.length <= 6, `Caffè Nero image source ${sourceUrl} is used by ${usedBy.length} products (max 6)`);
   }
 }

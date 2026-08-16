@@ -886,7 +886,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
     name: "Espresso Ristretto",
     category: "espresso_hot",
     productKind: "drink",
-    description: "Özenle kavrulmuş kaliteli çekirdeklerden taze demlenen espresso bazlı kahve.",
+    description: "Yoğun espresso",
     image: "/images/menu/caffe_nero/espresso_ristretto.webp",
     isDrink: true,
     defaultSizeId: "short",
@@ -2322,7 +2322,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich%2C_Sandwich_Weavers_-_geograph.org.uk_-_2199660.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3APanini_2.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2497,7 +2497,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Weavers%2C_Strand_Street%2C_Sandwich_-_geograph.org.uk_-_2471582.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2602,7 +2602,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich%2C_New_Street%2C_former_Sandwich_Arms_-_geograph.org.uk_-_3122223.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2777,7 +2777,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich%2C_Sandwich_Weavers_-_2008_-_geograph.org.uk_-_3431150.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3APanini_2.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2859,7 +2859,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
     description: "Su, domates, köz kapya biber, süt, domates salçası, soğan, buğday unu, tereyağı, sarımsak, tuz, karabiber",
     image: "/images/menu/caffe_nero/koz_biberli_domates_corbasi.webp",
     isDrink: false,
-    baseMacros: { calories: 132, protein: 6.8, carbs: 5.2, sugar: 4.4, fat: 7.6, satFat: 4.8, caffeine: 0, sodium: 1120 },
+    baseMacros: { calories: 118, protein: 6.8, carbs: 5.2, sugar: 4.4, fat: 7.6, satFat: 4.8, caffeine: 0, sodium: 1120 },
     allergens: ["gluten", "milk"],
     containsLactose: true,
     allergenSource: {
@@ -3169,7 +3169,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
     id: "caffe_nero_mini_uzumlu_corek",
     chainId: "caffe_nero",
     name: "Mini Üzümlü Çörek",
-    category: "sandwich_savory",
+    category: "bakery_dessert",
     productKind: "food",
     description: "Buğday unu, tereyağı, kuru üzüm, şeker, yumurta, maya, tuz",
     image: "/images/menu/caffe_nero/mini_uzumlu_corek.webp",
@@ -3944,7 +3944,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
     description: "Buğday unu, tereyağı, bitter çikolata, şeker, yumurta",
     image: "/images/menu/caffe_nero/chocolate_chip_cookie.webp",
     isDrink: false,
-    baseMacros: { calories: 380, protein: 5, carbs: 50, sugar: 32, fat: 18, satFat: 10, caffeine: 0, sodium: 160 },
+    baseMacros: { calories: 324, protein: 6.5, carbs: 41, sugar: 5.5, fat: 14, satFat: 1.8, caffeine: 10, sodium: 760 },
     allergens: ["egg", "gluten", "milk", "soy"],
     containsLactose: true,
     allergenSource: {
@@ -4049,8 +4049,8 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
     description: "Vegan sade kek miksi, muz, ayçiçek yağı, bitter çikolata, ceviz",
     image: "/images/menu/caffe_nero/banana_bread.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: ["gluten", "nuts"],
     containsLactose: false,
     allergenSource: {
       status: "official",
@@ -4329,8 +4329,8 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
     description: "Şeker, kakao yağı, yağlı süt tozu, kakao kitlesi (Kakao kuru maddesi en az %33)",
     image: "/images/menu/caffe_nero/sutlu_tablet_cikolata.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 10, sodium: 600 },
+    allergens: ["milk", "soy"],
     containsLactose: true,
     allergenSource: {
       status: "official",
@@ -4364,8 +4364,8 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
     description: "Kakao kitlesi, şeker, kakao yağı (Kakao kuru maddesi en az %54,5)",
     image: "/images/menu/caffe_nero/bitter_tablet_cikolata.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 10, sodium: 600 },
+    allergens: ["soy"],
     containsLactose: false,
     allergenSource: {
       status: "official",
@@ -4434,8 +4434,8 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
     description: "Şeker, su, glikoz-fruktoz şurubu ve aroma vericiler",
     image: "/images/menu/caffe_nero/lolipop.webp",
     isDrink: false,
-    baseMacros: { calories: 420, protein: 6, carbs: 48, sugar: 34, fat: 22, satFat: 12, caffeine: 0, sodium: 140 },
-    allergens: ["gluten", "milk", "egg"],
+    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    allergens: [],
     containsLactose: false,
     allergenSource: {
       status: "official",
@@ -4466,10 +4466,10 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
     name: "Glutensiz Mini Çatal",
     category: "sandwich_savory",
     productKind: "food",
-    description: "Glutensiz un karışımı, bitkisel margarin, nohut unu, yumurta, susam, çörek otu, pekmez",
+    description: "Geleneksel mahlepli, susamlı ve çörek otlu glutensiz mini çatal porsiyonu (70g).",
     image: "/images/menu/caffe_nero/glutensiz_mini_catal.webp",
     isDrink: false,
-    baseMacros: { calories: 400, protein: 14, carbs: 42, sugar: 5, fat: 16, satFat: 7, caffeine: 0, sodium: 600 },
+    baseMacros: { calories: 320, protein: 6, carbs: 38, sugar: 3, fat: 16, satFat: 7, caffeine: 0, sodium: 420 },
     allergens: ["egg", "sesame"],
     containsLactose: false,
     allergenSource: {

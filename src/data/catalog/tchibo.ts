@@ -227,7 +227,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3AHot_chocolate_p1150797.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -419,7 +419,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -450,7 +450,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3APanini_2.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -481,7 +481,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -512,7 +512,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_Water_tower.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -543,7 +543,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASimit-2x.JPG", kind: "licensed_fallback", exactProduct: false,
+      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
