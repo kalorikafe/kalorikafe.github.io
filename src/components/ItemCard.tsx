@@ -2,7 +2,7 @@ import React from 'react';
 import type { MenuItem, Allergen } from '../types/cafe';
 import { CHAINS } from '../data/chains';
 import { ALLERGEN_MAP } from '../utils/macroCalculator';
-import { SlidersHorizontal, Scale, Plus, ShieldAlert, Check, Flame, Zap, Star, FileText, Info } from 'lucide-react';
+import { SlidersHorizontal, Scale, Plus, ShieldAlert, Check, Flame, Zap, Star, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ItemCardProps {
@@ -90,14 +90,14 @@ export const ItemCard: React.FC<ItemCardProps> = ({
             onClick={() => onToggleFavorite(item.id)}
             aria-pressed={isFavorite}
             aria-label={isFavorite ? `${item.name} ürününü favorilerden çıkar` : `${item.name} ürününü favorilere ekle`}
-            className={`min-h-11 min-w-11 rounded-full border p-2 backdrop-blur-md transition-all ${
+            className={`w-9 h-9 rounded-full flex items-center justify-center border backdrop-blur-md transition-all ${
               isFavorite
-                ? 'bg-[#6F4E37] text-white border-[#6F4E37] shadow-md scale-110'
-                : 'bg-black/60 border-white/20 text-white/80 hover:text-[#D4B996]'
+                ? 'bg-[#6F4E37] text-white border-[#6F4E37] shadow-md scale-105'
+                : 'bg-black/60 border-white/20 text-white/80 hover:text-[#D4B996] hover:bg-black/80'
             }`}
             title={isFavorite ? "Favorilerden Çıkar" : "Favorilere Ekle"}
           >
-            <Star className={`w-3.5 h-3.5 ${isFavorite ? 'fill-current' : ''}`} />
+            <Star className={`w-4 h-4 ${isFavorite ? 'fill-current' : ''}`} />
           </button>
         </div>
 
@@ -130,20 +130,6 @@ export const ItemCard: React.FC<ItemCardProps> = ({
         <p className="text-xs text-stone-600 dark:text-[var(--dark-text-muted)] font-medium line-clamp-2 leading-relaxed">
           {item.description}
         </p>
-
-        {/* Nutrition confidence is explicit; mixed official/estimated data is not collapsed. */}
-        {item.nutritionSource?.status !== 'verified' && (
-          <div className="flex items-center gap-1.5 text-[10px] font-bold text-stone-500 dark:text-[var(--dark-text-muted)]">
-            <Info className="w-3.5 h-3.5 shrink-0 text-amber-600 dark:text-amber-400" />
-            <span data-testid="estimated-badge">{item.nutritionSource?.status === 'mixed' ? 'Karma veri — resmî alanlar ve tahminler ayrı gösterilir' : item.nutritionSource?.status === 'estimated' ? 'Tahmini değer — porsiyon ve tarif varsayımına dayanır' : 'Besin kaynağı doğrulanmadı'}</span>
-          </div>
-        )}
-        {(!item.allergenSource || ['estimated', 'unavailable'].includes(item.allergenSource.status)) && (
-          <div className="flex items-center gap-1.5 text-[10px] font-bold text-amber-700 dark:text-amber-300">
-            <ShieldAlert className="h-3.5 w-3.5 shrink-0" />
-            <span>Alerjen verisi {item.allergenSource?.status === 'estimated' ? 'tahmini' : 'bulunamadı'}; risk yok anlamına gelmez</span>
-          </div>
-        )}
 
         {/* Ultra High Contrast Macro Grid Summary */}
         <div className="grid grid-cols-4 gap-1.5 p-2 rounded-2xl bg-stone-50 dark:bg-[var(--dark-surface-elevated)]/60 border border-stone-200 dark:border-[var(--dark-border)]/80 text-center">
