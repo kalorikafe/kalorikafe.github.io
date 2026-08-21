@@ -8,11 +8,13 @@ platformda karşılaştıran React uygulamasıdır.
 - **Kaynak:** <https://github.com/kalorikafe/kalorikafe.github.io>
 - **Hosting:** GitHub Pages + Actions (yalnızca bu; Vercel/Cloudflare/Netlify kullanılmaz)
 
-Çalışma kesiti 16 Ağustos 2026; katalog zincirlerin resmî web menülerinden ve
-kontrollü şube anlık görüntülerinden derlendi (Starbucks TR menüsü, Espressolab
-resmî menü API'si, Arabica/Gloria Jean's/David People/Mackbear sayfaları, Caffè
-Nero Türkiye'nin 7 resmî menü sayfası ve Coffy 5-şube canlı menü anlık
-görüntüsü). Her statik ürün `catalogSource`, `imageSource` ve `nutritionSource`
+Veri tabanı 16 Ağustos 2026'da zincirlerin resmî web menülerinden ve
+kontrollü şube anlık görüntülerinden derlendi (Starbucks TR menüsü,
+Espressolab resmî menü API'si, Arabica/Gloria Jean's/David People/Mackbear
+sayfaları, Caffè Nero Türkiye'nin 7 resmî menü sayfası ve Coffy 5-şube canlı
+menü anlık görüntüsü); 21–22 Ağustos 2026'da görsel, kategori ve besin-verisi
+düzeltmeleriyle yenilendi (ayrıntı: [HANDOFF.md](./HANDOFF.md)).
+Her statik ürün `catalogSource`, `imageSource` ve `nutritionSource`
 provenance alanlarını taşır; `npm run catalog:audit` bunu otomatik denetler.
 Tchibo'nun 4 standart espresso bazlı ürünü kendi ürün sayfası olmadığı
 için `kind: 'secondary'` ile işaretlidir (`tchibo_espresso`,
@@ -86,6 +88,9 @@ kişisel günlük sınır** olarak yazılır (varsayılan 400 mg).
 
 ## Dokümanlar
 
+- [HANDOFF.md](./HANDOFF.md) — **ajan el değiştirme dokümanı (ilk oku)**: mimari,
+  sözleşmeler, tuzaklar, açık işler
+
 - [PROJECT.md](./PROJECT.md) — proje özeti, katalog ve kalite kapıları
 - [GATE_STATUS.md](./GATE_STATUS.md) — güncel kapı sonuçları
 - [DATA_PROVENANCE.md](./DATA_PROVENANCE.md) — kaynak sözleşmeleri
@@ -101,8 +106,8 @@ asset yolları `/images/...` kalır). Tetikleyiciler: `master` push ve manuel
 
 ## Arama motorları (SEO)
 
-- `public/sitemap.xml` (canlı `/sitemap.xml`) ve `public/robots.txt`
-  (`Allow: /` + `Sitemap:` yönergesi) yayında.
+- Sitemap (`/sitemap.xml`) her build'de `generate-static-pages` tarafından
+  üretilir (1019 URL); `public/robots.txt` (`Allow: /` + `Sitemap:` yönergesi).
 - `index.html` içinde JSON-LD `WebSite` yapılandırılmış verisi, `og:*`
   meta'ları ve `lang="tr"` mevcut.
 - **Bekleyen (kullanıcı):** Google Search Console'da mülk ekle

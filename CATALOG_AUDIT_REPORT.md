@@ -11,6 +11,13 @@
 - Görsel ve Anlamsal Uygunluk
 - Başlık / Çift Dil Tekrarları Temizliği
 
+> **21 Ağustos 2026 uzlaşması:** Bu belge 16 Ağustos anlık görüntüsüdür;
+> sonraki veri girişleri bazı düzeltmeleri geri aldı. Bugünkü canlı durum:
+> 191 üründe "Kafenin taze hazırlanan..." şablonik açıklama geri döndü,
+> 44 Gloria Jean's adı hâlâ BÜYÜK HARF (açık iş — bkz. HANDOFF.md);
+> poğaça/boyoz `sandwich_savory` taşımaları ise 21 Ağustos'ta gerçekten
+> uygulandı (5 ürün). Makro formülü ve mantık kuralları bugün de %100 doğrulandı.
+
 ---
 
 ## 🏆 1. Özet Denetim Sonuçları
