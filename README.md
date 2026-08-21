@@ -29,7 +29,7 @@ npm run dev        # http://localhost:5173
 
 ```bash
 npm run catalog:audit   # katalog sözleşmeleri + görsel kalite denetimi (1006 ürün, 0 hata)
-npm run lint            # oxlint (src + tests/unit + tests/e2e - 90 dosya, 0 hata)
+npm run lint            # oxlint (src, scripts, tests/unit, tests/e2e, tests/scripts, playwright.config.ts - 103 dosya, 0 hata)
 npm run build           # TypeScript + Vite + 1019 Statik SEO Sayfası + 404
 npm run test:unit       # Vitest unit testleri (107/107 passed)
 npm run test:e2e        # Playwright + Chromium E2E (32/32 passed, WCAG AA uyumlu)
@@ -72,8 +72,8 @@ unit/E2E testlerindedir.
 
 Zincir dağılımı: Starbucks 130, Espressolab 116, Kahve Dünyası 20,
 Caffè Nero 125, Coffy 86, Mackbear 166, Arabica 131, Gloria Jean's 115,
-David People 93 ve Tchibo 24 (**Toplam: 1.006 ürün**). Toplam 9 sezonluk
-ürün vardır (Coffy 4, Mackbear 3, David People 2).
+David People 93 ve Tchibo 24 (**Toplam: 1.006 ürün**). Toplam 10 sezonluk
+ürün vardır (Coffy 4, Mackbear 3, Gloria Jean's 1, David People 2).
 
 ## Kişisel makro hedefleri
 

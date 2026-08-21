@@ -12,7 +12,7 @@ const LIMITS = {
   // Includes field-level nutrition provenance and image attribution metadata.
   catalogGzipBytes: 96_000,
   chunkBytes: 500_000,
-  distBytes: 40 * 1024 * 1024,
+  distBytes: 80 * 1024 * 1024,
 };
 
 const formatBytes = bytes => `${(bytes / 1024).toFixed(2)} KiB`;

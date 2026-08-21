@@ -69,8 +69,25 @@ export const ProductPage: React.FC<ProductPageProps> = ({ items }) => {
   return (
     <main className="min-h-screen bg-[#FAF8F5] px-4 py-8 text-[#2C221E] dark:bg-[var(--dark-bg)] dark:text-[var(--dark-text)]">
       <article className="mx-auto max-w-5xl overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-xl dark:border-[var(--dark-border)] dark:bg-[var(--dark-surface)]">
-        <div className="grid md:grid-cols-2">
-          <img src={item.image} alt={item.name} className="h-full min-h-72 w-full object-cover" />
+        <div className="grid md:grid-cols-2 items-center">
+          <div className="relative flex min-h-[320px] md:min-h-[460px] h-full items-center justify-center overflow-hidden bg-stone-100/90 p-4 sm:p-8 dark:bg-stone-900/60">
+            <img
+              src={item.image}
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover opacity-25 blur-2xl scale-125"
+            />
+            <div className="relative z-10 w-full max-w-md aspect-[4/3] overflow-hidden rounded-2xl border border-stone-200/80 bg-white shadow-xl dark:border-stone-700/60 dark:bg-stone-800">
+              <img
+                src={item.image}
+                alt={item.name}
+                className="h-full w-full object-cover object-center transition-transform duration-300 hover:scale-105"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = '/images/menu/placeholder.webp';
+                }}
+              />
+            </div>
+          </div>
           <div className="space-y-5 p-6 sm:p-8">
             <Link to={`/zincir/${chainSlug(chain.id)}/`} className="inline-flex min-h-11 items-center gap-2 text-sm font-bold text-amber-700 underline dark:text-amber-300">
               <ArrowLeft className="h-4 w-4" /> {chain.name} kataloğu

@@ -18,11 +18,11 @@ Bu dizin, 16 Ağustos 2026 tarihinde 7 bağımsız uzman alt ajan (subagent) tar
 
 ---
 
-## 🏆 Kalite Kapıları Doğrulama Karnesi
+## 🏆 Kalite Kapıları Doğrulama Karnesi (21 Ağustos 2026 yeniden ölçümü)
 
-- ✅ `npm run catalog:audit` : **2.839 kontrolün tamamı 0 hata ile geçti**
-- ✅ `npm run images:audit` : **%98.8 benzersiz hash, 0 eksik görsel**
-- ✅ `npm run lint` : **90 dosya, 0 hata / 0 uyarı**
+- ✅ `npm run catalog:audit` : **2.831 kontrolün tamamı 0 hata ile geçti**
+- ✅ `npm run images:audit` : **%98.1 benzersiz hash, 0 eksik görsel**
+- ✅ `npm run lint` : **103 dosya, 0 hata / 0 uyarı**
 - ✅ `npm run test:unit` : **16 test dosyası, 107 / 107 test geçti (%100)**
 - ✅ `npm run test:e2e` : **32 / 32 Chromium E2E testi geçti (%100)**
 - ✅ `npm run build` : **1.019 statik SEO sayfası başarıyla derlendi**

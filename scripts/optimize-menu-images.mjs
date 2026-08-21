@@ -22,16 +22,16 @@ const DEFAULT_PUBLIC_DIR = path.join(PROJECT_ROOT, 'public');
 const DEFAULT_PROVENANCE_PATH = path.join(SCRIPT_DIR, 'catalog_sources', 'image-provenance.json');
 const DEFAULT_MANIFEST_PATH = path.join(SCRIPT_DIR, 'catalog_sources', 'image-derivatives.json');
 
-export const TRANSFORM_VERSION = 'menu-webp-v1';
+export const TRANSFORM_VERSION = 'menu-webp-v2';
 export const TRANSFORM_CONFIG = Object.freeze({
-  maximumWidth: 640,
-  maximumHeight: 480,
-  officialExactQuality: 76,
-  licensedFallbackQuality: 68,
-  webpEffort: 4,
+  maximumWidth: 800,
+  maximumHeight: 600,
+  officialExactQuality: 78,
+  licensedFallbackQuality: 78,
+  webpEffort: 5,
   fit: 'inside',
   withoutEnlargement: true,
-  fallbackOverlay: 'bottom-product-chain-v1',
+  fallbackOverlay: null,
 });
 
 function sha256(content) {
@@ -183,7 +183,7 @@ async function encodeImage(inputBuffer, item, chainLabel, provenance) {
     : TRANSFORM_CONFIG.officialExactQuality;
   let result;
 
-  if (isLicensedFallback) {
+  if (isLicensedFallback && TRANSFORM_CONFIG.fallbackOverlay) {
     const resized = await sharp(inputBuffer)
       .rotate()
       .resize(resize)
@@ -214,7 +214,7 @@ async function encodeImage(inputBuffer, item, chainLabel, provenance) {
     width: result.info.width,
     height: result.info.height,
     quality,
-    overlayApplied: isLicensedFallback,
+    overlayApplied: Boolean(isLicensedFallback && TRANSFORM_CONFIG.fallbackOverlay),
   };
 }
 

@@ -194,7 +194,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ATurkish_coffee_in_Istanbul.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -228,7 +228,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -358,7 +358,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -389,7 +389,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Glass_of_Iced_Tea.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1556881286-fc6915169721?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -609,7 +609,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -640,7 +640,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {

@@ -62,7 +62,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -129,7 +129,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -194,7 +194,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ATurkish_coffee_in_Istanbul.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -225,7 +225,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -258,7 +258,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -324,7 +324,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AFrappe_(4547117210).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -355,7 +355,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -386,7 +386,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1585238342024-78d387f4a707?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -417,7 +417,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1517433670267-08bbd4be890f?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -448,7 +448,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -479,7 +479,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -510,7 +510,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -572,7 +572,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AGranville_Island_Market_-_carrot_cake.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4166,7 +4166,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4198,7 +4198,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ATunnocks-Caramel-Wafer-Split.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4230,7 +4230,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4261,7 +4261,7 @@ export const CHAIN_ARABICA_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
 ];

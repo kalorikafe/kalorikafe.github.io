@@ -369,7 +369,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AWhite_chocolate_mocha_coffee.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -589,7 +589,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASt_Thomas'_Hospital_Sandwich%2C_Kent.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -659,7 +659,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3APeanut-Butter-Jelly-Sandwich.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -804,7 +804,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACrazy_Mocha_polaroid.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -914,7 +914,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AEspresso_cup.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -951,7 +951,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACup_of_espresso_01.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1610889556528-9a770e32642f?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -988,7 +988,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ATurkish_Coffee_with_Crema.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1250,7 +1250,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3A1998_hot_chocolate_cologne.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1401,7 +1401,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AMcDonald's_McCafe_Frappe_Chocolate_Chip_(44443234744).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2075,7 +2075,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AFrapp%C3%A9_(Tablet_Run_Cologne-Duisburg-Cologne)_._._-cologne_-frappe_-vlog_-vloggang_-gstdarmy_-teamoskar_-teamfabian_-heyarmy%E2%9A%A1_-lenarmy.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2252,7 +2252,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2322,7 +2322,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3APanini_2.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2497,7 +2497,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1567234669003-dce7a7a88821?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2602,7 +2602,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2777,7 +2777,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3APanini_2.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2812,7 +2812,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2847,7 +2847,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3162,7 +3162,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://unsplash.com/photos/1512621776951-a57141f2eefd", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3372,7 +3372,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AGluten_free_pogaca.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3407,7 +3407,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AGluten_free_pogaca.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3442,7 +3442,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AGluten_free_pogaca.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3967,7 +3967,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AChocolate_cookie.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4142,7 +4142,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACake_17.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4212,7 +4212,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AMuffin_NIH.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4282,7 +4282,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACookie_stack.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4317,7 +4317,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AMuffin_Sweets.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4422,7 +4422,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "official", "protein": "official", "carbs": "official", "sugar": "official", "fat": "official", "satFat": "official", "caffeine": "estimated", "sodium": "derived"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AChocolate_covered_gingerbread_cookies_02.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4457,7 +4457,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACake_35.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -4492,7 +4492,7 @@ export const CHAIN_CAFFE_NERO_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AGluten_free_pogaca.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
 ];

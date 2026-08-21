@@ -1,6 +1,6 @@
 # Project: Kalori Cafe — Katalog ve Kalite Kapıları
 
-Son güncelleme: **16 Ağustos 2026**. Bu belge çalışma ağacındaki güncel
+Son güncelleme: **21 Ağustos 2026**. Bu belge çalışma ağacındaki güncel
 katalog durumunu anlatır; canlı GitHub Pages sürümü ancak ilgili değişiklikler
 `master` üzerinden yayınlandıktan sonra aynı duruma gelir.
 
@@ -13,10 +13,10 @@ uygulamasında karşılaştırır.
 - Canlı adres: <https://kalorikafe.github.io/>
 - Kaynak: <https://github.com/kalorikafe/kalorikafe.github.io>
 - Hosting: GitHub Pages + GitHub Actions
-- Güncel katalog: **1006 ürün** (İçecekler: 564, Yiyecekler: 442), 10 zincir, 9 sezonluk ürün
+- Güncel katalog: **1006 ürün** (İçecekler: 564, Yiyecekler: 442), 10 zincir, 10 sezonluk ürün
 - Besin kaydı: 83 `mixed`, 923 `estimated`, 0 `verified`, 0 `unverified`
 - Görseller: 1006 benzersiz yerel WebP yolu; 384 resmî/exact, 622 lisanslı
-  fallback (%98.8 benzersiz hash, maks 3 tekrar)
+  fallback (%98.1 benzersiz hash, maks 3 tekrar)
 - Alt Ajan Denetimleri: 7 bağımsız uzman subagent raporu `reports/` altında
 
 ## Katalog dağılımı (16 Ağustos 2026)
@@ -33,7 +33,7 @@ uygulamasında karşılaştırır.
 | Gloria Jean's Coffees | 115 | 1 |
 | David People | 93 | 2 |
 | Tchibo | 24 | 0 |
-| **Toplam** | **1006** | **9** |
+| **Toplam** | **1006** | **10** |
 
 ### Caffè Nero güncellemesi
 
@@ -116,9 +116,12 @@ bulaşma riski her zaman ayrıca değerlendirilmelidir.
 
 ```bash
 npm run catalog:audit
+npm run images:audit
 npm run lint
 npm run build
 npm run test:unit
+npm run verify:build
+npm run budget:check
 npm run test:e2e
 npm audit
 ```

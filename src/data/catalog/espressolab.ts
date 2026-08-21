@@ -31,7 +31,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -63,7 +63,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -95,7 +95,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://upload.wikimedia.org/wikipedia/commons/e/ec/Flat_White_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -128,7 +128,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -162,7 +162,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Mocha_by_Phil.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -196,7 +196,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Mocha_by_Phil.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -227,7 +227,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ATurkish_coffee_in_Istanbul.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -260,7 +260,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -294,7 +294,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -325,7 +325,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://upload.wikimedia.org/wikipedia/commons/e/ee/Oji_Cold_Brew_System.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -358,7 +358,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -389,7 +389,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -422,7 +422,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://upload.wikimedia.org/wikipedia/commons/9/91/Caff%C3%A8_latte_as_being_served_at_Kaffebrenneriet_Torshov%2C_Oslo%2C_Norway_2_600x600_100KB.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -453,7 +453,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ANCI_iced_tea.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1556881286-fc6915169721?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -486,7 +486,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -517,7 +517,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -548,7 +548,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -579,7 +579,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -610,7 +610,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -641,7 +641,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -672,7 +672,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ATray_with_espresso_cups.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -705,7 +705,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -736,7 +736,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACapilar-Americano-1914-08-06-Nuevo-Mundo.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -769,7 +769,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -802,7 +802,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACappuccino_milk_froth.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -835,7 +835,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -868,7 +868,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1546173159-315724a31696?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -901,7 +901,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Mocha_by_Phil.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -934,7 +934,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACrazy_Mocha_polaroid.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -967,7 +967,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1000,7 +1000,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AHot_chocolate_p1150797.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1033,7 +1033,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1064,7 +1064,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACup_of_black_tea.JPG", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1095,7 +1095,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACup_of_black_tea.JPG", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1126,7 +1126,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACup_of_black_tea.JPG", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1157,7 +1157,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACup_of_black_tea.JPG", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1190,7 +1190,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1223,7 +1223,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1254,7 +1254,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://unsplash.com/photos/1517701604599-bb29b565090c", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1287,7 +1287,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1320,7 +1320,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1353,7 +1353,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AMcDonald%27s_McCafe_Frappe_Chocolate_Chip_%2844443234744%29.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1386,7 +1386,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1419,7 +1419,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1452,7 +1452,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AWhite_chocolate_mocha_coffee.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1485,7 +1485,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1518,7 +1518,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1551,7 +1551,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1584,7 +1584,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1617,7 +1617,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AMatcha_Latte_KF.JPG", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1650,7 +1650,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AFrappe_(4547117210).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1683,7 +1683,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1716,7 +1716,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AFrappe_(4547117210).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1749,7 +1749,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1782,7 +1782,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1815,7 +1815,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ANCI_iced_tea.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1556881286-fc6915169721?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1848,7 +1848,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1881,7 +1881,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ANCI_iced_tea.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1914,7 +1914,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1947,7 +1947,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AFrappe_(4547117210).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -1980,7 +1980,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AFrappe_(4547117210).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2013,7 +2013,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AStarbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2046,7 +2046,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACaff%C3%A8_Latte_at_Sainsbury's_Low_Hall%2C_Chingford%2C_London_1.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2079,7 +2079,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ANCI_iced_tea.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2112,7 +2112,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2145,7 +2145,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AFrappe_(4547117210).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2178,7 +2178,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ANCI_iced_tea.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2210,7 +2210,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_-_27682817724.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2240,7 +2240,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2270,7 +2270,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2300,7 +2300,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2330,7 +2330,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ACroissant_rising.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2360,7 +2360,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2390,7 +2390,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ABatch_of_chocolate_chip_cookies.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2420,7 +2420,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2451,7 +2451,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2482,7 +2482,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2513,7 +2513,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2543,7 +2543,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2574,7 +2574,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3APanini_2.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2604,7 +2604,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2634,7 +2634,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASimit_(rectangular).jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2665,7 +2665,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2695,7 +2695,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3APanini_2.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2726,7 +2726,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ALemonade_and_mini_pogacas.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2756,7 +2756,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ASandwich_on_a_cutting_board.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2786,7 +2786,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ABatch_of_chocolate_chip_cookies.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2816,7 +2816,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2846,7 +2846,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AChocolate_cake_and_Victoria_sponge.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2876,7 +2876,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ABatch_of_chocolate_chip_cookies.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2906,7 +2906,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AChocolate_brownies_without_table.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2936,7 +2936,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ABatch_of_chocolate_chip_cookies.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2966,7 +2966,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ATunnocks-Caramel-Wafer-Split.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -2996,7 +2996,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ABatch_of_chocolate_chip_cookies.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3026,7 +3026,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3056,7 +3056,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3086,7 +3086,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3116,7 +3116,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AChocolate_brownies_without_table.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3146,7 +3146,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AChocolate_cake_and_Victoria_sponge.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3176,7 +3176,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ADessert_Tiramisu.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3206,7 +3206,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ATunnocks-Caramel-Wafer-Split.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3236,7 +3236,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3266,7 +3266,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1556881286-fc6915169721?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3296,7 +3296,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3326,7 +3326,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3356,7 +3356,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ABaked_cheesecake_with_raspberries_and_blueberries.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3386,7 +3386,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3416,7 +3416,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3446,7 +3446,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3476,7 +3476,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AChocolate_cake_and_Victoria_sponge.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3506,7 +3506,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3AChocolate_cake_and_Victoria_sponge.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3536,7 +3536,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3566,7 +3566,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=1000&auto=format&fit=crop&q=80", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3596,7 +3596,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ABaked_cheesecake_with_raspberries_and_blueberries.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3626,7 +3626,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ABaked_cheesecake_with_raspberries_and_blueberries.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
   {
@@ -3656,7 +3656,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
       fieldStatus: {"calories": "estimated", "protein": "estimated", "carbs": "estimated", "sugar": "estimated", "fat": "estimated", "satFat": "estimated", "caffeine": "estimated", "sodium": "estimated"},
     },
     imageSource: {
-      url: "https://commons.wikimedia.org/wiki/File%3ABasque-style_cheesecake_in_Pepito%2C_Tokyo.jpg", kind: "licensed_fallback", exactProduct: false,
+      url: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=1200&auto=format&fit=crop&q=85", kind: "licensed_fallback", exactProduct: false,
     },
   },
 ];

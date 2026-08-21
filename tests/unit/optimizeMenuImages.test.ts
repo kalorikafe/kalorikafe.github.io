@@ -73,13 +73,13 @@ describe('menu image optimizer', () => {
     const second = await optimizeCatalogImages(options);
     const secondOutput = readFileSync(absoluteImagePath);
 
-    expect(first.summary).toMatchObject({ processed: 1, skipped: 0, overlaysApplied: 1 });
-    expect(metadata.width).toBeLessThanOrEqual(640);
-    expect(metadata.height).toBeLessThanOrEqual(480);
-    expect(second.summary).toMatchObject({ processed: 0, skipped: 1, overlaysApplied: 1 });
+    expect(first.summary).toMatchObject({ processed: 1, skipped: 0, overlaysApplied: 0 });
+    expect(metadata.width).toBeLessThanOrEqual(800);
+    expect(metadata.height).toBeLessThanOrEqual(600);
+    expect(second.summary).toMatchObject({ processed: 0, skipped: 1, overlaysApplied: 0 });
     expect(secondOutput.equals(firstOutput)).toBe(true);
     expect(JSON.parse(readFileSync(manifestPath, 'utf8')).records['test-product']).toMatchObject({
-      transform: { quality: 68, overlayApplied: true, productLabel: 'Kakao & Latte', chainLabel: 'Test Kafe' },
+      transform: { quality: 78, overlayApplied: false, productLabel: null, chainLabel: null },
       output: { format: 'webp' },
     });
   });
