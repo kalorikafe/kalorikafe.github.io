@@ -35,6 +35,7 @@ const DIETARY_PILLS: { id: DietaryPreference; label: string; icon: string }[] = 
   { id: 'vegetarian', label: 'Vejetaryen', icon: '🥬' },
   { id: 'high_protein', label: 'Yüksek protein', icon: '💪' },
   { id: 'low_calorie', label: '150 kcal altı', icon: '🔥' },
+  { id: 'sugar_free', label: 'Şekersiz', icon: '🍬' },
 ];
 
 export const DietaryFilterBar: React.FC<DietaryFilterBarProps> = ({

@@ -83,7 +83,9 @@ export const ProductPage: React.FC<ProductPageProps> = ({ items }) => {
                 alt={item.name}
                 className="h-full w-full object-cover object-center transition-transform duration-300 hover:scale-105"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/images/menu/placeholder.webp';
+                  const img = e.target as HTMLImageElement;
+                  img.onerror = null;
+                  img.src = '/images/menu/placeholder.webp';
                 }}
               />
             </div>

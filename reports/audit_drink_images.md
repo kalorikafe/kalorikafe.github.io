@@ -94,7 +94,7 @@ Prior to this audit, several beverages had been matched to non-drink imagery due
 | `espressolab_iced_white_chocolate_mocha` | Iced White Chocolate Mocha | `espresso_iced` | Ice cream dessert scoop (`White_mocha_ice_cream.jpg`) | `File:White_chocolate_mocha_coffee.jpg` (CC BY 2.0) - Iced mocha glass |
 | `espressolab_iced_caffe_mocha` | Iced Caffe Mocha | `espresso_iced` | Steaming hot latte art cup (`Caffè_Mocha_by_Phil.jpg`) | `File:Starbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg` (CC BY 2.0) - Iced drink |
 | `espressolab_iced_gold_chocolate_mocha` | Iced Gold Chocolate Mocha | `espresso_iced` | Steaming hot latte art cup (`Caffè_Mocha_by_Phil.jpg`) | `File:Starbucks_Grande_Iced_Pumpkin_Spice_Latte.jpg` (CC BY 2.0) - Iced drink |
-| `espressolab_mocha_esfrappa` | Mocha Esfrappa | `frappe_blended` | Hot mocha cup (`Caffè_Mocha_by_Phil.jpg`) | `File:McDonald's_McCafe_Frappe_Chocolate_Chip.jpg` (CC BY 2.0) - Blended frappe glass |
+| `espressolab_mocha_esfrappa` | Mocha Esfrappa | `espresso_hot` | Hot mocha cup (`Caffè_Mocha_by_Phil.jpg`) | `File:McDonald's_McCafe_Frappe_Chocolate_Chip.jpg` (CC BY 2.0) - Blended frappe glass |
 | `espressolab_paragon_lime` | Paragon Lime | `smoothie_juice` | Hot latte cup (`Caffè_Latte_at_Sainsbury...`) | Unsplash `photo-1613478223719-2ab802602423` (Unsplash License) - Chilled lime drink |
 | `espressolab_lime_breeze` | Lime Breeze | `smoothie_juice` | Hot latte cup (`Caffè_Latte_at_Sainsbury...`) | Unsplash `photo-1613478223719-2ab802602423` (Unsplash License) - Chilled lime drink |
 | `espressolab_sky` | Sky | `smoothie_juice` | Hot latte cup (`Caffè_Latte_at_Sainsbury...`) | Unsplash `photo-1553530666-ba11a7da3888` (Unsplash License) - Cold refresher glass |

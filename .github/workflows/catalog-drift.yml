@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Test drift and fetch invariants
-        run: npm run catalog:drift:test
+        run: npm run test:scripts
 
       - name: Verify tracked release is byte-equivalent
         run: npm run catalog:check

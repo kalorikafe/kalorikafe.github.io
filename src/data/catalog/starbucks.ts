@@ -147,6 +147,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "grande",
     baseMacros: { calories: 15, protein: 1, carbs: 3, sugar: 0, fat: 0, satFat: 0, caffeine: 225, sodium: 15 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -178,6 +179,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "short",
     baseMacros: { calories: 15, protein: 0.5, carbs: 2, sugar: 0, fat: 0.4, satFat: 0.1, caffeine: 75, sodium: 5 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -243,6 +245,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "grande",
     baseMacros: { calories: 5, protein: 0, carbs: 0, sugar: 0, fat: 0, satFat: 0, caffeine: 205, sodium: 20 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -687,7 +690,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     isDrink: true,
     defaultSizeId: "grande",
     defaultMilkId: "whole_milk",
-    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 0, sodium: 90 },
+    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 80, sodium: 90 },
     allergens: ["milk"],
     containsLactose: true,
     allergenSource: {
@@ -820,6 +823,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "grande",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -850,7 +854,8 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     isDrink: true,
     defaultSizeId: "grande",
     baseMacros: { calories: 45, protein: 1, carbs: 2, sugar: 1, fat: 4, satFat: 2.5, caffeine: 80, sodium: 15 },
-    allergens: [],
+    allergens: ["milk"],
+    containsLactose: true,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -882,6 +887,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "grande",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -912,7 +918,8 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     isDrink: true,
     defaultSizeId: "grande",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
-    allergens: [],
+    allergens: ["milk"],
+    containsLactose: true,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -1241,6 +1248,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "grande",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -1272,6 +1280,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "grande",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -1334,7 +1343,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     isDrink: true,
     defaultSizeId: "grande",
     defaultMilkId: "whole_milk",
-    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 0, sodium: 90 },
+    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 120, sodium: 90 },
     allergens: ["milk"],
     containsLactose: true,
     allergenSource: {
@@ -2010,6 +2019,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "grande",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -2393,6 +2403,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "grande",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -2588,7 +2599,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     isDrink: true,
     defaultSizeId: "grande",
     defaultMilkId: "whole_milk",
-    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 0, sodium: 90 },
+    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 75, sodium: 90 },
     allergens: ["milk"],
     containsLactose: true,
     allergenSource: {
@@ -2622,6 +2633,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     defaultSizeId: "grande",
     baseMacros: { calories: 5, protein: 0, carbs: 0, sugar: 0, fat: 0, satFat: 0, caffeine: 165, sodium: 15 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -3126,7 +3138,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     id: "starbucks_tahilli_peynirli_pogaca",
     chainId: "starbucks",
     name: "Tahıllı Peynirli Poğaça",
-    category: "bakery_dessert",
+    category: "sandwich_savory",
     productKind: "food",
     description: "Kafenin taze hazırlanan Tahıllı Peynirli Poğaça lezzeti.",
     image: "/images/menu/starbucks/tahilli_peynirli_pogaca.webp",
@@ -4004,7 +4016,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     id: "starbucks_kasarli_susamli_pogaca",
     chainId: "starbucks",
     name: "Kaşarlı Susamlı Poğaça",
-    category: "bakery_dessert",
+    category: "sandwich_savory",
     productKind: "food",
     description: "Kafenin taze hazırlanan Kaşarlı Susamlı Poğaça lezzeti.",
     image: "/images/menu/starbucks/kasarli_susamli_pogaca.webp",
@@ -4065,7 +4077,7 @@ export const CHAIN_STARBUCKS_ITEMS: MenuItem[] = [
     id: "starbucks_dereotlu_scone_pogaca",
     chainId: "starbucks",
     name: "Dereotlu Scone Poğaça",
-    category: "bakery_dessert",
+    category: "sandwich_savory",
     productKind: "food",
     description: "Kafenin taze hazırlanan Dereotlu Scone Poğaça lezzeti.",
     image: "/images/menu/starbucks/dereotlu_scone_pogaca.webp",

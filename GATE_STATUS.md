@@ -22,16 +22,21 @@ subagentReports: 7 specialized audit reports in reports/
 |---|---|
 | `npm run catalog:audit` | ✅ 1006 ürün · 1006 benzersiz yerel yol · 2.831 kontrol · 0 hata |
 | `npm run images:audit` | ✅ 0 eksik görsel · %98.1 benzersiz içerik hash'i · 0 provenance hatası |
-| `npm run lint` | ✅ 0 uyarı / 0 hata (103 dosya) |
+| `npm run lint` | ✅ 0 uyarı / 0 hata (99 dosya) |
 | `npm run build` | ✅ TypeScript + Vite + 1019 Statik SEO Sayfası + 404 üretimi |
 | `npm run test:unit` | ✅ 107/107 passed (16 test suite) |
 | `npm run verify:build` | ✅ Üretim derlemesi doğrulandı |
 | `npm run budget:check` | ✅ Bundle bütçesi sınırların altında (%100 yeşil) |
 | `npm run test:e2e` | ✅ 32/32 passed (Chromium) |
 
-Aynı gün 11 üründe sınıf-arası görsel uyumsuzluk düzeltildi (yiyecek
-ürünlerinde içecek fotosu, tatlıda çay fotosu); yukarıdaki ölçümler
-düzeltme sonrası çalışma ağacına aittir.
+21 Ağustos günü ağaca giren değişiklikler: tüm 1006 WebP'nin yeniden
+üretilmesi, 622 lisanslı fallback kaynak URL'inin güncellenmesi (11'i
+sınıf-arası görsel uyumsuzluk düzeltmesi), 21 üründe kafein tahmini, 9
+üründe milk alerjeni, 63 üründe containsLactose tamamlaması, 26 üründe
+kategori taşımaları (20 buzlu içecek espresso_iced'e; chia_puding
+fit_healthy'ye; boyoz/poğaça sandwich_savory'ye) ve nameEn alanının
+kaldırılması. Yukarıdaki ölçümler bu değişiklikler sonrası çalışma
+ağacına aittir.
 
 ## 17 Ağustos 2026 — 1.006 Ürün Birebir Görsel Eşleşmesi ve Kalite Kapıları
 

@@ -1,3 +1,4 @@
+import sharp from 'sharp';
 import { execFileSync } from 'node:child_process';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
@@ -10,6 +11,7 @@ const ORIGIN = 'https://kalorikafe.github.io';
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const projectRoot = dirname(scriptDirectory);
 const distDirectory = join(projectRoot, 'dist');
+const publicDirectory = join(projectRoot, 'public');
 const template = await readFile(join(distDirectory, 'index.html'), 'utf8');
 const productSlugs = createProductSlugMap(MENU_ITEMS);
 const imageProvenance = JSON.parse(await readFile(
@@ -32,14 +34,15 @@ const latestDate = items => items
   .sort()
   .at(-1) ?? new Date().toISOString().slice(0, 10);
 
-const renderDocument = ({ title, description, path, image, body, jsonLd, noIndex = false }) => {
+const renderDocument = async ({ title, description, path, image, body, jsonLd, noIndex = false }) => {
   const socialImage = absoluteUrl(image || '/social-card.png');
   let html = template
+    .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>\s*/g, '')
     .replace(/<title>.*?<\/title>/s, `<title>${escapeHtml(title)}</title>`)
     .replace(/<meta name="description" content="[^"]*"\s*\/>/, `<meta name="description" content="${escapeHtml(description)}" />`)
     .replace(/<meta property="og:title" content="[^"]*"\s*\/>/, `<meta property="og:title" content="${escapeHtml(title)}" />`)
     .replace(/<meta property="og:description" content="[^"]*"\s*\/>/, `<meta property="og:description" content="${escapeHtml(description)}" />`)
-    .replace(/<link rel="canonical" href="[^"]*"\s*\/>/, `<link rel="canonical" href="${absoluteUrl(path)}" />`)
+    .replace(/<link rel="canonical" href="[^"]*"\s*\/>/, noIndex ? '' : `<link rel="canonical" href="${absoluteUrl(path)}" />`)
     .replace(/<meta property="og:url" content="[^"]*"\s*\/>/, `<meta property="og:url" content="${absoluteUrl(path)}" />`)
     .replace(/<meta property="og:image" content="[^"]*"\s*\/>/, `<meta property="og:image" content="${socialImage}" />`)
     .replace(/<meta property="og:image:alt" content="[^"]*"\s*\/>/, `<meta property="og:image:alt" content="${escapeHtml(image ? `${title} görseli` : 'Kalori Cafe — kafe ürünlerini veriye göre seç')}" />`)
@@ -49,9 +52,10 @@ const renderDocument = ({ title, description, path, image, body, jsonLd, noIndex
     .replace('<div id="root"></div>', `<div id="root">${body}</div>`);
 
   if (image) {
+    const meta = await sharp(join(publicDirectory, image)).metadata();
     html = html
-      .replace(/\s*<meta property="og:image:width"[^>]*\/>/, '')
-      .replace(/\s*<meta property="og:image:height"[^>]*\/>/, '');
+      .replace(/<meta property="og:image:width" content="[^"]*"/, `<meta property="og:image:width" content="${meta.width}"`)
+      .replace(/<meta property="og:image:height" content="[^"]*"/, `<meta property="og:image:height" content="${meta.height}"`);
   }
 
   const metadata = [
@@ -80,7 +84,7 @@ const chainLinks = CHAINS.map(chain =>
 ).join('');
 const newest = latestDate(MENU_ITEMS);
 
-await writeRoute('/', renderDocument({
+await writeRoute('/', await renderDocument({
   title: 'Kalori Cafe | Kafe Kalori, Makro ve Alerjen Rehberi',
   description: `${CHAINS.length} zincirde ${MENU_ITEMS.length} ürünün kalori, makro, kafein, kaynak ve alerjen bilgilerini karşılaştırın.`,
   path: '/',
@@ -97,7 +101,7 @@ for (const chain of CHAINS) {
   const links = items.map(item =>
     `<li><a href="${productPath(item, productSlugs)}">${escapeHtml(item.name)}</a> — ${item.baseMacros.calories} kcal</li>`,
   ).join('');
-  await writeRoute(path, renderDocument({
+  await writeRoute(path, await renderDocument({
     title: `${chain.name} Kalori ve Alerjen Rehberi | Kalori Cafe`,
     description: `${chain.name} menüsündeki ${items.length} ürünün kalori, makro, kafein, alerjen ve kaynak bilgileri.`,
     path,
@@ -139,7 +143,7 @@ for (const item of MENU_ITEMS) {
     { '@type': 'ListItem', position: 2, name: chain.name, item: absoluteUrl(`/zincir/${chainSlug(chain.id)}/`) },
     { '@type': 'ListItem', position: 3, name: item.name, item: absoluteUrl(path) },
   ];
-  await writeRoute(path, renderDocument({
+  await writeRoute(path, await renderDocument({
     title: `${item.name} Kalori ve Makroları — ${chain.name} | Kalori Cafe`,
     description,
     path,
@@ -169,7 +173,7 @@ for (const item of MENU_ITEMS) {
 }
 
 const methodologyPath = '/metodoloji/';
-await writeRoute(methodologyPath, renderDocument({
+await writeRoute(methodologyPath, await renderDocument({
   title: 'Veri Metodolojisi | Kalori Cafe',
   description: 'Kalori Cafe ürün, besin, alerjen, porsiyon, kaynak ve tahmin verilerini nasıl toplar ve günceller?',
   path: methodologyPath,
@@ -178,7 +182,7 @@ await writeRoute(methodologyPath, renderDocument({
 }));
 
 const privacyPath = '/gizlilik/';
-await writeRoute(privacyPath, renderDocument({
+await writeRoute(privacyPath, await renderDocument({
   title: 'Gizlilik | Kalori Cafe',
   description: 'Kalori Cafe yerel veri saklama ve mahremiyet odaklı, hassas veri toplamayan ölçüm ilkeleri.',
   path: privacyPath,
@@ -199,7 +203,7 @@ const urls = [
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(entry => `  <url><loc>${absoluteUrl(entry.path)}</loc><lastmod>${entry.lastmod}</lastmod><priority>${entry.priority}</priority></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(join(distDirectory, 'sitemap.xml'), sitemap, 'utf8');
 
-const notFound = renderDocument({
+const notFound = await renderDocument({
   title: 'Sayfa bulunamadı | Kalori Cafe', description: 'Aradığınız Kalori Cafe sayfası bulunamadı.', path: '/404.html', noIndex: true,
   body: shell('<h1>Sayfa bulunamadı</h1><p>Ürün kaldırılmış veya adres değişmiş olabilir. <a href="/">Güncel kataloğa dönün.</a></p>'),
   jsonLd: { '@context': 'https://schema.org', '@type': 'WebPage', name: 'Sayfa bulunamadı' },

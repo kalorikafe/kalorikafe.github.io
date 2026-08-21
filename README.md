@@ -29,11 +29,11 @@ npm run dev        # http://localhost:5173
 
 ```bash
 npm run catalog:audit   # katalog sözleşmeleri + görsel kalite denetimi (1006 ürün, 0 hata)
-npm run lint            # oxlint (src, scripts, tests/unit, tests/e2e, tests/scripts, playwright.config.ts - 103 dosya, 0 hata)
+npm run lint            # oxlint (src, scripts, tests/unit, tests/e2e, tests/scripts, playwright.config.ts - 99 dosya, 0 hata)
 npm run build           # TypeScript + Vite + 1019 Statik SEO Sayfası + 404
 npm run test:unit       # Vitest unit testleri (107/107 passed)
 npm run test:e2e        # Playwright + Chromium E2E (32/32 passed, WCAG AA uyumlu)
-npm test                # unit + E2E birlikte
+npm test                # tüm kalite kapıları: audit + lint + unit + build + verify + budget + e2e
 npm audit               # bağımlılık güvenlik taraması
 ```
 

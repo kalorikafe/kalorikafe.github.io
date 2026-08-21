@@ -1,4 +1,4 @@
-export const ANALYTICS_EVENTS = [
+const ANALYTICS_EVENTS = [
   'chain_select',
   'filter_apply',
   'product_view',

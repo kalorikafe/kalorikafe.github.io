@@ -32,7 +32,7 @@ the public catalog.
 - `npm run catalog:fetch:caffe-nero -- --checked-at YYYY-MM-DD` writes an
   ignored candidate and semantic report under `tmp/catalog_drift/`. It never
   overwrites `caffe_nero.json`.
-- `npm run catalog:drift:test` verifies duplicate detection, the greater-than
+- `npm run test:scripts` verifies duplicate detection, the greater-than
   20% sudden-drop guard, and lifecycle handling.
 
 ## Review and lifecycle policy

@@ -16,6 +16,11 @@ taşır; `npm run catalog:audit` bu sözleşmeleri otomatik denetler.
   (Tchibo standart espresso bazlı 4 kayıt: `tchibo_espresso`,
   `tchibo_caff_latte`, `tchibo_cappuccino`, `tchibo_americano` ve Coffy
   çoklu-şube sipariş yüzeyi gözlemleri).
+- `kind: 'legacy_unverified'` — eski kaynak-metin döneminden devralınan ve
+  güncel zincir kaynağıyla doğrulanmamış 116 kayıt (kahve_dunyasi 20,
+  tchibo 20, espressolab 20, gloria_jeans 14, mackbear 13, arabica 13,
+  david_people 7, starbucks 6, coffy 3). Kayıt sayısı `npm run
+  catalog:audit` çıktısındaki `legacyUnverifiedSources` alanıyla izlenir.
 
 ### Caffè Nero & Coffy izlenen kaynak anlık görüntüleri
 

@@ -275,6 +275,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
     defaultSizeId: "tall",
     baseMacros: { calories: 15, protein: 1, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 145, sodium: 10 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -306,6 +307,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
     defaultSizeId: "tall",
     baseMacros: { calories: 5, protein: 0, carbs: 0, sugar: 0, fat: 0, satFat: 0, caffeine: 165, sodium: 15 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -651,6 +653,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
     defaultSizeId: "tall",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -748,6 +751,7 @@ export const CHAIN_TCHIBO_ITEMS: MenuItem[] = [
     defaultSizeId: "tall",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",

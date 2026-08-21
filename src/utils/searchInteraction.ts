@@ -1,7 +1,6 @@
 import type React from 'react';
 import type { MenuItem } from '../types/cafe';
 
-export const SUGGESTION_LIST_ID = 'search-suggestions';
 export const DEFAULT_ACTIVE_INDEX = -1;
 export const MAX_SUGGESTIONS = 8;
 

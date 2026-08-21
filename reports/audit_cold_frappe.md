@@ -6,6 +6,11 @@
 **Categories Audited:** `espresso_iced`, `cold_brew`, `frappe_blended` (plus iced drinks previously miscategorized under `espresso_hot`)  
 **Total Audited Products:** 165 items across 10 coffee chains  
 
+> **21 Ağustos 2026 uzlaşması:** Bu raporun "espresso_hot → espresso_iced"
+> kategori düzeltmeleri yayımında uygulanmamıştı; 21 Ağustos 2026'da 20 ürün
+> veriye uygulandı. Canlı `espresso_iced` sayısı 88'dir; aşağıdaki 89'luk
+> özet ve zincir satırları rapor günü anketinin tarihsel kaydıdır.
+
 ---
 
 ## 1. Executive Summary

@@ -211,6 +211,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     defaultSizeId: "short",
     baseMacros: { calories: 15, protein: 0.5, carbs: 2, sugar: 0, fat: 0.4, satFat: 0.1, caffeine: 75, sodium: 5 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -309,6 +310,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     defaultSizeId: "tall",
     baseMacros: { calories: 5, protein: 0, carbs: 0, sugar: 0, fat: 0, satFat: 0, caffeine: 180, sodium: 15 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -373,6 +375,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     defaultSizeId: "tall",
     baseMacros: { calories: 5, protein: 0.3, carbs: 1, sugar: 0, fat: 0, satFat: 0, caffeine: 160, sodium: 10 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -656,6 +659,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     defaultSizeId: "tall",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -686,7 +690,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     isDrink: true,
     defaultSizeId: "tall",
     defaultMilkId: "whole_milk",
-    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 0, sodium: 90 },
+    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 140, sodium: 90 },
     allergens: ["milk"],
     containsLactose: true,
     allergenSource: {
@@ -720,6 +724,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     defaultSizeId: "tall",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",
@@ -750,7 +755,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     isDrink: true,
     defaultSizeId: "tall",
     defaultMilkId: "whole_milk",
-    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 0, sodium: 90 },
+    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 130, sodium: 90 },
     allergens: ["milk"],
     containsLactose: true,
     allergenSource: {
@@ -1014,7 +1019,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     isDrink: true,
     defaultSizeId: "tall",
     defaultMilkId: "whole_milk",
-    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 0, sodium: 90 },
+    baseMacros: { calories: 150, protein: 8, carbs: 13, sugar: 12, fat: 6, satFat: 3.5, caffeine: 75, sodium: 90 },
     allergens: ["milk"],
     containsLactose: true,
     allergenSource: {
@@ -1238,6 +1243,7 @@ export const CHAIN_ESPRESSOLAB_ITEMS: MenuItem[] = [
     defaultSizeId: "tall",
     baseMacros: { calories: 10, protein: 0.5, carbs: 2, sugar: 0, fat: 0, satFat: 0, caffeine: 140, sodium: 12 },
     allergens: [],
+    containsLactose: false,
     allergenSource: {
       status: "estimated",
       notes: "Alerjenler ürün adı, kategori ve standart tarif üzerinden ihtiyatlı olarak tahmin edildi.",

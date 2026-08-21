@@ -95,7 +95,3 @@ export const loadCatalog = async (): Promise<readonly MenuItem[]> => {
 
   return catalogPromise;
 };
-
-export const resetCatalogCacheForTests = (): void => {
-  catalogPromise = undefined;
-};

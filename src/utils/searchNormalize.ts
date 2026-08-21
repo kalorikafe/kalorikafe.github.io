@@ -1,3 +1,4 @@
+import { ALLERGEN_MAP } from './macroCalculator';
 import type { MenuItem } from '../types/cafe';
 import { CHAINS } from '../data/chains';
 
@@ -44,9 +45,20 @@ const DIET_LABELS: Record<string, string> = {
   low_calorie: 'Düşük Kalori',
 };
 
+const CATEGORY_SEARCH_ALIASES: Record<string, string> = {
+  espresso_hot: 'sıcak kahveler',
+  espresso_iced: 'soğuk kahveler buzlu',
+  cold_brew: 'soğuk kahve',
+  frappe_blended: 'frappe ve buzlu',
+  tea_herbal: 'çay ve matcha',
+  smoothie_juice: 'smoothie ve meyve suyu',
+  bakery_dessert: 'fırın ve tatlı',
+  sandwich_savory: 'sandviç ve tost',
+  fit_healthy: 'fit ve sağlıklı',
+};
+
 export interface SearchableFields {
   name: string;
-  nameEn: string;
   chainName: string;
   description: string;
   categoryLabel: string;
@@ -58,11 +70,15 @@ export function getSearchableFields(item: MenuItem): SearchableFields {
   const chainName = CHAINS.find(c => c.id === item.chainId)?.name ?? '';
   return {
     name: normalizeSearchText(item.name),
-    nameEn: normalizeSearchText(item.nameEn ?? ''),
     chainName: normalizeSearchText(chainName),
     description: normalizeSearchText(item.description),
-    categoryLabel: normalizeSearchText(CATEGORY_LABELS[item.category] ?? ''),
-    dietaryLabels: item.dietaryTags.map(t => normalizeSearchText(DIET_LABELS[t] ?? t)),
+    categoryLabel: normalizeSearchText(
+      `${CATEGORY_LABELS[item.category] ?? ''} ${CATEGORY_SEARCH_ALIASES[item.category] ?? ''}`,
+    ),
+    dietaryLabels: [
+      ...item.dietaryTags.map(t => normalizeSearchText(DIET_LABELS[t] ?? t)),
+      ...(item.allergens ?? []).map(a => normalizeSearchText(ALLERGEN_MAP[a]?.name ?? a)),
+    ],
   };
 }
 
@@ -71,7 +87,6 @@ export function matchesNormalizedTerm(item: MenuItem, term: string): boolean {
   const f = getSearchableFields(item);
   return (
     f.name.includes(term) ||
-    f.nameEn.includes(term) ||
     f.chainName.includes(term) ||
     f.description.includes(term) ||
     f.categoryLabel.includes(term) ||
@@ -98,7 +113,7 @@ function itemNormalizedBlob(item: MenuItem): string {
   let blob = blobCache.get(item);
   if (!blob) {
     const f = getSearchableFields(item);
-    blob = [f.name, f.nameEn, f.chainName, f.description, f.categoryLabel, ...f.dietaryLabels]
+    blob = [f.name, f.chainName, f.description, f.categoryLabel, ...f.dietaryLabels]
       .filter(Boolean)
       .join(' ');
     blobCache.set(item, blob);
@@ -126,8 +141,6 @@ export function rankSearchMatches(items: readonly MenuItem[], rawQuery: string, 
       if (name.includes(term)) {
         score += 10;
         if (name.startsWith(term)) score += 5;
-      } else if (f.nameEn.includes(term)) {
-        score += 8;
       } else if (f.chainName.includes(term)) {
         score += 4;
       } else if (f.categoryLabel.includes(term)) {

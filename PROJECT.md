@@ -45,10 +45,12 @@ audit'i bu dosyadaki 125 ürünle derlenmiş katalog arasında eksik/fazla ad
 olmadığını denetler.
 
 Caffè Nero görsellerinin 96'sı markanın resmî ürün görseli, 29'u lisanslı
-fallback'tir. Resmî menüdeki kullanılabilir değerler tarif girdisi olarak
-alınsa da uygulamanın tam makro şeması — özellikle kafein — her ürün için
-resmî ve eksiksiz yayınlanmadığından 125 kaydın tamamı dürüstçe `estimated`
-kalır.
+fallback'tir.
+
+Resmî menüdeki kullanılabilir değerler tarif girdisi olarak alınır;
+uygulamanın tam makro şeması — özellikle kafein — her ürün için resmî ve
+eksiksiz yayınlanmadığından durumlar dürüstçe işaretlenir: 83 kayıt `mixed`
+(resmî tarif girdileri kısmî), 42 kayıt `estimated`.
 
 ## Mimari
 
@@ -76,7 +78,8 @@ etiketleri ve aşağıdaki provenance kayıtlarını taşır:
 Tchibo'nun ürün sayfası bulunmayan dört standart espresso bazlı kaydı
 (`tchibo_espresso`, `tchibo_caff_latte`, `tchibo_cappuccino`,
 `tchibo_americano`) `catalogSource.kind: 'secondary'` taşır. Diğer kayıtlar
-resmî katalog kaynağına bağlıdır. URL, besin değeri veya kaynak bilgisi
+resmî katalog kaynağına bağlıdır; 116 kayıt eski kaynak-metin döneminden
+devralınan `legacy_unverified` bayrağı taşır. URL, besin değeri veya kaynak
 uydurulmaz.
 
 Desteklenen alerjen profili gluten, laktoz, kuruyemiş, yer fıstığı, soya,
