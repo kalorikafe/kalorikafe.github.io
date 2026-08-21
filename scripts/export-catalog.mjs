@@ -3,8 +3,6 @@ import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { MENU_ITEMS } from '../src/data/items.ts';
-import { CHAINS } from '../src/data/chains.ts';
-import { chainSlug, createProductSlugMap, productPath } from '../src/utils/slugs.ts';
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const projectRoot = dirname(scriptDirectory);
@@ -58,20 +56,5 @@ await writeFile(
   'utf8',
 );
 
-const origin = 'https://kalorikafe.github.io';
-const productSlugs = createProductSlugMap(MENU_ITEMS);
-const newest = MENU_ITEMS.map(item => item.catalogSource?.checkedAt).filter(Boolean).sort().at(-1);
-const urls = [
-  { path: '/', lastmod: newest },
-  ...CHAINS.map(chain => ({
-    path: `/zincir/${chainSlug(chain.id)}/`,
-    lastmod: MENU_ITEMS.filter(item => item.chainId === chain.id).map(item => item.catalogSource?.checkedAt).filter(Boolean).sort().at(-1) ?? newest,
-  })),
-  ...MENU_ITEMS.map(item => ({ path: productPath(item, productSlugs), lastmod: item.catalogSource?.checkedAt ?? newest })),
-  { path: '/metodoloji/', lastmod: newest },
-  { path: '/gizlilik/', lastmod: newest },
-];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(entry => `  <url><loc>${new URL(entry.path, origin).href}</loc><lastmod>${entry.lastmod}</lastmod></url>`).join('\n')}\n</urlset>\n`;
-await writeFile(join(projectRoot, 'public', 'sitemap.xml'), sitemap, 'utf8');
 
-console.log(`Catalog export: ${runtimeItems.length} items -> public/data/${file}; sitemap ${urls.length} URLs`);
+console.log(`Catalog export: ${runtimeItems.length} items -> public/data/${file}`);
